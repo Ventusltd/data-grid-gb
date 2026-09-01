@@ -1,0 +1,38 @@
+{
+  "schema": "data-grid-gb.sources.v1",
+  "edition": "ETYS 2025",
+  "publisher": "National Energy System Operator",
+  "publication_page": "https://www.neso.energy/publications/electricity-ten-year-statement-etys/etys-documents-and-appendices",
+  "artifacts": {
+    "appendix_a": {
+      "url": "https://www.neso.energy/document/383931/download",
+      "bytes": 7965240,
+      "sha256": "43fac7a5513e7e45461cd2aae4f34defe59b053cdefe0a5b6e8142de027f2307",
+      "role": "published system schematics; not machine topology"
+    },
+    "appendix_b": {
+      "url": "https://www.neso.energy/document/383936/download",
+      "bytes": 1237005,
+      "sha256": "d5cacf238292e8c78af989a5ee3a0c9bd8619acc6e6e67f451d6b44c71fa5e0c",
+      "role": "supplementary technical data: site codes, circuits, transformers, reactive equipment and HVDC"
+    },
+    "appendix_c": {
+      "url": "https://www.neso.energy/document/383946/download",
+      "bytes": 3071955,
+      "sha256": "b5f4678afee745be2f7e719534a9f151771ca80144a7efb6a7c336f72a0fd418",
+      "role": "published power-flow diagrams; not a machine-readable solved case"
+    },
+    "fault_minimum": {
+      "url": "https://www.neso.energy/document/383961/download",
+      "bytes": 161789,
+      "sha256": "5f44bdb1650422368bb4ded9d1cbe53fafbd9d5af101725457619001fd264774",
+      "role": "minimum-demand fault-current scenarios"
+    },
+    "fault_peak": {
+      "url": "https://www.neso.energy/document/383951/download",
+      "bytes": 718863,
+      "sha256": "ad8b54fa0b0562c34295514c150f33913a92fc756ff140e0154d53c181363440",
+      "role": "peak-demand fault-current scenarios"
+    }
+  }
+}
