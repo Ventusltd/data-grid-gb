@@ -74,7 +74,7 @@ jobs:
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          POINTS=$(python -c "import json;print(json.load(open('derived/connection-points.v1.json'))['counts']['connection_points'])")
+          POINTS=$(python -c "import json;print(json.load(open('derived/connection-points.v2.json'))['counts']['connection_points'])")
           CIRCUITS=$(python -c "import json;print(json.load(open('derived/gb-transmission-network.v1.json'))['counts']['circuits'])")
           git commit -m "Refresh the GB network products: ${POINTS} connection points, ${CIRCUITS} circuits
 

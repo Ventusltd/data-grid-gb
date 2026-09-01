@@ -33,7 +33,7 @@ def check(label, condition):
 def main():
     network = json.load(io.open(os.path.join(REPO, "derived", "gb-transmission-network.v1.json"),
                                 encoding="utf-8"))
-    points = json.load(io.open(os.path.join(REPO, "derived", "connection-points.v1.json"),
+    points = json.load(io.open(os.path.join(REPO, "derived", "connection-points.v2.json"),
                                encoding="utf-8"))
 
     print("\nthe network model\n")
@@ -69,7 +69,7 @@ def main():
 
     print("\nthe connection points\n")
     check("schema is named and versioned",
-          points.get("schema") == "data-grid-gb.connection-points.v1")
+          points.get("schema") == "data-grid-gb.connection-points.v2")
     check("it refuses to be read as a connection assessment",
           "no published appendix contains" in points["not_a_connection_assessment"]
           and "queue position" in points["not_a_connection_assessment"].lower())
@@ -91,20 +91,37 @@ def main():
     check("a located point says how it was matched",
           all(p["location"]["matched_by"] in ("exact_name", "distinctive_tokens")
               for p in points["connection_points"] if "location" in p))
-    check("fault levels, where published, are a range with a snapshot count",
-          all(all("three_phase_break_ka_min" in e and "three_phase_break_ka_max" in e
-                  and e.get("snapshots", 0) > 0
-                  for e in (p["fault_level"] or {}).values())
-              for p in points["connection_points"] if p["fault_level"]))
-    check("fault level minima never exceed their maxima",
-          all(e["three_phase_break_ka_min"] <= e["three_phase_break_ka_max"]
-              for p in points["connection_points"] if p["fault_level"]
-              for e in p["fault_level"].values()))
+    expected_metrics = {
+        "three_phase_initial_peak_current_ka", "three_phase_rms_break_current_ka",
+        "three_phase_dc_break_current_ka", "three_phase_peak_break_current_ka",
+        "single_phase_initial_peak_current_ka", "single_phase_rms_break_current_ka",
+        "single_phase_dc_break_current_ka", "single_phase_peak_break_current_ka"}
+    check("the root feed retains all eight exact Appendix D metrics",
+          set(network.get("fault_current_metrics", [])) == expected_metrics)
+    check("fault-current summaries name every metric and unit separately",
+          all(set(entry["metrics"]) == expected_metrics
+              and all(metric["unit"] == "kA" and metric["min"] <= metric["max"]
+                      for metric in entry["metrics"].values())
+              for point in points["connection_points"] if point["fault_current"]
+              for entry in point["fault_current"].values()))
+    check("fault-current summaries retain scenarios, winters and locations",
+          all(entry["scenarios"] > 0 and entry["winters"] and entry["locations"]
+              for point in points["connection_points"] if point["fault_current"]
+              for entry in point["fault_current"].values()))
+    cottam = [row for row in network["fault_current_scenarios"]
+              if row["demand_case"] == "peak" and row["winter"] == "2025/26"
+              and row["location"] == "COTT4 M1"]
+    check("Cottam proves initial-peak is not renamed break current",
+          len(cottam) == 1
+          and abs(cottam[0]["three_phase_initial_peak_current_ka"]
+                  - 109.219270174868) < 1e-9
+          and "three_phase_rms_break_current_ka" in cottam[0]
+          and "three_phase_break_ka" not in cottam[0])
     check("planned change years are consistent with their count",
           all((p["planned_changes"] > 0) == bool(p["planned_change_years"])
               for p in points["connection_points"]))
     check("the product stays browser-sized",
-          os.path.getsize(os.path.join(REPO, "derived", "connection-points.v1.json")) < 1_500_000)
+          os.path.getsize(os.path.join(REPO, "derived", "connection-points.v2.json")) < 1_500_000)
 
     # A named spot check: if these move, something upstream changed and a
     # reader deserves to hear about it before a map does.

@@ -18,7 +18,7 @@ is allowed to read them.
 
 ## The products
 
-### `derived/connection-points.v1.json` — 357 kB, browser-sized
+### `derived/connection-points.v2.json` — browser-sized
 
 Every transmission substation NESO names at **132 kV and above** (886 of
 them), each carrying what the operator publishes about it:
@@ -29,7 +29,7 @@ them), each carrying what the operator publishes about it:
 | `circuits`, `transformers` | how many meet there |
 | `circuit_winter_rating_mva` | the range of winter ratings on those circuits |
 | `reactive_compensation` | installed units and their MVAr generation / absorption |
-| `fault_level` | NESO's published three-phase break range, peak and minimum, across demand snapshots |
+| `fault_current` | all eight separately named Appendix D current metrics, with peak/minimum demand cases, scenario winters, locations and units |
 | `planned_changes`, `planned_change_years` | changes already published for 2026/27 → 2033/34 |
 | `location` | coordinates, where a join to mapped geometry exists, and **how** it was matched |
 
@@ -37,12 +37,12 @@ them), each carrying what the operator publishes about it:
 without them rather than dropped** — a consumer that needs to know a node
 exists should not be told it does not merely because nobody has mapped it.
 
-### `derived/gb-transmission-network.v1.json` — 2.4 MB, the model itself
+### `derived/gb-transmission-network.v1.json` — topology and equipment parameters
 
 921 sites · 2,679 nodes · 1,392 circuits with R/X/B on a 100 MVA base and
 seasonal ratings · 1,472 transformers · **2,230 planned changes** · 573
-reactive compensation units · 11 interconnectors · 658 nodes with a
-published fault level.
+reactive compensation units · 11 interconnectors · the labelled Appendix D
+fault-current scenarios. This is not a runnable or solved load-flow case.
 
 ## What these products are not
 

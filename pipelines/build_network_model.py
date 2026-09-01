@@ -56,6 +56,30 @@ DERIVED = os.path.join(REPO, "derived")
 EDITION = "2025"
 OWNERS = {"a": "SHET", "b": "SPT", "c": "NGET", "d": "OFTO"}
 VOLTAGE_DIGIT = {"1": 132, "2": 275, "4": 400}
+FAULT_HEADER_KEYS = {
+    "Three Phase Initial Peak Current (kA)": "three_phase_initial_peak_current_ka",
+    "Three Phase RMS Break Current (kA)": "three_phase_rms_break_current_ka",
+    "Symmetrical Three Phase RMS Break Current (kA)": "three_phase_rms_break_current_ka",
+    "Three Phase DC Break Current (kA)": "three_phase_dc_break_current_ka",
+    "Three Phase Peak Break Current (kA)": "three_phase_peak_break_current_ka",
+    "Asymmetrical Three Phase Peak Break Current (kA)": "three_phase_peak_break_current_ka",
+    "Single Phase Initial Peak Current (kA)": "single_phase_initial_peak_current_ka",
+    "Single Phase RMS Break Current (kA)": "single_phase_rms_break_current_ka",
+    "Symmetrical Single Phase RMS Break Current (kA)": "single_phase_rms_break_current_ka",
+    "Single Phase DC Break Current (kA)": "single_phase_dc_break_current_ka",
+    "Single Phase Peak Break Current (kA)": "single_phase_peak_break_current_ka",
+    "Asymmetrical Single Phase Peak Break Current (kA)": "single_phase_peak_break_current_ka",
+}
+FAULT_KEYS = (
+    "three_phase_initial_peak_current_ka",
+    "three_phase_rms_break_current_ka",
+    "three_phase_dc_break_current_ka",
+    "three_phase_peak_break_current_ka",
+    "single_phase_initial_peak_current_ka",
+    "single_phase_rms_break_current_ka",
+    "single_phase_dc_break_current_ka",
+    "single_phase_peak_break_current_ka",
+)
 
 
 def cells(worksheet, min_row=1):
@@ -243,43 +267,55 @@ def main():
             "voltage_consistent_with_site": consistent}
 
     # ── fault levels ─────────────────────────────────────────────────────
-    fault_levels = defaultdict(dict)
+    fault_scenarios = []
     for label, filename in (("peak", f"etys-{EDITION}-appendix-d-fault-levels-peak.xlsx"),
                             ("minimum", f"etys-{EDITION}-appendix-d-fault-levels-minimum.xlsx")):
         path = os.path.join(SOURCES, filename)
         if not os.path.exists(path):
             continue
         book = openpyxl.load_workbook(path, read_only=True, data_only=True)
-        for sheet in book.sheetnames:
-            if sheet.lower() == "menu":
+        for sheet_name in book.sheetnames:
+            if not re.fullmatch(r"D[123]\.\d", sheet_name):
                 continue
-            for row in cells(book[sheet]):
-                values = [v for v in row if v not in (None, "")]
-                if len(values) < 3 or not isinstance(values[0], str):
+            sheet = book[sheet_name]
+            title = text(sheet.cell(1, 1).value) or ""
+            header = tuple(text(sheet.cell(2, column).value) for column in range(1, 11))
+            metric_keys = tuple(FAULT_HEADER_KEYS.get(value) for value in header[2:])
+            if (header[:2] != ("Location", "Voltage (kV)")
+                    or None in metric_keys or metric_keys != FAULT_KEYS):
+                raise ValueError(f"{sheet_name}: unknown Appendix D schema: {header}")
+            year_index = re.search(r"\b(?:Yr|Year)\s*(\d+)\b", title, re.I)
+            winter = re.search(r"\b(\d{4}/\d{2})\b", title)
+            if not year_index or not winter:
+                raise ValueError(f"{sheet_name}: scenario missing from title: {title!r}")
+            owner = {"1": "SHET", "2": "SPT", "3": "NGET"}[sheet_name[1]]
+            owner_sites = {code: site for code, site in sites.items()
+                           if site["transmission_owner"] == owner}
+            sites_by_name = {site["name"].upper(): code for code, site in owner_sites.items()}
+            for source_row, row in enumerate(
+                    sheet.iter_rows(min_row=3, max_col=10, values_only=True), start=3):
+                if not isinstance(row[0], str) or not isinstance(row[1], (int, float)):
                     continue
-                node = values[0].split()[0].strip().upper()
-                kv = number(values[1])
-                three_phase = number(values[2])
-                if not node or kv is None or three_phase is None:
-                    continue
-                entry = fault_levels[node].setdefault(label, {
-                    "voltage_kv": int(kv), "three_phase_break_ka": []})
-                entry["three_phase_break_ka"].append(three_phase)
+                location = " ".join(row[0].split()).upper()
+                prefix = location[:4]
+                site_code = prefix if prefix in owner_sites else sites_by_name.get(location)
+                record = {
+                    "demand_case": label, "transmission_owner": owner,
+                    "scenario_year_index": int(year_index.group(1)),
+                    "winter": winter.group(1), "location": location,
+                    "site_code": site_code, "voltage_kv": float(row[1]),
+                    "source_sheet": sheet_name, "source_row": source_row,
+                    "published_metric_labels": list(header[2:]),
+                }
+                for key, value in zip(metric_keys, row[2:]):
+                    if not isinstance(value, (int, float)):
+                        raise ValueError(f"{sheet_name}/{source_row}: nonnumeric {key}")
+                    record[key] = float(value)
+                fault_scenarios.append(record)
         book.close()
-    for node, byhorizon in fault_levels.items():
-        for label, entry in byhorizon.items():
-            series = entry.pop("three_phase_break_ka")
-            # The appendix publishes one row per demand-year snapshot; the
-            # range is the honest summary, and the count says how many.
-            entry["three_phase_break_ka_min"] = round(min(series), 2)
-            entry["three_phase_break_ka_max"] = round(max(series), 2)
-            entry["snapshots"] = len(series)
-
-    for node, record in nodes.items():
-        # ETYS D nodes carry a shorter form (COTT4) than B nodes (COTT41).
-        key = node[:5]
-        if key in fault_levels:
-            record["fault_level"] = fault_levels[key]
+    fault_scenarios.sort(key=lambda row: (
+        row["demand_case"], row["transmission_owner"], row["winter"],
+        row["location"], row["voltage_kv"], row["source_sheet"], row["source_row"]))
 
     product = {
         "schema": "data-grid-gb.transmission-network.v1",
@@ -309,8 +345,9 @@ def main():
             "transformers": len(transformers), "planned_changes": len(changes),
             "reactive_compensation_units": len(compensation),
             "interconnectors": len(interconnectors),
-            "nodes_with_a_published_fault_level":
-                sum(1 for n in nodes.values() if "fault_level" in n),
+            "published_fault_current_scenarios": len(fault_scenarios),
+            "fault_current_scenarios_with_site_code":
+                sum(1 for row in fault_scenarios if row["site_code"]),
         },
         "sites": sorted(sites.values(), key=lambda s: s["code"]),
         "nodes": [nodes[k] for k in sorted(nodes)],
@@ -319,6 +356,8 @@ def main():
         "planned_changes": changes,
         "reactive_compensation": compensation,
         "interconnectors": interconnectors,
+        "fault_current_metrics": list(FAULT_KEYS),
+        "fault_current_scenarios": fault_scenarios,
     }
 
     os.makedirs(DERIVED, exist_ok=True)

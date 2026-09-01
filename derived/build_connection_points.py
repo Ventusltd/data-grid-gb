@@ -117,6 +117,11 @@ def main():
         entry["mvar_generation"] += unit.get("mvar_generation") or 0.0
         entry["mvar_absorption"] += unit.get("mvar_absorption") or 0.0
 
+    fault_at = defaultdict(list)
+    for scenario in network.get("fault_current_scenarios", []):
+        if scenario.get("site_code"):
+            fault_at[scenario["site_code"]].append(scenario)
+
     points, joined_exact, joined_token, unjoined = [], 0, 0, 0
     for site in network["sites"]:
         if not site["voltages_kv"] or max(site["voltages_kv"]) < MINIMUM_KV:
@@ -142,15 +147,24 @@ def main():
         circuits = circuits_at.get(code, [])
         winter = [c["winter_mva"] for c in circuits if c.get("winter_mva")]
         changes = changes_at.get(code, [])
-        fault = {}
-        for node in nodes_by_site.get(code, []):
-            if "fault_level" in node:
-                for horizon, entry in node["fault_level"].items():
-                    current = fault.setdefault(horizon, dict(entry))
-                    current["three_phase_break_ka_min"] = min(
-                        current["three_phase_break_ka_min"], entry["three_phase_break_ka_min"])
-                    current["three_phase_break_ka_max"] = max(
-                        current["three_phase_break_ka_max"], entry["three_phase_break_ka_max"])
+        fault_current = {}
+        for demand_case in ("peak", "minimum"):
+            scenarios = [row for row in fault_at.get(code, [])
+                         if row["demand_case"] == demand_case]
+            if not scenarios:
+                continue
+            metrics = {}
+            for metric in network["fault_current_metrics"]:
+                values = [row[metric] for row in scenarios]
+                metrics[metric] = {"min": round(min(values), 2),
+                                   "max": round(max(values), 2), "unit": "kA"}
+            fault_current[demand_case] = {
+                "scenarios": len(scenarios),
+                "winters": sorted({row["winter"] for row in scenarios}),
+                "locations": sorted({row["location"] for row in scenarios}),
+                "metrics": metrics,
+                "aggregation": "envelope across the listed published rows; metrics are not interchangeable",
+            }
 
         point = {
             "site_code": code,
@@ -166,7 +180,7 @@ def main():
                  "mvar_generation": round(compensation_at[code]["mvar_generation"]),
                  "mvar_absorption": round(compensation_at[code]["mvar_absorption"])}
                 if code in compensation_at else None),
-            "fault_level": fault or None,
+            "fault_current": fault_current or None,
             "planned_changes": len(changes),
             "planned_change_years": sorted({c["year"] for c in changes if c.get("year")}),
         }
@@ -177,12 +191,12 @@ def main():
 
     points.sort(key=lambda p: p["site_code"])
     product = {
-        "schema": "data-grid-gb.connection-points.v1",
+        "schema": "data-grid-gb.connection-points.v2",
         "what_this_is": (
             "Every transmission substation NESO names at 132 kV and above, "
             "with what the operator publishes about it: circuits and their "
-            "seasonal ratings, transformers, reactive plant, fault level "
-            "range, and the changes already planned to 2033/34. Coordinates "
+            "seasonal ratings, transformers, reactive plant, eight separately "
+            "named fault-current metrics, and changes planned to 2033/34. Coordinates "
             "are joined from the OpenStreetMap-derived substation payload "
             "where a join exists."),
         "not_a_connection_assessment": (
@@ -204,16 +218,16 @@ def main():
         "counts": {
             "connection_points": len(points),
             "with_location": len(points) - unjoined,
-            "with_fault_level": sum(1 for p in points if p["fault_level"]),
+            "with_fault_current": sum(1 for p in points if p["fault_current"]),
             "with_planned_changes": sum(1 for p in points if p["planned_changes"]),
         },
         "connection_points": points,
     }
 
-    out = os.path.join(REPO, "derived", "connection-points.v1.json")
+    out = os.path.join(REPO, "derived", "connection-points.v2.json")
     io.open(out, "w", encoding="utf-8", newline="\n").write(
         json.dumps(product, ensure_ascii=False, separators=(",", ":")) + "\n")
-    print(f"wrote derived/connection-points.v1.json "
+    print(f"wrote derived/connection-points.v2.json "
           f"({os.path.getsize(out) / 1024:.0f} kB)")
     for key, value in product["counts"].items():
         print(f"  {key:<26} {value:>6,}")
