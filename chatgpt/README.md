@@ -38,3 +38,20 @@ python chatgpt/verify_product.py chatgpt/derived/etys-2025.normalized.json
 The verifier requires the exact phrase **Mobile is the sales surface; it must
 answer immediately.** in the product contract, as requested, while keeping
 network facts asynchronous and provenance-bound.
+
+## Map-click network projection
+
+`build_map_click_network.mjs` joins the two already-verified owner products
+without inventing another identity system. For each v3 connection point it
+publishes one-hop existing circuits, remote ETYS sites, R/X/B on the published
+100 MVA base, seasonal ratings, transformers, reactive compensation,
+interconnectors, planned changes, safe geometry and fault-current groups by
+published voltage.
+
+```powershell
+node chatgpt/build_map_click_network.mjs
+node chatgpt/verify_map_click_network.mjs
+```
+
+The product is network context for a map click. It is not solved power flow,
+headroom, a queue position or a connection assessment.
