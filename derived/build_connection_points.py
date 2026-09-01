@@ -43,6 +43,8 @@ NOISE = re.compile(
     r"POWER|STATION|WIND|FARM|WINDFARM|OFFSHORE|ONSHORE|EXTENSION|"
     r"400KV|275KV|132KV|66KV|33KV|11KV|NGET|SSE|SP|SHE)\b")
 MINIMUM_KV = 132
+SCHEMA = "data-grid-gb.connection-points.v3"
+OUTPUT = "connection-points.v3.json"
 
 
 def normalise(name):
@@ -54,6 +56,24 @@ def normalise(name):
 
 def tokens(name):
     return {t for t in normalise(name).split() if len(t) > 3}
+
+
+def summarise_fault_rows(rows, metric_names, scope):
+    """Keep a published-row envelope explicit about what it combines."""
+    metrics = {}
+    for metric in metric_names:
+        values = [row[metric] for row in rows]
+        metrics[metric] = {"min": round(min(values), 2),
+                           "max": round(max(values), 2), "unit": "kA"}
+    return {
+        "scenarios": len(rows),
+        "winters": sorted({row["winter"] for row in rows}),
+        "locations": sorted({row["location"] for row in rows}),
+        "voltages_kv": sorted({row["voltage_kv"] for row in rows}),
+        "metrics": metrics,
+        "scope": scope,
+        "aggregation": "envelope across the listed published rows; metrics, voltages and buses are not interchangeable",
+    }
 
 
 def main():
@@ -122,7 +142,8 @@ def main():
         if scenario.get("site_code"):
             fault_at[scenario["site_code"]].append(scenario)
 
-    points, joined_exact, joined_token, unjoined = [], 0, 0, 0
+    points, joined_exact, joined_token = [], 0, 0
+    ambiguous_exact, ambiguous_token, unjoined = 0, 0, 0
     for site in network["sites"]:
         if not site["voltages_kv"] or max(site["voltages_kv"]) < MINIMUM_KV:
             continue
@@ -131,16 +152,32 @@ def main():
         key = normalise(site["name"])
         match, how = None, None
         if key and key in mapped_exact:
-            match, how = mapped_exact[key][0], "exact_name"
-            joined_exact += 1
+            candidates = mapped_exact[key]
+            highest = max(site["voltages_kv"])
+            compatible = [candidate for candidate in candidates
+                          if candidate["kv"] == highest]
+            if len(compatible) == 1:
+                match, how = compatible[0], "exact_name_highest_voltage"
+                joined_exact += 1
+            elif len(candidates) == 1 and (not candidates[0]["kv"]
+                                           or candidates[0]["kv"] in site["voltages_kv"]):
+                match, how = candidates[0], "exact_name_voltage_compatible"
+                joined_exact += 1
+            else:
+                ambiguous_exact += 1
         else:
             site_tokens = tokens(site["name"])
             if site_tokens:
-                for candidate_tokens, candidate in mapped_tokens:
-                    if candidate_tokens and site_tokens <= candidate_tokens:
-                        match, how = candidate, "distinctive_tokens"
-                        joined_token += 1
-                        break
+                candidates = [candidate for candidate_tokens, candidate in mapped_tokens
+                              if candidate_tokens and site_tokens <= candidate_tokens]
+                highest = max(site["voltages_kv"])
+                compatible = [candidate for candidate in candidates
+                              if candidate["kv"] == highest]
+                if len(compatible) == 1:
+                    match, how = compatible[0], "distinctive_tokens_highest_voltage"
+                    joined_token += 1
+                elif candidates:
+                    ambiguous_token += 1
         if not match:
             unjoined += 1
 
@@ -153,18 +190,24 @@ def main():
                          if row["demand_case"] == demand_case]
             if not scenarios:
                 continue
-            metrics = {}
-            for metric in network["fault_current_metrics"]:
-                values = [row[metric] for row in scenarios]
-                metrics[metric] = {"min": round(min(values), 2),
-                                   "max": round(max(values), 2), "unit": "kA"}
-            fault_current[demand_case] = {
-                "scenarios": len(scenarios),
-                "winters": sorted({row["winter"] for row in scenarios}),
-                "locations": sorted({row["location"] for row in scenarios}),
-                "metrics": metrics,
-                "aggregation": "envelope across the listed published rows; metrics are not interchangeable",
-            }
+            fault_current[demand_case] = summarise_fault_rows(
+                scenarios, network["fault_current_metrics"],
+                "site-wide envelope; may combine voltage levels and buses")
+
+        fault_by_voltage = {}
+        for voltage in sorted({row["voltage_kv"] for row in fault_at.get(code, [])}):
+            cases = {}
+            for demand_case in ("peak", "minimum"):
+                scenarios = [row for row in fault_at.get(code, [])
+                             if row["demand_case"] == demand_case
+                             and row["voltage_kv"] == voltage]
+                if scenarios:
+                    cases[demand_case] = summarise_fault_rows(
+                        scenarios, network["fault_current_metrics"],
+                        f"{voltage:g} kV published-row envelope")
+            if cases:
+                voltage_key = str(int(voltage) if float(voltage).is_integer() else voltage)
+                fault_by_voltage[voltage_key] = cases
 
         point = {
             "site_code": code,
@@ -181,6 +224,7 @@ def main():
                  "mvar_absorption": round(compensation_at[code]["mvar_absorption"])}
                 if code in compensation_at else None),
             "fault_current": fault_current or None,
+            "fault_current_by_voltage": fault_by_voltage or None,
             "planned_changes": len(changes),
             "planned_change_years": sorted({c["year"] for c in changes if c.get("year")}),
         }
@@ -191,7 +235,7 @@ def main():
 
     points.sort(key=lambda p: p["site_code"])
     product = {
-        "schema": "data-grid-gb.connection-points.v2",
+        "schema": SCHEMA,
         "what_this_is": (
             "Every transmission substation NESO names at 132 kV and above, "
             "with what the operator publishes about it: circuits and their "
@@ -210,6 +254,8 @@ def main():
             "geometry_source": "OpenStreetMap contributors, via the GridAtlas release",
             "exact_name": joined_exact,
             "distinctive_tokens": joined_token,
+            "ambiguous_exact_name": ambiguous_exact,
+            "ambiguous_distinctive_tokens": ambiguous_token,
             "unlocated": unjoined,
             "unlocated_are_published": (
                 "a site nobody has mapped is published without coordinates "
@@ -224,14 +270,16 @@ def main():
         "connection_points": points,
     }
 
-    out = os.path.join(REPO, "derived", "connection-points.v2.json")
+    out = os.path.join(REPO, "derived", OUTPUT)
     io.open(out, "w", encoding="utf-8", newline="\n").write(
         json.dumps(product, ensure_ascii=False, separators=(",", ":")) + "\n")
-    print(f"wrote derived/connection-points.v2.json "
+    print(f"wrote derived/{OUTPUT} "
           f"({os.path.getsize(out) / 1024:.0f} kB)")
     for key, value in product["counts"].items():
         print(f"  {key:<26} {value:>6,}")
-    print(f"  join: exact {joined_exact}, tokens {joined_token}, unlocated {unjoined}")
+    print(f"  join: exact {joined_exact}, tokens {joined_token}, "
+          f"ambiguous exact {ambiguous_exact}, ambiguous tokens {ambiguous_token}, "
+          f"unlocated {unjoined}")
     return 0
 
 

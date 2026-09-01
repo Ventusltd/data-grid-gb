@@ -33,7 +33,7 @@ def check(label, condition):
 def main():
     network = json.load(io.open(os.path.join(REPO, "derived", "gb-transmission-network.v1.json"),
                                 encoding="utf-8"))
-    points = json.load(io.open(os.path.join(REPO, "derived", "connection-points.v2.json"),
+    points = json.load(io.open(os.path.join(REPO, "derived", "connection-points.v3.json"),
                                encoding="utf-8"))
 
     print("\nthe network model\n")
@@ -69,7 +69,7 @@ def main():
 
     print("\nthe connection points\n")
     check("schema is named and versioned",
-          points.get("schema") == "data-grid-gb.connection-points.v2")
+          points.get("schema") == "data-grid-gb.connection-points.v3")
     check("it refuses to be read as a connection assessment",
           "no published appendix contains" in points["not_a_connection_assessment"]
           and "queue position" in points["not_a_connection_assessment"].lower())
@@ -77,10 +77,16 @@ def main():
           all(max(p["voltages_kv"]) >= points["minimum_kv"] for p in points["connection_points"]))
     join = points["join"]
     check("the join is reported by tier, not as a single number",
-          all(k in join for k in ("exact_name", "distinctive_tokens", "unlocated")))
+          all(k in join for k in ("exact_name", "distinctive_tokens",
+                                  "ambiguous_exact_name",
+                                  "ambiguous_distinctive_tokens", "unlocated")))
     check("the join total equals the number of points",
           join["exact_name"] + join["distinctive_tokens"] + join["unlocated"]
           == len(points["connection_points"]))
+    check("ambiguous exact names fail closed inside the unlocated tier",
+          0 < join["ambiguous_exact_name"] <= join["unlocated"])
+    check("ambiguous token matches fail closed inside the unlocated tier",
+          0 < join["ambiguous_distinctive_tokens"] <= join["unlocated"])
     check("unlocated sites are published rather than dropped",
           join["unlocated"] > 0
           and sum(1 for p in points["connection_points"] if "location" not in p)
@@ -89,7 +95,9 @@ def main():
           all(49 < p["location"]["lat"] < 61 and -9 < p["location"]["lon"] < 3
               for p in points["connection_points"] if "location" in p))
     check("a located point says how it was matched",
-          all(p["location"]["matched_by"] in ("exact_name", "distinctive_tokens")
+          all(p["location"]["matched_by"] in ("exact_name_highest_voltage",
+                                                "exact_name_voltage_compatible",
+                                                "distinctive_tokens_highest_voltage")
               for p in points["connection_points"] if "location" in p))
     expected_metrics = {
         "three_phase_initial_peak_current_ka", "three_phase_rms_break_current_ka",
@@ -108,6 +116,17 @@ def main():
           all(entry["scenarios"] > 0 and entry["winters"] and entry["locations"]
               for point in points["connection_points"] if point["fault_current"]
               for entry in point["fault_current"].values()))
+    check("every fault-current site envelope states when it combines voltages",
+          all("site-wide envelope" in entry["scope"] and entry["voltages_kv"]
+              for point in points["connection_points"] if point["fault_current"]
+              for entry in point["fault_current"].values()))
+    check("fault-current summaries are also separated by published voltage",
+          all(point["fault_current_by_voltage"]
+              and all(len(entry["voltages_kv"]) == 1
+                      and str(int(entry["voltages_kv"][0])) == voltage
+                      for voltage, cases in point["fault_current_by_voltage"].items()
+                      for entry in cases.values())
+              for point in points["connection_points"] if point["fault_current"]))
     cottam = [row for row in network["fault_current_scenarios"]
               if row["demand_case"] == "peak" and row["winter"] == "2025/26"
               and row["location"] == "COTT4 M1"]
@@ -121,7 +140,7 @@ def main():
           all((p["planned_changes"] > 0) == bool(p["planned_change_years"])
               for p in points["connection_points"]))
     check("the product stays browser-sized",
-          os.path.getsize(os.path.join(REPO, "derived", "connection-points.v2.json")) < 1_500_000)
+          os.path.getsize(os.path.join(REPO, "derived", "connection-points.v3.json")) < 3_000_000)
 
     # A named spot check: if these move, something upstream changed and a
     # reader deserves to hear about it before a map does.
@@ -131,6 +150,15 @@ def main():
         check(f"{site.title()} is present with its circuits and a location",
               site in named and named[site]["circuits"] >= minimum_circuits
               and "location" in named[site])
+    west_burton = named["WEST BURTON"]
+    check("West Burton resolves to the voltage-compatible Nottinghamshire feature",
+          west_burton["location"]["matched_by"] == "exact_name_highest_voltage"
+          and abs(west_burton["location"]["lat"] - 53.359219) < 0.001
+          and abs(west_burton["location"]["lon"] + 0.809114) < 0.001)
+    check("West Burton keeps 132 kV and 400 kV fault envelopes separate",
+          set(west_burton["fault_current_by_voltage"]) == {"132", "400"}
+          and west_burton["fault_current_by_voltage"]["400"]["peak"]
+              ["metrics"]["three_phase_rms_break_current_ka"]["min"] > 30)
 
     print(f"\n{passed}/{passed + len(failures)} checks passed")
     if failures:

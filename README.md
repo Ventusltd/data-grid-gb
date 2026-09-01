@@ -18,7 +18,7 @@ is allowed to read them.
 
 ## The products
 
-### `derived/connection-points.v2.json` — browser-sized
+### `derived/connection-points.v3.json` — browser-sized
 
 Every transmission substation NESO names at **132 kV and above** (886 of
 them), each carrying what the operator publishes about it:
@@ -29,11 +29,12 @@ them), each carrying what the operator publishes about it:
 | `circuits`, `transformers` | how many meet there |
 | `circuit_winter_rating_mva` | the range of winter ratings on those circuits |
 | `reactive_compensation` | installed units and their MVAr generation / absorption |
-| `fault_current` | all eight separately named Appendix D current metrics, with peak/minimum demand cases, scenario winters, locations and units |
+| `fault_current` | explicitly site-wide envelopes for all eight separately named Appendix D metrics; may combine buses and voltages |
+| `fault_current_by_voltage` | the same published rows separated by voltage before any envelope is calculated |
 | `planned_changes`, `planned_change_years` | changes already published for 2026/27 → 2033/34 |
 | `location` | coordinates, where a join to mapped geometry exists, and **how** it was matched |
 
-574 of the 886 carry coordinates. The 312 that do not are **published
+502 of the 886 carry coordinates. The 384 that do not are **published
 without them rather than dropped** — a consumer that needs to know a node
 exists should not be told it does not merely because nobody has mapped it.
 
@@ -64,10 +65,16 @@ site does not declare rather than silently correcting them.
 
 **ETYS names substations; it does not locate them.** Coordinates come from
 the OpenStreetMap-derived payload published with the GridAtlas release,
-joined on a normalised name in two tiers — exact, then distinctive tokens.
-Every tier is counted in the product (`exact_name` 486, `distinctive_tokens`
-88, `unlocated` 312) and every located point records `matched_by`, so a
-consumer can decide how much to trust any single join.
+joined on a normalised name and then constrained by the site's highest
+published voltage. Text equality alone is not identity: ambiguous exact or
+token matches are withheld. Every tier is counted in v3 (`exact_name` 461,
+`distinctive_tokens` 41, `ambiguous_exact_name` 25,
+`ambiguous_distinctive_tokens` 47, `unlocated` 384) and every located point
+records `matched_by`, so a consumer can decide how much to trust any join.
+
+v2 remains immutable because a deployed consumer requires its schema. It
+contains site-wide fault-current envelopes and the earlier name-only location
+join; new consumers must use v3.
 
 ## Running it
 
