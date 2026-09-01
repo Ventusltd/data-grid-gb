@@ -1,0 +1,83 @@
+# Rebuild the network products from the pinned public sources.
+#
+# WHY IT IS NOT ON A CLOCK
+#
+# ETYS is published once a year. A nightly job against an annual
+# publication is noise that trains everyone to ignore the one run that
+# matters. This fires on a change to the pipelines, on manual dispatch,
+# and on a monthly heartbeat that exists to notice when NESO's documents
+# move underneath their pinned ids - which is the only thing that can
+# quietly break this repository.
+#
+# The sources are pinned by document id and recorded by SHA-256. If a
+# digest changes, the run says so and commits the new products together
+# with the new manifest, so the change is visible in one diff rather than
+# discovered later in a map.
+
+name: Refresh the GB network products
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipelines/**'
+      - 'derived/build_connection_points.py'
+      - 'derived/verify_connection_points.py'
+      - '.github/workflows/refresh_network_products.yml'
+  schedule:
+    # Monthly, to notice a source that moved under its pinned id.
+    - cron: '17 6 1 * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gb-network-products
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dependencies
+        run: pip install --quiet openpyxl
+
+      - name: Fetch and pin the public sources
+        run: python pipelines/fetch_sources.py
+
+      - name: Build the network model and the connection points
+        run: |
+          python pipelines/build_network_model.py
+          python derived/build_connection_points.py
+
+      - name: Verify, fail closed
+        run: python derived/verify_connection_points.py
+
+      # The products are arithmetic over the pinned sources. If the sources
+      # have not moved, neither have they, and a run that changes nothing
+      # should leave no trace.
+      - name: Commit only what changed
+        run: |
+          set -euo pipefail
+          git add -- derived sources/sources-manifest.json
+          if git diff --cached --quiet; then
+            echo "the products are unchanged; nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          POINTS=$(python -c "import json;print(json.load(open('derived/connection-points.v1.json'))['counts']['connection_points'])")
+          CIRCUITS=$(python -c "import json;print(json.load(open('derived/gb-transmission-network.v1.json'))['counts']['circuits'])")
+          git commit -m "Refresh the GB network products: ${POINTS} connection points, ${CIRCUITS} circuits
+
+          Derived from the pinned NESO ETYS appendices by pipelines/ and
+          derived/. Parameters as published; no power flow is solved."
+          git push

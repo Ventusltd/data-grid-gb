@@ -1,0 +1,38 @@
+{
+  "schema": "data-grid-gb.sources.v1",
+  "etys_edition": "2025",
+  "why_pinned": "document ids are stable and 'latest' links are not; a product whose inputs can change without notice is not a product",
+  "sources": {
+    "appendix-b-system-technical-data": {
+      "bytes": 1237005,
+      "sha256": "d5cacf238292e8c78af989a5ee3a0c9bd8619acc6e6e67f451d6b44c71fa5e0c",
+      "url": "https://www.neso.energy/document/383936/download",
+      "document_id": 383936,
+      "publisher": "NESO",
+      "extension": "xlsx"
+    },
+    "appendix-d-fault-levels-minimum": {
+      "bytes": 161789,
+      "sha256": "5f44bdb1650422368bb4ded9d1cbe53fafbd9d5af101725457619001fd264774",
+      "url": "https://www.neso.energy/document/383961/download",
+      "document_id": 383961,
+      "publisher": "NESO",
+      "extension": "xlsx"
+    },
+    "appendix-d-fault-levels-peak": {
+      "bytes": 718863,
+      "sha256": "ad8b54fa0b0562c34295514c150f33913a92fc756ff140e0154d53c181363440",
+      "url": "https://www.neso.energy/document/383951/download",
+      "document_id": 383951,
+      "publisher": "NESO",
+      "extension": "xlsx"
+    },
+    "substation-geometry": {
+      "bytes": 1192748,
+      "sha256": "87976435766a58ddf19c99540b58cd7f18a224148af42ba55075d8851f9e6251",
+      "url": "https://ventusltd.github.io/gridatlas/atlas/releases/202608300453-atlas-v9/data/grid_substations.geojson",
+      "publisher": "OpenStreetMap contributors, via the GridAtlas release",
+      "note": "ETYS names substations and does not locate them; this is the only geometry the estate holds for named substations"
+    }
+  }
+}
