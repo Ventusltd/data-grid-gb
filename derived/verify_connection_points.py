@@ -12,6 +12,9 @@ import io
 import json
 import os
 import sys
+from collections import Counter, defaultdict
+
+from build_connection_points import normalise, site_join_context
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -66,6 +69,9 @@ def main():
     check("the model is not trivially small",
           counts["circuits"] > 1000 and counts["nodes"] > 2000
           and counts["planned_changes"] > 1000)
+    check("the ETYS 2025 model retains 1,472 distinct transformer records",
+          counts["transformers"] == 1472
+          and len(network["transformers"]) == 1472)
 
     print("\nthe connection points\n")
     check("schema is named and versioned",
@@ -79,7 +85,9 @@ def main():
     check("the join is reported by tier, not as a single number",
           all(k in join for k in ("exact_name", "distinctive_tokens",
                                   "ambiguous_exact_name",
-                                  "ambiguous_distinctive_tokens", "unlocated")))
+                                  "ambiguous_distinctive_tokens",
+                                  "ambiguous_authoritative_identity",
+                                  "rejected_shore_qualifier_conflict", "unlocated")))
     check("the join total equals the number of points",
           join["exact_name"] + join["distinctive_tokens"] + join["unlocated"]
           == len(points["connection_points"]))
@@ -87,6 +95,10 @@ def main():
           0 < join["ambiguous_exact_name"] <= join["unlocated"])
     check("ambiguous token matches fail closed inside the unlocated tier",
           0 < join["ambiguous_distinctive_tokens"] <= join["unlocated"])
+    check("an ambiguous authoritative name/voltage/owner identity fails closed",
+          0 < join["ambiguous_authoritative_identity"] <= join["unlocated"])
+    check("a mapped onshore/offshore qualifier conflict fails closed",
+          0 < join["rejected_shore_qualifier_conflict"] <= join["unlocated"])
     check("unlocated sites are published rather than dropped",
           join["unlocated"] > 0
           and sum(1 for p in points["connection_points"] if "location" not in p)
@@ -99,6 +111,28 @@ def main():
                                                 "exact_name_voltage_compatible",
                                                 "distinctive_tokens_highest_voltage")
               for p in points["connection_points"] if "location" in p))
+    check("onshore, offshore and extension remain identity-bearing",
+          normalise("Moray East Onshore") == "MORAY EAST ONSHORE"
+          and normalise("Moray East Offshore") == "MORAY EAST OFFSHORE"
+          and normalise("Arecleoch Extension") == "ARECLEOCH EXTENSION")
+    contexts = defaultdict(list)
+    for site in network["sites"]:
+        if site["voltages_kv"] and max(site["voltages_kv"]) >= points["minimum_kv"]:
+            contexts[site_join_context(site)].append(site["code"])
+    point_by_code = {p["site_code"]: p for p in points["connection_points"]}
+    check("context keys combine name, voltage and owner and fail closed on duplicates",
+          all((point_by_code[code]["join_context_key"] is not None) == (len(codes) == 1)
+              for context, codes in contexts.items() for code in codes)
+          and all("|" in p["join_context_key"]
+                  for p in points["connection_points"] if p["join_context_key"] is not None))
+    check("Thanet onshore does not lend its coordinate to Thanet offshore",
+          "location" in point_by_code["THAW"]
+          and "ONSHORE" in point_by_code["THAW"]["location"]["mapped_name"].upper()
+          and "location" not in point_by_code["THOW"])
+    check("Moray East offshore does not inherit Moray East onshore geometry",
+          "location" in point_by_code["MORO"]
+          and "ONSHORE" in point_by_code["MORO"]["location"]["mapped_name"].upper()
+          and "location" not in point_by_code["MOWE"])
     expected_metrics = {
         "three_phase_initial_peak_current_ka", "three_phase_rms_break_current_ka",
         "three_phase_dc_break_current_ka", "three_phase_peak_break_current_ka",
@@ -139,6 +173,36 @@ def main():
     check("planned change years are consistent with their count",
           all((p["planned_changes"] > 0) == bool(p["planned_change_years"])
               for p in points["connection_points"]))
+
+    # One transformer source row is one physical record.  Its two node ends
+    # remain available as winding/landing evidence, but a same-site row must
+    # contribute only once to that site's headline equipment count.
+    node_by_name = {n["node"]: n for n in network["nodes"]}
+    transformer_rows_by_site = defaultdict(set)
+    for row_index, transformer in enumerate(network["transformers"]):
+        incident_sites = {
+            node_by_name[transformer[end]]["site_code"]
+            for end in ("node_1", "node_2")
+        }
+        for site_code in incident_sites:
+            transformer_rows_by_site[site_code].add(row_index)
+    check("every site transformer headline counts distinct source rows, not node ends",
+          all(p["transformers"] == len(transformer_rows_by_site[p["site_code"]])
+              for p in points["connection_points"]))
+    cowley = point_by_code["COWL"]
+    cowley_rows = transformer_rows_by_site["COWL"]
+    cowley_windings = Counter(
+        node_by_name[transformer[end]]["voltage_kv"]
+        for row_index, transformer in enumerate(network["transformers"])
+        if row_index in cowley_rows
+        for end in ("node_1", "node_2")
+        if node_by_name[transformer[end]]["site_code"] == "COWL")
+    check("Cowley is five physical records while both voltage winding counts remain five",
+          cowley["transformers"] == 5 and len(cowley_rows) == 5
+          and cowley_windings == Counter({400: 5, 132: 5}))
+    check("the product declares its transformer count semantics",
+          "one count per published Appendix B transformer row" in
+          points.get("transformer_count_semantics", ""))
     check("the product stays browser-sized",
           os.path.getsize(os.path.join(REPO, "derived", "connection-points.v3.json")) < 3_000_000)
 

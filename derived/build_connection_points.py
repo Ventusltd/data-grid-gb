@@ -40,7 +40,10 @@ REPO = os.path.dirname(HERE)
 
 NOISE = re.compile(
     r"\b(SUBSTATION|SUB STATION|SUBSTN|GRID|SUPPLY|POINT|GSP|NATIONAL|"
-    r"POWER|STATION|WIND|FARM|WINDFARM|OFFSHORE|ONSHORE|EXTENSION|"
+    # ONSHORE, OFFSHORE and EXTENSION are identity-bearing qualifiers.  They
+    # must never be treated as presentation noise: removing them aliases
+    # physically separate sites such as MORAY EAST ONSHORE/OFFSHORE.
+    r"POWER|STATION|WIND|FARM|WINDFARM|"
     r"400KV|275KV|132KV|66KV|33KV|11KV|NGET|SSE|SP|SHE)\b")
 MINIMUM_KV = 132
 SCHEMA = "data-grid-gb.connection-points.v3"
@@ -56,6 +59,45 @@ def normalise(name):
 
 def tokens(name):
     return {t for t in normalise(name).split() if len(t) > 3}
+
+
+def shore_qualifier(name):
+    """Return the last explicit onshore/offshore qualifier, if one exists.
+
+    Mapped names sometimes contain an offshore project's name followed by
+    "onshore substation".  The last explicit qualifier describes the mapped
+    asset more specifically; treating both words as an unordered token set
+    would let the same point satisfy both authoritative sites.
+    """
+    words = re.findall(r"[A-Z0-9]+", str(name or "").upper())
+    qualifiers = [word for word in words if word in {"ONSHORE", "OFFSHORE"}]
+    return qualifiers[-1] if qualifiers else None
+
+
+def qualifier_compatible(authoritative_name, mapped_name):
+    wanted = shore_qualifier(authoritative_name)
+    mapped = shore_qualifier(mapped_name)
+    return wanted is None or mapped is None or wanted == mapped
+
+
+def site_join_context(site):
+    """Return the strongest context ETYS itself supplies for a name join.
+
+    Mapped OpenStreetMap features do not carry a trustworthy transmission
+    owner, so owner is used to distinguish authoritative ETYS identities, not
+    to force a geometry match.  A context that is still duplicated must fail
+    closed; the stable site code remains the only unambiguous identifier.
+    """
+    voltages = site.get("voltages_kv") or []
+    highest = max(voltages) if voltages else None
+    return (normalise(site.get("name")), highest,
+            str(site.get("transmission_owner") or "").upper())
+
+
+def serialise_join_context(context):
+    name, voltage, owner = context
+    voltage_text = f"{float(voltage):g}KV" if voltage is not None else "UNKNOWNKV"
+    return "|".join((name, voltage_text, owner))
 
 
 def summarise_fault_rows(rows, metric_names, scope):
@@ -116,12 +158,17 @@ def main():
             site = node_site.get(circuit[end])
             if site:
                 circuits_at[site].append(circuit)
-    transformers_at = defaultdict(int)
-    for transformer in network["transformers"]:
-        for end in ("node_1", "node_2"):
-            site = node_site.get(transformer[end])
-            if site:
-                transformers_at[site] += 1
+    # One Appendix B transformer row is one physical transformer record.  Its
+    # two node ends are windings/landings, and both commonly resolve to the
+    # same site.  Count each source row once per incident site without
+    # collapsing genuinely parallel (and sometimes byte-identical) units.
+    transformers_at = defaultdict(set)
+    for transformer_index, transformer in enumerate(network["transformers"]):
+        incident_sites = {
+            node_site.get(transformer[end]) for end in ("node_1", "node_2")
+        } - {None}
+        for site in incident_sites:
+            transformers_at[site].add(transformer_index)
     changes_at = defaultdict(list)
     for change in network["planned_changes"]:
         for end in ("node_1", "node_2"):
@@ -142,17 +189,33 @@ def main():
         if scenario.get("site_code"):
             fault_at[scenario["site_code"]].append(scenario)
 
+    eligible_sites = [
+        site for site in network["sites"]
+        if site["voltages_kv"] and max(site["voltages_kv"]) >= MINIMUM_KV
+    ]
+    context_claims = defaultdict(list)
+    for site in eligible_sites:
+        context_claims[site_join_context(site)].append(site["code"])
+
     points, joined_exact, joined_token = [], 0, 0
-    ambiguous_exact, ambiguous_token, unjoined = 0, 0, 0
-    for site in network["sites"]:
-        if not site["voltages_kv"] or max(site["voltages_kv"]) < MINIMUM_KV:
-            continue
+    ambiguous_exact, ambiguous_token = 0, 0
+    ambiguous_identity, qualifier_conflict, unjoined = 0, 0, 0
+    for site in eligible_sites:
         code = site["code"]
 
         key = normalise(site["name"])
+        context = site_join_context(site)
+        context_unique = len(context_claims[context]) == 1
         match, how = None, None
-        if key and key in mapped_exact:
-            candidates = mapped_exact[key]
+        if not context_unique:
+            # Name + highest voltage + owner still cannot tell these records
+            # apart (currently the two Erebus rows).  Never let file order pick
+            # one geometry for an ambiguous authoritative identity.
+            ambiguous_identity += 1
+        elif key and key in mapped_exact:
+            raw_candidates = mapped_exact[key]
+            candidates = [candidate for candidate in raw_candidates
+                          if qualifier_compatible(site["name"], candidate["name"])]
             highest = max(site["voltages_kv"])
             compatible = [candidate for candidate in candidates
                           if candidate["kv"] == highest]
@@ -163,13 +226,17 @@ def main():
                                            or candidates[0]["kv"] in site["voltages_kv"]):
                 match, how = candidates[0], "exact_name_voltage_compatible"
                 joined_exact += 1
+            elif not candidates and raw_candidates:
+                qualifier_conflict += 1
             else:
                 ambiguous_exact += 1
         else:
             site_tokens = tokens(site["name"])
             if site_tokens:
-                candidates = [candidate for candidate_tokens, candidate in mapped_tokens
-                              if candidate_tokens and site_tokens <= candidate_tokens]
+                raw_candidates = [candidate for candidate_tokens, candidate in mapped_tokens
+                                  if candidate_tokens and site_tokens <= candidate_tokens]
+                candidates = [candidate for candidate in raw_candidates
+                              if qualifier_compatible(site["name"], candidate["name"])]
                 highest = max(site["voltages_kv"])
                 compatible = [candidate for candidate in candidates
                               if candidate["kv"] == highest]
@@ -178,6 +245,8 @@ def main():
                     joined_token += 1
                 elif candidates:
                     ambiguous_token += 1
+                elif raw_candidates:
+                    qualifier_conflict += 1
         if not match:
             unjoined += 1
 
@@ -214,8 +283,13 @@ def main():
             "name": site["name"],
             "transmission_owner": site["transmission_owner"],
             "voltages_kv": site["voltages_kv"],
+            # The component fields already appear above.  This compact key is
+            # safe for a consumer lookup only when ETYS makes the context
+            # unique; null means callers must use site_code or fail closed.
+            "join_context_key": (
+                serialise_join_context(context) if context_unique else None),
             "circuits": len(circuits),
-            "transformers": transformers_at.get(code, 0),
+            "transformers": len(transformers_at.get(code, set())),
             "circuit_winter_rating_mva": (
                 {"min": round(min(winter)), "max": round(max(winter))} if winter else None),
             "reactive_compensation": (
@@ -256,6 +330,8 @@ def main():
             "distinctive_tokens": joined_token,
             "ambiguous_exact_name": ambiguous_exact,
             "ambiguous_distinctive_tokens": ambiguous_token,
+            "ambiguous_authoritative_identity": ambiguous_identity,
+            "rejected_shore_qualifier_conflict": qualifier_conflict,
             "unlocated": unjoined,
             "unlocated_are_published": (
                 "a site nobody has mapped is published without coordinates "
@@ -267,6 +343,13 @@ def main():
             "with_fault_current": sum(1 for p in points if p["fault_current"]),
             "with_planned_changes": sum(1 for p in points if p["planned_changes"]),
         },
+        "transformer_count_semantics": (
+            "one count per published Appendix B transformer row incident to the site; "
+            "the two winding/node ends of one row are not two physical units"),
+        "join_context_semantics": (
+            "join_context_key combines normalised name, highest published voltage and "
+            "transmission owner; null means that context is ambiguous and site_code is "
+            "required. Geometry owner tags are not trusted to force a match."),
         "connection_points": points,
     }
 
@@ -279,6 +362,8 @@ def main():
         print(f"  {key:<26} {value:>6,}")
     print(f"  join: exact {joined_exact}, tokens {joined_token}, "
           f"ambiguous exact {ambiguous_exact}, ambiguous tokens {ambiguous_token}, "
+          f"ambiguous identities {ambiguous_identity}, "
+          f"shore qualifier conflicts {qualifier_conflict}, "
           f"unlocated {unjoined}")
     return 0
 

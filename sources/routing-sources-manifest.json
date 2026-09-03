@@ -1,0 +1,153 @@
+{
+  "schema": "data-grid-gb.routing-research-sources.v1",
+  "status": "research_only_not_product_input",
+  "accessed_on": "2026-09-03",
+  "purpose": "Civil-engineering and data-method evidence for an indicative corridor-screening service.",
+  "product_boundary": "These sources do not establish a feasible or consented cable route, available capacity, a connection commitment, commercial terms or a connection date.",
+  "integrity_policy": "A sha256 value is present only where the exact referenced file was independently downloaded and hashed on 2026-09-03. The two hashed downloads were re-fetched and reproduced during Phase 0, but their source URLs remain mutable and acquisition receipts are not vendored here. null means integrity pinning is still required before the source can become an active product input.",
+  "sources": {
+    "national-grid-undergrounding-technical": {
+      "publisher": "National Grid",
+      "title": "Undergrounding high voltage electricity transmission lines: the technical issues",
+      "url": "https://www.nationalgrid.com/sites/default/files/documents/45349-Undergrounding_high_voltage_electricity_transmission_lines_The_technical_issues_INT.pdf",
+      "published": null,
+      "locators": ["pp. 5, 8-9, 11-12"],
+      "role": "General 400 kV underground-cable construction dimensions, joints, route and cost drivers",
+      "licence_use": "Cite and link as literature; do not redistribute without confirming permission.",
+      "bytes": 2277586,
+      "sha256": "d94fb2a69dc8f342938fc2afefe656882ffc7041ef28f82d78e075a58887aa67"
+    },
+    "national-grid-river-ouse-methods": {
+      "publisher": "National Grid",
+      "title": "River Ouse - Possible Installation Methods for Underground Cables",
+      "url": "https://www.nationalgrid.com/document/348826/download",
+      "published": "2023-06",
+      "locators": ["Appendix A, pp. A1-A4"],
+      "role": "Site-specific comparison of HDD, microtunnelling/pipejacking and conventional tunnelling for a 400 kV river crossing",
+      "licence_use": "Cite and link as literature; do not redistribute without confirming permission.",
+      "bytes": null,
+      "sha256": null
+    },
+    "national-grid-glaslyn-es-volume-4": {
+      "publisher": "National Grid",
+      "title": "Pentir to Trawsfynydd Reinforcement Project, Environmental Statement Volume 4: Glaslyn Cables Works",
+      "url": "https://www.nationalgrid.com/document/563931/download",
+      "published": "2025-09",
+      "locators": ["sections 2.3.35-2.3.46", "sections 2.4.7-2.4.16", "Executive Summary vii-x"],
+      "role": "Detailed GB 400 kV route, installation-method and crossing benchmark",
+      "licence_use": "Cite and link as literature; do not redistribute without confirming permission.",
+      "bytes": null,
+      "sha256": null
+    },
+    "desnz-ramboll-undergrounding-2026": {
+      "publisher": "Department for Energy Security and Net Zero",
+      "author": "Ramboll",
+      "title": "Undergrounding transmission cables: study of costs of innovative methods - literature review and cost assessment",
+      "url": "https://assets.publishing.service.gov.uk/media/6a27e1592cdcfdb7436ac131/undergrounding-transmission-cables-report.pdf",
+      "landing_page": "https://www.gov.uk/government/publications/undergrounding-transmission-cables-study-of-costs-of-innovative-methods",
+      "first_published": "2026-05-12",
+      "last_updated": "2026-06-12",
+      "locators": ["report-wide", "crossing-frequency scenario assumptions"],
+      "role": "Current UK 275/400 kV undergrounding literature and cost scenarios",
+      "licence_use": "Open Government Licence v3.0 unless the report states an exception; retain attribution.",
+      "bytes": 2884872,
+      "sha256": "e99cd8c800ae20b46f35f14c77925beb3ea107071492e90e58098d4893b1049d"
+    },
+    "iet-mott-transmission-technologies-2025": {
+      "publisher": "Institution of Engineering and Technology",
+      "author": "Mott MacDonald",
+      "title": "A comparison of electricity transmission technologies: costs and characteristics",
+      "url": "https://www.theiet.org/impact-society/sustainability-and-climate-change/iet-electricity-transmission-technologies-report",
+      "published": "2025",
+      "locators": ["whole-life cost and characteristics comparison"],
+      "role": "Technology and cost comparison; evidence against deriving cost from distance alone",
+      "licence_use": "Cite and link as literature; confirm permission before redistribution.",
+      "bytes": null,
+      "sha256": null
+    },
+    "national-grid-egl5-strategic-options": {
+      "publisher": "National Grid",
+      "title": "Strategic Options Report: Eastern Green Link 5",
+      "url": "https://www.nationalgrid.com/document/558946/download",
+      "published": "2025",
+      "locators": ["section 5.6.8", "sections 6.2.4 and 6.2.11", "option tables pp. 98-108"],
+      "role": "Strategic-option evidence for straight-line lengths with route-deviation tolerance and graded avoid/mitigate/cross treatment; not an onshore routed-versus-straight benchmark",
+      "licence_use": "Cite and link as literature; do not redistribute without confirming permission.",
+      "bytes": null,
+      "sha256": null
+    },
+    "environment-agency-fra3": {
+      "publisher": "Environment Agency",
+      "title": "FRA3: service crossings below the bed of a main river",
+      "url": "https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities/exempt-flood-risk-activities-environmental-permits#fra3-service-crossings-below-the-bed-of-a-main-river",
+      "published": null,
+      "locators": ["FRA3"],
+      "role": "England exemption conditions for certain main-river service crossings",
+      "jurisdiction": "England",
+      "licence_use": "Open Government Licence v3.0.",
+      "bytes": null,
+      "sha256": null
+    },
+    "network-rail-utilities": {
+      "publisher": "Network Rail",
+      "title": "Utilities and Infrastructure",
+      "url": "https://property.networkrail.co.uk/land-and-station-opportunities/utilities-infrastructure/",
+      "published": null,
+      "locators": ["Asset Protection", "Property Clearance", "legal agreement"],
+      "role": "Process evidence for cables on, over or under Network Rail property",
+      "jurisdiction": "Network Rail estate",
+      "licence_use": "Cite and link as guidance; confirm permission before redistribution.",
+      "bytes": null,
+      "sha256": null
+    },
+    "versleijen-cable-routing-benchmark-2026": {
+      "publisher": "Energy Informatics / Springer Nature",
+      "authors": ["Versleijen et al."],
+      "title": "An open-source benchmark of the state-of-the-art in electrical cable routing",
+      "url": "https://doi.org/10.1007/s12667-026-00827-x",
+      "implementation": "https://github.com/alliander-opensource/utility-route-planner",
+      "published": "2026",
+      "locators": ["method", "five real-world cases", "discussion and future work"],
+      "role": "Peer-reviewed least-cost-routing benchmark and reproducible implementation",
+      "licence_use": "Article: CC BY. Reference implementation: Apache-2.0; its README says it is not for production use. Pin an exact commit before reuse.",
+      "bytes": null,
+      "sha256": null
+    },
+    "pyorps": {
+      "publisher": "Open-source project",
+      "title": "PYORPS: Python for Optimal Routes in Power Systems",
+      "url": "https://github.com/marhofmann/pyorps",
+      "published": null,
+      "locators": ["README", "documentation", "CIRED 2025 citation"],
+      "role": "Rasterisation and Dijkstra/A* implementation proposed as an independent oracle candidate; this manifest does not validate it",
+      "licence_use": "MIT; verify dependency licences and pin an exact release or commit before reuse.",
+      "bytes": null,
+      "sha256": null
+    },
+    "os-open-roads": {
+      "publisher": "Ordnance Survey",
+      "title": "OS Open Roads",
+      "url": "https://www.ordnancesurvey.co.uk/products/os-open-roads",
+      "published": null,
+      "locators": ["product overview", "technical specification", "licensing"],
+      "role": "Candidate authoritative GB link-and-node road network, including classified and unclassified roads",
+      "jurisdiction": "Great Britain",
+      "identifier_caveat": "Feature identifiers are unique within a release but the technical specification says they are not persistent between versions and no change history is supplied; pin each release digest and maintain a crosswalk.",
+      "licence_use": "Open Government Licence with required Ordnance Survey attribution; verify the downloaded release terms.",
+      "bytes": null,
+      "sha256": null
+    },
+    "environment-agency-statutory-main-rivers": {
+      "publisher": "Environment Agency",
+      "title": "Statutory Main River Map",
+      "url": "https://www.data.gov.uk/dataset/4ae8ba46-f9a4-47d0-8d93-0f93eb494540/statutory-main-river-map",
+      "published": null,
+      "locators": ["dataset description", "download and licence metadata"],
+      "role": "Candidate authoritative main-river linework; does not cover ordinary watercourses or other UK jurisdictions",
+      "jurisdiction": "England",
+      "licence_use": "Open Government Licence; retain source attribution and release metadata.",
+      "bytes": null,
+      "sha256": null
+    }
+  }
+}

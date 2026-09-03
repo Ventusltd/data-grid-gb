@@ -26,7 +26,7 @@ them), each carrying what the operator publishes about it:
 | field | what it is |
 |---|---|
 | `voltages_kv` | the voltages present at that site |
-| `circuits`, `transformers` | how many meet there |
+| `circuits`, `transformers` | circuit-end landings and distinct Appendix B transformer records incident to the site; a transformer's two windings are not two physical units |
 | `circuit_winter_rating_mva` | the range of winter ratings on those circuits |
 | `reactive_compensation` | installed units and their MVAr generation / absorption |
 | `fault_current` | explicitly site-wide envelopes for all eight separately named Appendix D metrics; may combine buses and voltages |
@@ -34,9 +34,11 @@ them), each carrying what the operator publishes about it:
 | `planned_changes`, `planned_change_years` | changes already published for 2026/27 → 2033/34 |
 | `location` | coordinates, where a join to mapped geometry exists, and **how** it was matched |
 
-502 of the 886 carry coordinates. The 384 that do not are **published
-without them rather than dropped** — a consumer that needs to know a node
-exists should not be told it does not merely because nobody has mapped it.
+489 of the 886 carry mapped/joined coordinates. The 397 that do not are
+**published without them rather than dropped** — a consumer that needs to know
+a node exists should not be told it does not merely because nobody has mapped
+it. These coordinates are not published by NESO: they are separately sourced
+map geometry joined to ETYS identities, with ambiguous joins withheld.
 
 ### `derived/gb-transmission-network.v1.json` — topology and equipment parameters
 
@@ -66,11 +68,14 @@ site does not declare rather than silently correcting them.
 **ETYS names substations; it does not locate them.** Coordinates come from
 the OpenStreetMap-derived payload published with the GridAtlas release,
 joined on a normalised name and then constrained by the site's highest
-published voltage. Text equality alone is not identity: ambiguous exact or
-token matches are withheld. Every tier is counted in v3 (`exact_name` 461,
-`distinctive_tokens` 41, `ambiguous_exact_name` 25,
-`ambiguous_distinctive_tokens` 47, `unlocated` 384) and every located point
-records `matched_by`, so a consumer can decide how much to trust any join.
+published voltage. Text equality alone is not identity: `ONSHORE`, `OFFSHORE`
+and `EXTENSION` remain identity-bearing, and ambiguous identities and shore
+qualifier conflicts fail closed. Every tier is counted in v3 (`exact_name`
+450, `distinctive_tokens` 39, `ambiguous_exact_name` 14,
+`ambiguous_distinctive_tokens` 31, `ambiguous_authoritative_identity` 2,
+`rejected_shore_qualifier_conflict` 1, `unlocated` 397). Every located point
+records `matched_by`; every point carries a name + highest-voltage + owner
+context key only when that key is unique.
 
 v2 remains immutable because a deployed consumer requires its schema. It
 contains site-wide fault-current envelopes and the earlier name-only location
@@ -83,6 +88,7 @@ python pipelines/fetch_sources.py          # pull and pin the public sources
 python pipelines/build_network_model.py    # ETYS Appendix B + D -> the model
 python derived/build_connection_points.py  # -> the browser product
 python derived/verify_connection_points.py # fails closed
+python derived/verify_phase0_acceptance.py  # counts, joins, coverage and cable evidence
 ```
 
 ## Sources
@@ -94,3 +100,23 @@ fetched for reference with `--with-reference` and are not parsed.
 Substation geometry: OpenStreetMap contributors, via the GridAtlas
 release. Document ids and SHA-256 digests are recorded in
 `sources/sources-manifest.json`.
+
+## Route-screening research
+
+The proposed second-generation corridor engine is documented separately from
+the existing straight-line distance product:
+
+- [`docs/routing/LITERATURE_REVIEW.md`](docs/routing/LITERATURE_REVIEW.md) records
+  the civil-engineering evidence and exact page/section locators.
+- [`docs/routing/METHOD_AND_LIMITATIONS.md`](docs/routing/METHOD_AND_LIMITATIONS.md)
+  specifies an additive, multi-option screening service and its acceptance gates.
+- [`docs/routing/LEGACY_LAYER_AUDIT.md`](docs/routing/LEGACY_LAYER_AUDIT.md)
+  records what the v8/current Atlas layers can and cannot support.
+- [`sources/routing-sources-manifest.json`](sources/routing-sources-manifest.json)
+  records source status and integrity. It is research provenance, not an active
+  product-input manifest.
+
+These documents do not turn a displayed corridor into an engineered cable
+route. They preserve the existing straight-line measurement as the baseline
+and explicitly do not infer feasibility, consent, commitment, capacity,
+connection date, construction method, or cost.
