@@ -62,9 +62,9 @@
    },
    "7": {
     "33": 3,
-    "20": 2,
     "132": 2,
-    "25": 2
+    "25": 2,
+    "20": 2
    }
   },
   "nodes_whose_voltage_is_not_declared_by_their_site": 726
