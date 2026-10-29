@@ -29,15 +29,7 @@
 #     -f domain=all -f include_unverified=false
 name: Fetch the asset sources (manual)
 
-# Temporary, issue #73: regenerate the *existing pinned offline baseline* on a
-# dedicated review branch; remove this push trigger before merging the repair.
 on:
-  push:
-    branches: [fix/dc-73-operator-separation-20261029]
-    paths:
-      - 'datacentres/lanes/dc-a4-osm-wikidata/dc_a4.py'
-      - 'datacentres/lanes/dc-a7-merge/dcmerge.py'
-      - 'datacentres/lanes/dc-a7-merge/test_dcmerge.py'
   workflow_dispatch:
     inputs:
       domain:
@@ -67,46 +59,11 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: asset-fetch-${{ github.event_name }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  group: asset-fetch
+  cancel-in-progress: false
 
 jobs:
-  repair-offline-baseline:
-    if: github.event_name == 'push'
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: pip install -r requirements.txt
-      - name: Rebuild only pinned open sources, with no live network-source fetches
-        run: |
-          set -euo pipefail
-          python pipelines/run_lanes.py inputs all
-          python pipelines/run_lanes.py build datacentres
-          python pipelines/run_lanes.py manifest datacentres
-          python pipelines/run_lanes.py selftest datacentres
-          python ci/verify.py
-          ASSETS_REQUIRE_DEPS=1 ASSETS_REQUIRE_INPUTS=1 python reproduce.py check
-          python -m unittest discover -s tests -v
-      - name: Commit the reproducible corrected baseline back to the review branch only
-        run: |
-          set -euo pipefail
-          git add -A -- datacentres/
-          if git diff --cached --quiet; then
-            echo 'Already byte-for-byte reproducible; no commit needed'
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Rebuild pinned data-centre baseline after operator separation (#73)'
-          git push origin "HEAD:${GITHUB_REF_NAME}"
   fetch:
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     env:
