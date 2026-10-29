@@ -4,6 +4,8 @@ from __future__ import annotations
 import hashlib
 import io
 import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import urllib.request
 from openpyxl import load_workbook
 URL = "https://assets.publishing.service.gov.uk/media/6a6a365b0ddb7e4831c629f3/DUKES_5.11.xlsx"
