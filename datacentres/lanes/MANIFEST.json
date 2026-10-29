@@ -96,24 +96,24 @@
           "sha256": "263ab7d44d0a2b293a6f0e3f1db44d189675b1f3e2a9c439f1da9b596184d532"
         },
         "dcmerge.py": {
-          "bytes": 22067,
-          "sha256": "5e9b3b2b2b983511c77d94cca42b5f816677fc3bdf80b58de32e100b08077c03"
+          "bytes": 22575,
+          "sha256": "95e4a08b9622ebb8bca983d39088d528a64b658c6bc90836172733ae0bc36182"
         },
         "dcschema.py": {
           "bytes": 8604,
           "sha256": "1c4cde998c127527aa3e2b228cad81c766fe3471aba3776f52032a3de4a43592"
         },
         "out/uk_datacentre_pipeline.geojson": {
-          "bytes": 446550,
-          "sha256": "87337db5d3bf7959f7f605d3abd029dd4196ab24a79107ceb95210c5b7751654"
+          "bytes": 447511,
+          "sha256": "176c1b2e894943618c1dd866b3a96c9f3e00bcded8c6e88a5263b0048ae22d89"
         },
         "out/uk_datacentre_pipeline.rejects.json": {
           "bytes": 2117,
           "sha256": "dcf72c035d23de7bfb63449450211d575351145a6e61dc3acae1dd7764ab211f"
         },
         "test_dcmerge.py": {
-          "bytes": 26186,
-          "sha256": "1a0ee5337188638008ede94e42ba976fc95308d515042f4d30735a7fcb24e7bb"
+          "bytes": 28105,
+          "sha256": "bd1ae38e1efb7e97910b2d97fefd2798790863476f6b1768cb62755d9550f7b7"
         }
       }
     }
