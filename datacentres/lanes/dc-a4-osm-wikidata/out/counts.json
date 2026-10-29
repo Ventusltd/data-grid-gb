@@ -8,18 +8,18 @@
   "wikidata_items": 0,
   "wikidata_without_coords": 0
  },
- "sites_total": 190,
+ "sites_total": 212,
  "sites_by_kind": {
   "cable_landing_station": 12,
-  "data_centre": 149,
-  "data_centre_campus": 29
+  "data_centre": 182,
+  "data_centre_campus": 18
  },
- "operational_data_centre_sites_excl_cable_landing": 178,
- "duplicates_merged": 50,
+ "operational_data_centre_sites_excl_cable_landing": 200,
+ "duplicates_merged": 28,
  "sites_multi_source": 0,
- "sites_with_conflicts": 15,
- "sites_with_name": 159,
- "sites_with_operator": 145,
+ "sites_with_conflicts": 11,
+ "sites_with_name": 165,
+ "sites_with_operator": 146,
  "sites_with_it_load_mw": 0,
  "sites_with_grid_connection_mw": 0,
  "sites_with_unclassified_mw": 0,
@@ -29,7 +29,7 @@
   "cross_source_radius_m": 500
  },
  "outputs": {
-  "dc_operational.json": "506f0b9a71c0a8cb99c8b2eef154da27d015b3d8b479734d5a01c7992a073b9a",
-  "dc_operational.geojson": "654da80acfb2224c1b959b8b512bef0fae81cc4d214ebc3fe73140cfc9664cf0"
+  "dc_operational.json": "6628e707d4e60b68744aba9bbaf4dee8b9fd16a58879de2536dc2eb2d2c494c4",
+  "dc_operational.geojson": "0d8318ed94bfb2acd828c93c67e58d13bd886c45533d7e19a535a4e93ef4c2c8"
  }
 }

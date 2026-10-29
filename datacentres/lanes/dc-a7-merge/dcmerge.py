@@ -123,8 +123,9 @@ def operator_match(a, b):
     na, nb = norm_operator(a), norm_operator(b)
     if not na or not nb:
         return None  # unknown
-    sa, sb = set(na.split()), set(nb.split())
-    return sa == sb or sa <= sb or sb <= sa
+    # Subset matching is unsafe: Digital Realty must not match Global Digital
+    # Realty simply because both share words. Remove corporate suffixes only.
+    return na == nb
 
 
 def haversine_km(lat1, lon1, lat2, lon2):
@@ -232,6 +233,10 @@ def compare(a, b):
     pa, pb = _point(a), _point(b)
     dist = round(haversine_km(pa[0], pa[1], pb[0], pb[1]), 4) if pa and pb else None
     same_source = bool(rec_datasets(a) & rec_datasets(b))
+    # Hard guard BEFORE planning refs, connection refs or shared URLs. Even a
+    # shared government document can name unrelated operators at nearby sites.
+    if operator_match(a.get("operator"), b.get("operator")) is False:
+        return None
     if plan_keys(a) & plan_keys(b):
         return "planning_ref", sim, dist
     if conn_keys(a) & conn_keys(b):
@@ -258,6 +263,9 @@ def cannot_link(a, b):
     """Hard separation regardless of other links (prevents transitive chaining)."""
     pa, pb = _point(a), _point(b)
     dist = haversine_km(pa[0], pa[1], pb[0], pb[1]) if pa and pb else None
+    # This is cluster-wide: no transitive bridge through an unknown-operator record.
+    if operator_match(a.get("operator"), b.get("operator")) is False:
+        return True
     if plan_keys(a) & plan_keys(b) or conn_keys(a) & conn_keys(b) or url_link(a, b, dist):
         return False
     da, db = designators(a.get("name")), designators(b.get("name"))

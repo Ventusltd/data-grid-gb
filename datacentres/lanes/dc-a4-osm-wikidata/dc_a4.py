@@ -209,16 +209,46 @@ def wd_records(raw_path, retrieved):
 
 # ---------------------------------------------------------------- de-duplication
 def op_compatible(a, b):
-    return a is None or b is None or norm(a) == norm(b) or bool(tokens(a) & tokens(b))
+    """Known operators require exact canonical identity: a shared token is not an identity."""
+    if not a or not b:
+        return False
+    suffixes = {"ltd", "limited", "plc", "llp", "llc", "inc", "the", "uk"}
+    canon = lambda v: " ".join(t for t in norm(v).split() if t not in suffixes)
+    return bool(canon(a) and canon(a) == canon(b))
+
+
+def site_compatible(members, incoming):
+    """Never bridge different known operators, including across an unknown intermediate.
+    An unknown operator supplies no authority to merge nearby *different named sites*.
+    """
+    for prev in members:
+        a, b = prev.get("operator"), incoming.get("operator")
+        if a and b:
+            if not op_compatible(a, b):
+                return False
+        elif not (prev.get("name") and incoming.get("name")
+                  and norm(prev["name"]) == norm(incoming["name"])):
+            return False
+    return True
+
+
+def assert_single_operator(sites):
+    """Fail closed: a site containing distinct known operators is invalid, not a conflict to hide."""
+    for s in sites:
+        ops = [m["operator"] for m in s["members"] if m.get("operator")]
+        if any(not op_compatible(ops[0], x) for x in ops[1:]):
+            raise ValueError("cross-operator data-centre merge: " + repr(ops))
+
 
 def group_osm(recs):
-    """Greedy, deterministic (sorted by sid): attach to the first site whose seed is within SITE_RADIUS_M and whose
-    operator is compatible (same rule as ot_filter.py step 4, so legacy grouping is comparable with the overlay)."""
+    """Group only colocated records compatible with *every* member of the site.
+    Absence of an operator is not permission to join different named facilities.
+    """
     sites = []
     for r in sorted(recs, key=lambda r: (r["src"], r["sid"] if r["src"] == "osm" else int(r["sid"].rsplit("-", 1)[1]))):
         g = None
         for s in sites:
-            if hav_m((s["lon"], s["lat"]), (r["lon"], r["lat"])) <= SITE_RADIUS_M and op_compatible(s["operator"], r["operator"]):
+            if hav_m((s["lon"], s["lat"]), (r["lon"], r["lat"])) <= SITE_RADIUS_M and site_compatible(s["members"], r):
                 g = s; break
         if g is None:
             sites.append(dict(lon=r["lon"], lat=r["lat"], name=r["name"], operator=r["operator"], members=[r]))
@@ -226,6 +256,7 @@ def group_osm(recs):
             g["members"].append(r)
             if g["name"] is None and r["name"]: g["name"] = r["name"]
             if g["operator"] is None and r["operator"]: g["operator"] = r["operator"]
+    assert_single_operator(sites)
     return sites
 
 def match_wikidata(sites, wds):
@@ -238,11 +269,14 @@ def match_wikidata(sites, wds):
         for s in sites:
             d = hav_m((s["lon"], s["lat"]), (w["lon"], w["lat"]))
             if d > XSRC_RADIUS_M: continue
+            if not site_compatible(s["members"], w):
+                continue
             names = {x["name"] for x in s["members"] if x["name"]} | {x["operator"] for x in s["members"] if x["operator"]}
             ok = any(tokens(n) & (tokens(w["name"]) | tokens(w["operator"])) for n in names)
             if ok and (best is None or d < best[0]): best = (d, s)
         if best: best[1]["members"].append(dict(w, match_distance_m=round(best[0], 1)))
         else: added.append(dict(lon=w["lon"], lat=w["lat"], name=w["name"], operator=w["operator"], members=[w]))
+    assert_single_operator(sites + added)
     return sites + added, unplaced
 
 
@@ -427,6 +461,28 @@ def selftest(a):
     assert sum(1 for r in R if r["site_kind"] == "cable_landing_station") == 1
     assert not any(r["lat"] < 49 for r in R)                                      # out-of-UK dropped
     assert len(d["wikidata_unplaced"]) == 1 and len(R) == 4
+    # Same 250 m, different operators: never one site, even through an unknown member.
+    sl = [
+        dict(src="osm_legacy", sid="gg2050-dc-133", name="Digital Realty LHR26",
+             operator="Digital Realty", lon=-0.617916, lat=51.516456),
+        dict(src="osm_legacy", sid="gg2050-dc-237", name="Global Technical Realty London GB One",
+             operator="Global Technical Realty", lon=-0.618361, lat=51.517670),
+        dict(src="osm_legacy", sid="gg2050-dc-135", name="Digital Realty LHR27",
+             operator="Digital Realty", lon=-0.618850, lat=51.516715),
+        dict(src="osm_legacy", sid="gg2050-dc-193", name="China Mobile Slough",
+             operator=None, lon=-0.628276, lat=51.519482),
+        dict(src="osm_legacy", sid="gg2050-dc-231", name="VIRTUS London 11",
+             operator=None, lon=-0.626252, lat=51.518958),
+    ]
+    sg = group_osm(sl)
+    assert len(sg) == 4, [(x["name"], [r["name"] for r in x["members"]]) for x in sg]
+    assert all(not ({"Digital Realty", "Global Technical Realty"} <=
+                    {r.get("operator") for r in x["members"]}) for x in sg)
+    assert all(not ({"China Mobile Slough", "VIRTUS London 11"} <=
+                    {r.get("name") for r in x["members"]}) for x in sg)
+    assert not op_compatible("Digital Realty", "Global Technical Realty")
+    assert op_compatible("Equinix (UK) Ltd", "EQUINIX")
+
     h = sha256_file(os.path.join(t, "out", "dc_operational.json")); build(ns)
     assert h == sha256_file(os.path.join(t, "out", "dc_operational.json")), "not deterministic"
     print("SELFTEST OK", t); return 0
