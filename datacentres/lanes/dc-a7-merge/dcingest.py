@@ -73,7 +73,7 @@ PRECISION_MAP = {
 IT_KEYS = ["it_load_mw", "it_mw", "it_capacity_mw", "critical_it_mw", "it_load"]
 GRID_KEYS = ["grid_connection_mw", "connection_mw", "grid_mw", "import_capacity_mw", "tec_mw",
              "connection_capacity_mw", "mw_connection", "demand_mw", "max_import_mw"]
-UNCL_KEYS = ["unclassified_mw", "mw_unclassified", "mw", "capacity_mw", "capacity", "power_mw", "size_mw"]
+UNCL_KEYS = ["unclassified_mw", "mw_unclassified", "other_mw", "mw", "capacity_mw", "capacity", "power_mw", "size_mw"]
 
 
 def _get(d, keys):
@@ -255,6 +255,7 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
         if ref is None:
             ref = hashlib.sha256(json.dumps([raw, s], sort_keys=True, default=str).encode()).hexdigest()[:12]
         lic_url = s.get("licence_url") or s.get("license_url") or r.get("licence_url") or \
+            (lic_raw.get("url") if isinstance(lic_raw, dict) else None) or \
             meta.get("licence_url") or meta.get("license_url") or LICENCE_URLS[lic]
         status_v = s.get("licence_status") or r.get("licence_status") or meta.get("licence_status")
         sha = s.get("sha256") or s.get("snapshot_sha256") or r.get("sha256") or meta.get("sha256")
@@ -277,8 +278,16 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
         if n is None or n < 0 or n > 10000:
             return {"value": None, "source_id": None, "label": None}
         s = _mw_src(v)
+        first = v
+        if isinstance(v, list):
+            first = next((x for x in v if isinstance(x, dict) and _num(x.get("mw", x.get("value"))) is not None), {})
+        extra = ()
+        if isinstance(first, dict):
+            q = first.get("quote") or first.get("raw")
+            extra = (first.get("measure") or first.get("property"), first.get("qualifier"),
+                     q and "quote: \"%s\"" % q, first.get("evidence_url"))
         label = " | ".join(str(x) for x in (k, r.get(k + "_basis"), r.get(k + "_direction") and
-                                            "direction: %s" % r.get(k + "_direction")) if x)
+                                            "direction: %s" % r.get(k + "_direction")) + extra if x)
         return {"value": n, "source_id": s if s in {x["id"] for x in srcs} else sid, "label": label}
 
     it = mw(IT_KEYS)
@@ -294,13 +303,20 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
         prec = "unknown"
     elif prec in (None, "unknown"):
         prec = "exact_site" if geom and geom.get("type") in ("Polygon", "MultiPolygon") else "settlement"
+    member_names = {str(x.get("name")) for x in (src_in or []) if isinstance(x, dict) and x.get("name")}
+    notes = r.get("notes") if isinstance(r.get("notes"), list) else [r["notes"]] if r.get("notes") else []
+    for k in ("status_basis", "screening_note"):
+        if r.get(k):
+            notes.append("%s: %s" % (k, r[k]))
+    for c in r.get("conflicts") or []:  # lane-level flags kept verbatim as notes
+        notes.append("lane flag: " + json.dumps(c, sort_keys=True, ensure_ascii=False))
     dates_in = r.get("dates") if isinstance(r.get("dates"), dict) else {}
     dates = {}
     aliases = {"announced": ["announced", "announced_date", "date_announced"],
                "planning_submitted": ["planning_submitted", "submitted", "application_date", "received"],
                "consented": ["consented", "decision_date", "consent_date", "approved"],
                "construction_start": ["construction_start"],
-               "operational": ["operational", "operational_date", "opened", "commissioned"],
+               "operational": ["operational", "operational_date", "opened", "commissioned", "launched"],
                "connection_date": ["connection_date", "mw_effective_from", "connection_year"]}
     for f, keys in aliases.items():
         v, _ = _get({**r, **dates_in}, keys)
@@ -309,13 +325,16 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
     if not dates["operational"] and norm_status(status_raw) == "operational":
         # OSM start_date on an existing facility = when it came into use
         dates["operational"] = norm_date(_get({**r, **dates_in}, ["start_date"])[0])
-    member_names = {str(x.get("name")) for x in (src_in or []) if isinstance(x, dict) and x.get("name")}
-    notes = r.get("notes") if isinstance(r.get("notes"), list) else [r["notes"]] if r.get("notes") else []
-    for k in ("status_basis", "screening_note"):
+    st_norm = norm_status(status_raw)
+    if not dates["consented"] and st_norm == "consented":
+        dates["consented"] = norm_date(_get({**r, **dates_in}, ["decision"])[0])
+    used = {k for ks in aliases.values() for k in ks} | {"start_date", "decision"}
+    for k, v in sorted(dates_in.items()):
+        if v and (k not in used or (k == "decision" and st_norm != "consented")):
+            notes.append("lane date %s: %s" % (k, v))
+    for k in ("status_note", "status_as_of", "coordinates_source", "location_note", "place"):
         if r.get(k):
             notes.append("%s: %s" % (k, r[k]))
-    for c in r.get("conflicts") or []:  # lane-level flags kept verbatim as notes
-        notes.append("lane flag: " + json.dumps(c, sort_keys=True, ensure_ascii=False))
     prefs = []
     for p in r.get("planning_refs") or []:
         if isinstance(p, dict) and p.get("authority") and p.get("reference"):

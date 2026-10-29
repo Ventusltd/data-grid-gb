@@ -93,6 +93,7 @@ not committed; they are recorded as URL and SHA-256 and downloaded by
 | dc-a1-neso | NESO TEC + Embedded rows, data-centre-like; grid connection MW only | `fetch_neso.py --out out` | (one step with fetch) |
 | dc-a3-gov | GOV.UK-published sites | `gov_sites.py fetch --verify` (snapshots and re-checks every quote) | `gov_sites.py build` |
 | dc-a4-osm-wikidata | operational sites mapped in OSM, matched to Wikidata | `dc_a4.py fetch-osm`, `fetch-wikidata` | `dc_a4.py build` (falls back to the pinned globalgrid2050 snapshot) |
+| dc-a5-dno | DNO embedded capacity register name candidates; grid connection MW only (licence unverified) | `dno_fetch.py --out out` | (one step with fetch) |
 | dc-a7-merge | merged pipeline: de-duplication, provenance, conflicts | none | `dcingest.py` over the lanes above |
 | dc-a6 (conventional) | conventional power assets | none (DUKES 5.11 is snapshotted by the native track) | `build_conventional.py` |
 
@@ -282,9 +283,9 @@ The workflow can only be dispatched once this file is on the default branch, `ma
   - every other native fetcher is a placeholder.
 - **Vendored lanes:**
   - DC-A3, DC-A4, DC-A6 and DC-A7 are present;
-  - DC-A1 is present, and its licence is unverified;
-  - DC-A2 (planning) and DC-A5 (DNO registers) had not delivered a script when this
-    was written.
+  - DC-A1 (NESO) and DC-A5 (DNO registers) are present, and their licences are
+    unverified;
+  - DC-A2 (planning) had not delivered a script when this was written.
 - **Licences:** a licence marked `unverified` stays unverified until someone quotes
   the exact terms with their URL. See `datacentres/NOTICE` and
   `conventional/NOTICE`.

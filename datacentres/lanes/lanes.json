@@ -117,6 +117,34 @@
       ]
     },
     {
+      "id": "dc-a5-dno",
+      "lane": "DC-A5",
+      "title": "DNO embedded capacity registers and queues: data-centre name candidates (grid connection MW only)",
+      "open": "unverified",
+      "licence": "per source: SSEN ECR CC BY 4.0 (verified); NGED Open Data Licence (OGL v3-derived, current text unverified); Northern Powergrid Open Data Licence v1.0 (text unread)",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "SSEN Distribution (CC BY 4.0); Supported by NGED/WPD Open Data; Northern Powergrid",
+      "fetch": [
+        [
+          "dno_fetch.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [],
+      "selftest": [
+        [
+          "dno_fetch.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/dno_ecr_dc_candidates.geojson",
+        "out/manifest.json"
+      ],
+      "notes": "An ECR name match is a candidate, not a confirmed data centre; ECR scope is generation, storage and DSR >= 50 kW, so absence says nothing. Import capacity is a grid connection figure, never IT load. Marked unverified as a lane because NGED and NPg licence texts are not yet quoted; split per DNO once they are. Login-gated sources (UKPN, ENWL, SPEN) are never run here."
+    },
+    {
       "id": "dc-a7-merge",
       "lane": "DC-A7",
       "title": "Merged UK data-centre pipeline (schema, de-duplication, conflicts)",
@@ -132,6 +160,7 @@
           "../dc-a1-neso/out",
           "../dc-a3-gov",
           "../dc-a4-osm-wikidata/out",
+          "../dc-a5-dno/out",
           "--out",
           "out/uk_datacentre_pipeline.geojson"
         ]

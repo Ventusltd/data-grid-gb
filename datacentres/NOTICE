@@ -63,5 +63,12 @@ dc-a3-gov (DC-A3)  GOV.UK, gov.scot and gov.wales pages: OGL v3.0 ("All content 
 dc-a4-osm-wikidata (DC-A4)  © OpenStreetMap contributors, ODbL 1.0 (share-alike), and
   Wikidata, CC0 1.0. The fallback snapshot raw/gg2050_datacentres.geojson is OSM-derived
   (Ventusltd/globalgrid2050 datacentres.geojson, sha256 a686a2e0...c73acab4), ODbL.
+dc-a5-dno (DC-A5)  DNO embedded capacity registers and queue files. SSEN ECR: CC BY 4.0,
+  verified on https://data-api.ssen.co.uk/dataset/embedded_capacity_register . NGED:
+  "NGED/WPD Open Data Licence", whose Dec 2020 text is based on OGL v3.0, with the
+  attribution "Supported by WPD Open Data"; the current text is unverified. Northern
+  Powergrid Open Data Licence v1.0: text not read. The lane is UNVERIFIED as a whole, so
+  its outputs fail ci/verify.py until each DNO's licence is quoted. Login-gated portals
+  (UKPN, ENWL, SPEN) are never fetched.
 dc-a7-merge (DC-A7)  Merge of the lanes above; each record keeps its sources' licences.
   The merged database is ODbL wherever an OSM source contributes.

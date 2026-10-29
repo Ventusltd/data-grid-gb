@@ -9,6 +9,7 @@
 #   DC-A1 fetch_neso.py   NESO TEC + Embedded registers  (licence unverified: only with include_unverified)
 #   DC-A3 gov_sites.py    GOV.UK / gov.scot / gov.wales pages behind each record, quotes re-checked
 #   DC-A4 dc_a4.py        Overpass + Wikidata SPARQL
+#   DC-A5 dno_fetch.py    DNO ECRs and queues: SSEN, NGED, NPg (licence unverified: only with include_unverified)
 # then rebuilds every lane offline (DC-A3, DC-A4, DC-A6, then the DC-A7 merge),
 # verifies, reproduces, commits raw snapshots + outputs with their sha256 pins
 # to a NEW branch and opens a draft pull request with the diff summary. It
@@ -37,7 +38,7 @@ on:
         type: choice
         options: [all, datacentres, conventional]
       include_unverified:
-        description: 'also run sources whose licence is unverified (NESO DC-A1); the PR is then marked do-not-merge'
+        description: 'also run sources whose licence is unverified (NESO DC-A1, DNO DC-A5); the PR is then marked do-not-merge'
         required: false
         default: false
         type: boolean
