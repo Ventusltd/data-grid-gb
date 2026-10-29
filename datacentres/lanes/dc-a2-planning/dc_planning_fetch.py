@@ -120,7 +120,8 @@ S35_SEED = [
         "lpa": "Buckinghamshire", "applicant": "Slough Holdings UK Limited",
         "route": "NSIP s35 direction", "stage_raw": "Pre-application (application expected Jan 2027)",
         "status": "in planning",
-        "it_load_mw": 300.0, "generation_mw": None, "mw_unqualified": None,
+        "it_load_mw": 300.0, "grid_connection_mw": None, "facility_power_mw": None,
+        "generation_mw": None, "mw_unqualified": None,
         "mw_note": "PINS page: IT load up to c.300MW; on-site gas energy centre c.250-350MW "
                    "generating capacity; gas connection up to c.900MW (gas, not electrical grid)",
         "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110030",
@@ -130,16 +131,22 @@ S35_SEED = [
         "reference": "s35-2026-06-15-questpit", "name": "Data Centre Campus, Ampthill Road, Bedford",
         "lpa": "Central Bedfordshire", "applicant": "QuestPit Limited",
         "route": "NSIP s35 direction (15 Jun 2026)", "stage_raw": "s35 direction granted",
-        "status": "in planning", "it_load_mw": None, "generation_mw": None, "mw_unqualified": None,
-        "mw_note": "MW not read (request statement PDF not parsed)",
+        "status": "in planning", "it_load_mw": 720.0, "grid_connection_mw": 200.0,
+        "facility_power_mw": None, "generation_mw": None, "mw_unqualified": None,
+        "mw_note": "Request statement s4.4.1 '1GW AI ready data centre (720MW IT load)' (Volterra s3.4: "
+                   "'indicative and subject to revision'); s5.3 'an initial connection of 200MW'",
+        "evidence_url_2": "https://assets.publishing.service.gov.uk/media/6a2fc930c39255c595b5084f/Request_Statement_on_behalf_of_Questpit_Limited.pdf",
         "evidence_url": "https://www.gov.uk/government/publications/data-centre-campus-ampthill-road-bedford-in-central-bedfordshire-section-35-direction-planning-act-2008",
     },
     {
-        "reference": "s35-2026-07-01-cse52", "name": "Data Centre Campus, New Barn Road, Dartford",
+        "reference": "s35-2026-07-01-cse52", "name": "Ebbsfleet Datacentre Campus, New Barn Road, Dartford",
         "lpa": "Dartford", "applicant": "CSE52 Limited",
         "route": "NSIP s35 direction (1 Jul 2026)", "stage_raw": "s35 direction granted",
-        "status": "in planning", "it_load_mw": None, "generation_mw": None, "mw_unqualified": None,
-        "mw_note": "MW not read (supporting statement PDF not parsed)",
+        "status": "in planning", "it_load_mw": 240.0, "grid_connection_mw": None,
+        "facility_power_mw": 300.0, "generation_mw": None, "mw_unqualified": None,
+        "mw_note": "Response to additional information request: 'total power load of up to 300MW', "
+                   "'IT load of up to 240MW'; total power load is facility demand, not a grid connection figure",
+        "evidence_url_2": "https://assets.publishing.service.gov.uk/media/6a451766e50f952c9b89e2aa/Response_to_additional_information_request.pdf",
         "evidence_url": "https://www.gov.uk/government/publications/data-centre-campus-new-barn-road-dartford-section-35-direction-planning-act-2008",
     },
 ]
@@ -405,7 +412,7 @@ def run(args):
                         "operator": None, "applicant": None,
                         "status": status, "status_raw": " | ".join(x for x in n["status_raw"] if x) or None,
                         "route": "NSIP" if src["adapter"] in ("pins", "pdgu_nsip") else "TCPA",
-                        "it_load_mw": it, "grid_connection_mw": grid,
+                        "it_load_mw": it, "grid_connection_mw": grid, "facility_power_mw": None,
                         "onsite_generation_mw": gen, "mw_unqualified": unq,
                         "mw_evidence": snips or None,
                         "date_received": n["date_received"] or None, "date_decided": n["date_decided"] or None,
@@ -426,17 +433,18 @@ def run(args):
     for s in S35_SEED:
         seed_counts["candidates"] += 1
         seed_counts["by_status"][s["status"]] = seed_counts["by_status"].get(s["status"], 0) + 1
-        seed_counts["with_any_mw"] += s["it_load_mw"] is not None
+        seed_counts["with_any_mw"] += any(s[k] is not None for k in ("it_load_mw", "grid_connection_mw", "facility_power_mw"))
         features.append({"type": "Feature", "geometry": None, "properties": {
             "id": "dc-a2:s35:" + s["reference"], "name": s["name"], "operator": None,
             "applicant": s["applicant"], "status": s["status"], "status_raw": s["stage_raw"],
-            "route": s["route"], "it_load_mw": s["it_load_mw"], "grid_connection_mw": None,
+            "route": s["route"], "it_load_mw": s["it_load_mw"], "grid_connection_mw": s["grid_connection_mw"],
+            "facility_power_mw": s["facility_power_mw"],
             "onsite_generation_mw": s["generation_mw"], "mw_unqualified": s["mw_unqualified"],
             "mw_evidence": [s["mw_note"]], "date_received": None, "date_decided": None,
             "organisation": s["lpa"], "address": None, "description": None, "keywords": ["data centre"],
             "use_classes": [], "match": "s35-direction", "location_precision": "named site (no coordinates)",
             "source": "s35-seed", "licence": OGL3[0], "licence_url": OGL3[1],
-            "evidence_url": s["evidence_url"]}})
+            "evidence_url": s["evidence_url"], "evidence_url_2": s.get("evidence_url_2")}})
     counts["s35-seed"] = seed_counts
     manifest["sources"].append({"id": "s35-seed", "title": "Data-centre s35 directions (hand-curated from gov.uk / PINS pages)",
                                 "fetch": "curated", "licence": OGL3[0], "licence_url": OGL3[1],

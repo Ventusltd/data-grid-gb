@@ -73,7 +73,7 @@ PRECISION_MAP = {
 IT_KEYS = ["it_load_mw", "it_mw", "it_capacity_mw", "critical_it_mw", "it_load"]
 GRID_KEYS = ["grid_connection_mw", "connection_mw", "grid_mw", "import_capacity_mw", "tec_mw",
              "connection_capacity_mw", "mw_connection", "demand_mw", "max_import_mw"]
-UNCL_KEYS = ["unclassified_mw", "mw_unclassified", "other_mw", "mw", "capacity_mw", "capacity", "power_mw", "size_mw"]
+UNCL_KEYS = ["unclassified_mw", "mw_unclassified", "other_mw", "mw_unqualified", "facility_power_mw", "mw", "capacity_mw", "capacity", "power_mw", "size_mw"]
 
 
 def _get(d, keys):
@@ -310,6 +310,9 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
             notes.append("%s: %s" % (k, r[k]))
     for c in r.get("conflicts") or []:  # lane-level flags kept verbatim as notes
         notes.append("lane flag: " + json.dumps(c, sort_keys=True, ensure_ascii=False))
+    for k in ("mw_evidence", "onsite_generation_mw", "stated_targets"):  # context only; never an IT or grid figure
+        if r.get(k):
+            notes.append("%s: %s" % (k, json.dumps(r[k], ensure_ascii=False)))
     dates_in = r.get("dates") if isinstance(r.get("dates"), dict) else {}
     dates = {}
     aliases = {"announced": ["announced", "announced_date", "date_announced"],
@@ -332,7 +335,8 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
     for k, v in sorted(dates_in.items()):
         if v and (k not in used or (k == "decision" and st_norm != "consented")):
             notes.append("lane date %s: %s" % (k, v))
-    for k in ("status_note", "status_as_of", "coordinates_source", "location_note", "place"):
+    for k in ("status_note", "status_raw", "status_as_of", "coordinates_source", "location_note", "place", "route",
+              "operator_basis"):
         if r.get(k):
             notes.append("%s: %s" % (k, r[k]))
     prefs = []
@@ -364,6 +368,10 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
                      "local_authority": loc_in.get("local_authority") or r.get("local_authority") or r.get("la"),
                      "postcode": loc_in.get("postcode") or r.get("postcode")},
         "planning_refs": prefs, "connection_refs": sorted(set(conns)),
+        "evidence_urls": sorted({str(u) for u in ([r.get("evidence_url"), r.get("evidence_url_2")]
+                                                  + list(r.get("evidence_urls") or [])
+                                                  + [x.get("evidence_url") for x in (src_in or []) if isinstance(x, dict)])
+                                 if isinstance(u, str) and u.startswith(("http://", "https://"))}),
         "sources": srcs, "conflicts": [],
         "notes": sorted({str(n) for n in notes}),
     }

@@ -35,8 +35,9 @@ THRESHOLD_KM = {"exact_site": 0.5, "address": 1.0, "planning_site": 1.0, "postco
 NAME_SIM_STRONG = 0.85
 NAME_SIM_WEAK = 0.50
 NAME_SIM_SAME_SOURCE = 0.95
-RULE_RANK = {"planning_ref": 0, "connection_ref": 1, "name_distance": 2,
-             "operator_distance": 3, "name_operator_exact": 4}
+RULE_RANK = {"planning_ref": 0, "connection_ref": 1, "evidence_document": 2, "name_distance": 3,
+             "operator_distance": 4, "name_operator_exact": 5}
+URL_KEY_MAX_RECORDS = 2  # a URL is a site key only if at most this many input records cite it
 DATE_FIELDS = ["announced", "planning_submitted", "consented", "construction_start",
                "operational", "connection_date"]
 MW_FIELDS = ["it_load_mw", "grid_connection_mw", "unclassified_mw"]
@@ -176,6 +177,47 @@ def conn_keys(r):
     return {"conn:%s" % norm_ref(c) for c in r.get("connection_refs") or []}
 
 
+def norm_url(u):
+    u = (u or "").strip().split("#")[0].split("?")[0].rstrip("/")
+    return re.sub(r"^https?://(www\.)?", "", u).lower()
+
+
+def raw_url_keys(r):
+    """Candidate document URLs: specific paths only (>= 2 path segments)."""
+    out = set()
+    for u in list(r.get("evidence_urls") or []) + [s.get("url") for s in r["sources"]]:
+        n = norm_url(u)
+        if n.count("/") >= 2:
+            out.add("url:" + n)
+    return out
+
+
+_URL_OK = None  # set by merge(): URL keys cited by <= URL_KEY_MAX_RECORDS input records
+
+
+def url_keys(r):
+    ks = raw_url_keys(r)
+    return ks & _URL_OK if _URL_OK is not None else set()
+
+
+URL_MAX_KM = 25.0
+
+
+def _lanes(r):
+    return {s.get("lane") for s in r["sources"]}
+
+
+def url_link(a, b, dist):
+    """Shared document URL counts only across DIFFERENT lanes (a lane has already de-duplicated
+    itself, so two of its records citing one press release are two sites), and never when both
+    points are placed (finer than region) more than URL_MAX_KM apart."""
+    if not (url_keys(a) & url_keys(b)) or (_lanes(a) & _lanes(b)):
+        return False
+    if dist is not None and dist > URL_MAX_KM and THRESHOLD_KM[coarser(_precision(a), _precision(b))] is not None:
+        return False
+    return True
+
+
 def geo_key(r):
     pt = _point(r)
     lat = "%.3f" % pt[0] if pt else "na"
@@ -194,6 +236,8 @@ def compare(a, b):
         return "planning_ref", sim, dist
     if conn_keys(a) & conn_keys(b):
         return "connection_ref", sim, dist
+    if url_link(a, b, dist):
+        return "evidence_document", sim, dist
     da, db = designators(a.get("name")), designators(b.get("name"))
     if da and db and da != db:
         return None
@@ -212,7 +256,9 @@ def compare(a, b):
 
 def cannot_link(a, b):
     """Hard separation regardless of other links (prevents transitive chaining)."""
-    if plan_keys(a) & plan_keys(b) or conn_keys(a) & conn_keys(b):
+    pa, pb = _point(a), _point(b)
+    dist = haversine_km(pa[0], pa[1], pb[0], pb[1]) if pa and pb else None
+    if plan_keys(a) & plan_keys(b) or conn_keys(a) & conn_keys(b) or url_link(a, b, dist):
         return False
     da, db = designators(a.get("name")), designators(b.get("name"))
     if da and db and da != db:
@@ -227,7 +273,7 @@ def candidate_pairs(recs):
     pairs = set()
     index = {}
     for i, r in enumerate(recs):
-        keys = set(plan_keys(r)) | set(conn_keys(r))
+        keys = set(plan_keys(r)) | set(conn_keys(r)) | url_keys(r)
         nm = norm_name(r.get("name"))
         if nm:
             keys.add("name:" + nm)
@@ -421,6 +467,7 @@ def merge_group(recs, links):
             prefs.setdefault(k, {"authority": p["authority"], "reference": p["reference"], "url": p.get("url")})
     out["planning_refs"] = [prefs[k] for k in sorted(prefs)]
     out["connection_refs"] = sorted({c for r in recs for c in r.get("connection_refs") or []})
+    out["evidence_urls"] = sorted({u for r in recs for u in r.get("evidence_urls") or []})
 
     # same-source duplicates (two records of one dataset merged by reference)
     by_ds = {}  # dataset -> ids of the INPUT records from it (a lane's own multi-member site counts once)
@@ -458,7 +505,13 @@ def _canon(obj):
 
 def merge(records):
     """records -> merged records sorted by id. Input order does not matter."""
+    global _URL_OK
     recs = sorted(records, key=rec_key)
+    freq = {}
+    for r in recs:
+        for k in raw_url_keys(r):
+            freq[k] = freq.get(k, 0) + 1
+    _URL_OK = {k for k, n in freq.items() if n <= URL_KEY_MAX_RECORDS}
     out = []
     for idxs, links in cluster(recs):
         group = [recs[i] for i in idxs]
@@ -479,7 +532,7 @@ def merge(records):
 
 FIELD_ORDER = ["id", "site_key", "name", "aliases", "operator", "status", "status_source_id",
                "it_load_mw", "grid_connection_mw", "unclassified_mw", "dates", "location",
-               "planning_refs", "connection_refs", "sources", "conflicts", "match", "notes"]
+               "planning_refs", "connection_refs", "evidence_urls", "sources", "conflicts", "match", "notes"]
 
 
 def _ordered_record(m):

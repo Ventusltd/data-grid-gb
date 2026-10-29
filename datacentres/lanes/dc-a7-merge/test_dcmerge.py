@@ -236,6 +236,42 @@ class MergeTests(unittest.TestCase):
             self.assertFalse("Equinix LD4" in names and "Equinix LD5" in names)
 
 
+class EvidenceUrlTests(unittest.TestCase):
+    def test_shared_document_url_merges(self):
+        doc = "https://assets.publishing.service.gov.uk/media/abc/Request_Statement.pdf"
+        a = mk("DC-A2", "s35-seed", "1", "Data Centre Campus, Ampthill Road, Bedford", operator="QuestPit Limited")
+        a["evidence_urls"] = [doc]
+        b = mk("DC-A3", "MHCLG", "2", "QuestPit data centre campus", 52.09, -0.49, precision="settlement", it=720)
+        b["evidence_urls"] = [doc, "https://www.gov.uk/government/collections/ai-growth-zones"]
+        out = dcmerge.merge([a, b])
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["match"][0]["rule"], "evidence_document")
+        self.assertEqual(dcschema.validate(out[0]), [])
+
+    def test_same_lane_shared_press_release_does_not_merge(self):
+        pr = "https://www.gov.uk/government/news/some-release"
+        a = mk("DC-A3", "DSIT", "1", "CloudHQ Didcot", 51.61, -1.24, precision="settlement", operator="CloudHQ")
+        b = mk("DC-A3", "DSIT", "2", "QTS Cambois", 55.15, -1.53, precision="settlement", operator="QTS")
+        a["evidence_urls"] = b["evidence_urls"] = [pr]
+        self.assertEqual(len(dcmerge.merge([a, b])), 2)
+
+    def test_shared_url_far_apart_does_not_merge(self):
+        pr = "https://www.gov.uk/government/news/some-release"
+        a = mk("DC-A3", "DSIT", "1", "Nscale Loughton", 51.65, 0.07, precision="settlement")
+        b = mk("DC-A4", "osm", "2", "Culham Campus", 51.66, -1.23)
+        a["evidence_urls"] = b["evidence_urls"] = [pr]
+        self.assertEqual(len(dcmerge.merge([a, b])), 2)
+
+    def test_widely_cited_url_is_not_a_key(self):
+        coll = "https://www.gov.uk/government/collections/ai-growth-zones"
+        recs = []
+        for i, nm in enumerate(["North", "South", "East"]):
+            r = mk("DC-A3", "DSIT", str(i), nm + " Zone", 51 + i, -1.0, precision="region")
+            r["evidence_urls"] = [coll]
+            recs.append(r)
+        self.assertEqual(len(dcmerge.merge(recs)), 3)
+
+
 class ConflictTests(unittest.TestCase):
     def test_mw_disagreement_within_field_only(self):
         a = mk("DC-A2", "NESO TEC register", "t1", "Delta DC", 51.5, -1.0, grid=100, conn=["T1"])
