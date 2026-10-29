@@ -271,6 +271,16 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
             "sha256": sha,
         })
     sid = srcs[0]["id"]
+    member_names = {str(x.get("name")) for x in (src_in or []) if isinstance(x, dict) and x.get("name")}
+    notes = r.get("notes") if isinstance(r.get("notes"), list) else [r["notes"]] if r.get("notes") else []
+    for k in ("status_basis", "screening_note"):
+        if r.get(k):
+            notes.append("%s: %s" % (k, r[k]))
+    for c in r.get("conflicts") or []:  # lane-level flags kept verbatim as notes
+        notes.append("lane flag: " + json.dumps(c, sort_keys=True, ensure_ascii=False))
+    for k in ("mw_evidence", "onsite_generation_mw", "stated_targets"):  # context only; never an IT or grid figure
+        if r.get(k):
+            notes.append("%s: %s" % (k, json.dumps(r[k], ensure_ascii=False)))
 
     def mw(keys):
         v, k = _get(r, keys)
@@ -290,6 +300,12 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
                                             "direction: %s" % r.get(k + "_direction")) + extra if x)
         return {"value": n, "source_id": s if s in {x["id"] for x in srcs} else sid, "label": label}
 
+    for k in ("other_mw", "mw_unclassified"):  # on-site generation / gas is not site demand: notes only
+        if isinstance(r.get(k), list):
+            gen = [x for x in r[k] if isinstance(x, dict) and re.search(r"generat|\bgas\b|export", str(x.get("measure") or x.get("property") or ""), re.I)]
+            if gen:
+                r = dict(r, **{k: [x for x in r[k] if x not in gen]})
+                notes.append("%s excluded (generation, not demand): %s" % (k, json.dumps(gen, ensure_ascii=False)))
     it = mw(IT_KEYS)
     grid = mw(GRID_KEYS)
     uncl = mw(UNCL_KEYS)
@@ -303,16 +319,6 @@ def normalise(raw, geom, meta, fid, lane, fname, file_sha):
         prec = "unknown"
     elif prec in (None, "unknown"):
         prec = "exact_site" if geom and geom.get("type") in ("Polygon", "MultiPolygon") else "settlement"
-    member_names = {str(x.get("name")) for x in (src_in or []) if isinstance(x, dict) and x.get("name")}
-    notes = r.get("notes") if isinstance(r.get("notes"), list) else [r["notes"]] if r.get("notes") else []
-    for k in ("status_basis", "screening_note"):
-        if r.get(k):
-            notes.append("%s: %s" % (k, r[k]))
-    for c in r.get("conflicts") or []:  # lane-level flags kept verbatim as notes
-        notes.append("lane flag: " + json.dumps(c, sort_keys=True, ensure_ascii=False))
-    for k in ("mw_evidence", "onsite_generation_mw", "stated_targets"):  # context only; never an IT or grid figure
-        if r.get(k):
-            notes.append("%s: %s" % (k, json.dumps(r[k], ensure_ascii=False)))
     dates_in = r.get("dates") if isinstance(r.get("dates"), dict) else {}
     dates = {}
     aliases = {"announced": ["announced", "announced_date", "date_announced"],
