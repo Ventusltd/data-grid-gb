@@ -1,0 +1,81 @@
+data-grid-gb / datacentres: third-party data terms
+===================================================
+
+Code in this folder is Apache-2.0, as for the rest of the repository (see the root
+LICENSE and NOTICE, added by PR #1). The DATA keeps its publishers' terms, listed
+here per source id in sources.json. Only sources marked open: "yes" are fetched by
+default or published under normalised/. Quotes are short extracts; the URL is the
+authority. "unverified" means the exact file's terms have not yet been quoted.
+
+osm-datacentres  (open: yes)
+  OpenStreetMap contributors. Open Database Licence 1.0.
+  https://opendatacommons.org/licenses/odbl/1-0/  and  https://www.openstreetmap.org/copyright
+  "OpenStreetMap® is open data, licensed under the Open Data Commons Open Database
+  License (ODbL) by the OpenStreetMap Foundation (OSMF)."
+  Attribution: © OpenStreetMap contributors. SHARE-ALIKE: a database that republishes
+  or merges these records is an ODbL database.
+
+wikidata-datacentres  (open: yes)
+  Wikidata contributors. CC0 1.0.
+  https://www.wikidata.org/wiki/Wikidata:Licensing
+  "All structured data from the main, Property, Lexeme, and EntitySchema namespaces
+  is available under the Creative Commons CC0 License".
+  https://creativecommons.org/publicdomain/zero/1.0/
+
+planning-data-gov-uk  (open: unverified)
+  MHCLG, planning.data.gov.uk. Platform data is described as OGL v3; each dataset
+  states its own licence and some local-authority datasets differ. Not fetched or
+  published until the licence of each dataset used is quoted here.
+  https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+neso-connections  (open: unverified)
+  NESO data portal, NESO Open Data Licence. Terms to be quoted against the exact
+  register files before use.
+  https://www.neso.energy/data-portal/neso-open-licence  (URL unverified)
+  If confirmed, attribution: "Supported by National Energy SO Open Data".
+
+dno-ecr  (open: unverified)
+  GB DNO embedded capacity registers. Each DNO publishes under its own terms; mark
+  each DNO separately before use.
+
+dsit-ai-growth-zones  (open: unverified)
+  DSIT announcements on GOV.UK. GOV.UK content is OGL v3 "except where otherwise
+  stated"; the specific pages must be checked. Gives localities, not sites.
+  https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+local-planning-portals  (open: no)
+  Portal terms restrict reuse. May appear as an evidence URL on a record from an
+  open source; never scraped.
+
+company-disclosures  (open: no)
+  Publisher copyright. May appear as an evidence URL; never a source of records.
+
+Vendored lanes (datacentres/lanes/, see lanes.json)
+----------------------------------------------------
+dc-a1-neso (DC-A1)  NESO TEC + Embedded registers. NESO Open Data Licence, described by
+  NESO as "based on version 3.0 of the Open Government Licence with specific amendments
+  for NESO"; attribution "Supported by National Energy SO Open Data".
+  https://www.neso.energy/data-portal/neso-open-licence . Marked UNVERIFIED until the
+  owner confirms the amendments keep it fully open; its outputs fail ci/verify.py until then.
+dc-a2-planning (DC-A2)  planning.data.gov.uk (planning-application, infrastructure-project),
+  the Planning Inspectorate NSIP download, and LPA open feeds (Camden, Adur, Worthing,
+  Doncaster via digital-land). OGL v3.0: planning.data.gov.uk dataset pages say
+  "Licensed under the Open Government Licence v.3.0"; the PINS footer says "All content is
+  available under the Open Government Licence v3.0, except where otherwise stated". The
+  Camden, Adur and Worthing feeds are recorded as ogl3 in digital-land's source register;
+  their own publisher pages were not re-read.
+dc-a3-gov (DC-A3)  GOV.UK, gov.scot and gov.wales pages: OGL v3.0 ("All content is
+  available under the Open Government Licence v3.0, except where otherwise stated").
+  Per-record licence notes mark the domains not yet checked as unverified.
+dc-a4-osm-wikidata (DC-A4)  © OpenStreetMap contributors, ODbL 1.0 (share-alike), and
+  Wikidata, CC0 1.0. The fallback snapshot raw/gg2050_datacentres.geojson is OSM-derived
+  (Ventusltd/globalgrid2050 datacentres.geojson, sha256 a686a2e0...c73acab4), ODbL.
+dc-a5-dno (DC-A5)  DNO embedded capacity registers and queue files. SSEN ECR: CC BY 4.0,
+  verified on https://data-api.ssen.co.uk/dataset/embedded_capacity_register . NGED:
+  "NGED/WPD Open Data Licence", whose Dec 2020 text is based on OGL v3.0, with the
+  attribution "Supported by WPD Open Data"; the current text is unverified. Northern
+  Powergrid Open Data Licence v1.0: text not read. The lane is UNVERIFIED as a whole, so
+  its outputs fail ci/verify.py until each DNO's licence is quoted. Login-gated portals
+  (UKPN, ENWL, SPEN) are never fetched.
+dc-a7-merge (DC-A7)  Merge of the lanes above; each record keeps its sources' licences.
+  The merged database is ODbL wherever an OSM source contributes.

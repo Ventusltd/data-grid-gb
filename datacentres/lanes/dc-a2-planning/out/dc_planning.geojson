@@ -1,0 +1,116 @@
+{
+ "features": [
+  {
+   "geometry": null,
+   "properties": {
+    "address": null,
+    "applicant": "Slough Holdings UK Limited",
+    "date_decided": null,
+    "date_received": null,
+    "description": null,
+    "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110030",
+    "evidence_url_2": "https://www.gov.uk/government/publications/data-centre-campus-wapseys-wood-buckinghamshire-section-35-direction-planning-act-2008",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:s35:EN0110030",
+    "it_load_mw": 300.0,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "named site (no coordinates)",
+    "match": "s35-direction",
+    "mw_evidence": [
+     "PINS page: IT load up to c.300MW; on-site gas energy centre c.250-350MW generating capacity; gas connection up to c.900MW (gas, not electrical grid)"
+    ],
+    "mw_unqualified": null,
+    "name": "SDC M40 Campus (Wapseys Wood)",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "Buckinghamshire",
+    "route": "NSIP s35 direction",
+    "source": "s35-seed",
+    "status": "in planning",
+    "status_raw": "Pre-application (application expected Jan 2027)",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
+    "address": null,
+    "applicant": "QuestPit Limited",
+    "date_decided": null,
+    "date_received": null,
+    "description": null,
+    "evidence_url": "https://www.gov.uk/government/publications/data-centre-campus-ampthill-road-bedford-in-central-bedfordshire-section-35-direction-planning-act-2008",
+    "evidence_url_2": "https://assets.publishing.service.gov.uk/media/6a2fc930c39255c595b5084f/Request_Statement_on_behalf_of_Questpit_Limited.pdf",
+    "facility_power_mw": null,
+    "grid_connection_mw": 200.0,
+    "id": "dc-a2:s35:s35-2026-06-15-questpit",
+    "it_load_mw": 720.0,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "named site (no coordinates)",
+    "match": "s35-direction",
+    "mw_evidence": [
+     "Request statement s4.4.1 '1GW AI ready data centre (720MW IT load)' (Volterra s3.4: 'indicative and subject to revision'); s5.3 'an initial connection of 200MW'"
+    ],
+    "mw_unqualified": null,
+    "name": "Data Centre Campus, Ampthill Road, Bedford",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "Central Bedfordshire",
+    "route": "NSIP s35 direction (15 Jun 2026)",
+    "source": "s35-seed",
+    "status": "in planning",
+    "status_raw": "s35 direction granted",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
+    "address": null,
+    "applicant": "CSE52 Limited",
+    "date_decided": null,
+    "date_received": null,
+    "description": null,
+    "evidence_url": "https://www.gov.uk/government/publications/data-centre-campus-new-barn-road-dartford-section-35-direction-planning-act-2008",
+    "evidence_url_2": "https://assets.publishing.service.gov.uk/media/6a451766e50f952c9b89e2aa/Response_to_additional_information_request.pdf",
+    "facility_power_mw": 300.0,
+    "grid_connection_mw": null,
+    "id": "dc-a2:s35:s35-2026-07-01-cse52",
+    "it_load_mw": 240.0,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "named site (no coordinates)",
+    "match": "s35-direction",
+    "mw_evidence": [
+     "Response to additional information request: 'total power load of up to 300MW', 'IT load of up to 240MW'; total power load is facility demand, not a grid connection figure"
+    ],
+    "mw_unqualified": null,
+    "name": "Ebbsfleet Datacentre Campus, New Barn Road, Dartford",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "Dartford",
+    "route": "NSIP s35 direction (1 Jul 2026)",
+    "source": "s35-seed",
+    "status": "in planning",
+    "status_raw": "s35 direction granted",
+    "use_classes": []
+   },
+   "type": "Feature"
+  }
+ ],
+ "type": "FeatureCollection"
+}

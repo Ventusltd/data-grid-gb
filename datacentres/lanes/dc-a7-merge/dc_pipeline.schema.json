@@ -1,0 +1,449 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ventusltd/gridatlas/issues/73/dc_pipeline.schema.json",
+  "title": "UK data-centre pipeline record (GridAtlas #73 step 3)",
+  "description": "One data-centre site or pipeline entry. IT load MW and grid connection MW are separate fields and are never derived from each other. null means unknown, never zero. A pipeline entry is not a commitment; a location is not a connection.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "aliases",
+    "operator",
+    "status",
+    "it_load_mw",
+    "grid_connection_mw",
+    "unclassified_mw",
+    "dates",
+    "location",
+    "planning_refs",
+    "connection_refs",
+    "sources",
+    "conflicts"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^dcuk-[0-9a-f]{16}$",
+      "description": "Stable id: 'dcuk-' + first 16 hex of SHA-256 of the canonical site key (see site_key)."
+    },
+    "site_key": {
+      "type": "string",
+      "description": "Canonical site key the id hashes: plan:<authority>:<ref> | conn:<ref> | geo:<name>|<operator>|<lat3>|<lon3>."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "operator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "$ref": "#/$defs/status"
+    },
+    "status_source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "it_load_mw": {
+      "$ref": "#/$defs/mw"
+    },
+    "grid_connection_mw": {
+      "$ref": "#/$defs/mw"
+    },
+    "unclassified_mw": {
+      "description": "A MW figure a source gives without saying whether it is IT load or grid connection. Kept apart so it is never conflated with either.",
+      "$ref": "#/$defs/mw"
+    },
+    "dates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "announced",
+        "planning_submitted",
+        "consented",
+        "construction_start",
+        "operational",
+        "connection_date"
+      ],
+      "properties": {
+        "announced": {
+          "$ref": "#/$defs/date"
+        },
+        "planning_submitted": {
+          "$ref": "#/$defs/date"
+        },
+        "consented": {
+          "$ref": "#/$defs/date"
+        },
+        "construction_start": {
+          "$ref": "#/$defs/date"
+        },
+        "operational": {
+          "$ref": "#/$defs/date"
+        },
+        "connection_date": {
+          "$ref": "#/$defs/date"
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lat",
+        "lon",
+        "precision",
+        "source_id"
+      ],
+      "properties": {
+        "lat": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 49.0,
+          "maximum": 61.5
+        },
+        "lon": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -9.0,
+          "maximum": 2.5
+        },
+        "precision": {
+          "$ref": "#/$defs/precision"
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local_authority": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "postcode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "planning_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "authority",
+          "reference"
+        ],
+        "properties": {
+          "authority": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "connection_refs": {
+      "type": "array",
+      "description": "System-operator or DNO queue/register references (e.g. NESO TEC/queue project ids).",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_urls": {
+      "type": "array",
+      "description": "Document-level evidence URLs (decision letters, register pages). A URL shared by at most two input records is a matching key.",
+      "items": {
+        "type": "string",
+        "pattern": "^https?://"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/conflict"
+      }
+    },
+    "match": {
+      "type": "array",
+      "description": "Merge provenance: which member records were joined and by which rule.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "a",
+          "b",
+          "rule"
+        ],
+        "properties": {
+          "a": {
+            "type": "string"
+          },
+          "b": {
+            "type": "string"
+          },
+          "rule": {
+            "type": "string"
+          },
+          "name_similarity": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "distance_km": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "operational",
+        "under_construction",
+        "consented",
+        "in_planning",
+        "connection_request",
+        "announced",
+        "refused_or_withdrawn",
+        "unknown"
+      ]
+    },
+    "precision": {
+      "type": "string",
+      "description": "How exact the point is. Drives the dedupe distance threshold.",
+      "enum": [
+        "exact_site",
+        "address",
+        "planning_site",
+        "postcode",
+        "settlement",
+        "local_authority",
+        "region",
+        "unknown"
+      ]
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$",
+      "description": "ISO 8601 date, year, or year-month. null = unknown."
+    },
+    "mw": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "source_id"
+      ],
+      "description": "value null = unknown (not zero). When value is set, source_id must be set (checked by the validator).",
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The source's own wording, quoted."
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "dataset",
+        "url",
+        "licence",
+        "licence_url",
+        "licence_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "<lane>:<dataset>:<record_ref>"
+        },
+        "lane": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dataset": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "licence": {
+          "type": "string",
+          "enum": [
+            "OGL-UK-3.0",
+            "CC-BY-4.0",
+            "CC-BY-3.0",
+            "CC0-1.0",
+            "PDDL-1.0",
+            "public-domain",
+            "ODbL-1.0",
+            "Open-Parliament-Licence-3.0",
+            "NESO-Open-Data-Licence"
+          ],
+          "description": "Fully open licences only (owner rule, #73). NESO-Open-Data-Licence is OGL v3-derived (commercial use, attribution); its equivalence is unverified, so records under it carry licence_status 'unverified'."
+        },
+        "licence_url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "licence_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "unverified"
+          ]
+        },
+        "attribution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved": {
+          "$ref": "#/$defs/date"
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "conflict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field",
+        "kind",
+        "values"
+      ],
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "mw_disagreement",
+            "status_disagreement",
+            "operator_disagreement",
+            "date_disagreement",
+            "location_disagreement",
+            "same_source_duplicate"
+          ]
+        },
+        "values": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "source_id"
+            ],
+            "properties": {
+              "value": {},
+              "source_id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "chosen": {},
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

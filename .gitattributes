@@ -1,3 +1,6 @@
 * text=auto eol=lf
 *.xlsx binary
 *.pdf binary
+# Pinned snapshots and outputs are byte-exact (sha256): never convert line endings.
+datacentres/** -text
+conventional/** -text

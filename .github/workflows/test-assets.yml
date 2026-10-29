@@ -1,0 +1,83 @@
+# Tests for the data-centre and conventional-generation pipelines.
+#
+# Two legs, as in Ventusltd/lightning's test workflow: "requirements" installs
+# requirements.txt (openpyxl, for spreadsheet sources such as DUKES 5.11) and may
+# not skip a dependency test; "bare" proves that fetch, verify and reproduce need
+# nothing beyond the standard library.
+name: Test the asset pipelines
+
+on:
+  push:
+    paths:
+      - 'assetpipe/**'
+      - 'datacentres/**'
+      - 'conventional/**'
+      - 'pipelines/fetch_assets.py'
+      - 'pipelines/run_lanes.py'
+      - 'ci/**'
+      - 'reproduce.py'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/test-assets.yml'
+      - '.github/workflows/fetch-assets.yml'
+  pull_request:
+    paths:
+      - 'assetpipe/**'
+      - 'datacentres/**'
+      - 'conventional/**'
+      - 'pipelines/fetch_assets.py'
+      - 'pipelines/run_lanes.py'
+      - 'ci/**'
+      - 'reproduce.py'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/test-assets.yml'
+      - '.github/workflows/fetch-assets.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (${{ matrix.deps }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        deps: [requirements, bare]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install requirements.txt
+        if: matrix.deps == 'requirements'
+        run: pip install -r requirements.txt
+      - name: Static check (undefined names)
+        run: |
+          pip install pyflakes==3.2.0
+          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py pipelines/run_lanes.py datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
+          if grep -E "undefined name|referenced before assignment|unable to detect undefined names" "$RUNNER_TEMP/pyflakes.txt"; then
+            echo "::error::pyflakes found an undefined name"
+            exit 1
+          fi
+      - name: Unit tests
+        env:
+          ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+        run: python -m unittest discover -s tests -v
+      - name: Verify the committed data (fails closed; no unverified-licence lane outputs)
+        run: python ci/verify.py
+      - name: Lane self-tests (synthetic fixtures, no network)
+        run: python pipelines/run_lanes.py selftest
+      # The DC-A6 build reads three large pinned inputs that are not committed
+      # (url + sha256 in conventional/lanes/lanes.json). They come from GitHub
+      # itself, so this leg can rebuild DC-A6 and must not skip it.
+      - name: Download pinned lane inputs
+        if: matrix.deps == 'requirements'
+        run: python pipelines/run_lanes.py inputs
+      - name: Reproduce from the committed raw snapshots and rebuild every open lane
+        env:
+          ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+          ASSETS_REQUIRE_INPUTS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+        run: python reproduce.py check --json "$RUNNER_TEMP/reproduction.json"

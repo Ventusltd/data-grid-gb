@@ -1,0 +1,40 @@
+{
+ "generation": "DC-A6-202610292000",
+ "features": 301,
+ "excluded_repd": 58,
+ "by_fuel_status": {
+  "biomass|operational": 3,
+  "biomass|unknown": 2,
+  "coal|closed": 6,
+  "gas|closed": 2,
+  "gas|converted": 1,
+  "gas|operational": 41,
+  "gas|unknown": 54,
+  "nuclear|closed": 3,
+  "nuclear|closing": 4,
+  "nuclear|construction": 1,
+  "nuclear|operational": 1,
+  "oil|operational": 9,
+  "oil|unknown": 2,
+  "unstated|operational": 167,
+  "waste|operational": 5
+ },
+ "technology": {
+  "CCGT": 23,
+  "CHP": 19,
+  "CHP (fuel not stated)": 11,
+  "EfW": 5,
+  "OCGT/gas engines (coal units closed 2023)": 1,
+  "biomass steam": 5,
+  "coal steam": 6,
+  "gas (CCGT/OCGT/engines not stated)": 28,
+  "gas (type not stated)": 1,
+  "nuclear (AGR)": 7,
+  "nuclear (EPR, under construction)": 1,
+  "nuclear (PWR)": 1,
+  "oil (GT/engine/diesel split not stated)": 11,
+  "peaking/reserve (engines or OCGT; fuel not stated)": 77,
+  "peaking/reserve (engines or OCGT; type not stated)": 26,
+  "thermal (fuel and type not stated)": 79
+ }
+}

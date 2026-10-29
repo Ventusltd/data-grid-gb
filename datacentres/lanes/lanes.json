@@ -1,0 +1,216 @@
+{
+  "schema": "gb-asset-lanes.v1",
+  "domain": "datacentres",
+  "about": "Lane scripts vendored from GridAtlas #73 work lanes, run as they were delivered (each in its own schema). pipelines/run_lanes.py runs them; ci/verify.py pins every file; reproduce.py rebuilds the deterministic ones.",
+  "lanes": [
+    {
+      "id": "dc-a1-neso",
+      "lane": "DC-A1",
+      "title": "NESO TEC and Embedded registers: data-centre-like rows (grid connection MW only)",
+      "open": "unverified",
+      "licence": "NESO Open Data Licence (OGL v3-derived; owner to confirm)",
+      "licence_url": "https://www.neso.energy/data-portal/neso-open-licence",
+      "attribution": "Supported by National Energy SO Open Data",
+      "fetch": [
+        [
+          "fetch_neso.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [],
+      "selftest": [
+        [
+          "fetch_neso.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/neso_connections.normalised.json",
+        "out/neso_dc_like.normalised.json",
+        "out/neso_dc_like.geojson",
+        "out/counts.json",
+        "out/manifest.json"
+      ],
+      "notes": "Fetch and normalise are one step. TEC and Embedded hold generation, so expect few or no data-centre rows; a miss is 'not identified', not zero. The EA register (--include-ea) is left off: licence unverified."
+    },
+    {
+      "id": "dc-a2-planning",
+      "lane": "DC-A2",
+      "title": "Planning applications and NSIPs that name data centres (planning.data.gov.uk, PINS, LPA open feeds)",
+      "open": "yes",
+      "licence": "OGL-3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0 (MHCLG planning.data.gov.uk; Planning Inspectorate; Camden, Adur, Worthing and Doncaster councils via digital-land)",
+      "fetch": [
+        [
+          "dc_planning_fetch.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [
+        [
+          "dc_planning_fetch.py",
+          "--out",
+          "out",
+          "--offline"
+        ]
+      ],
+      "selftest": [
+        [
+          "dc_planning_fetch.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/dc_planning.geojson",
+        "out/manifest.json"
+      ],
+      "notes": "A keyword hit is a CANDIDATE, not a data centre. MW only where the text states it; IT, grid and on-site generation kept apart; an unqualified MW goes to mw_unqualified. The Camden, Adur and Worthing feeds rely on digital-land's licence register (ogl3); their publisher pages were not re-read (DC-A2). The build re-reads the raw snapshots offline, so a failed fetch never shrinks the output."
+    },
+    {
+      "id": "dc-a3-gov",
+      "lane": "DC-A3",
+      "title": "Government-published data-centre sites (AI Growth Zones, s35 directions, recovered appeals)",
+      "open": "yes",
+      "licence": "OGL-3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0",
+      "fetch": [
+        [
+          "gov_sites.py",
+          "fetch",
+          "--verify"
+        ]
+      ],
+      "build": [
+        [
+          "gov_sites.py",
+          "build"
+        ]
+      ],
+      "outputs": [
+        "gov_sites.json",
+        "gov_sites.geojson"
+      ],
+      "notes": "Records are curated from cited GOV.UK, gov.scot and gov.wales pages; fetch snapshots every cited page and checks each quote still appears. Some cited domains are marked unverified per record."
+    },
+    {
+      "id": "dc-a4-osm-wikidata",
+      "lane": "DC-A4",
+      "title": "Operational data centres mapped in OpenStreetMap, matched to Wikidata",
+      "open": "yes",
+      "licence": "ODbL-1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors (ODbL); Wikidata (CC0)",
+      "fetch": [
+        [
+          "dc_a4.py",
+          "fetch-osm",
+          "--raw",
+          "raw",
+          "--retrieved",
+          "{today}"
+        ],
+        [
+          "dc_a4.py",
+          "fetch-wikidata",
+          "--raw",
+          "raw",
+          "--retrieved",
+          "{today}"
+        ]
+      ],
+      "build": [
+        [
+          "dc_a4.py",
+          "build",
+          "--raw",
+          "raw",
+          "--out",
+          "out",
+          "--legacy",
+          "raw/gg2050_datacentres.geojson",
+          "--retrieved",
+          "{retrieved}"
+        ]
+      ],
+      "outputs": [
+        "out/dc_operational.json",
+        "out/dc_operational.geojson",
+        "out/counts.json"
+      ],
+      "notes": "Without a live Overpass snapshot the build falls back to the pinned globalgrid2050 datacentres.geojson (240 points, name and operator only).",
+      "selftest": [
+        [
+          "dc_a4.py",
+          "selftest",
+          "--out",
+          "{tmp}"
+        ]
+      ]
+    },
+    {
+      "id": "dc-a5-dno",
+      "lane": "DC-A5",
+      "title": "DNO embedded capacity registers and queues: data-centre name candidates (grid connection MW only)",
+      "open": "unverified",
+      "licence": "per source: SSEN ECR CC BY 4.0 (verified); NGED Open Data Licence (OGL v3-derived, current text unverified); Northern Powergrid Open Data Licence v1.0 (text unread)",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "SSEN Distribution (CC BY 4.0); Supported by NGED/WPD Open Data; Northern Powergrid",
+      "fetch": [
+        [
+          "dno_fetch.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [],
+      "selftest": [
+        [
+          "dno_fetch.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/dno_ecr_dc_candidates.geojson",
+        "out/manifest.json"
+      ],
+      "notes": "An ECR name match is a candidate, not a confirmed data centre; ECR scope is generation, storage and DSR >= 50 kW, so absence says nothing. Import capacity is a grid connection figure, never IT load. Marked unverified as a lane because NGED and NPg licence texts are not yet quoted; split per DNO once they are. Login-gated sources (UKPN, ENWL, SPEN) are never run here."
+    },
+    {
+      "id": "dc-a7-merge",
+      "lane": "DC-A7",
+      "title": "Merged UK data-centre pipeline (schema, de-duplication, conflicts)",
+      "open": "yes",
+      "licence": "per record (ODbL-1.0 where any OSM source contributes)",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "See each record's sources[]",
+      "fetch": [],
+      "build": [
+        [
+          "dcingest.py",
+          "--lanes",
+          "../dc-a1-neso/out",
+          "../dc-a2-planning/out",
+          "../dc-a3-gov",
+          "../dc-a4-osm-wikidata/out",
+          "../dc-a5-dno/out",
+          "--out",
+          "out/uk_datacentre_pipeline.geojson"
+        ]
+      ],
+      "selftest": [
+        [
+          "test_dcmerge.py"
+        ]
+      ],
+      "outputs": [
+        "out/uk_datacentre_pipeline.geojson",
+        "out/uk_datacentre_pipeline.rejects.json"
+      ],
+      "notes": "Runs after the other lanes. Rejects any record without a fully open licence, a URL or a name."
+    }
+  ]
+}
