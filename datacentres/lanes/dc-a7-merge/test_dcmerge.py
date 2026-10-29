@@ -122,6 +122,7 @@ class NormaliserTests(unittest.TestCase):
     def test_operator_match(self):
         self.assertTrue(dcmerge.operator_match("Equinix (UK) Ltd", "EQUINIX"))
         self.assertFalse(dcmerge.operator_match("Equinix", "Digital Realty"))
+        self.assertFalse(dcmerge.operator_match("Digital Realty", "Global Digital Realty"))
         self.assertIsNone(dcmerge.operator_match(None, "Equinix"))
 
     def test_designators(self):
@@ -151,6 +152,38 @@ class NormaliserTests(unittest.TestCase):
 
 
 class MergeTests(unittest.TestCase):
+    def test_cross_operator_name_and_location_never_merge(self):
+        a = mk("DC-A4", "osm", "133", "Digital Realty LHR26", 51.516456, -0.617916,
+               operator="Digital Realty")
+        b = mk("DC-A3", "wikidata", "237", "Digital Realty LHR26", 51.517670, -0.618361,
+               operator="Global Technical Realty")
+        self.assertEqual(len(dcmerge.merge([a, b])), 2)
+
+    def test_cross_operator_shared_document_and_ref_never_merge(self):
+        url = "https://assets.publishing.service.gov.uk/media/abcd/shared.pdf"
+        a = mk("DC-A2", "planning", "1", "Slough Campus", 51.517, -0.618,
+               operator="Digital Realty", plan=[("Slough", "P/999")])
+        b = mk("DC-A3", "government", "2", "Slough Campus", 51.517, -0.618,
+               operator="Global Technical Realty", plan=[("Slough", "P/999")])
+        a["evidence_urls"] = [url]
+        b["evidence_urls"] = [url]
+        a["connection_refs"] = b["connection_refs"] = ["same-ref"]
+        self.assertEqual(len(dcmerge.merge([a, b])), 2)
+
+    def test_cross_operator_cannot_chain_through_unknown(self):
+        a = mk("DC-A4", "osm", "133", "Slough DC", 51.5165, -0.6180,
+               operator="Digital Realty")
+        middle = mk("DC-A3", "government", "u", "Slough DC", 51.5166, -0.6180)
+        b = mk("DC-A5", "wikidata", "237", "Slough DC", 51.5167, -0.6180,
+               operator="Global Technical Realty")
+        for order in ([a, middle, b], [b, middle, a]):
+            out = dcmerge.merge(order)
+            self.assertEqual(len(out), 2)
+            self.assertTrue(all(not ({"Digital Realty", "Global Technical Realty"} <=
+                          {z["operator"] for z in order if
+                           any(q["id"] in {u["id"] for u in f["sources"]} for q in z["sources"])})
+                          for f in out))
+
     def test_same_name_close_points_merge(self):
         a = mk("DC-A1", "osm", "w1", "Alpha Data Centre", 51.5230, -0.6290, operator="Alphaco")
         b = mk("DC-A2", "wikidata", "Q1", "Alpha DC", 51.5250, -0.6290, operator="Alphaco Ltd")
@@ -323,8 +356,8 @@ class ConflictTests(unittest.TestCase):
                dates={"consented": "2025-03-01"})
         b = mk("DC-A4", "company", "c1", "Kap", 51.5, -1.0, operator="B Corp", plan=[("X", "2")],
                dates={"consented": "2024"})
-        kinds = {c["kind"] for c in dcmerge.merge([a, b])[0]["conflicts"]}
-        self.assertEqual(kinds, {"operator_disagreement", "date_disagreement"})
+        # An operator disagreement is a separation, not merely a note on a false-merged site.
+        self.assertEqual(len(dcmerge.merge([a, b])), 2)
 
     def test_compatible_dates_refine(self):
         a = mk("DC-A3", "planning", "p1", "Lam", 51.5, -1.0, plan=[("X", "3")], dates={"consented": "2025"})
