@@ -29,3 +29,13 @@ from conventional.fetchers.dukes_5_11 import normalise, RAW_FILE
 stations = normalise({RAW_FILE: data})
 print("DUKES_SOURCE_ROWS", len(stations), "BY_FUEL", dict(sorted(Counter(v["fuel"] for v in stations).items())))
 print("DUKES_MARCHWOOD", [(x["id"], x["name"], x["capacity_mw"], x["fuel"]) for x in stations if "marchwood" in x["name"].lower()])
+
+import json
+from pathlib import Path
+from conventional.dukes_reconcile import reconcile, encode
+baseline = json.loads((Path(__file__).resolve().parent / "lanes/dc-a6/out/conventional_power_uk.geojson").read_text())
+derived, audit = reconcile(baseline, stations)
+print("DUKES_JOIN_COUNTS", {k:v for k,v in audit.items() if not isinstance(v,list)})
+print("DUKES_MATCHES", audit["matches"][:80])
+print("DUKES_REJECTED", audit["rejected_matches"][:50])
+print("DUKES_OUTPUT_SHA256", hashlib.sha256(encode(derived)).hexdigest())
