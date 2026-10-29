@@ -1,0 +1,60 @@
+{
+  "schema": "gb-asset-lanes.v1",
+  "domain": "conventional",
+  "about": "Lane scripts vendored from GridAtlas #73 work lanes, run as they were delivered (each in its own schema). pipelines/run_lanes.py runs them; ci/verify.py pins every file; reproduce.py rebuilds the deterministic ones.",
+  "lanes": [
+    {
+      "id": "dc-a6",
+      "lane": "DC-A6",
+      "title": "UK conventional power assets (offtakers class B + WRI GPPD MW, REPD-excluded)",
+      "open": "yes",
+      "licence": "ODbL-1.0 (contains OSM; the OGL + CC BY subset is filterable by sources[])",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "NAEI 2023 (OGL v3.0); © OpenStreetMap contributors (ODbL); WRI GPPD v1.3.0 (CC BY 4.0); REPD (OGL v3.0, exclusion only)",
+      "env": {
+        "DC_A6_INPUT_DIR": "inputs",
+        "DC_A6_OUT": "out"
+      },
+      "inputs": [
+        {
+          "file": "inputs/offtakers_filtered_202610290945.geojson",
+          "url": "https://raw.githubusercontent.com/Ventusltd/gridatlas/f0f449b4c61cc4c3865de969a46d39cad1dc052d/data/offtakers_filtered_202610290945.geojson",
+          "sha256": "6fc20e04fdcaadc55d723354848bcf77d3871e9d088a29cbf7ea3a76890b6730",
+          "commit": false
+        },
+        {
+          "file": "inputs/gppd.csv",
+          "url": "https://raw.githubusercontent.com/wri/global-power-plant-database/master/output_database/global_power_plant_database.csv",
+          "sha256": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+          "commit": false
+        },
+        {
+          "file": "inputs/repd_browser_registry_202608290716.json",
+          "url": "https://raw.githubusercontent.com/Ventusltd/gridatlas/f0f449b4c61cc4c3865de969a46d39cad1dc052d/data/repd_browser_registry_202608290716.json",
+          "sha256": "c8a5c59be878c52014a272eb0e4d09af06a0d301d10a8d6b5d0b116b5d1bb6bc",
+          "commit": false
+        },
+        {
+          "file": "inputs/status_curated.csv",
+          "url": null,
+          "sha256": "04c8f83acd5f8e14a2e4f8a28bc04535b3951bf21e8ce13c11e74a23ecdf58a6",
+          "commit": true
+        }
+      ],
+      "fetch": [],
+      "build": [
+        [
+          "build_conventional.py"
+        ]
+      ],
+      "outputs": [
+        "out/conventional_power_uk.geojson",
+        "out/excluded_repd.json",
+        "out/counts.md",
+        "out/counts.json",
+        "out/SHA256SUMS"
+      ],
+      "notes": "Offline baseline: 301 sites, 167 with fuel unstated, because DUKES 5.11 was unreachable from the build session. conventional/sources.json dukes-5-11 snapshots DUKES 5.11 on the fetch workflow so the lane can parse it next."
+    }
+  ]
+}

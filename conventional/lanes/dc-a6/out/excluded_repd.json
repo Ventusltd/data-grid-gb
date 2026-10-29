@@ -1,0 +1,1166 @@
+[
+ {
+  "id": "CONV-GPPD-GBR1000156",
+  "name": "Glanford",
+  "fuel": "biomass",
+  "status": "unknown",
+  "mw": 14.0,
+  "lat": 53.5411,
+  "lon": -0.5056,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "150",
+   "repd_name": "Brigg Renewable Energy Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.298,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0813",
+  "name": "Ashington",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 55.20069,
+  "lon": -1.539016,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "115",
+   "repd_name": "Lynemouth Power Station",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.788,
+   "shared_name_tokens": [
+    "lynemouth"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0815",
+  "name": "Blackburn Meadows Renewable Energy Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.419266,
+  "lon": -1.406357,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "166",
+   "repd_name": "Blackburn Meadows Biomass Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.532,
+   "shared_name_tokens": [
+    "blackburn",
+    "meadows"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0816",
+  "name": "Boston Energy Production Facility",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.959808,
+  "lon": -0.004974,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "118",
+   "repd_name": "Riverside Industrial Estate Gasification Plant",
+   "repd_technology": "Advanced Conversion Technologies",
+   "repd_status": "operational",
+   "distance_km": 0.606,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0817",
+  "name": "Brigg Renewable Energy Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.542543,
+  "lon": -0.511714,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "150",
+   "repd_name": "Brigg Renewable Energy Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.141,
+   "shared_name_tokens": [
+    "brigg"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0818",
+  "name": "Chilton Biomass Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 54.667806,
+  "lon": -1.565223,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "14",
+   "repd_name": "Chilton Energy Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.094,
+   "shared_name_tokens": [
+    "chilton"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0819",
+  "name": "Drax",
+  "fuel": "biomass",
+  "status": "converted",
+  "mw": null,
+  "lat": 53.732437,
+  "lon": -0.990414,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "174",
+   "repd_name": "Drax Biomass Power Station - Unit 1",
+   "repd_technology": "Biomass (co-firing)",
+   "repd_status": "operational",
+   "distance_km": 0.353,
+   "shared_name_tokens": [
+    "drax"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0821",
+  "name": "Hull Energy Production Facility",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.746443,
+  "lon": -0.275026,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "919",
+   "repd_name": "Energy Works (Hull)",
+   "repd_technology": "Advanced Conversion Technologies",
+   "repd_status": "operational",
+   "distance_km": 3.881,
+   "shared_name_tokens": [
+    "hull"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0822",
+  "name": "Lynemouth Power Station",
+  "fuel": "biomass",
+  "status": "converted",
+  "mw": null,
+  "lat": 55.202772,
+  "lon": -1.521898,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "115",
+   "repd_name": "Lynemouth Power Station",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.804,
+   "shared_name_tokens": [
+    "lynemouth"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0825",
+  "name": "Markinch",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": 65.0,
+  "lat": 56.199721,
+  "lon": -3.163629,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "155",
+   "repd_name": "Markinch Biomass CHP Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.183,
+   "shared_name_tokens": [
+    "markinch"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0826",
+  "name": "Ridham Biomass Power Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.380464,
+  "lon": 0.761354,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "106",
+   "repd_name": "Ridham CHP Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.272,
+   "shared_name_tokens": [
+    "ridham"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0827",
+  "name": "Sleaford Renewable Energy Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.999517,
+  "lon": -0.383673,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "206",
+   "repd_name": "Sleaford Renewable Energy Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.085,
+   "shared_name_tokens": [
+    "sleaford"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0828",
+  "name": "Snetterton Biomass Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.479903,
+  "lon": 0.95447,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "185",
+   "repd_name": "Snetterton Biomass Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.084,
+   "shared_name_tokens": [
+    "snetterton"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0830",
+  "name": "Steven's Croft Power Station",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": 50.0,
+  "lat": 55.15651,
+  "lon": -3.383074,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "196",
+   "repd_name": "Stevens Croft",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.477,
+   "shared_name_tokens": [
+    "croft"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0831",
+  "name": "Templeborough Biomass Power Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.421617,
+  "lon": -1.372181,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "161",
+   "repd_name": "Templeborough Biomass Power Plant- Rotherham",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.133,
+   "shared_name_tokens": [
+    "templeborough"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0832",
+  "name": "Twinwoods Business Park",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.198003,
+  "lon": -0.492946,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "986",
+   "repd_name": "Twinwoods Heat & Power CHP",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.612,
+   "shared_name_tokens": [
+    "twinwoods"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0833",
+  "name": "Westfield Biomass Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 56.168838,
+  "lon": -3.305869,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "62",
+   "repd_name": "Westfield Biomass Power Station",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 3.018,
+   "shared_name_tokens": [
+    "westfield"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0834",
+  "name": "Widmerpool Biomass Power Plant",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.843592,
+  "lon": -1.033568,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "5752",
+   "repd_name": "The Sawmill",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.352,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0835",
+  "name": "Widnes Biomass Facility",
+  "fuel": "biomass",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.354564,
+  "lon": -2.751305,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "190",
+   "repd_name": "Widnes 3MG Biomass/Mersey Bioenergy (CHP) Plant",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 0.001,
+   "shared_name_tokens": [
+    "bioenergy",
+    "mersey",
+    "widnes"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0874",
+  "name": "Allington Quarry",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.292807,
+  "lon": 0.49129,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "886",
+   "repd_name": "Allington EFW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.704,
+   "shared_name_tokens": [
+    "allington"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0875",
+  "name": "Aveley",
+  "fuel": "waste",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.503852,
+  "lon": 0.233508,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "514",
+   "repd_name": "Aveley",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.017,
+   "shared_name_tokens": [
+    "aveley"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0876",
+  "name": "Battlefield EfW",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.741012,
+  "lon": -2.727524,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "910",
+   "repd_name": "Battlefield EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.172,
+   "shared_name_tokens": [
+    "battlefield"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0877",
+  "name": "Beddington Energy Recovery Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.389657,
+  "lon": -0.142941,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "942",
+   "repd_name": "Beddington EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 1.059,
+   "shared_name_tokens": [
+    "beddington"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0878",
+  "name": "Beddington ERF",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.400457,
+  "lon": -0.14351,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "942",
+   "repd_name": "Beddington EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 2.232,
+   "shared_name_tokens": [
+    "beddington"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0879",
+  "name": "Belvedere",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.505144,
+  "lon": 0.155422,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "859",
+   "repd_name": "Riverside Resource Recovery Facility (RRRF)",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 4.851,
+   "shared_name_tokens": [
+    "resource",
+    "riverside"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0881",
+  "name": "Cardiff EfW Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.472727,
+  "lon": -3.150046,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "922",
+   "repd_name": "Trident Park",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.042,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0882",
+  "name": "Colnbrook",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.485136,
+  "lon": -0.506481,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "865",
+   "repd_name": "Lakeside EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 1.312,
+   "shared_name_tokens": [
+    "lakeside"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0883",
+  "name": "Cornwall Energy Recovery Centre",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 50.376648,
+  "lon": -4.891282,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "914",
+   "repd_name": "Cornwall ERC",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.482,
+   "shared_name_tokens": [
+    "cornwall"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0884",
+  "name": "Deeside Industrial Estate, Deeside",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.235858,
+  "lon": -3.034194,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "1001",
+   "repd_name": "Parc Adfer EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.106,
+   "shared_name_tokens": [
+    "adfer",
+    "parc"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0885",
+  "name": "Devonport EfW CHP Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 50.395913,
+  "lon": -4.186348,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "941",
+   "repd_name": "North Yard EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.165,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0886",
+  "name": "Dunbar ERF",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 55.975221,
+  "lon": -2.463047,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "992",
+   "repd_name": "Dunbar EfW (previously Oxwellmains EfW)",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.368,
+   "shared_name_tokens": [
+    "dunbar"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0888",
+  "name": "Exeter EfW",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 50.7041,
+  "lon": -3.522137,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "939",
+   "repd_name": "Exeter EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.068,
+   "shared_name_tokens": [
+    "exeter"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0889",
+  "name": "Ferrybridge MF1",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.71674,
+  "lon": -1.281728,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "3",
+   "repd_name": "Ferrybridge Multifuel 2 (FM2)",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.037,
+   "shared_name_tokens": [
+    "ferrybridge"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0890",
+  "name": "Four Ashes Energy Recovery Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.672711,
+  "lon": -2.11457,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "911",
+   "repd_name": "Four Ashes EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.254,
+   "shared_name_tokens": [
+    "ashes",
+    "four"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0891",
+  "name": "Glasgow Recycling & Renewable Energy Centre",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 55.833789,
+  "lon": -4.243905,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "928",
+   "repd_name": "Glasgow Renewable Energy and Recycling Centre (ACT)",
+   "repd_technology": "Advanced Conversion Technologies",
+   "repd_status": "operational",
+   "distance_km": 0.057,
+   "shared_name_tokens": [
+    "glasgow",
+    "recycling"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0892",
+  "name": "Greatmoor EfW",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.895724,
+  "lon": -0.979769,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "968",
+   "repd_name": "Greatmoor EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 2.445,
+   "shared_name_tokens": [
+    "greatmoor"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0893",
+  "name": "Javelin Park Energy Recovery Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.792499,
+  "lon": -2.293083,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "998",
+   "repd_name": "Javelin Park EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.165,
+   "shared_name_tokens": [
+    "javelin"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0894",
+  "name": "Kemsley Generating Station",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.365514,
+  "lon": 0.758385,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "946",
+   "repd_name": "K3 CHP Facility (Kemsley EfW)",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.156,
+   "shared_name_tokens": [
+    "kemsley"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0896",
+  "name": "Lincolnshire EfW Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.199438,
+  "lon": -0.595037,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "924",
+   "repd_name": "Lincoln EFW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.807,
+   "shared_name_tokens": []
+  }
+ },
+ {
+  "id": "CONV-OT-B-0898",
+  "name": "Newhurst Quarry Energy Recovery Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.758303,
+  "lon": -1.276845,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "1000",
+   "repd_name": "Newhurst Quarry",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.247,
+   "shared_name_tokens": [
+    "newhurst",
+    "quarry"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0899",
+  "name": "Peterborough EfW Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.575125,
+  "lon": -0.205853,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "905",
+   "repd_name": "Peterborough EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.025,
+   "shared_name_tokens": [
+    "peterborough"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0900",
+  "name": "Rookery Pit Energy Recovery Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 52.061455,
+  "lon": -0.523657,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "979",
+   "repd_name": "Rookery South",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 1.619,
+   "shared_name_tokens": [
+    "rookery"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0901",
+  "name": "Runcorn EfW Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 53.329105,
+  "lon": -2.754611,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "932",
+   "repd_name": "Runcorn EfW",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.406,
+   "shared_name_tokens": [
+    "runcorn"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0903",
+  "name": "SELCHP",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": 32.0,
+  "lat": 51.484559,
+  "lon": -0.04518,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "4928",
+   "repd_name": "SELCHP ERF",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.013,
+   "shared_name_tokens": [
+    "selchp"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0904",
+  "name": "Severn Road EfW Facility",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.533363,
+  "lon": -2.668082,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "1008",
+   "repd_name": "Avonmouth Resource Recovery Centre (formerly Severn Road)",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 0.462,
+   "shared_name_tokens": [
+    "severn"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0905",
+  "name": "Severnside Energy Recovery Centre",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 51.528968,
+  "lon": -2.6534,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "918",
+   "repd_name": "Severnside Energy Recovery Centre",
+   "repd_technology": "EfW Incineration",
+   "repd_status": "operational",
+   "distance_km": 1.297,
+   "shared_name_tokens": [
+    "severnside"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0906",
+  "name": "Wilton 11 EfW Plant",
+  "fuel": "waste",
+  "status": "operational",
+  "mw": null,
+  "lat": 54.590009,
+  "lon": -1.122533,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "35",
+   "repd_name": "Wilton International",
+   "repd_technology": "Biomass (dedicated)",
+   "repd_status": "operational",
+   "distance_km": 3.019,
+   "shared_name_tokens": [
+    "wilton"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0948",
+  "name": "Albury Landfill",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.226265,
+  "lon": -0.489467,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "767",
+   "repd_name": "Albury Landfill",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.248,
+   "shared_name_tokens": [
+    "albury",
+    "landfill"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0949",
+  "name": "Codford Biogas",
+  "fuel": "biogas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.172079,
+  "lon": -2.015098,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "336",
+   "repd_name": "Codford Biogas (Waste AD)",
+   "repd_technology": "Anaerobic Digestion",
+   "repd_status": "operational",
+   "distance_km": 0.05,
+   "shared_name_tokens": [
+    "biogas",
+    "codford"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0950",
+  "name": "Fairoak Landfill",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 50.963216,
+  "lon": -1.280879,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "750",
+   "repd_name": "Fairoak Landfill",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.103,
+   "shared_name_tokens": [
+    "fairoak",
+    "landfill"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0951",
+  "name": "Lidsey Landfill",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 50.823577,
+  "lon": -0.677498,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "596",
+   "repd_name": "Lidsey Landfill",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.269,
+   "shared_name_tokens": [
+    "landfill",
+    "lidsey"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0952",
+  "name": "Mucking Gas 2 Landfill Scheme",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.494126,
+  "lon": 0.425121,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "737",
+   "repd_name": "Mucking Gas 3 Landfill Scheme",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.055,
+   "shared_name_tokens": [
+    "landfill",
+    "mucking"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0953",
+  "name": "Offham Landfill Site",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.292475,
+  "lon": 0.360382,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "582",
+   "repd_name": "Offham Landfill Site Phase II",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.097,
+   "shared_name_tokens": [
+    "landfill",
+    "offham"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0954",
+  "name": "Pitsea Landfill Scheme",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.539898,
+  "lon": 0.509135,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "626",
+   "repd_name": "Pitsea Tipp",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.317,
+   "shared_name_tokens": [
+    "pitsea"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0955",
+  "name": "Rainham Landfill Scheme",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.491388,
+  "lon": 0.194728,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "520",
+   "repd_name": "Rainham Phase II",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.137,
+   "shared_name_tokens": [
+    "rainham"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0956",
+  "name": "Stangate Landfill Site",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.283914,
+  "lon": 0.298962,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "581",
+   "repd_name": "Stangate Landfill Site",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.143,
+   "shared_name_tokens": [
+    "landfill",
+    "stangate"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0957",
+  "name": "Westbury Landfill Scheme",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.2727,
+  "lon": -2.169031,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "598",
+   "repd_name": "Westbury Landfill Scheme",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.109,
+   "shared_name_tokens": [
+    "landfill",
+    "westbury"
+   ]
+  }
+ },
+ {
+  "id": "CONV-OT-B-0958",
+  "name": "Whiteparish Landfill Gas Plant",
+  "fuel": "landfill_gas",
+  "status": "unknown",
+  "mw": null,
+  "lat": 51.018046,
+  "lon": -1.691854,
+  "reason": "in REPD (GridAtlas registry 202608290716): served by the 30-nearest REPD list",
+  "repd": {
+   "repd_ref": "655",
+   "repd_name": "Whiteparish",
+   "repd_technology": "Landfill Gas",
+   "repd_status": "operational",
+   "distance_km": 0.263,
+   "shared_name_tokens": [
+    "whiteparish"
+   ]
+  }
+ }
+]

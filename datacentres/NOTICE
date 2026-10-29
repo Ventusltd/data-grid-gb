@@ -49,3 +49,19 @@ local-planning-portals  (open: no)
 
 company-disclosures  (open: no)
   Publisher copyright. May appear as an evidence URL; never a source of records.
+
+Vendored lanes (datacentres/lanes/, see lanes.json)
+----------------------------------------------------
+dc-a1-neso (DC-A1)  NESO TEC + Embedded registers. NESO Open Data Licence, described by
+  NESO as "based on version 3.0 of the Open Government Licence with specific amendments
+  for NESO"; attribution "Supported by National Energy SO Open Data".
+  https://www.neso.energy/data-portal/neso-open-licence . Marked UNVERIFIED until the
+  owner confirms the amendments keep it fully open; its outputs fail ci/verify.py until then.
+dc-a3-gov (DC-A3)  GOV.UK, gov.scot and gov.wales pages: OGL v3.0 ("All content is
+  available under the Open Government Licence v3.0, except where otherwise stated").
+  Per-record licence notes mark the domains not yet checked as unverified.
+dc-a4-osm-wikidata (DC-A4)  © OpenStreetMap contributors, ODbL 1.0 (share-alike), and
+  Wikidata, CC0 1.0. The fallback snapshot raw/gg2050_datacentres.geojson is OSM-derived
+  (Ventusltd/globalgrid2050 datacentres.geojson, sha256 a686a2e0...c73acab4), ODbL.
+dc-a7-merge (DC-A7)  Merge of the lanes above; each record keeps its sources' licences.
+  The merged database is ODbL wherever an OSM source contributes.

@@ -2,3 +2,7 @@ sources/*.xlsx
 sources/*.pdf
 sources/grid_substations.geojson
 **/__pycache__/
+# Pinned lane inputs fetched at run time (url + sha256 in lanes.json); too large to commit.
+conventional/lanes/dc-a6/inputs/offtakers_filtered_202610290945.geojson
+conventional/lanes/dc-a6/inputs/gppd.csv
+conventional/lanes/dc-a6/inputs/repd_browser_registry_202608290716.json

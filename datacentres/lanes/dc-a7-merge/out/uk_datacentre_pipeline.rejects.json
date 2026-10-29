@@ -1,0 +1,62 @@
+[
+ {
+  "file": "out/dc_operational.json",
+  "name": "Brean Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Cable & Wireless Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "ESAT 1 Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Hibernia Southport Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Lands End Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Lanis 1 Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Level3 Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Reynoldston Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Skewjack Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "TAT14 Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Whitesands Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ },
+ {
+  "file": "out/dc_operational.json",
+  "name": "Winterton Cable Landing Station",
+  "reason": "cable landing station, not a data centre (excluded as ot_filter.py does)"
+ }
+]

@@ -277,6 +277,18 @@ class PipelineTests(unittest.TestCase):
             quiet(pipeline.normalise_domain, "datacentres", root=root)
         self.assertFalse((root / "datacentres/normalised/fake-src.geojson").exists())
 
+    def test_network_failure_is_reported_and_keeps_previous_snapshot(self):
+        root = make_root(self.tmp)
+        self.fetch(root)
+        before = (root / "datacentres/raw/MANIFEST.json").read_bytes()
+
+        def blocked(request):
+            raise OSError("Tunnel connection failed: 403 Forbidden")
+        manifest, out = quiet(pipeline.fetch_domain, "datacentres", root=root, opener=blocked)
+        self.assertEqual(manifest["failures"], ["fake-src/sites.json"])
+        self.assertIn("unknown, not zero", out)
+        self.assertEqual((root / "datacentres/raw/MANIFEST.json").read_bytes(), before)
+
     def test_unsafe_raw_file_name_is_refused(self):
         evil = FAKE_FETCHER.replace('"file": "sites.json"', '"file": "../../escape.json"')
         root = make_root(self.tmp, fetcher=evil)
@@ -300,13 +312,16 @@ class RepositoryTests(unittest.TestCase):
                 if module is None:
                     self.assertEqual(entry["open"], "no", entry["id"])
                     continue
-                self.assertIn(module.STATUS, ("ready", "placeholder"))
-                if module.STATUS == "placeholder":
-                    self.assertEqual(module.raw_requests(), [])
+                self.assertIn(module.STATUS, ("ready", "snapshot", "placeholder"))
+                if module.STATUS in ("placeholder", "snapshot"):
+                    if module.STATUS == "placeholder":
+                        self.assertEqual(module.raw_requests(), [])
                     with self.assertRaises(NotImplementedError):
                         module.normalise({})
-                else:
-                    self.assertEqual(entry["open"], "yes", f"{entry['id']}: ready fetcher on a source not fully open")
+                if module.STATUS != "placeholder":
+                    self.assertNotEqual(entry["open"], "no", f"{entry['id']}: fetcher on a source that is not open")
+                    if module.STATUS == "ready":
+                        self.assertEqual(entry["open"], "yes", f"{entry['id']}: ready fetcher on a source not fully open")
                     for request in module.raw_requests():
                         self.assertTrue(request["url"].startswith("https://"), request["url"])
 

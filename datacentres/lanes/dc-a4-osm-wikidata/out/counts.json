@@ -1,0 +1,35 @@
+{
+ "inputs": {
+  "gg2050_datacentres.geojson": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+ },
+ "mode": "legacy globalgrid2050 snapshot (Overpass and Wikidata unreachable from this session)",
+ "source_objects": {
+  "osm": 240,
+  "wikidata_items": 0,
+  "wikidata_without_coords": 0
+ },
+ "sites_total": 190,
+ "sites_by_kind": {
+  "cable_landing_station": 12,
+  "data_centre": 149,
+  "data_centre_campus": 29
+ },
+ "operational_data_centre_sites_excl_cable_landing": 178,
+ "duplicates_merged": 50,
+ "sites_multi_source": 0,
+ "sites_with_conflicts": 15,
+ "sites_with_name": 159,
+ "sites_with_operator": 145,
+ "sites_with_it_load_mw": 0,
+ "sites_with_grid_connection_mw": 0,
+ "sites_with_unclassified_mw": 0,
+ "reconciliation": null,
+ "params": {
+  "site_radius_m": 250,
+  "cross_source_radius_m": 500
+ },
+ "outputs": {
+  "dc_operational.json": "506f0b9a71c0a8cb99c8b2eef154da27d015b3d8b479734d5a01c7992a073b9a",
+  "dc_operational.geojson": "654da80acfb2224c1b959b8b512bef0fae81cc4d214ebc3fe73140cfc9664cf0"
+ }
+}

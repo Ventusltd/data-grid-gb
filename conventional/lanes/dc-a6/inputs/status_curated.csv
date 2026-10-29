@@ -1,0 +1,41 @@
+match_regex,status,status_date,fuel_note,source_url,verified_in_session
+# Curated power-station status overrides. match_regex is applied case-insensitively to the merged site name; first match wins.
+# status: operational | closing | closed | converted | other text (shown as "Unknown" chip). status_date ISO (YYYY, YYYY-MM or YYYY-MM-DD).
+# verified_in_session: yes = the cited page was fetched on 29 Oct 2026 (lane R-otdata) and states the status and date; partial = status verified, date only to the precision given.
+# Corrections against OT-filter's table are marked "R-otdata:" in fuel_note. Evidence: evidence/R-otdata/STATUS-VERIFY.md.
+ratcliffe,closed,2024-09-30,coal; last UK coal station,https://en.wikipedia.org/wiki/Ratcliffe-on-Soar_Power_Station,yes
+west burton(?!.*(b|ccgt)),closed,2023-03-31,coal units (West Burton A),https://www.solarpowerportal.co.uk/solar-projects/edf-s-west-burton-a-coal-fired-plant-officially-closes,yes
+cottam(?!.*development),closed,2019-09-30,coal,https://www.edfenergy.com/media-centre/news-releases/cottam-power-station-powers-down-after-half-century,yes
+eggborough,closed,2018-03-23,coal; R-otdata: date corrected from 2018-09-30 (stopped generating and de-synced 23 Mar 2018),https://en.wikipedia.org/wiki/Eggborough_power_station,yes
+fiddler,closed,2020-03-31,coal,https://en.wikipedia.org/wiki/Fiddler%27s_Ferry_power_station,yes
+aberthaw,closed,2020-03-31,coal (Aberthaw B); R-otdata: source URL replaced (old RWE URL not found),https://www.rwe.com/en/investor-relations/financial-calendar-and-publications/news-and-ad-hoc-announcements/news/news-2019-08-01/,yes
+longannet,closed,2016-03-24,coal,https://en.wikipedia.org/wiki/Longannet_power_station,yes
+ferrybridge c,closed,2016-03-31,coal; last unit off 23 Mar 2016,https://www.sse.com/news-and-views/2016/03/ferrybridge-c-ceases-production/,yes
+rugeley,closed,2016-06-08,coal,https://en.wikipedia.org/wiki/Rugeley_power_stations,yes
+kilroot,converted,2023-09,coal units closed Sep 2023; gas generation from late Mar 2024; R-otdata: day not verified (was 2023-09-30),https://en.wikipedia.org/wiki/Kilroot_Power_Station,yes
+drax,converted,2023-03,coal units closed Mar 2023 at the end of the winter-contingency agreement (commercial coal ended 2021); biomass units operating; R-otdata: date corrected from 2021-03-31,https://www.solarpowerportal.co.uk/solar-projects/edf-and-drax-confirm-closure-of-coal-plants-despite-call-for-contingency-contract-extension,yes
+lynemouth,converted,2018,coal to biomass in 2018; R-otdata: month not verified (was 2018-06),https://en.wikipedia.org/wiki/Lynemouth_power_station,partial
+uskmouth,closed,2017-04,coal; last coal use Apr 2017; decommissioned; BESS consented on the site Jan 2024; R-otdata: date corrected from 2017-12,https://en.wikipedia.org/wiki/Uskmouth_power_stations,yes
+ironbridge,closed,2015-11-20,coal/biomass; site redeveloped,https://en.wikipedia.org/wiki/Ironbridge_power_stations,yes
+didcot a,closed,2013-03-22,coal; demolished (Didcot B CCGT and Didcot OCGT operate separately),https://en.wikipedia.org/wiki/Didcot_power_stations,yes
+kingsnorth,closed,2012-12-17,coal/oil; demolished,https://en.wikipedia.org/wiki/Kingsnorth_power_station,yes
+tilbury,closed,2013-08,coal then biomass; last generation Aug 2013; demolished 2016-19; R-otdata: day not verified (was 2013-08-13),https://en.wikipedia.org/wiki/Tilbury_power_stations,partial
+cockenzie,closed,2013-03-15,coal; demolished,https://en.wikipedia.org/wiki/Cockenzie_power_station,yes
+hunterston b,closed,2022-01-07,nuclear AGR; R4 off 7 Jan 2022 (R3 26 Nov 2021); defuelling,https://onr.org.uk/news/all-news/2022/01/hunterston-b-moves-into-defuelling-phase,yes
+hinkley point b,closed,2022-08-01,nuclear AGR; defuelling,https://en.wikipedia.org/wiki/Hinkley_Point_B_nuclear_power_station,yes
+dungeness b,closed,2021-06-07,nuclear AGR; date = EDF decision to defuel (last generation 2018),https://www.edfenergy.com/node/22505,yes
+wylfa,closed,2015-12-30,nuclear Magnox; decommissioning,https://world-nuclear-news.org/Articles/World-s-last-operating-Magnox-reactor-closes,yes
+oldbury(?!.*(standby|stor|reserve)),closed,2012-02-29,nuclear Magnox (Oldbury-on-Severn); R-otdata: regex no longer hits the Oldbury (West Midlands) standby plant,https://en.wikipedia.org/wiki/Oldbury_nuclear_power_station,yes
+heysham 1,closing,2028-03,nuclear AGR; R-otdata: EDF extended to Mar 2028 on 2 Sep 2025 (was 2027-03),https://world-nuclear-news.org/articles/further-life-extension-of-two-uk-nuclear-power-stations,yes
+hartlepool,closing,2028-03,nuclear AGR; R-otdata: EDF extended to Mar 2028 on 2 Sep 2025 (was 2027-03),https://world-nuclear-news.org/articles/further-life-extension-of-two-uk-nuclear-power-stations,yes
+heysham 2,closing,2030-03,nuclear AGR; generation end date forecast by EDF,https://world-nuclear-news.org/articles/further-life-extension-of-two-uk-nuclear-power-stations,yes
+torness,closing,2030-03,nuclear AGR; generation end date forecast by EDF,https://world-nuclear-news.org/articles/further-life-extension-of-two-uk-nuclear-power-stations,yes
+baglan bay,closed,2020-07,gas CCGT; owner in administration Jun 2020; stopped generating Jul 2020; demolished after Aug 2023 fire (chimney left); R-otdata: date corrected from 2020-06,https://en.wikipedia.org/wiki/Baglan_Bay_power_station,yes
+^deeside$|deeside power,closed,2018-03,gas CCGT mothballed Mar 2018; since 2021 inertia and reactive-power service (no generation); R-otdata: regex no longer hits Parc Adfer EfW on Deeside Industrial Estate; date corrected from "2019 (uncertain)",https://en.wikipedia.org/wiki/Deeside_Power_Station,yes
+roosecote,closed,2012,gas CCGT mothballed 2012; demolished 2014-15; battery on site since 2018; R-otdata: date corrected from 2015,https://en.wikipedia.org/wiki/Roosecote_Power_Station,yes
+barking,closed,2018,gas CCGT; closure announced Jul 2014; decommissioning started 2018,https://en.wikipedia.org/wiki/Barking_Power_Station,partial
+teesside power,closed,2011-04,gas CCGT element ceased 1 Apr 2011; closure announced 2013; demolished by 2015; R-otdata: date corrected from 2013,https://en.wikipedia.org/wiki/Teesside_power_station,yes
+grain(?!.*(ccgt|chp|\bgt\b)),closed,2012-12,oil-fired Grain A; demolished; R-otdata: regex no longer hits GPPD "Grain GT" (listed in DUKES 2018-19; status not verified),https://en.wikipedia.org/wiki/Grain_Power_Station,yes
+littlebrook,closed,2015-03-31,oil; demolished,https://en.wikipedia.org/wiki/Littlebrook_Power_Station,yes
+fawley power,closed,2013-03-31,oil; demolished,https://en.wikipedia.org/wiki/Fawley_Power_Station,yes
+hinkley point c,construction site (not generating),,R-otdata: new row; the NAEI 2023 row is the Hinkley Point C construction site (power-producer sector) not a generator,https://naei.energysecurity.gov.uk/data/maps/emissions-point-sources,partial

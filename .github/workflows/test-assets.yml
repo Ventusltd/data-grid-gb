@@ -13,6 +13,7 @@ on:
       - 'datacentres/**'
       - 'conventional/**'
       - 'pipelines/fetch_assets.py'
+      - 'pipelines/run_lanes.py'
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
@@ -25,6 +26,7 @@ on:
       - 'datacentres/**'
       - 'conventional/**'
       - 'pipelines/fetch_assets.py'
+      - 'pipelines/run_lanes.py'
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
@@ -55,7 +57,7 @@ jobs:
       - name: Static check (undefined names)
         run: |
           pip install pyflakes==3.2.0
-          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
+          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py pipelines/run_lanes.py datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
           if grep -E "undefined name|referenced before assignment|unable to detect undefined names" "$RUNNER_TEMP/pyflakes.txt"; then
             echo "::error::pyflakes found an undefined name"
             exit 1
@@ -64,9 +66,18 @@ jobs:
         env:
           ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
         run: python -m unittest discover -s tests -v
-      - name: Verify the committed data (fails closed)
+      - name: Verify the committed data (fails closed; no unverified-licence lane outputs)
         run: python ci/verify.py
-      - name: Reproduce from the committed raw snapshots
+      - name: Lane self-tests (synthetic fixtures, no network)
+        run: python pipelines/run_lanes.py selftest
+      # The DC-A6 build reads three large pinned inputs that are not committed
+      # (url + sha256 in conventional/lanes/lanes.json). They come from GitHub
+      # itself, so this leg can rebuild DC-A6 and must not skip it.
+      - name: Download pinned lane inputs
+        if: matrix.deps == 'requirements'
+        run: python pipelines/run_lanes.py inputs
+      - name: Reproduce from the committed raw snapshots and rebuild every open lane
         env:
           ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+          ASSETS_REQUIRE_INPUTS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
         run: python reproduce.py check --json "$RUNNER_TEMP/reproduction.json"

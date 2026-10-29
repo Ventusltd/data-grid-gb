@@ -18,6 +18,12 @@ Checks, per domain, each only when its file exists:
              evidence URL present, location precision stated); unique ids;
              the three honesty sentences present.
 
+- lanes      ``lanes/lanes.json`` + ``lanes/MANIFEST.json``: every committed file in
+             every vendored lane directory matches its pin, nothing unpinned, no
+             lane that is not fully open, pinned inputs intact, and no outputs
+             from a lane whose licence is unverified (``--allow-unverified-lanes``
+             relaxes only that last rule, for review branches).
+
 Exit 0 when every check passes, 1 otherwise (``::error::`` lines), as
 lightning's ci/verify_data.py does.
 """
@@ -26,6 +32,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -33,6 +40,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from assetpipe import DOMAINS  # noqa: E402
+from assetpipe import lanes as lanelib  # noqa: E402
 from assetpipe.schema import OPEN_VALUES, SCHEMA_COLLECTION, VALIDATORS  # noqa: E402
 
 HONESTY = (
@@ -40,6 +48,14 @@ HONESTY = (
     "A pipeline entry is not a commitment.",
     "Unknown is null, not zero.",
 )
+STATUS_LINE = re.compile(r'^STATUS = "(\w+)"', re.M)
+
+
+def fetcher_status(path: Path) -> str:
+    match = STATUS_LINE.search(path.read_text(encoding="utf-8"))
+    return match.group(1) if match else "missing"
+
+
 IGNORED_RAW = {"MANIFEST.json", ".gitkeep", "README.md"}
 
 
@@ -72,16 +88,18 @@ def check_registry(ddir: Path, domain: str) -> tuple[str, dict]:
             text = path.read_text(encoding="utf-8")
             if f'SOURCE_ID = "{sid}"' not in text:
                 raise ValueError(f"{sid}: {path.name} does not declare SOURCE_ID = \"{sid}\"")
-            if entry["open"] == "no" and 'STATUS = "ready"' in text:
+            if fetcher_status(path) not in ("ready", "snapshot", "placeholder"):
+                raise ValueError(f"{sid}: {path.name} has no STATUS = \"ready|snapshot|placeholder\" line")
+            if entry["open"] == "no" and fetcher_status(path) != "placeholder":
                 raise ValueError(f"{sid}: a source that is not fully open has a ready fetcher")
         by_id[sid] = entry
     notice = (ddir / "NOTICE").read_text(encoding="utf-8") if (ddir / "NOTICE").exists() else ""
     for sid, entry in by_id.items():
         if f"{sid}  (open: {entry['open']})" not in notice:
             raise ValueError(f"NOTICE has no entry '{sid}  (open: {entry['open']})' matching the registry")
-    ready =sum(1 for e in by_id.values() if e.get("module") and
-                'STATUS = "ready"' in (ddir / "fetchers" / f"{e['module']}.py").read_text(encoding="utf-8"))
-    return f"registry ok ({len(by_id)} sources, {ready} ready)", by_id
+    states = [fetcher_status(ddir / "fetchers" / f"{e['module']}.py") for e in by_id.values() if e.get("module")]
+    return (f"registry ok ({len(by_id)} sources, {states.count('ready')} ready, "
+            f"{states.count('snapshot')} snapshot-only)"), by_id
 
 
 def check_raw(ddir: Path) -> tuple[str, dict]:
@@ -173,6 +191,8 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--domain", default="all", choices=(*DOMAINS, "all"))
+    parser.add_argument("--allow-unverified-lanes", action="store_true",
+                        help="accept lane outputs whose licence is unverified (review branches only; never main)")
     args = parser.parse_args(argv)
     failed = False
     for domain in (DOMAINS if args.domain == "all" else (args.domain,)):
@@ -187,6 +207,11 @@ def main(argv=None) -> int:
             message, manifest = check_raw(ddir)
             print(f"verify {domain}: {message}")
             print(f"verify {domain}: {check_outputs(ddir, domain, registry, manifest)}")
+            problems = lanelib.check_manifest(domain, args.root, strict_open=not args.allow_unverified_lanes)
+            if problems:
+                raise ValueError("lanes: " + "; ".join(problems[:10]))
+            n = len(lanelib.load_lanes(domain, args.root)["lanes"])
+            print(f"verify {domain}: lanes ok ({n} vendored lanes, every file pinned)")
         except Exception as error:  # noqa: BLE001 - reported, then exit 1
             failed = True
             print(f"::error::verify {domain}: {type(error).__name__}: {error}")

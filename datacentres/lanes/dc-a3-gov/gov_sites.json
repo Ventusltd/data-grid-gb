@@ -1,0 +1,1268 @@
+{
+ "schema": "gridatlas#73 step-3 data-centre pipeline record (DC-A3 lane)",
+ "generated": "2026-10-29",
+ "lane": "DC-A3",
+ "rules": [
+  "Facts only, as stated by the cited page on status_as_of.",
+  "it_load_mw and grid_connection_mw hold ONLY figures the source labels as such; every other MW figure is in other_mw with its measure.",
+  "null means unknown, never zero. A pipeline entry is not a commitment. stated_targets are not commitments.",
+  "Proximity is not connection, capacity or feasibility."
+ ],
+ "status_enum": [
+  "announced",
+  "connection request",
+  "consented",
+  "in planning",
+  "operational",
+  "under construction",
+  null
+ ],
+ "location_precision_enum": [
+  "exact",
+  "region",
+  "town"
+ ],
+ "records": [
+  {
+   "id": "gov-aigz-culham",
+   "name": "Culham AI Growth Zone (Culham Campus)",
+   "operator": "UK Atomic Energy Authority (site owner); no commercial partner named",
+   "kind": "AI Growth Zone",
+   "gov_designation": "AI Growth Zone (first; announced 13 Jan 2025)",
+   "status": "announced",
+   "status_note": "Designated AIGZ. UKAEA PIN (Feb 2025) is 'Prior information only'; no partner contract is published. UKAEA strategy lists delivery 'By September 2026' as a target, not a completion.",
+   "status_as_of": "2026-04-28",
+   "country": "England",
+   "place": "Culham, Abingdon, Oxfordshire",
+   "lat": 51.6585,
+   "lon": -1.2286,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 100,
+     "measure": "site power available to a planned AI data centre ('steady state, dual resilient power'); basis IT vs connection not stated",
+     "quote": "initially deliver approximately 100MW of steady state, dual resilient power",
+     "evidence_url": "https://www.find-tender.service.gov.uk/Notice/005218-2025/PDF",
+     "approximate": true
+    }
+   ],
+   "stated_targets": [
+    "UKAEA PIN: zones scale 'up to 500MW in collaboration with network operators' (a programme-wide target, not Culham-specific)",
+    "UKAEA strategy 2026-2030: 'By September 2026: Deliver the Government's first AI Growth Zone (AIGZ) at Culham'"
+   ],
+   "dates": {
+    "announced": "2025-01-13",
+    "aigz_programme_press": "2025-04-30"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/prime-minister-sets-out-blueprint-to-turbocharge-ai",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/prime-minister-sets-out-blueprint-to-turbocharge-ai",
+    "https://www.gov.uk/government/news/investors-and-local-authorities-gear-up-as-ai-growth-zone-delivery-gathers-speed",
+    "https://www.gov.uk/government/collections/ai-growth-zones",
+    "https://www.gov.uk/government/publications/ukaea-strategy/uk-atomic-energy-authority-strategy-2026-to-2030",
+    "https://www.find-tender.service.gov.uk/Notice/005218-2025/PDF"
+   ],
+   "quotes": [
+    "The first of these will be in Culham, Oxfordshire"
+   ],
+   "source": "DSIT / Prime Minister's Office; UKAEA",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-aigz-lanarkshire",
+   "name": "Lanarkshire AI Growth Zone (DataVita, Airdrie)",
+   "operator": "DataVita (HFD Group); CoreWeave as backer",
+   "kind": "AI Growth Zone",
+   "gov_designation": "AI Growth Zone (announced 29 Jan 2026)",
+   "status": "announced",
+   "status_note": "gov.uk: 'AI Growth Zone status is conditional on delivery against agreed milestones'. Investment/jobs figures were 'supplied by DataVita'.",
+   "status_as_of": "2026-02-03",
+   "country": "Scotland",
+   "place": "Airdrie, North Lanarkshire",
+   "lat": 55.866,
+   "lon": -3.98,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 500,
+     "measure": "on-site power generation (renewables); not IT load, not grid connection",
+     "quote": "generation of more than 500MW of on-site power",
+     "evidence_url": "https://www.gov.uk/government/news/more-than-3400-jobs-and-targeted-support-for-local-communities-to-help-tackle-the-cost-of-living-as-lanarkshire-named-latest-ai-growth-zone",
+     "qualifier": "'more than'; planned 'in the next 4 years'"
+    }
+   ],
+   "stated_targets": [
+    ">500 MW on-site generation 'in the next 4 years'"
+   ],
+   "dates": {
+    "announced": "2026-01-29",
+    "page_updated": "2026-02-03"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/more-than-3400-jobs-and-targeted-support-for-local-communities-to-help-tackle-the-cost-of-living-as-lanarkshire-named-latest-ai-growth-zone",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/more-than-3400-jobs-and-targeted-support-for-local-communities-to-help-tackle-the-cost-of-living-as-lanarkshire-named-latest-ai-growth-zone",
+    "https://www.gov.uk/government/collections/ai-growth-zones"
+   ],
+   "quotes": [
+    "Airdrie"
+   ],
+   "source": "DSIT / Scotland Office",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-aigz-north-east",
+   "name": "North East AI Growth Zone",
+   "operator": "Multiple (Blackstone/QTS at Blyth-Cambois; Nscale at Cobalt Park)",
+   "kind": "AI Growth Zone",
+   "gov_designation": "AI Growth Zone (announced 16 Sep 2025)",
+   "status": "announced",
+   "status_note": "Zone-level record; component sites follow as separate records.",
+   "status_as_of": "2025-09-16",
+   "country": "England",
+   "place": "Blyth (Northumberland) and Cobalt Park (North Tyneside)",
+   "lat": 55.09,
+   "lon": -1.52,
+   "location_precision": "region",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 1100,
+     "measure": "zone-wide power capacity ambition; IT vs connection not stated",
+     "quote": "increase its energy capacity to 1.1GW in the next 6 years",
+     "evidence_url": "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+     "qualifier": "stated ambition over six years; not secured power"
+    }
+   ],
+   "stated_targets": [
+    "1.1 GW zone capacity within six years (ambition)"
+   ],
+   "dates": {
+    "announced": "2025-09-16"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+    "https://www.gov.uk/government/collections/ai-growth-zones"
+   ],
+   "quotes": [
+    "1.1GW"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-aigz-north-wales",
+   "name": "North Wales AI Growth Zone",
+   "operator": "Consortium incl. Stena Line, Isle of Anglesey County Council, Bangor University; investment partner not yet secured",
+   "kind": "AI Growth Zone",
+   "gov_designation": "AI Growth Zone (announced 13 Nov 2025)",
+   "status": "announced",
+   "status_note": "gov.uk: 'Work is underway to secure an investment partner'; construction starts once a deal is confirmed. No MW is given.",
+   "status_as_of": "2025-11-13",
+   "country": "Wales",
+   "place": "Straddles the Menai Strait: Prosperity Parc (Anglesey) and Trawsfynydd (Gwynedd)",
+   "lat": 53.0,
+   "lon": -4.2,
+   "location_precision": "region",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-13"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+    "https://www.gov.wales/written-statement-wylfa-announced-site-uks-first-small-modular-reactor-smr-nuclear-power-station",
+    "https://www.gov.uk/government/collections/ai-growth-zones"
+   ],
+   "quotes": [
+    "Menai Strait",
+    "Trawsfynydd"
+   ],
+   "source": "DSIT / Wales Office / No 10; Welsh Government written statement",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-aigz-south-wales",
+   "name": "South Wales AI Growth Zone (M4 corridor, Newport to Bridgend)",
+   "operator": "Vantage Data Centers and Microsoft named as joining; investor not yet secured",
+   "kind": "AI Growth Zone",
+   "gov_designation": "AI Growth Zone (announced 20 Nov 2025; fourth announced)",
+   "status": "announced",
+   "status_note": "gov.uk: 'Work is now underway to secure an investor to help deliver the South Wales Growth Zone site'.",
+   "status_as_of": "2025-11-20",
+   "country": "Wales",
+   "place": "M4 corridor from Newport to Bridgend",
+   "lat": 51.55,
+   "lon": -3.25,
+   "location_precision": "region",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 1000,
+     "measure": "potential power; IT vs connection not stated",
+     "quote": "has the potential to harness over 1GW by early 2030s",
+     "evidence_url": "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation",
+     "qualifier": "'over'; potential, not secured"
+    }
+   ],
+   "stated_targets": [
+    "'over 1GW by early 2030s' (potential)"
+   ],
+   "dates": {
+    "announced": "2025-11-20"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation",
+    "https://businesswales.gov.wales/news-and-blog/second-ai-growth-zone-wales-announced",
+    "https://www.gov.uk/government/collections/ai-growth-zones"
+   ],
+   "quotes": [
+    "from Newport to Bridgend"
+   ],
+   "source": "DSIT / HM Treasury / Wales Office; Business Wales",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-appeal-abbots-langley",
+   "name": "Land off Bedmond Road, Abbots Langley",
+   "operator": "Greystoke Land Ltd (appellant)",
+   "kind": "data centre",
+   "gov_designation": "recovered appeal ALLOWED; outline permission (APP/P1940/W/24/3346061)",
+   "status": "consented",
+   "status_note": "Outline permission for 'a data centre of up to 84,000 sqm (GEA)'.",
+   "status_as_of": "2025-05-12",
+   "country": "England",
+   "place": "Abbots Langley, Three Rivers, Hertfordshire",
+   "lat": 51.709,
+   "lon": -0.41,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 96,
+     "measure": "unspecified ('capacity'; IT vs connection not stated; Inspector's summary of the Council's case)",
+     "quote": "96 MW of capacity",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/6821f977c66deec8488f7f42/Recovered_appeal_-_land_off_Bedmond_Road__Abbots_Langley.pdf"
+    }
+   ],
+   "stated_targets": [],
+   "dates": {
+    "decision": "2025-05-12"
+   },
+   "evidence_url": "https://www.gov.uk/government/publications/recovered-appeal-land-off-bedmond-road-abbots-langley-ref-3346061-12-may-2025",
+   "evidence_urls": [
+    "https://www.gov.uk/government/publications/recovered-appeal-land-off-bedmond-road-abbots-langley-ref-3346061-12-may-2025",
+    "https://assets.publishing.service.gov.uk/media/6821f977c66deec8488f7f42/Recovered_appeal_-_land_off_Bedmond_Road__Abbots_Langley.pdf"
+   ],
+   "quotes": [
+    "Bedmond Road"
+   ],
+   "source": "MHCLG",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-appeal-court-lane-iver",
+   "name": "Court Lane Industrial Estate, Iver (SL0 9HL)",
+   "operator": "Affinius Capital LLC (appellant)",
+   "kind": "data centre",
+   "gov_designation": "recovered appeal ALLOWED; outline permission",
+   "status": "consented",
+   "status_note": "Outline permission for a data centre 'of up to 65,000sqm (GEA)'.",
+   "status_as_of": "2024-12-06",
+   "country": "England",
+   "place": "Iver, Buckinghamshire",
+   "lat": 51.515,
+   "lon": -0.505,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": {
+    "value": 140,
+    "measure": "grid connection (reserved)",
+    "quote": "The proposed development has a 140MW grid connection reserved.",
+    "evidence_url": "https://assets.publishing.service.gov.uk/media/6752d28020bcf083762a6c99/Recovered_appeal_decision_-_Court_Lane_Industrial_Estate_Court_Lane_Iver_SL0_9HL.pdf"
+   },
+   "other_mw": [
+    {
+     "value": 103,
+     "measure": "contribution to data-centre need (Inspector's report); basis not stated",
+     "quote": "the 103 MW proposed here",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/6752d28020bcf083762a6c99/Recovered_appeal_decision_-_Court_Lane_Industrial_Estate_Court_Lane_Iver_SL0_9HL.pdf"
+    }
+   ],
+   "stated_targets": [],
+   "dates": {
+    "decision": "2024-12-06"
+   },
+   "evidence_url": "https://assets.publishing.service.gov.uk/media/6752d28020bcf083762a6c99/Recovered_appeal_decision_-_Court_Lane_Industrial_Estate_Court_Lane_Iver_SL0_9HL.pdf",
+   "evidence_urls": [
+    "https://assets.publishing.service.gov.uk/media/6752d28020bcf083762a6c99/Recovered_appeal_decision_-_Court_Lane_Industrial_Estate_Court_Lane_Iver_SL0_9HL.pdf"
+   ],
+   "quotes": [
+    "COURT LANE INDUSTRIAL ESTATE"
+   ],
+   "source": "MHCLG",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK attachment; OGL v3.0 as printed on the document's copyright page where checked, otherwise 'unverified'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-appeal-manor-farm-slough",
+   "name": "Land at Manor Farm and north of Wraysbury Reservoir, Poyle Road, Slough",
+   "operator": "Manor Farm Propco Limited (appellant)",
+   "kind": "data centre + BESS",
+   "gov_designation": "recovered appeal ALLOWED; permission granted (ref 3366043)",
+   "status": "consented",
+   "status_note": "Data centre (Use Class B8) plus BESS; GIA about 36,368 sqm (Inspector's report).",
+   "status_as_of": "2026-06-10",
+   "country": "England",
+   "place": "Poyle, Slough (SL3 0AA)",
+   "lat": 51.474,
+   "lon": -0.515,
+   "location_precision": "town",
+   "it_load_mw": {
+    "value": 72,
+    "measure": "IT load (design IT capacity)",
+    "quote": "deliver an IT capacity of around 72 MW",
+    "evidence_url": "https://assets.publishing.service.gov.uk/media/6a292d6edb0592d809052b94/260610_Combined_DL_IR_RtoC_-_Manor_Farm_Slough_-_3366043.pdf",
+    "approximate": true
+   },
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 100,
+     "measure": "battery energy storage capacity (BESS); not data-centre load",
+     "quote": "a 100 MW capacity system to store electricity",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/6a292d6edb0592d809052b94/260610_Combined_DL_IR_RtoC_-_Manor_Farm_Slough_-_3366043.pdf"
+    }
+   ],
+   "stated_targets": [],
+   "dates": {
+    "decision": "2026-06-10"
+   },
+   "evidence_url": "https://www.gov.uk/government/publications/recovered-appeal-land-at-manor-farm-and-land-north-of-wraysbury-reservoir-poyle-road-slough-ref-3366043-10-june-2026",
+   "evidence_urls": [
+    "https://www.gov.uk/government/publications/recovered-appeal-land-at-manor-farm-and-land-north-of-wraysbury-reservoir-poyle-road-slough-ref-3366043-10-june-2026",
+    "https://assets.publishing.service.gov.uk/media/6a292d6edb0592d809052b94/260610_Combined_DL_IR_RtoC_-_Manor_Farm_Slough_-_3366043.pdf"
+   ],
+   "quotes": [
+    "Manor Farm"
+   ],
+   "source": "MHCLG",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-appeal-woodlands-park-iver",
+   "name": "Woodlands Park landfill site, land south of Slough Road, Iver",
+   "operator": "Greystoke Land Ltd (per secondary reports; not confirmed from gov.uk)",
+   "kind": "data centre",
+   "gov_designation": "recovered appeal decision 9 Jul 2025 (approval; see conflict)",
+   "status": null,
+   "status_note": "gov.uk publishes the 9 Jul 2025 decision ('up to 72,000 sqm (GEA) delivered across 2 buildings'). Secondary press (The Register, 23 Jan 2026) reports that the government conceded the approval should be quashed after a legal challenge. Current status UNKNOWN.",
+   "status_as_of": "2026-10-29",
+   "country": "England",
+   "place": "Iver, Buckinghamshire",
+   "lat": 51.52,
+   "lon": -0.52,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "conflicts": [
+    "gov.uk decision (approval, 9 Jul 2025) vs reported concession to quash (Jan 2026, non-OGL secondary source). The gov.uk page metadata updated 2026-10-01; re-check."
+   ],
+   "dates": {
+    "decision": "2025-07-09"
+   },
+   "evidence_url": "https://www.gov.uk/government/publications/recovered-appeal-woodlands-park-landfill-site-land-south-of-slough-road-iver-buckinghamshire-ref-3347353-9-july-2025",
+   "evidence_urls": [
+    "https://www.gov.uk/government/publications/recovered-appeal-woodlands-park-landfill-site-land-south-of-slough-road-iver-buckinghamshire-ref-3347353-9-july-2025"
+   ],
+   "quotes": [
+    "72,000 sqm"
+   ],
+   "source": "MHCLG",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source"
+  },
+  {
+   "id": "gov-compute-dawn",
+   "name": "DAWN supercomputer (AIRR)",
+   "operator": "University of Cambridge",
+   "kind": "public AI supercomputer",
+   "gov_designation": "AI Research Resource",
+   "status": "operational",
+   "status_note": "One Year On: capacity at Cambridge to increase 'sixfold by Spring 2026' (target). See the Isambard-AI note for the combined <0.01 GW.",
+   "status_as_of": "2026-01-29",
+   "country": "England",
+   "place": "Cambridge",
+   "lat": 52.21,
+   "lon": 0.12,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [
+    "sixfold capacity increase by Spring 2026"
+   ],
+   "dates": {},
+   "evidence_url": "https://assets.publishing.service.gov.uk/media/697a36873c71d838df6bd400/ai_opportunities_action_plan-one-year-on.pdf",
+   "evidence_urls": [
+    "https://assets.publishing.service.gov.uk/media/697a36873c71d838df6bd400/ai_opportunities_action_plan-one-year-on.pdf",
+    "https://assets.publishing.service.gov.uk/media/69d8dae9d3e08b8871b66599/compute-evidence-annex-final.pdf",
+    "https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap"
+   ],
+   "quotes": [
+    "DAWN"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK attachment; OGL v3.0 as printed on the document's copyright page where checked, otherwise 'unverified'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-compute-edinburgh-national",
+   "name": "Next national supercomputer, Edinburgh (EPCC)",
+   "operator": "Edinburgh Parallel Computing Centre, University of Edinburgh",
+   "kind": "public supercomputer",
+   "gov_designation": "EPCC designated first National Supercomputing Centre",
+   "status": "announced",
+   "status_note": "Up to GBP 750m of funding; replaces ARCHER2 (operational). Planned for 2027. No MW is given.",
+   "status_as_of": "2026-04-23",
+   "country": "Scotland",
+   "place": "Edinburgh",
+   "lat": 55.95,
+   "lon": -3.19,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [
+    "early 2027 (Compute Roadmap)"
+   ],
+   "dates": {},
+   "evidence_url": "https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap",
+   "evidence_urls": [
+    "https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap",
+    "https://assets.publishing.service.gov.uk/media/697a36873c71d838df6bd400/ai_opportunities_action_plan-one-year-on.pdf"
+   ],
+   "quotes": [
+    "Edinburgh"
+   ],
+   "source": "DSIT / UKRI",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-compute-isambard-ai",
+   "name": "Isambard-AI supercomputer (AIRR)",
+   "operator": "University of Bristol",
+   "kind": "public AI supercomputer",
+   "gov_designation": "AI Research Resource",
+   "status": "operational",
+   "status_note": "Launched July 2025 (One Year On). Evidence annex: 'Isambard-AI and Dawn currently provide less than 0.01GW of sustained compute' (combined; IT-load basis).",
+   "status_as_of": "2026-01-29",
+   "country": "England",
+   "place": "Bristol",
+   "lat": 51.45,
+   "lon": -2.59,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 10,
+     "measure": "COMBINED Isambard-AI + Dawn sustained compute, IT-load basis; upper bound ('less than'); not per-site",
+     "quote": "less than 0.01GW of sustained compute",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/69d8dae9d3e08b8871b66599/compute-evidence-annex-final.pdf",
+     "qualifier": "< (upper bound, combined)"
+    }
+   ],
+   "stated_targets": [],
+   "dates": {
+    "launched": "2025-07"
+   },
+   "evidence_url": "https://assets.publishing.service.gov.uk/media/697a36873c71d838df6bd400/ai_opportunities_action_plan-one-year-on.pdf",
+   "evidence_urls": [
+    "https://assets.publishing.service.gov.uk/media/697a36873c71d838df6bd400/ai_opportunities_action_plan-one-year-on.pdf",
+    "https://assets.publishing.service.gov.uk/media/69d8dae9d3e08b8871b66599/compute-evidence-annex-final.pdf",
+    "https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap"
+   ],
+   "quotes": [
+    "Isambard-AI"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK attachment; OGL v3.0 as printed on the document's copyright page where checked, otherwise 'unverified'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-dsit-cloudhq-didcot",
+   "name": "CloudHQ data centre, Didcot",
+   "operator": "CloudHQ",
+   "kind": "data centre",
+   "gov_designation": null,
+   "status": "consented",
+   "status_note": "As of 14 Oct 2024: 'currently in development' with planning permission secured. No MW is given.",
+   "status_as_of": "2024-10-14",
+   "country": "England",
+   "place": "Didcot, Oxfordshire",
+   "lat": 51.61,
+   "lon": -1.24,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2024-10-14"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/tech-secretary-welcomes-foreign-investment-in-uk-data-centres-which-will-spur-economic-growth-and-ai-innovation-in-britain",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/tech-secretary-welcomes-foreign-investment-in-uk-data-centres-which-will-spur-economic-growth-and-ai-innovation-in-britain"
+   ],
+   "quotes": [
+    "Didcot"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-dsit-dc01uk-hertsmere",
+   "name": "DC01UK data centre, Hertsmere",
+   "operator": "DC01UK",
+   "kind": "data centre",
+   "gov_designation": "named in CNI designation release",
+   "status": "in planning",
+   "status_note": "As of 12 Sep 2024: 'plans have been submitted to Hertsmere Borough Council'. Later status was not checked against an OGL source.",
+   "status_as_of": "2024-09-12",
+   "country": "England",
+   "place": "Hertsmere, Hertfordshire",
+   "lat": 51.69,
+   "lon": -0.22,
+   "location_precision": "region",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "conflicts": [
+    "Investment given as 'GBP 3.75 billion' and 'nearly GBP 4 billion' in the same release."
+   ],
+   "dates": {
+    "announced": "2024-09-12"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/data-centres-to-be-given-massive-boost-and-protections-from-cyber-criminals-and-it-blackouts",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/data-centres-to-be-given-massive-boost-and-protections-from-cyber-criminals-and-it-blackouts"
+   ],
+   "quotes": [
+    "DC01UK"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source"
+  },
+  {
+   "id": "gov-dsit-equinix-herts",
+   "name": "Equinix high-performance data centre campus, Hertfordshire",
+   "operator": "Equinix",
+   "kind": "data centre campus",
+   "gov_designation": null,
+   "status": "announced",
+   "status_note": "gov.uk (20 Nov 2025) refers to 'Equinix's recent GBP 4 billion commitment'. No site or MW is given.",
+   "status_as_of": "2025-11-20",
+   "country": "England",
+   "place": "Hertfordshire",
+   "lat": 51.8,
+   "lon": -0.2,
+   "location_precision": "region",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-20"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation"
+   ],
+   "quotes": [
+    "Hertfordshire"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-dsit-google-waltham-cross",
+   "name": "Google data centre, Waltham Cross",
+   "operator": "Google",
+   "kind": "data centre",
+   "gov_designation": null,
+   "status": "operational",
+   "status_note": "Described in the gov.uk release (13 Nov 2025) as recently opened, in a quote from Google. No MW is given.",
+   "status_as_of": "2025-11-13",
+   "country": "England",
+   "place": "Waltham Cross, Hertfordshire",
+   "lat": 51.69,
+   "lon": -0.03,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-13"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales"
+   ],
+   "quotes": [
+    "Waltham Cross"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-dsit-nscale-loughton",
+   "name": "Nscale sovereign AI data centre, Loughton",
+   "operator": "Nscale",
+   "kind": "data centre",
+   "gov_designation": null,
+   "status": "announced",
+   "status_note": "As of 13 Jan 2025: 'signed a contract to build the largest UK sovereign AI data centre in Loughton, Essex by 2026'. No MW is given.",
+   "status_as_of": "2025-01-13",
+   "country": "England",
+   "place": "Loughton, Essex",
+   "lat": 51.65,
+   "lon": 0.07,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [
+    "build 'by 2026' (stated)"
+   ],
+   "dates": {
+    "announced": "2025-01-13"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/prime-minister-sets-out-blueprint-to-turbocharge-ai",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/prime-minister-sets-out-blueprint-to-turbocharge-ai"
+   ],
+   "quotes": [
+    "Loughton"
+   ],
+   "source": "DSIT / No 10",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-ne-blyth-cambois",
+   "name": "QTS Cambois Data Centre Campus (Blyth)",
+   "operator": "QTS (Blackstone)",
+   "kind": "data centre campus",
+   "gov_designation": "component of North East AI Growth Zone",
+   "status": "announced",
+   "status_note": "gov.uk: Blackstone has committed GBP 10bn and 'work to develop the site is underway'; the Mayor says it is 'due to open in 2028'. No MW is given.",
+   "status_as_of": "2025-09-16",
+   "country": "England",
+   "place": "Cambois, Blyth, Northumberland",
+   "lat": 55.155,
+   "lon": -1.53,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [
+    "opening 2028 (as quoted from the Mayor)"
+   ],
+   "dates": {
+    "announced": "2025-09-16"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+    "https://www.gov.uk/government/news/tech-secretary-welcomes-foreign-investment-in-uk-data-centres-which-will-spur-economic-growth-and-ai-innovation-in-britain"
+   ],
+   "quotes": [
+    "Blyth"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-ne-cobalt-park",
+   "name": "Cobalt Park Data Centres",
+   "operator": "Cobalt Park Data Centres; Nscale (GPU deployment); Stargate UK",
+   "kind": "data centre campus",
+   "gov_designation": "component of North East AI Growth Zone",
+   "status": "operational",
+   "status_note": "gov.uk release quotes the Mayor that Cobalt Park Data Centres are 'already established'. The Nscale/Stargate UK GPU rollout is planned. No MW is given.",
+   "status_as_of": "2025-09-16",
+   "country": "England",
+   "place": "Cobalt Park, Wallsend, North Tyneside",
+   "lat": 55.02,
+   "lon": -1.51,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [
+    "Stargate UK phase one: OpenAI to take 'up to 8,000 GPUs', possible growth to ~31,000 GPUs"
+   ],
+   "dates": {
+    "announced": "2025-09-16"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/north-east-england-set-for-billions-in-investment-and-thousands-of-jobs-as-uk-and-us-ink-tech-partnership"
+   ],
+   "quotes": [
+    "Cobalt Park"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-nw-prosperity-parc",
+   "name": "Prosperity Parc, Anglesey (North Wales AIGZ base)",
+   "operator": "Stena Line-led consortium",
+   "kind": "AI Growth Zone site",
+   "gov_designation": "component of North Wales AI Growth Zone",
+   "status": "announced",
+   "status_note": "Named in the gov.uk release as one base of the zone. Not named in the Welsh Government written statement.",
+   "status_as_of": "2025-11-13",
+   "country": "Wales",
+   "place": "Holyhead, Anglesey",
+   "lat": 53.3,
+   "lon": -4.6,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-13"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales"
+   ],
+   "quotes": [
+    "Prosperity Parc"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-nw-trawsfynydd",
+   "name": "Trawsfynydd (North Wales AIGZ base)",
+   "operator": null,
+   "kind": "AI Growth Zone site",
+   "gov_designation": "component of North Wales AI Growth Zone",
+   "status": "announced",
+   "status_note": "The Welsh Government statement says only that the zone 'has the potential to widen AI investment across the region, including at Trawsfynydd'.",
+   "status_as_of": "2025-11-13",
+   "country": "Wales",
+   "place": "Trawsfynydd, Gwynedd",
+   "lat": 52.92,
+   "lon": -3.95,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-13"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-growth-zones-to-create-thousands-of-jobs-and-unlock-up-to-100-billion-in-investment-as-new-site-confirmed-for-north-wales",
+    "https://www.gov.wales/written-statement-wylfa-announced-site-uks-first-small-modular-reactor-smr-nuclear-power-station"
+   ],
+   "quotes": [
+    "Trawsfynydd"
+   ],
+   "source": "DSIT; Welsh Government",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-s35-questpit-bedford",
+   "name": "QuestPit data centre campus, Ampthill Road",
+   "operator": "Questpit Limited",
+   "kind": "data centre campus",
+   "gov_designation": "s35 direction: development consent required (MHCLG, 15 Jun 2026)",
+   "status": "in planning",
+   "status_note": "A direction is given; no DCO application found. Source gives no connection figure.",
+   "status_as_of": "2026-06-15",
+   "country": "England",
+   "place": "Ampthill Road, Bedford, Central Bedfordshire",
+   "lat": 52.09,
+   "lon": -0.49,
+   "location_precision": "town",
+   "it_load_mw": {
+    "value": 720,
+    "measure": "IT load",
+    "quote": "a proposed IT load of up to c.720MW across the four buildings",
+    "evidence_url": "https://assets.publishing.service.gov.uk/media/6a2fcaea15f2a70fac7e5f54/260615_QuestPit_Data_Centre_Campus_s35_Direction.pdf",
+    "approximate": true,
+    "qualifier": "up to"
+   },
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "s35_request": "2026-04-24",
+    "s35_direction": "2026-06-15"
+   },
+   "evidence_url": "https://assets.publishing.service.gov.uk/media/6a2fcaea15f2a70fac7e5f54/260615_QuestPit_Data_Centre_Campus_s35_Direction.pdf",
+   "evidence_urls": [
+    "https://assets.publishing.service.gov.uk/media/6a2fcaea15f2a70fac7e5f54/260615_QuestPit_Data_Centre_Campus_s35_Direction.pdf",
+    "https://assets.publishing.service.gov.uk/media/6a2fc930c39255c595b5084f/Request_Statement_on_behalf_of_Questpit_Limited.pdf"
+   ],
+   "quotes": [
+    "AMPTHILL ROAD, BEDFORD"
+   ],
+   "source": "MHCLG",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK attachment; OGL v3.0 as printed on the document's copyright page where checked, otherwise 'unverified'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "gov-s35-wapseys-wood",
+   "name": "SDC M40 Campus (Wapseys Wood)",
+   "operator": "Slough Holdings UK Limited (SDC Capital Partners)",
+   "kind": "data centre campus + energy centre",
+   "gov_designation": "s35 direction: to be treated as NSIP (MHCLG, 16 Mar 2026)",
+   "status": "in planning",
+   "status_note": "PINS: 'This project is at the pre-application stage'; application 'expected to be submitted January 2027'.",
+   "status_as_of": "2026-10-29",
+   "country": "England",
+   "place": "Wapseys Wood landfill site, north of the M40, south of the A40, Buckinghamshire",
+   "lat": 51.58696,
+   "lon": -0.59697,
+   "location_precision": "exact",
+   "location_note": "OSGB 497300E 188500N as printed in the request (it locates building 'DC 02', not the campus boundary); converted to WGS84 by DC-A3 (Helmert, about 5 m).",
+   "it_load_mw": {
+    "value": 300,
+    "measure": "IT load",
+    "quote": "designed for an IT load of up to c.300MW across the three buildings (c.100 MW each)",
+    "evidence_url": "https://assets.publishing.service.gov.uk/media/69b7ece3ba47c264e6c8cfba/Request_Document_-_SDC_M40_Campus_-_Section_35_Direction.pdf",
+    "approximate": true,
+    "qualifier": "up to"
+   },
+   "grid_connection_mw": null,
+   "other_mw": [
+    {
+     "value": 350,
+     "measure": "energy centre generating capacity (upper bound of the range)",
+     "quote": "a generating capacity of c.270MW to 350MW",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/69b7ece3ba47c264e6c8cfba/Request_Document_-_SDC_M40_Campus_-_Section_35_Direction.pdf",
+     "approximate": true,
+     "qualifier": "range 270-350 (request); PINS page says 250-350"
+    },
+    {
+     "value": 900,
+     "measure": "GAS connection capacity (not electrical)",
+     "quote": "indicative gas connection capacity of up to c.900MW",
+     "evidence_url": "https://assets.publishing.service.gov.uk/media/69b7ece3ba47c264e6c8cfba/Request_Document_-_SDC_M40_Campus_-_Section_35_Direction.pdf",
+     "approximate": true,
+     "qualifier": "up to"
+    }
+   ],
+   "stated_targets": [
+    "DCO application expected January 2027 (PINS)"
+   ],
+   "conflicts": [
+    "Energy-centre generating capacity: the request says c.270-350 MW, the PINS project page says approximately 250-350 MW."
+   ],
+   "dates": {
+    "s35_request": "2026-01-21",
+    "s35_direction": "2026-03-16"
+   },
+   "evidence_url": "https://www.gov.uk/government/publications/data-centre-campus-wapseys-wood-buckinghamshire-section-35-direction-planning-act-2008",
+   "evidence_urls": [
+    "https://www.gov.uk/government/publications/data-centre-campus-wapseys-wood-buckinghamshire-section-35-direction-planning-act-2008",
+    "https://assets.publishing.service.gov.uk/media/69b7e853b84f01b2be53a27c/MHCLG_Decision_Letter_Data_Centre_Campus.pdf",
+    "https://assets.publishing.service.gov.uk/media/69b7ece3ba47c264e6c8cfba/Request_Document_-_SDC_M40_Campus_-_Section_35_Direction.pdf",
+    "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110030"
+   ],
+   "quotes": [
+    "Wapseys Wood"
+   ],
+   "source": "MHCLG; Planning Inspectorate",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "grid reference printed in source"
+  },
+  {
+   "id": "gov-sw-ford-bridgend",
+   "name": "Former Ford Bridgend Engine Plant (South Wales AIGZ)",
+   "operator": null,
+   "kind": "AI Growth Zone site",
+   "gov_designation": "component of South Wales AI Growth Zone",
+   "status": "announced",
+   "status_note": "Named in the gov.uk release as included in the zone. No operator or MW is given.",
+   "status_as_of": "2025-11-20",
+   "country": "Wales",
+   "place": "Bridgend",
+   "lat": 51.51,
+   "lon": -3.55,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "announced": "2025-11-20"
+   },
+   "evidence_url": "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation",
+   "evidence_urls": [
+    "https://www.gov.uk/government/news/ai-to-power-national-renewal-as-government-announces-billions-of-additional-investment-and-new-plans-to-boost-uk-businesses-jobs-and-innovation"
+   ],
+   "quotes": [
+    "former Ford Bridgend Engine Plant"
+   ],
+   "source": "DSIT",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "GOV.UK: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "scot-eia-auchtertool",
+   "name": "Auchtertool data centre",
+   "operator": null,
+   "kind": "data centre",
+   "gov_designation": "Scottish Ministers' EIA direction (Aug 2026)",
+   "status": "in planning",
+   "status_note": "EIA required by Ministerial direction. No MW is given.",
+   "status_as_of": "2026-08-17",
+   "country": "Scotland",
+   "place": "Auchtertool, Fife",
+   "lat": 56.13,
+   "lon": -3.27,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "direction_news": "2026-08-17"
+   },
+   "evidence_url": "https://www.gov.scot/news/data-centre-planning-direction/",
+   "evidence_urls": [
+    "https://www.gov.scot/news/data-centre-planning-direction/",
+    "https://www.dpea.scotland.gov.uk/CaseDetails.aspx?ID=128778"
+   ],
+   "quotes": [
+    "Auchtertool"
+   ],
+   "source": "Scottish Government",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "gov.scot footer: 'All content is available under the Open Government Licence v3.0, except for graphic assets and where otherwise stated.' https://www.gov.scot/crown-copyright/"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "scot-eia-wester-hermiston",
+   "name": "Wester Hermiston Data Centre Campus",
+   "operator": null,
+   "kind": "data centre campus",
+   "gov_designation": "Scottish Ministers' EIA direction (Aug 2026)",
+   "status": "in planning",
+   "status_note": "EIA required by Ministerial direction. No MW is given.",
+   "status_as_of": "2026-08-17",
+   "country": "Scotland",
+   "place": "Wester Hermiston, Edinburgh",
+   "lat": 55.92,
+   "lon": -3.33,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "direction_news": "2026-08-17"
+   },
+   "evidence_url": "https://www.gov.scot/news/data-centre-planning-direction/",
+   "evidence_urls": [
+    "https://www.gov.scot/news/data-centre-planning-direction/",
+    "https://www.dpea.scotland.gov.uk/CaseDetails.aspx?ID=128694"
+   ],
+   "quotes": [
+    "Wester Hermiston"
+   ],
+   "source": "Scottish Government",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "gov.scot footer: 'All content is available under the Open Government Licence v3.0, except for graphic assets and where otherwise stated.' https://www.gov.scot/crown-copyright/"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  },
+  {
+   "id": "scot-recall-redheughs",
+   "name": "Redheughs Avenue green data centre",
+   "operator": null,
+   "kind": "data centre",
+   "gov_designation": "planning appeal recalled by Scottish Ministers (Aug 2026)",
+   "status": "in planning",
+   "status_note": "Ministers, not a Reporter, will decide the appeal. No MW is given.",
+   "status_as_of": "2026-08-17",
+   "country": "Scotland",
+   "place": "Redheughs Avenue, Edinburgh",
+   "lat": 55.93,
+   "lon": -3.3,
+   "location_precision": "town",
+   "it_load_mw": null,
+   "grid_connection_mw": null,
+   "other_mw": [],
+   "stated_targets": [],
+   "dates": {
+    "direction_news": "2026-08-17"
+   },
+   "evidence_url": "https://www.gov.scot/news/data-centre-planning-direction/",
+   "evidence_urls": [
+    "https://www.gov.scot/news/data-centre-planning-direction/",
+    "https://www.dpea.scotland.gov.uk/CaseDetails.aspx?ID=128582"
+   ],
+   "quotes": [
+    "Redheughs Avenue"
+   ],
+   "source": "Scottish Government",
+   "licence": {
+    "id": "OGL-UK-3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "note": "gov.scot footer: 'All content is available under the Open Government Licence v3.0, except for graphic assets and where otherwise stated.' https://www.gov.scot/crown-copyright/"
+   },
+   "coordinates_source": "DC-A3 approximate centroid of the named place; NOT from the source",
+   "conflicts": []
+  }
+ ],
+ "context": {
+  "data_centre_covenant": {
+   "url": "https://www.gov.uk/government/publications/data-centre-covenant/the-data-centre-covenant",
+   "publisher": "HM Treasury",
+   "published": "2026-10-28",
+   "annexes": "none (publication page lists one HTML document)",
+   "named_sites": "none",
+   "facts": [
+    "'6 GW of AI data centre capacity by 2030': 'capacity' is not defined as IT load or grid connection.",
+    "'five AI Growth Zones across England, Scotland and Wales' (matches the 5 AIGZ records here).",
+    "New facilities designed for 'a Power Usage Effectiveness of 1.3 or better'."
+   ]
+  },
+  "compute_evidence_annex": {
+   "url": "https://assets.publishing.service.gov.uk/media/69d8dae9d3e08b8871b66599/compute-evidence-annex-final.pdf",
+   "publisher": "DSIT",
+   "licence": "OGL v3.0 (printed p.2)",
+   "named_sites": "no individual data-centre sites with capacity; Isambard-AI, Dawn, ARCHER2 named",
+   "facts": [
+    "Units: 'measured here in gigawatts (GW) of IT load' (p.9).",
+    "'Around 1.8GW of UK's IT load (power capacity) is currently used to power around 330 data centres' (p.12).",
+    "AIGZs 'capable of delivering at least 6GW of AI-ready capacity by 2030' (p.8): a target, not a commitment."
+   ]
+  },
+  "compute_roadmap": {
+   "url": "https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap",
+   "publisher": "DSIT/UKRI",
+   "published": "2025-07-17",
+   "updated": "2026-04-23",
+   "facts": [
+    "Each AIGZ core site to serve 'at least 500MW of demand by 2030', at least one 'scaling to more than 1GW by 2030' (targets)."
+   ]
+  },
+  "critical_national_infrastructure": {
+   "url": "https://www.gov.uk/government/news/data-centres-to-be-given-massive-boost-and-protections-from-cyber-criminals-and-it-blackouts",
+   "published": "2024-09-12",
+   "facts": [
+    "'Data centres powering the economy will be designated as Critical National Infrastructure': a sector designation. No list of designated sites is published (security-sensitive); none can be recorded."
+   ]
+  },
+  "aigz_collection": {
+   "url": "https://www.gov.uk/government/collections/ai-growth-zones",
+   "facts": [
+    "Announcements: Oxfordshire 30 Apr 2025 (Culham first named 13 Jan 2025), North East 16 Sep 2025, North Wales 13 Nov 2025, South Wales 20 Nov 2025, Scotland 29 Jan 2026. One Year On (Jan 2026): 'five AI Growth Zones across Great Britain, including 2 in Wales and one in Scotland'."
+   ]
+  },
+  "desnz_strategic_demand_consultation": {
+   "url": "https://assets.publishing.service.gov.uk/media/69b2aa5bc8010d37b34e0070/accelerating-electricity-network-connections-for-strategic-demand.pdf",
+   "published": "2026-03-11",
+   "facts": [
+    "'~140 data centres in the queue at transmission alone, representing approximately 50GW': connection requests, not sites. No sites are named, and Annex D examples are hypothetical."
+   ]
+  },
+  "scotland_green_dc_site_studies": {
+   "urls": [
+    "https://digitalconnectivity.campaign.gov.scot/publications/2023/06/short-list-of-datacentre-site-development-report",
+    "https://digitalconnectivity.campaign.gov.scot/publications/2023/11/long-list-of-datacentre-site-development-report"
+   ],
+   "licence": "OGL v3.0 (page footer)",
+   "facts": [
+    "Government-commissioned candidate-site studies (150-page PDF). NOT ingested: candidate sites are not projects. PDF not reachable from this sandbox."
+   ]
+  }
+ },
+ "excluded": [
+  {
+   "what": "Investments with no stated location (CyrusOne GBP 2.5bn, ServiceNow, CoreWeave GBP 750m, AWS GBP 8bn, Zoom, Groq 'London')",
+   "url": "https://www.gov.uk/government/news/tech-secretary-welcomes-foreign-investment-in-uk-data-centres-which-will-spur-economic-growth-and-ai-innovation-in-britain",
+   "reason": "No site, or only a city; not mappable as a site. Groq (London) and AI Pathfinder (Northamptonshire, GBP 150m GPU deployment) could be added at region precision if wanted."
+  },
+  {
+   "what": "Vantage 'one of Europe's largest data centre campuses in Wales'",
+   "url": "https://www.gov.uk/government/news/prime-minister-sets-out-blueprint-to-turbocharge-ai",
+   "reason": "gov.uk names no site; likely overlaps the South Wales AIGZ (see that record's operator)."
+  },
+  {
+   "what": "North East Combined Authority / council pages (Newcastle, Northumberland, North Lincolnshire, York & N Yorks, Havering LDO, Rushcliffe Ratcliffe-on-Soar LDO, Hertsmere)",
+   "reason": "Footer '(c) North East Mayoral Strategic Authority 2026', with no OGL statement; council licences are not stated. Not fully open: excluded under the owner's data rule. All NECA facts are duplicated on gov.uk."
+  },
+  {
+   "what": "West London Technology Park, Iver (150 MW): appeal dismissed by SoS (Gove era)",
+   "reason": "Only a secondary source (DCD) was found; no gov.uk citation was retrieved. Dismissed, so it is not pipeline."
+  }
+ ]
+}

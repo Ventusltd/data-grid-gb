@@ -1,0 +1,86 @@
+{
+  "domain": "datacentres",
+  "lanes": {
+    "dc-a1-neso": {
+      "files": {
+        "fetch_neso.py": {
+          "bytes": 24425,
+          "sha256": "5103b0dd85ad7cfbdb6f3ff974854952f4afbc93258df91c380436810c4e92a3"
+        }
+      }
+    },
+    "dc-a3-gov": {
+      "files": {
+        "gov_sites.geojson": {
+          "bytes": 53466,
+          "sha256": "232fe19108641df30fefdcdfa70be3f30ee62e65cbab7781ff1fb0b697d50f5b"
+        },
+        "gov_sites.json": {
+          "bytes": 55093,
+          "sha256": "4b545f7f84c7d9cb3bec373aa7630015cbf8c039e581a9280cda958482960185"
+        },
+        "gov_sites.py": {
+          "bytes": 46179,
+          "sha256": "56e30080914830e6ced94d25b575f999243b9ef93418e688e3a462c4c142f4a8"
+        }
+      }
+    },
+    "dc-a4-osm-wikidata": {
+      "files": {
+        "dc_a4.py": {
+          "bytes": 30822,
+          "sha256": "e2568e7079794d73b31e7d728125faf23446946cf105e21c6fde1321e947f588"
+        },
+        "out/counts.json": {
+          "bytes": 1030,
+          "sha256": "b3f901ec7637ec3cee3a7e80bf83970e25e737a64c8e6bbda13667404b2211bd"
+        },
+        "out/dc_operational.geojson": {
+          "bytes": 514260,
+          "sha256": "654da80acfb2224c1b959b8b512bef0fae81cc4d214ebc3fe73140cfc9664cf0"
+        },
+        "out/dc_operational.json": {
+          "bytes": 483959,
+          "sha256": "506f0b9a71c0a8cb99c8b2eef154da27d015b3d8b479734d5a01c7992a073b9a"
+        },
+        "raw/gg2050_datacentres.geojson": {
+          "bytes": 40563,
+          "sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+        }
+      }
+    },
+    "dc-a7-merge": {
+      "files": {
+        "dc_pipeline.schema.json": {
+          "bytes": 10011,
+          "sha256": "3aef76edac94ec0cfd3f355cd8294401e5245952179b6cfa0f0839917f5b17cb"
+        },
+        "dcingest.py": {
+          "bytes": 24522,
+          "sha256": "a862fa4530a89905b418348fbc807ee06e37cbd274e90c921d52e66f5db26ac8"
+        },
+        "dcmerge.py": {
+          "bytes": 20163,
+          "sha256": "e0742cf1dcccf6e285c85149cda5e92be66dc70e664cbf2d89e5be9929d345df"
+        },
+        "dcschema.py": {
+          "bytes": 8604,
+          "sha256": "1c4cde998c127527aa3e2b228cad81c766fe3471aba3776f52032a3de4a43592"
+        },
+        "out/uk_datacentre_pipeline.geojson": {
+          "bytes": 392224,
+          "sha256": "b49504fd0298951fc89612669624eecf3b13e14c0a715d6211d92d2f70d73f9d"
+        },
+        "out/uk_datacentre_pipeline.rejects.json": {
+          "bytes": 2117,
+          "sha256": "dcf72c035d23de7bfb63449450211d575351145a6e61dc3acae1dd7764ab211f"
+        },
+        "test_dcmerge.py": {
+          "bytes": 24171,
+          "sha256": "5584060953b2573fc6f0b643ffef220662dc22de844f5c69abc2cec275db2519"
+        }
+      }
+    }
+  },
+  "schema": "gb-asset-lanes-manifest.v1"
+}

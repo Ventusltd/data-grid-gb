@@ -20,6 +20,13 @@ their own verifiers under ``derived/``).
    IT load MW and grid connection MW, each with how many records know it and
    how many do not. Unknown is counted as unknown, never as zero.
 
+5. for the vendored lane scripts (``<domain>/lanes``): checks every file against
+   ``lanes/MANIFEST.json``, then rebuilds each fully open lane offline in a scratch
+   copy, in lanes.json order, and compares every declared output with its pin.
+   A lane whose pinned inputs are not on disk is ``skipped_missing_input`` (an
+   error when ``ASSETS_REQUIRE_INPUTS=1``; ``python pipelines/run_lanes.py inputs``
+   downloads them by URL and sha256).
+
 It prints a human summary and a canonical JSON summary whose ``summary_sha256`` is
 the sha256 of the canonical JSON of everything except that field and the ``run``
 block. Two people who run ``check`` on the same commit get the same digest; it is a
@@ -35,7 +42,9 @@ import hashlib
 import json
 import os
 import platform
+import shutil
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -43,6 +52,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
 from assetpipe.pipeline import load_module  # noqa: E402  (fetchers are loaded by path)
+from assetpipe import lanes as lanelib  # noqa: E402
 SCHEMA_SUMMARY = "gb-asset-reproduction.v1"
 DOMAINS = ("datacentres", "conventional")  # restated, not imported
 
@@ -111,7 +121,7 @@ def check_domain(root: Path, domain: str, mismatches: list) -> dict:
         result = {"open": entry.get("open"), "licence": entry.get("licence")}
         module = load_module(domain, entry, root) if module_name else None
         ready = module is not None and getattr(module, "STATUS", "placeholder") == "ready"
-        result["fetcher"] = "ready" if ready else ("placeholder" if module else "none")
+        result["fetcher"] = getattr(module, "STATUS", "placeholder") if module else "none"
         if out_path.exists():
             committed = out_path.read_bytes()
             obj = json.loads(committed.decode("utf-8"))
@@ -139,6 +149,51 @@ def check_domain(root: Path, domain: str, mismatches: list) -> dict:
     return {"files_sha256": files_digest, "file_count": len(lines), "sources": sources}
 
 
+def check_lanes(root: Path, domain: str, mismatches: list) -> dict:
+    """Rebuild every fully open lane offline in a scratch copy and compare its outputs with the pins."""
+    doc = lanelib.load_lanes(domain, root)
+    if not doc["lanes"]:
+        return {}
+    manifest = lanelib.read_manifest(domain, root)
+    for problem in lanelib.check_manifest(domain, root, strict_open=False):
+        mismatches.append(f"{domain}/lanes: {problem}")
+    result = {}
+    scratch = Path(tempfile.mkdtemp(prefix="reproduce-lanes-"))
+    try:
+        work = scratch / "lanes"
+        lanelib.copy_tree(lanelib.lanes_dir(domain, root), work)
+        for lane in doc["lanes"]:
+            lid = lane["id"]
+            pins = (manifest["lanes"].get(lid) or {}).get("files", {})
+            res = {"open": lane.get("open"), "outputs": {rel: (pins.get(rel) or {}).get("sha256") for rel in lane.get("outputs", [])}}
+            ldir = work / lid
+            if not lane.get("build"):
+                res["rebuilt"] = "no offline build (fetch and build are one step)"
+            elif lane.get("open") != "yes":
+                res["rebuilt"] = "skipped: licence not confirmed"
+            elif not lanelib.inputs_present(ldir, lane):
+                res["rebuilt"] = "skipped_missing_input"
+                if os.environ.get("ASSETS_REQUIRE_INPUTS") == "1":
+                    mismatches.append(f"{domain}/{lid}: pinned inputs missing but ASSETS_REQUIRE_INPUTS=1")
+            else:
+                for rel in lane.get("outputs", []):
+                    if (ldir / rel).exists():
+                        (ldir / rel).unlink()
+                codes = lanelib.run_commands(ldir, lane, lane["build"], today="reproduce",
+                                             retrieved=lanelib.retrieved_for(manifest, lid), log=lambda *_: None)
+                rebuilt = {rel: sha256_bytes((ldir / rel).read_bytes()) if (ldir / rel).exists() else None
+                           for rel in lane.get("outputs", [])}
+                same = not any(codes) and rebuilt == res["outputs"]
+                res["rebuilt"] = "identical" if same else "DIFFERENT"
+                if not same:
+                    diff = [rel for rel in rebuilt if rebuilt[rel] != res["outputs"].get(rel)]
+                    mismatches.append(f"{domain}/lanes/{lid}: rebuild differs from the pins ({diff or codes})")
+            result[lid] = res
+    finally:
+        shutil.rmtree(scratch, ignore_errors=True)
+    return result
+
+
 def cmd_check(args) -> int:
     root = args.root.resolve()
     for domain in DOMAINS:
@@ -147,6 +202,8 @@ def cmd_check(args) -> int:
             return 2
     mismatches: list = []
     summary = {"schema": SCHEMA_SUMMARY, "domains": {d: check_domain(root, d, mismatches) for d in DOMAINS}}
+    for d in DOMAINS:
+        summary["domains"][d]["lanes"] = check_lanes(root, d, mismatches)
     summary["mismatches"] = mismatches
     summary["run"] = {"at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "python": platform.python_version()}
@@ -160,6 +217,8 @@ def cmd_check(args) -> int:
                 h = res["headline"]
                 extra = f" records={h['records']} rebuilt={res.get('rebuilt', '-')}"
             print(f"  {sid:<26} open={res['open']:<10} fetcher={res['fetcher']:<11}{extra}")
+        for lid, res in block.get("lanes", {}).items():
+            print(f"  lane {lid:<21} open={res['open']:<10} rebuilt={res['rebuilt']}")
     for line in mismatches:
         print(f"::error::reproduce {line}")
     print(f"summary_sha256 {summary['summary_sha256']}")

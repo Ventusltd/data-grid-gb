@@ -62,6 +62,64 @@ reproduce.py                offline reproduction with a summary digest (style of
 tests/test_assets.py        unit tests; run with and without requirements.txt
 ```
 
+## Two tracks: native fetchers and vendored lanes
+
+The repository runs data through two tracks.
+
+**Native fetchers** (`<domain>/fetchers/`, run by `pipelines/fetch_assets.py`) follow
+the contract in `assetpipe/pipeline.py`. Their output is the strict schema below.
+
+A fetcher's `STATUS` is one of:
+- `ready`: it fetches the source and normalises it;
+- `snapshot`: it fetches and pins the raw bytes, but has no normaliser yet;
+- `placeholder`: it is skipped.
+
+DUKES 5.11 is `snapshot` for now. No one has yet seen this edition's sheet layout,
+and a parser written blind would be a guess.
+
+**Vendored lanes** (`<domain>/lanes/<lane>/`, run by `pipelines/run_lanes.py`) are the
+standard-library scripts that the #73 work lanes delivered. They are copied in
+unchanged, apart from a marked path-redirect block in DC-A6. Each keeps its own
+output schema. The data-centre lanes all share the step-3 vocabulary, and DC-A7's
+merge validates its output against `dc-a7-merge/dc_pipeline.schema.json`.
+
+`lanes/lanes.json` declares, for each lane, its fetch, build and self-test commands,
+its outputs, its licence and `open` flag, and its pinned inputs. Large inputs are
+not committed; they are recorded as URL and SHA-256 and downloaded by
+`run_lanes.py inputs`.
+
+| lane | role | fetch (network, workflow only) | offline build |
+|---|---|---|---|
+| dc-a1-neso | NESO TEC + Embedded rows, data-centre-like; grid connection MW only | `fetch_neso.py --out out` | (one step with fetch) |
+| dc-a3-gov | GOV.UK-published sites | `gov_sites.py fetch --verify` (snapshots and re-checks every quote) | `gov_sites.py build` |
+| dc-a4-osm-wikidata | operational sites mapped in OSM, matched to Wikidata | `dc_a4.py fetch-osm`, `fetch-wikidata` | `dc_a4.py build` (falls back to the pinned globalgrid2050 snapshot) |
+| dc-a7-merge | merged pipeline: de-duplication, provenance, conflicts | none | `dcingest.py` over the lanes above |
+| dc-a6 (conventional) | conventional power assets | none (DUKES 5.11 is snapshotted by the native track) | `build_conventional.py` |
+
+How the pins work:
+- `lanes/MANIFEST.json` pins every committed file in every lane directory, and records
+  each lane's last fetch: its date, its exit codes, and whether it succeeded.
+- A fetch that fails, such as one blocked by a proxy, is recorded as a failure, and
+  the previous snapshot stays in place. The PR summary shows that lane as
+  **FAILED: unknown, not zero**.
+- `ci/verify.py` fails on any unpinned or altered file. It also fails on any output
+  from a lane whose licence is `unverified`, so NESO data cannot reach `main` until
+  the owner confirms the NESO Open Data Licence.
+- `reproduce.py check` rebuilds every fully open lane offline in a scratch copy and
+  requires byte-identical outputs. When the pinned inputs are absent, it reports the
+  lane as `skipped_missing_input`; in CI, the requirements leg downloads the inputs
+  first and may not skip. Two people get the same `summary_sha256` only if both had
+  the inputs present.
+
+The offline baseline at scaffold time is everything built without network:
+- DC-A3: 27 records;
+- DC-A4: 190 sites from the legacy OSM snapshot;
+- DC-A7: the merge of those two;
+- DC-A6: 301 conventional sites, 167 of which have fuel unstated because DUKES could
+  not be reached.
+
+The first manual fetch replaces these on a review branch.
+
 ## The open-data rule, as code
 
 `sources.json` gives each source `"open": "yes" | "no" | "unverified"`.
@@ -154,6 +212,9 @@ Licence rule for the merged product: if it includes any ODbL source
 python pipelines/fetch_assets.py list                       # sources, open status, fetcher status
 python pipelines/fetch_assets.py fetch all                  # network; fully open + ready only
 python pipelines/fetch_assets.py normalise all              # no network
+python pipelines/run_lanes.py inputs                        # pinned lane inputs (url + sha256)
+python pipelines/run_lanes.py build                         # rebuild every open lane offline
+python pipelines/run_lanes.py selftest                      # lane self-tests, synthetic fixtures
 python ci/verify.py                                         # fail closed
 python reproduce.py check --json reproduction.json          # offline; prints summary_sha256
 python -m unittest discover -s tests -v
@@ -173,20 +234,57 @@ it, use `ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n file reproduction.json`.
 
   Each leg runs pyflakes, the unit tests, `ci/verify.py` and `reproduce.py check`.
 - **`.github/workflows/fetch-assets.yml`** runs only on manual dispatch, and there is
-  **no schedule**. The sources update at different rates:
+  **no schedule**. It is where every fetcher runs for real, because a GitHub-hosted
+  runner can reach gov.uk, NESO, Overpass and Wikidata. It runs these steps in order:
+  1. the native fetch (fully open sources);
+  2. the lane fetches (`run_lanes.py fetch`);
+  3. the offline lane builds and normalise;
+  4. `ci/verify.py` and `reproduce.py check`, with inputs required;
+  5. a summary of the run.
+
+  It then commits the raw snapshots and outputs, with their pins, to a new branch
+  `fetch/<run id>-<domain>`, and opens a **draft PR** whose body is that summary.
+  **It never pushes to `main`.**
+
+  There is no schedule because the sources update at different rates:
   - DUKES: once a year;
   - WRI: frozen since 2021;
   - OSM and Wikidata: continuously;
-  - registers: monthly or ad hoc.
+  - NESO registers: twice weekly.
 
-  A changed pin is a decision for someone who reads the diff. The run fetches,
-  normalises, verifies and reproduces, uploads the snapshot as an artifact and, if
-  asked, commits it to a new branch `fetch/<run id>`. It never pushes to `main`. A
-  per-source schedule can be added once a source has a published cadence and a named
-  reviewer.
+  A changed pin is a decision for someone who reads the diff.
+
+  `include_unverified=true` also runs DC-A1 (NESO). That PR is titled "DO NOT MERGE",
+  and the test workflow fails on it until the licence is confirmed.
+
+  A PR opened with `GITHUB_TOKEN` does not trigger other workflows. To run the test
+  workflow on such a PR, push a commit to its branch, or close and reopen it. If the
+  repository setting "Allow GitHub Actions to create and approve pull requests" is
+  off, the run prints a compare link instead of opening the PR.
+
+### How to dispatch it
+
+The workflow can only be dispatched once this file is on the default branch, `main`.
+
+- **From the web:** go to the Actions tab and choose **Fetch the asset sources
+  (manual)**, then **Run workflow**. Pick a domain; `include_unverified` is off by
+  default.
+- **From the command line:**
+  `gh workflow run fetch-assets.yml --repo Ventusltd/data-grid-gb --ref main -f domain=all -f include_unverified=false -f open_pr=true`
+- **To watch the run:**
+  `gh run list --repo Ventusltd/data-grid-gb --workflow fetch-assets.yml --limit 1`,
+  then `gh run watch <id> --repo Ventusltd/data-grid-gb`.
 
 ## Status of the sources (at scaffold time)
 
-Every fetcher is a placeholder until its lane (DC-A1..A6) delivers it. Licences
-marked `unverified` stay unverified until someone quotes the exact terms with their
-URL. See `datacentres/NOTICE` and `conventional/NOTICE`.
+- **Native fetchers:**
+  - `dukes-5-11` is snapshot-only;
+  - every other native fetcher is a placeholder.
+- **Vendored lanes:**
+  - DC-A3, DC-A4, DC-A6 and DC-A7 are present;
+  - DC-A1 is present, and its licence is unverified;
+  - DC-A2 (planning) and DC-A5 (DNO registers) had not delivered a script when this
+    was written.
+- **Licences:** a licence marked `unverified` stays unverified until someone quotes
+  the exact terms with their URL. See `datacentres/NOTICE` and
+  `conventional/NOTICE`.

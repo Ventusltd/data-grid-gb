@@ -27,3 +27,18 @@ osm-power-plants  (open: yes)
   https://opendatacommons.org/licenses/odbl/1-0/  and  https://www.openstreetmap.org/copyright
   Attribution: © OpenStreetMap contributors. SHARE-ALIKE applies to any database
   that republishes or merges these records.
+
+Vendored lane (conventional/lanes/dc-a6, see lanes.json)
+---------------------------------------------------------
+dc-a6 (DC-A6)  Built from:
+  - NAEI 2023 point sources, via the GridAtlas offtakers file: OGL v3.0, "published by
+    Defra, DESNZ and the Devolved Governments under the Open Government Licence"
+    (https://naei.energysecurity.gov.uk/data/maps);
+  - OpenStreetMap power=plant: ODbL 1.0, © OpenStreetMap contributors;
+  - WRI GPPD v1.3.0: CC BY 4.0 (citation above);
+  - REPD Q2 2026 (DESNZ): OGL v3.0, used ONLY to exclude renewable-scope sites and
+    never copied;
+  - inputs/status_curated.csv: facts curated by GridAtlas R-otdata, each row citing its
+    source URL.
+  The output is an ODbL database because it contains OSM data. Filtering on each
+  feature's sources[] gives the OGL + CC BY subset.

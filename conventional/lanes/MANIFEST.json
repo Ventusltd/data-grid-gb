@@ -1,0 +1,38 @@
+{
+  "domain": "conventional",
+  "lanes": {
+    "dc-a6": {
+      "files": {
+        "build_conventional.py": {
+          "bytes": 23075,
+          "sha256": "01d7d947c745736fc3ad06bf81e8fb0d4ad905d1ab50d325f76711a4b0421c70"
+        },
+        "inputs/status_curated.csv": {
+          "bytes": 6828,
+          "sha256": "04c8f83acd5f8e14a2e4f8a28bc04535b3951bf21e8ce13c11e74a23ecdf58a6"
+        },
+        "out/SHA256SUMS": {
+          "bytes": 335,
+          "sha256": "13f2a74c544de093912511ec932b1c3cb014549283800d199e254ae12b173ef6"
+        },
+        "out/conventional_power_uk.geojson": {
+          "bytes": 465909,
+          "sha256": "44b577a12d714d934ce90ce39b44951fb2a641f32ccc20d45a5e2461b145ec98"
+        },
+        "out/counts.json": {
+          "bytes": 1022,
+          "sha256": "e8f7b988875b7a8048f92bfd2c88bca4b2fe678f223d4abfdd14cf03198d5062"
+        },
+        "out/counts.md": {
+          "bytes": 6800,
+          "sha256": "5946bc254dc96ec3c4564c0c15866a050fb41ca67402c3eefa163f4d85e248df"
+        },
+        "out/excluded_repd.json": {
+          "bytes": 28608,
+          "sha256": "ce4e026a881981659358ed6304c4ae979adc225f79278af398059586fa78e012"
+        }
+      }
+    }
+  },
+  "schema": "gb-asset-lanes-manifest.v1"
+}

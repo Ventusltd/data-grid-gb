@@ -1,0 +1,151 @@
+{
+  "schema": "gb-asset-lanes.v1",
+  "domain": "datacentres",
+  "about": "Lane scripts vendored from GridAtlas #73 work lanes, run as they were delivered (each in its own schema). pipelines/run_lanes.py runs them; ci/verify.py pins every file; reproduce.py rebuilds the deterministic ones.",
+  "lanes": [
+    {
+      "id": "dc-a1-neso",
+      "lane": "DC-A1",
+      "title": "NESO TEC and Embedded registers: data-centre-like rows (grid connection MW only)",
+      "open": "unverified",
+      "licence": "NESO Open Data Licence (OGL v3-derived; owner to confirm)",
+      "licence_url": "https://www.neso.energy/data-portal/neso-open-licence",
+      "attribution": "Supported by National Energy SO Open Data",
+      "fetch": [
+        [
+          "fetch_neso.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [],
+      "selftest": [
+        [
+          "fetch_neso.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/neso_connections.normalised.json",
+        "out/neso_dc_like.normalised.json",
+        "out/neso_dc_like.geojson",
+        "out/counts.json",
+        "out/manifest.json"
+      ],
+      "notes": "Fetch and normalise are one step. TEC and Embedded hold generation, so expect few or no data-centre rows; a miss is 'not identified', not zero. The EA register (--include-ea) is left off: licence unverified."
+    },
+    {
+      "id": "dc-a3-gov",
+      "lane": "DC-A3",
+      "title": "Government-published data-centre sites (AI Growth Zones, s35 directions, recovered appeals)",
+      "open": "yes",
+      "licence": "OGL-3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0",
+      "fetch": [
+        [
+          "gov_sites.py",
+          "fetch",
+          "--verify"
+        ]
+      ],
+      "build": [
+        [
+          "gov_sites.py",
+          "build"
+        ]
+      ],
+      "outputs": [
+        "gov_sites.json",
+        "gov_sites.geojson"
+      ],
+      "notes": "Records are curated from cited GOV.UK, gov.scot and gov.wales pages; fetch snapshots every cited page and checks each quote still appears. Some cited domains are marked unverified per record."
+    },
+    {
+      "id": "dc-a4-osm-wikidata",
+      "lane": "DC-A4",
+      "title": "Operational data centres mapped in OpenStreetMap, matched to Wikidata",
+      "open": "yes",
+      "licence": "ODbL-1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors (ODbL); Wikidata (CC0)",
+      "fetch": [
+        [
+          "dc_a4.py",
+          "fetch-osm",
+          "--raw",
+          "raw",
+          "--retrieved",
+          "{today}"
+        ],
+        [
+          "dc_a4.py",
+          "fetch-wikidata",
+          "--raw",
+          "raw",
+          "--retrieved",
+          "{today}"
+        ]
+      ],
+      "build": [
+        [
+          "dc_a4.py",
+          "build",
+          "--raw",
+          "raw",
+          "--out",
+          "out",
+          "--legacy",
+          "raw/gg2050_datacentres.geojson",
+          "--retrieved",
+          "{retrieved}"
+        ]
+      ],
+      "outputs": [
+        "out/dc_operational.json",
+        "out/dc_operational.geojson",
+        "out/counts.json"
+      ],
+      "notes": "Without a live Overpass snapshot the build falls back to the pinned globalgrid2050 datacentres.geojson (240 points, name and operator only).",
+      "selftest": [
+        [
+          "dc_a4.py",
+          "selftest",
+          "--out",
+          "{tmp}"
+        ]
+      ]
+    },
+    {
+      "id": "dc-a7-merge",
+      "lane": "DC-A7",
+      "title": "Merged UK data-centre pipeline (schema, de-duplication, conflicts)",
+      "open": "yes",
+      "licence": "per record (ODbL-1.0 where any OSM source contributes)",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "See each record's sources[]",
+      "fetch": [],
+      "build": [
+        [
+          "dcingest.py",
+          "--lanes",
+          "../dc-a1-neso/out",
+          "../dc-a3-gov",
+          "../dc-a4-osm-wikidata/out",
+          "--out",
+          "out/uk_datacentre_pipeline.geojson"
+        ]
+      ],
+      "selftest": [
+        [
+          "test_dcmerge.py"
+        ]
+      ],
+      "outputs": [
+        "out/uk_datacentre_pipeline.geojson",
+        "out/uk_datacentre_pipeline.rejects.json"
+      ],
+      "notes": "Runs after the other lanes. Rejects any record without a fully open licence, a URL or a name."
+    }
+  ]
+}

@@ -6,7 +6,8 @@ A source module ``<domain>/fetchers/<module>.py`` defines:
 
     SOURCE_ID = "osm-datacentres"        # matches its entry in <domain>/sources.json
     LANE = "DC-A4"                        # the work lane that owns it (provenance only)
-    STATUS = "ready"                      # or "placeholder": skipped, never fails a run
+    STATUS = "ready"                      # "snapshot": fetch and pin raw bytes only (no normaliser yet);
+                                          # "placeholder": skipped, never fails a run
 
     def raw_requests() -> list[dict]:
         # Pinned requests: [{"file": "uk.json", "url": "https://...",
@@ -149,6 +150,7 @@ def fetch_domain(domain: str, *, root: Path = ROOT, only=None, include_unverifie
     raw_dir = domain_dir(domain, root) / "raw"
     manifest_path = raw_dir / "MANIFEST.json"
     manifest = read_json(manifest_path, {"schema": MANIFEST_SCHEMA, "domain": domain, "files": {}})
+    failures: list = []
     for entry in registry["sources"]:
         sid = entry["id"]
         if only and sid not in only:
@@ -160,12 +162,18 @@ def fetch_domain(domain: str, *, root: Path = ROOT, only=None, include_unverifie
             log(f"  skip {sid}: licence unverified (use --include-unverified to snapshot it for review)")
             continue
         module = load_module(domain, entry, root)
-        if module is None or getattr(module, "STATUS", "placeholder") != "ready":
+        if module is None or getattr(module, "STATUS", "placeholder") not in ("ready", "snapshot"):
             log(f"  skip {sid}: fetcher is a placeholder ({entry.get('lane', 'no lane')})")
             continue
         for request in module.raw_requests():
             rel = f"{sid}/{_safe_file(request['file'])}"
-            payload = opener(request)
+            try:
+                payload = opener(request)
+            except OSError as error:  # network failure: recorded, previous snapshot kept, run continues
+                log(f"::warning::{domain}/{rel}: fetch failed ({type(error).__name__}: {error}); "
+                    "the previous snapshot, if any, is kept; unknown, not zero")
+                failures.append(rel)
+                continue
             digest = sha256_bytes(payload)
             pinned = manifest["files"].get(rel)
             if pinned and pinned["sha256"] != digest and not update_pins:
@@ -190,7 +198,9 @@ def fetch_domain(domain: str, *, root: Path = ROOT, only=None, include_unverifie
             }
             log(f"  {rel:<48} {len(payload):>11,} bytes  {digest[:16]}{'' if committed else '  (not committed: too large)'}")
     manifest["files"] = dict(sorted(manifest["files"].items()))
-    write_text(manifest_path, canonical_text(manifest))
+    if manifest["files"] or manifest_path.exists():
+        write_text(manifest_path, canonical_text(manifest))
+    manifest["failures"] = failures  # reported to the caller, never written into the pins
     return manifest
 
 

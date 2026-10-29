@@ -1,18 +1,30 @@
-# Fetch the data-centre and conventional-generation sources, by hand.
+# Fetch every data-centre and conventional-generation source for real, by hand.
+#
+# WHERE THE FETCHERS RUN
+#
+# The sandbox that wrote the lane scripts cannot reach gov.uk, api.neso.energy,
+# Overpass or Wikidata; a GitHub-hosted runner can. So this workflow is the one
+# place every fetcher runs against the live sources:
+#   assetpipe sources  datacentres/ + conventional/ sources.json   (dukes-5-11 snapshot, ...)
+#   DC-A1 fetch_neso.py   NESO TEC + Embedded registers  (licence unverified: only with include_unverified)
+#   DC-A3 gov_sites.py    GOV.UK / gov.scot / gov.wales pages behind each record, quotes re-checked
+#   DC-A4 dc_a4.py        Overpass + Wikidata SPARQL
+# then rebuilds every lane offline (DC-A3, DC-A4, DC-A6, then the DC-A7 merge),
+# verifies, reproduces, commits raw snapshots + outputs with their sha256 pins
+# to a NEW branch and opens a draft pull request with the diff summary. It
+# never pushes to main.
 #
 # WHY THERE IS NO SCHEDULE
 #
-# The sources move on different clocks: DUKES 5.11 once a year, the WRI database
-# not since 2021, OpenStreetMap and Wikidata continuously, planning and
-# connection registers monthly or ad hoc. One timer would either miss the slow
-# ones' single meaningful change among empty runs or hammer the fast ones for
-# churn nobody reviews. And a refreshed pin is a decision (raw bytes changed;
-# the sha256 pin fails closed until --update-pins), so it should be taken by a
-# person who will read the diff. Add a schedule per source once one has a
-# published cadence and a reviewer.
+# The sources move on different clocks (DUKES yearly, WRI frozen since 2021,
+# OSM and Wikidata continuously, NESO registers twice weekly) and a changed pin
+# is a decision for a person who reads the diff. Add a per-source schedule once
+# a source has a published cadence and a named reviewer.
 #
-# The run never pushes to main. It commits to a new branch (when asked) so the
-# change lands through a pull request and the test workflow.
+# HOW TO RUN (once this file is on the default branch)
+#   Actions tab -> "Fetch the asset sources (manual)" -> Run workflow, or
+#   gh workflow run fetch-assets.yml --repo Ventusltd/data-grid-gb --ref main \
+#     -f domain=all -f include_unverified=false
 name: Fetch the asset sources (manual)
 
 on:
@@ -24,23 +36,25 @@ on:
         default: 'all'
         type: choice
         options: [all, datacentres, conventional]
-      source:
-        description: 'optional: one source id from <domain>/sources.json'
-        required: false
-        default: ''
-      update_pins:
-        description: 'accept upstream bytes that differ from the pinned sha256'
+      include_unverified:
+        description: 'also run sources whose licence is unverified (NESO DC-A1); the PR is then marked do-not-merge'
         required: false
         default: false
         type: boolean
-      commit_branch:
-        description: 'commit the snapshot to a new branch fetch/<run id> (never main)'
+      update_pins:
+        description: 'accept assetpipe source bytes that differ from the pinned sha256'
+        required: false
+        default: false
+        type: boolean
+      open_pr:
+        description: 'commit to a new branch fetch/<run id> and open a draft PR (never main)'
         required: false
         default: true
         type: boolean
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: asset-fetch
@@ -49,57 +63,112 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 60
+    env:
+      DOMAIN: ${{ inputs.domain }}
+      INCLUDE_UNVERIFIED: ${{ inputs.include_unverified }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - name: Fetch and pin (fully open sources only)
+
+      - name: Fetch and pin the registered sources (fully open only)
         env:
-          DOMAIN: ${{ inputs.domain }}
-          SOURCE: ${{ inputs.source }}
           UPDATE_PINS: ${{ inputs.update_pins }}
         run: |
           set -euo pipefail
           args=(fetch "$DOMAIN")
-          if [ -n "$SOURCE" ]; then args+=(--source "$SOURCE"); fi
           if [ "$UPDATE_PINS" = "true" ]; then args+=(--update-pins); fi
+          if [ "$INCLUDE_UNVERIFIED" = "true" ]; then args+=(--include-unverified); fi
           python pipelines/fetch_assets.py "${args[@]}"
-      - name: Normalise (no network)
-        env:
-          DOMAIN: ${{ inputs.domain }}
-        run: python pipelines/fetch_assets.py normalise "$DOMAIN"
+
+      # A blocked or failing lane fetch is recorded in lanes/MANIFEST.json
+      # (last_fetch.codes) and the previous snapshot is kept: unknown, not zero.
+      - name: Run the lane fetchers (network)
+        run: |
+          set -euo pipefail
+          args=(fetch "$DOMAIN")
+          if [ "$INCLUDE_UNVERIFIED" = "true" ]; then args+=(--include-unverified); fi
+          python pipelines/run_lanes.py "${args[@]}"
+
+      - name: Rebuild every lane and normalise (offline)
+        run: |
+          set -euo pipefail
+          args=(build "$DOMAIN")
+          if [ "$INCLUDE_UNVERIFIED" = "true" ]; then args+=(--include-unverified); fi
+          python pipelines/run_lanes.py "${args[@]}"
+          python pipelines/fetch_assets.py normalise "$DOMAIN"
+
       - name: Verify and reproduce (fail closed)
         env:
           ASSETS_REQUIRE_DEPS: '1'
+          ASSETS_REQUIRE_INPUTS: '1'
         run: |
-          python ci/verify.py
+          set -euo pipefail
+          if [ "$INCLUDE_UNVERIFIED" = "true" ]; then
+            python ci/verify.py --allow-unverified-lanes
+          else
+            python ci/verify.py
+          fi
           python reproduce.py check --json "$RUNNER_TEMP/reproduction.json"
+
+      - name: Summarise
+        run: |
+          set -euo pipefail
+          {
+            echo "Manual fetch, run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} (domain: ${DOMAIN}, include_unverified: ${INCLUDE_UNVERIFIED})."
+            echo
+            if [ "$INCLUDE_UNVERIFIED" = "true" ]; then
+              echo "**DO NOT MERGE as is: this snapshot includes sources whose licence is unverified. The test workflow fails on it until each is confirmed fully open.**"
+              echo
+            fi
+            python pipelines/run_lanes.py summary "$DOMAIN"
+            echo "reproduce.py summary_sha256: \`$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['summary_sha256'])" "$RUNNER_TEMP/reproduction.json")\`"
+            echo
+            echo '```'
+            git add -A -- datacentres conventional
+            git diff --cached --stat | tail -40
+            echo '```'
+            echo
+            echo "A failed fetch keeps the previous snapshot; its counts are unknown, not zero. A pipeline entry is not a commitment; IT load MW and grid connection MW are never conflated."
+          } > "$RUNNER_TEMP/summary.md"
+          cat "$RUNNER_TEMP/summary.md" >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/upload-artifact@v4
         with:
           name: asset-snapshot-${{ github.run_id }}
           path: |
-            datacentres/raw/MANIFEST.json
-            datacentres/normalised/
-            conventional/raw/MANIFEST.json
-            conventional/normalised/
+            datacentres/
+            conventional/
             ${{ runner.temp }}/reproduction.json
+            ${{ runner.temp }}/summary.md
           if-no-files-found: ignore
-      - name: Commit to a review branch
-        if: inputs.commit_branch
+
+      # Note: a pull request opened with GITHUB_TOKEN does not trigger other
+      # workflows. Verify and reproduce have already run above; to run the
+      # test workflow on the PR as well, push any commit to the branch or
+      # close and reopen the PR.
+      - name: Commit to a review branch and open a draft PR
+        if: inputs.open_pr
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          git add -- datacentres conventional
+          git add -A -- datacentres conventional
           if git diff --cached --quiet; then
-            echo "nothing changed; no branch"
+            echo "nothing changed; no branch, no PR"
             exit 0
           fi
-          branch="fetch/${GITHUB_RUN_ID}"
+          branch="fetch/${GITHUB_RUN_ID}-${DOMAIN}"
           git switch -c "$branch"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Asset snapshot from run ${GITHUB_RUN_ID} (manual fetch)"
+          git commit -q -m "Asset snapshot from manual fetch run ${GITHUB_RUN_ID} (${DOMAIN})"
           git push origin "$branch"
-          echo "::notice::pushed $branch; open a pull request to review it"
+          title="Asset snapshot: ${DOMAIN}, run ${GITHUB_RUN_ID}"
+          if [ "$INCLUDE_UNVERIFIED" = "true" ]; then title="[DO NOT MERGE: unverified licence] ${title}"; fi
+          gh pr create --draft --base "${{ github.event.repository.default_branch }}" --head "$branch" \
+            --title "$title" --body-file "$RUNNER_TEMP/summary.md" \
+          || echo "::warning::could not open the PR (Settings > Actions > 'Allow GitHub Actions to create pull requests' may be off); open it from ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/${branch}?expand=1"
