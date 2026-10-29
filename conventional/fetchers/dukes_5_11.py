@@ -37,7 +37,7 @@ FUEL = {
     "natural gas": "gas", "sour gas": "gas", "coal": "coal",
     "oil": "oil", "diesel/gas oil": "gas_oil_dual",
     "diesel": "diesel", "nuclear": "nuclear",
-    "biomass": "biomass", "waste": "efw",
+    "biomass": "biomass", "waste": "efw", "msw": "efw",  # Municipal Solid Waste, 5.11 fuel
 }
 
 
