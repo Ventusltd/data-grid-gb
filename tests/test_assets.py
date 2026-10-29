@@ -325,6 +325,11 @@ class RepositoryTests(unittest.TestCase):
                     for request in module.raw_requests():
                         self.assertTrue(request["url"].startswith("https://"), request["url"])
 
+    def test_pinned_data_is_exempt_from_line_ending_conversion(self):
+        text = (ROOT / ".gitattributes").read_text(encoding="utf-8")
+        for domain in ("datacentres", "conventional"):
+            self.assertIn(f"{domain}/** -text", text, "eol=lf would rewrite CRLF snapshots and break their pins")
+
     def test_fetch_workflow_is_manual_only(self):
         text = (ROOT / ".github/workflows/fetch-assets.yml").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:", text)
