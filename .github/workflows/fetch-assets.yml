@@ -29,7 +29,7 @@
 #     -f domain=all -f include_unverified=false
 name: Fetch the asset sources (manual)
 
-# Run retry 2 after PR #4 bounded CSV parser merged to main; no unverified datasets.
+# Run retry 3: persist verified Actions fetch as a draft snapshot PR, without touching main.
 # One-off dispatch by a dedicated review branch because this GitHub connector
 # cannot POST workflow_dispatch. Only the temporary branch can trigger it.
 on:
@@ -163,7 +163,7 @@ jobs:
       # test workflow on the PR as well, push any commit to the branch or
       # close and reopen the PR.
       - name: Commit to a review branch and open a draft PR
-        if: inputs.open_pr != false
+        if: github.event_name == 'push' || inputs.open_pr
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
