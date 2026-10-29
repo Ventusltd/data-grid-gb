@@ -29,6 +29,7 @@
 #     -f domain=all -f include_unverified=false
 name: Fetch the asset sources (manual)
 
+# Run retry 2 after PR #4 bounded CSV parser merged to main; no unverified datasets.
 # One-off dispatch by a dedicated review branch because this GitHub connector
 # cannot POST workflow_dispatch. Only the temporary branch can trigger it.
 on:
