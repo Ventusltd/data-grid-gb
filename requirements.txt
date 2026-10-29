@@ -1,0 +1,2 @@
+# Optional: only spreadsheet normalisers (DUKES 5.11) need it. Fetch, verify and reproduce are standard library.
+openpyxl>=3.1,<4

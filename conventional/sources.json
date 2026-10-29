@@ -1,0 +1,55 @@
+{
+  "domain": "conventional",
+  "open_rule": "Only sources with open == 'yes' are fetched by default and only they reach normalised/. FULLY OPEN means OGL v3, CC BY, CC0, public domain or ODbL with attribution; non-commercial, approval-based and paid sources are 'no'. 'unverified' means nobody has yet quoted the licence that applies to the exact file.",
+  "schema": "gb-asset-source-registry.v1",
+  "sources": [
+    {
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0 (DESNZ, DUKES 5.11)",
+      "cadence": "annual (DUKES, July)",
+      "format": "XLSX",
+      "id": "dukes-5-11",
+      "lane": "DC-A6",
+      "licence": "OGL-3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "module": "dukes_5_11",
+      "notes": "Installed capacity MW by station with fuel and year of commission; renewables rows are excluded here (REPD covers them).",
+      "open": "yes",
+      "publisher": "Department for Energy Security and Net Zero",
+      "share_alike": false,
+      "title": "DUKES Table 5.11: Power stations in the United Kingdom",
+      "url": "https://www.gov.uk/government/statistics/electricity-chapter-5-digest-of-united-kingdom-energy-statistics-dukes"
+    },
+    {
+      "attribution": "Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia, World Resources Institute. 2021. Global Power Plant Database. CC BY 4.0.",
+      "cadence": "frozen (last release 2021)",
+      "format": "CSV",
+      "id": "wri-gppd",
+      "lane": "TBC (DC-A1..A6)",
+      "licence": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "module": "wri_gppd",
+      "notes": "Cross-check only for coordinates and commissioning year; stale for closures after 2021.",
+      "open": "yes",
+      "publisher": "World Resources Institute",
+      "share_alike": false,
+      "title": "WRI Global Power Plant Database, GB rows (v1.3.0)",
+      "url": "https://datasets.wri.org/dataset/globalpowerplantdatabase"
+    },
+    {
+      "attribution": "© OpenStreetMap contributors, https://www.openstreetmap.org/copyright",
+      "cadence": "continuous (snapshot on manual fetch)",
+      "format": "Overpass JSON",
+      "id": "osm-power-plants",
+      "lane": "TBC (DC-A1..A6)",
+      "licence": "ODbL-1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "module": "osm_power_plants",
+      "notes": "Geometry for sites DUKES locates only by postcode or grid reference.",
+      "open": "yes",
+      "publisher": "OpenStreetMap contributors",
+      "share_alike": true,
+      "title": "OpenStreetMap power=plant with a conventional plant:source",
+      "url": "https://www.openstreetmap.org/"
+    }
+  ]
+}

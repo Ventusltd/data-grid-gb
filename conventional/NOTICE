@@ -1,0 +1,29 @@
+data-grid-gb / conventional: third-party data terms
+====================================================
+
+Code is Apache-2.0 (root LICENSE and NOTICE, via PR #1). The DATA keeps its
+publishers' terms, listed per source id in sources.json. Quotes are short
+extracts; the URL is the authority.
+
+dukes-5-11  (open: yes)
+  Department for Energy Security and Net Zero, Digest of UK Energy Statistics,
+  Table 5.11 (Power stations in the United Kingdom). Open Government Licence v3.0.
+  https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  "You are free to: copy, publish, distribute and transmit the Information; adapt
+  the Information; exploit the Information commercially and non-commercially".
+  Attribution: Contains public sector information licensed under the Open
+  Government Licence v3.0.
+
+wri-gppd  (open: yes)
+  World Resources Institute, Global Power Plant Database v1.3.0 (2021). CC BY 4.0.
+  https://creativecommons.org/licenses/by/4.0/
+  https://datasets.wri.org/dataset/globalpowerplantdatabase
+  Attribution: Global Energy Observatory, Google, KTH Royal Institute of Technology
+  in Stockholm, Enipedia, World Resources Institute. 2021. Global Power Plant
+  Database. Stale for closures after 2021; used as a cross-check only.
+
+osm-power-plants  (open: yes)
+  OpenStreetMap contributors. Open Database Licence 1.0.
+  https://opendatacommons.org/licenses/odbl/1-0/  and  https://www.openstreetmap.org/copyright
+  Attribution: © OpenStreetMap contributors. SHARE-ALIKE applies to any database
+  that republishes or merges these records.

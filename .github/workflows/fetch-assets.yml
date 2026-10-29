@@ -1,0 +1,105 @@
+# Fetch the data-centre and conventional-generation sources, by hand.
+#
+# WHY THERE IS NO SCHEDULE
+#
+# The sources move on different clocks: DUKES 5.11 once a year, the WRI database
+# not since 2021, OpenStreetMap and Wikidata continuously, planning and
+# connection registers monthly or ad hoc. One timer would either miss the slow
+# ones' single meaningful change among empty runs or hammer the fast ones for
+# churn nobody reviews. And a refreshed pin is a decision (raw bytes changed;
+# the sha256 pin fails closed until --update-pins), so it should be taken by a
+# person who will read the diff. Add a schedule per source once one has a
+# published cadence and a reviewer.
+#
+# The run never pushes to main. It commits to a new branch (when asked) so the
+# change lands through a pull request and the test workflow.
+name: Fetch the asset sources (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: 'datacentres, conventional or all'
+        required: true
+        default: 'all'
+        type: choice
+        options: [all, datacentres, conventional]
+      source:
+        description: 'optional: one source id from <domain>/sources.json'
+        required: false
+        default: ''
+      update_pins:
+        description: 'accept upstream bytes that differ from the pinned sha256'
+        required: false
+        default: false
+        type: boolean
+      commit_branch:
+        description: 'commit the snapshot to a new branch fetch/<run id> (never main)'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: asset-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Fetch and pin (fully open sources only)
+        env:
+          DOMAIN: ${{ inputs.domain }}
+          SOURCE: ${{ inputs.source }}
+          UPDATE_PINS: ${{ inputs.update_pins }}
+        run: |
+          set -euo pipefail
+          args=(fetch "$DOMAIN")
+          if [ -n "$SOURCE" ]; then args+=(--source "$SOURCE"); fi
+          if [ "$UPDATE_PINS" = "true" ]; then args+=(--update-pins); fi
+          python pipelines/fetch_assets.py "${args[@]}"
+      - name: Normalise (no network)
+        env:
+          DOMAIN: ${{ inputs.domain }}
+        run: python pipelines/fetch_assets.py normalise "$DOMAIN"
+      - name: Verify and reproduce (fail closed)
+        env:
+          ASSETS_REQUIRE_DEPS: '1'
+        run: |
+          python ci/verify.py
+          python reproduce.py check --json "$RUNNER_TEMP/reproduction.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asset-snapshot-${{ github.run_id }}
+          path: |
+            datacentres/raw/MANIFEST.json
+            datacentres/normalised/
+            conventional/raw/MANIFEST.json
+            conventional/normalised/
+            ${{ runner.temp }}/reproduction.json
+          if-no-files-found: ignore
+      - name: Commit to a review branch
+        if: inputs.commit_branch
+        run: |
+          set -euo pipefail
+          git add -- datacentres conventional
+          if git diff --cached --quiet; then
+            echo "nothing changed; no branch"
+            exit 0
+          fi
+          branch="fetch/${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Asset snapshot from run ${GITHUB_RUN_ID} (manual fetch)"
+          git push origin "$branch"
+          echo "::notice::pushed $branch; open a pull request to review it"

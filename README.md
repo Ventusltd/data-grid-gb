@@ -101,6 +101,18 @@ Substation geometry: OpenStreetMap contributors, via the GridAtlas
 release. Document ids and SHA-256 digests are recorded in
 `sources/sources-manifest.json`.
 
+## Data centres and conventional generation
+
+`datacentres/` and `conventional/` are two further products, built with the same
+discipline: pinned sources, SHA-256, a fail-closed verifier, and offline
+reproduction. They hold UK data-centre sites and pipeline entries, and UK
+conventional power stations. They come only from fully open sources (OGL v3, CC BY,
+CC0, public domain, or ODbL with attribution). Each folder has its own `NOTICE`.
+
+The method and schema are in [`docs/METHODS.md`](docs/METHODS.md). The work is
+tracked in GridAtlas issue #73. IT load MW and grid connection MW are never
+conflated. A pipeline entry is not a commitment.
+
 ## Route-screening research
 
 The proposed second-generation corridor engine is documented separately from

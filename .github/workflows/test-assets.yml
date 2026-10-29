@@ -1,0 +1,72 @@
+# Tests for the data-centre and conventional-generation pipelines.
+#
+# Two legs, as in Ventusltd/lightning's test workflow: "requirements" installs
+# requirements.txt (openpyxl, for spreadsheet sources such as DUKES 5.11) and may
+# not skip a dependency test; "bare" proves that fetch, verify and reproduce need
+# nothing beyond the standard library.
+name: Test the asset pipelines
+
+on:
+  push:
+    paths:
+      - 'assetpipe/**'
+      - 'datacentres/**'
+      - 'conventional/**'
+      - 'pipelines/fetch_assets.py'
+      - 'ci/**'
+      - 'reproduce.py'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/test-assets.yml'
+      - '.github/workflows/fetch-assets.yml'
+  pull_request:
+    paths:
+      - 'assetpipe/**'
+      - 'datacentres/**'
+      - 'conventional/**'
+      - 'pipelines/fetch_assets.py'
+      - 'ci/**'
+      - 'reproduce.py'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/test-assets.yml'
+      - '.github/workflows/fetch-assets.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (${{ matrix.deps }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        deps: [requirements, bare]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install requirements.txt
+        if: matrix.deps == 'requirements'
+        run: pip install -r requirements.txt
+      - name: Static check (undefined names)
+        run: |
+          pip install pyflakes==3.2.0
+          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
+          if grep -E "undefined name|referenced before assignment|unable to detect undefined names" "$RUNNER_TEMP/pyflakes.txt"; then
+            echo "::error::pyflakes found an undefined name"
+            exit 1
+          fi
+      - name: Unit tests
+        env:
+          ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+        run: python -m unittest discover -s tests -v
+      - name: Verify the committed data (fails closed)
+        run: python ci/verify.py
+      - name: Reproduce from the committed raw snapshots
+        env:
+          ASSETS_REQUIRE_DEPS: ${{ matrix.deps == 'requirements' && '1' || '0' }}
+        run: python reproduce.py check --json "$RUNNER_TEMP/reproduction.json"
