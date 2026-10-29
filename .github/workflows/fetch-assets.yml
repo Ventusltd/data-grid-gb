@@ -7,10 +7,11 @@
 # place every fetcher runs against the live sources:
 #   assetpipe sources  datacentres/ + conventional/ sources.json   (dukes-5-11 snapshot, ...)
 #   DC-A1 fetch_neso.py   NESO TEC + Embedded registers  (licence unverified: only with include_unverified)
+#   DC-A2 dc_planning_fetch.py  planning.data.gov.uk, PINS NSIP download, LPA open feeds
 #   DC-A3 gov_sites.py    GOV.UK / gov.scot / gov.wales pages behind each record, quotes re-checked
 #   DC-A4 dc_a4.py        Overpass + Wikidata SPARQL
 #   DC-A5 dno_fetch.py    DNO ECRs and queues: SSEN, NGED, NPg (licence unverified: only with include_unverified)
-# then rebuilds every lane offline (DC-A3, DC-A4, DC-A6, then the DC-A7 merge),
+# then rebuilds every lane offline (DC-A2, DC-A3, DC-A4, DC-A6, then the DC-A7 merge),
 # verifies, reproduces, commits raw snapshots + outputs with their sha256 pins
 # to a NEW branch and opens a draft pull request with the diff summary. It
 # never pushes to main.

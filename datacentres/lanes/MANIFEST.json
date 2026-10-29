@@ -9,6 +9,34 @@
         }
       }
     },
+    "dc-a2-planning": {
+      "files": {
+        "dc_planning_fetch.py": {
+          "bytes": 25562,
+          "sha256": "aeb84c82ce15eaf7ef69bd7a17c34ed18695f2ac696dca5c3533c6427058b6be"
+        },
+        "out/dc_planning.geojson": {
+          "bytes": 3586,
+          "sha256": "dfa004265925475f0d2131007f91a26b75a7369eb475fe85835ce595a05df6c9"
+        },
+        "out/manifest.json": {
+          "bytes": 7521,
+          "sha256": "ec7d00594f2b97fa94239ac883ecde67c5fb17476a54ea3003b69556cb585df4"
+        },
+        "out/raw/digital-land-nsip-snapshot.csv": {
+          "bytes": 49581,
+          "sha256": "0cd20e8867b2f8544a5674508c4493e1c60fc5006acfca287258756366b2dcfa"
+        },
+        "out/raw/doncaster-2023.csv": {
+          "bytes": 205267,
+          "sha256": "48380b738d1599b86e7514e170577cfc5c29a2d419a193ac501cb11c9bc999f1"
+        },
+        "out/raw/doncaster-2024.csv": {
+          "bytes": 196349,
+          "sha256": "4933704b9bcbfec0215ec80134716edf727e3ff0eaffeecf9e84c27d6f996b52"
+        }
+      }
+    },
     "dc-a3-gov": {
       "files": {
         "gov_sites.geojson": {
@@ -76,8 +104,8 @@
           "sha256": "1c4cde998c127527aa3e2b228cad81c766fe3471aba3776f52032a3de4a43592"
         },
         "out/uk_datacentre_pipeline.geojson": {
-          "bytes": 404468,
-          "sha256": "1467b7e56d92e410128b66452a6420792d52e607aa8ff739b02c81bd8a3ea8a4"
+          "bytes": 408022,
+          "sha256": "4123127275c9c32c2599f0790d4751cdac3b49171002f71ef82888c5f3077dd3"
         },
         "out/uk_datacentre_pipeline.rejects.json": {
           "bytes": 2117,

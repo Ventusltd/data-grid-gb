@@ -35,6 +35,41 @@
       "notes": "Fetch and normalise are one step. TEC and Embedded hold generation, so expect few or no data-centre rows; a miss is 'not identified', not zero. The EA register (--include-ea) is left off: licence unverified."
     },
     {
+      "id": "dc-a2-planning",
+      "lane": "DC-A2",
+      "title": "Planning applications and NSIPs that name data centres (planning.data.gov.uk, PINS, LPA open feeds)",
+      "open": "yes",
+      "licence": "OGL-3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0 (MHCLG planning.data.gov.uk; Planning Inspectorate; Camden, Adur, Worthing and Doncaster councils via digital-land)",
+      "fetch": [
+        [
+          "dc_planning_fetch.py",
+          "--out",
+          "out"
+        ]
+      ],
+      "build": [
+        [
+          "dc_planning_fetch.py",
+          "--out",
+          "out",
+          "--offline"
+        ]
+      ],
+      "selftest": [
+        [
+          "dc_planning_fetch.py",
+          "--selftest"
+        ]
+      ],
+      "outputs": [
+        "out/dc_planning.geojson",
+        "out/manifest.json"
+      ],
+      "notes": "A keyword hit is a CANDIDATE, not a data centre. MW only where the text states it; IT, grid and on-site generation kept apart; an unqualified MW goes to mw_unqualified. The Camden, Adur and Worthing feeds rely on digital-land's licence register (ogl3); their publisher pages were not re-read (DC-A2). The build re-reads the raw snapshots offline, so a failed fetch never shrinks the output."
+    },
+    {
       "id": "dc-a3-gov",
       "lane": "DC-A3",
       "title": "Government-published data-centre sites (AI Growth Zones, s35 directions, recovered appeals)",
@@ -158,6 +193,7 @@
           "dcingest.py",
           "--lanes",
           "../dc-a1-neso/out",
+          "../dc-a2-planning/out",
           "../dc-a3-gov",
           "../dc-a4-osm-wikidata/out",
           "../dc-a5-dno/out",

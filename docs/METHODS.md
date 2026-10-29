@@ -91,6 +91,7 @@ not committed; they are recorded as URL and SHA-256 and downloaded by
 | lane | role | fetch (network, workflow only) | offline build |
 |---|---|---|---|
 | dc-a1-neso | NESO TEC + Embedded rows, data-centre-like; grid connection MW only | `fetch_neso.py --out out` | (one step with fetch) |
+| dc-a2-planning | planning applications and NSIPs naming data centres (candidates) | `dc_planning_fetch.py --out out` | `dc_planning_fetch.py --out out --offline` (re-reads the raw snapshots) |
 | dc-a3-gov | GOV.UK-published sites | `gov_sites.py fetch --verify` (snapshots and re-checks every quote) | `gov_sites.py build` |
 | dc-a4-osm-wikidata | operational sites mapped in OSM, matched to Wikidata | `dc_a4.py fetch-osm`, `fetch-wikidata` | `dc_a4.py build` (falls back to the pinned globalgrid2050 snapshot) |
 | dc-a5-dno | DNO embedded capacity register name candidates; grid connection MW only (licence unverified) | `dno_fetch.py --out out` | (one step with fetch) |
@@ -285,7 +286,8 @@ The workflow can only be dispatched once this file is on the default branch, `ma
   - DC-A3, DC-A4, DC-A6 and DC-A7 are present;
   - DC-A1 (NESO) and DC-A5 (DNO registers) are present, and their licences are
     unverified;
-  - DC-A2 (planning) had not delivered a script when this was written.
+  - DC-A2 (planning) arrived last. Its baseline is 3 s35 candidates; the live
+    planning.data.gov.uk and PINS feeds were unreachable from the sandbox.
 - **Licences:** a licence marked `unverified` stays unverified until someone quotes
   the exact terms with their URL. See `datacentres/NOTICE` and
   `conventional/NOTICE`.

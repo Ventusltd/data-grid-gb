@@ -1,0 +1,203 @@
+{
+ "schema": "dc-a2/1",
+ "sources": [
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "alpha, environment=staging; page says 'incomplete and not yet ready for use'; only 4 LPAs configured (Camden, Adur, Worthing, Doncaster)",
+   "fetch": "missing-offline",
+   "id": "pdgu-planning-application",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "dataset page: 'Licensed under the Open Government Licence v.3.0'; specification content/dataset/planning-application.md licence: ogl3",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "planning.data.gov.uk planning-application (England, national aggregate)",
+   "url": "https://files.planning.data.gov.uk/dataset/planning-application.csv"
+  },
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "England + Wales NSIPs (Planning Act 2008)",
+   "fetch": "missing-offline",
+   "id": "pdgu-infrastructure-project",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "specification content/dataset/infrastructure-project.md licence: ogl3; config source.csv licence ogl3",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "planning.data.gov.uk infrastructure-project (NSIPs, from PINS)",
+   "url": "https://files.planning.data.gov.uk/dataset/infrastructure-project.csv"
+  },
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "all NSIPs incl. data centres directed in under s35 (since Jan 2026)",
+   "fetch": "missing-offline",
+   "id": "pins-nsip-applications",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "site footer: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "Planning Inspectorate NSIP applications download",
+   "url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/api/applications-download"
+  },
+  {
+   "bytes": 49581,
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": 233,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "stale scrape of PINS projects map; superseded by pins-nsip-applications",
+   "fetch": "offline-cache",
+   "id": "digital-land-nsip-snapshot",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "derived from PINS (OGL v3); digital-land endpoint retired 2026-10-02 -> STALE",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "0cd20e8867b2f8544a5674508c4493e1c60fc5006acfca287258756366b2dcfa",
+   "title": "digital-land infrastructure-project-collection nsip.csv (GitHub snapshot)",
+   "url": "https://raw.githubusercontent.com/digital-land/infrastructure-project-collection/main/data/nsip.csv"
+  },
+  {
+   "bytes": 196349,
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": 1053,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "one LPA, decided applications in 2024 only, no coordinates",
+   "fetch": "offline-cache",
+   "id": "doncaster-2024",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "digital-land config collection/planning-application/source.csv licence ogl3",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "4933704b9bcbfec0215ec80134716edf727e3ff0eaffeecf9e84c27d6f996b52",
+   "title": "Doncaster 2024 decided applications (digital-land planning-condition-data)",
+   "url": "https://raw.githubusercontent.com/digital-land/planning-condition-data/refs/heads/main/data/doncaster-2024-planning-applications.csv"
+  },
+  {
+   "bytes": 205267,
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": 1126,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "one LPA, decided applications in 2023 only, no coordinates",
+   "fetch": "offline-cache",
+   "id": "doncaster-2023",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "digital-land config collection/planning-application/source.csv licence ogl3",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "48380b738d1599b86e7514e170577cfc5c29a2d419a193ac501cb11c9bc999f1",
+   "title": "Doncaster 2023 decided applications (digital-land planning-condition-data)",
+   "url": "https://raw.githubusercontent.com/digital-land/planning-condition-data/refs/heads/main/data/doncaster-conditions-data-2023-planning-application.csv"
+  },
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "one LPA",
+   "fetch": "missing-offline",
+   "id": "adur",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "Adur DC planning applications (LPA open data feed)",
+   "url": "https://www.adur-worthing.gov.uk/datasets/planning/adur-planning.csv"
+  },
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "one LPA",
+   "fetch": "missing-offline",
+   "id": "worthing",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "Worthing BC planning applications (LPA open data feed)",
+   "url": "https://www.adur-worthing.gov.uk/datasets/planning/worthing-planning.csv"
+  },
+  {
+   "counts": {
+    "ancillary_hits": 0,
+    "by_status": {},
+    "candidates": 0,
+    "rows": null,
+    "use_class_only": 0,
+    "with_any_mw": 0,
+    "with_location": 0
+   },
+   "coverage_note": "one LPA",
+   "fetch": "missing-offline",
+   "id": "camden",
+   "licence": "OGL-UK-3.0",
+   "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "Camden planning applications (Socrata open data)",
+   "url": "https://opendata.camden.gov.uk/resource/2eiu-s2cw.csv?$limit=200000&$order=application_number"
+  },
+  {
+   "counts": {
+    "by_status": {
+     "in planning": 3
+    },
+    "candidates": 3,
+    "with_any_mw": 1,
+    "with_location": 0
+   },
+   "fetch": "curated",
+   "id": "s35-seed",
+   "licence": "OGL-UK-3.0",
+   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "title": "Data-centre s35 directions (hand-curated from gov.uk / PINS pages)"
+  }
+ ],
+ "totals": {
+  "by_status": {
+   "in planning": 3
+  },
+  "candidates": 3
+ }
+}
