@@ -41,3 +41,10 @@ print("DUKES_JOIN_COUNTS", {k:v for k,v in audit.items() if not isinstance(v,lis
 print("DUKES_MATCHES", audit["matches"][:80])
 print("DUKES_REJECTED", audit["rejected_matches"][:50])
 print("DUKES_OUTPUT_SHA256", hashlib.sha256(encode(derived)).hexdigest())
+
+from collections import Counter as _Counter
+fcount = _Counter()
+for row in wb["5.11 Full list"].iter_rows(min_row=7, values_only=True):
+    if row[5] is not None:
+        fcount[str(row[5]).strip()] += 1
+print("DUKES_ALL_PRIMARY_FUELS", dict(sorted(fcount.items())))
