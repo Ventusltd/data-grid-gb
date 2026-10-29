@@ -63,7 +63,8 @@ def normalise(raw):
     try:
         from openpyxl import load_workbook
     except ImportError as ex:
-        raise RuntimeError("DUKES XLSX normalisation requires openpyxl") from ex
+        from assetpipe.xlsx import MissingDependency
+        raise MissingDependency("DUKES XLSX normalisation requires openpyxl") from ex
     book = load_workbook(BytesIO(payload), read_only=True, data_only=True)
     if SHEET not in book.sheetnames:
         raise ValueError("DUKES sheet 5.11 Full list absent")
