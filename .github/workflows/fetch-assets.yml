@@ -29,7 +29,12 @@
 #     -f domain=all -f include_unverified=false
 name: Fetch the asset sources (manual)
 
+# One-off dispatch by a dedicated review branch because this GitHub connector
+# cannot POST workflow_dispatch. Only the temporary branch can trigger it.
 on:
+  push:
+    branches: [ops/dc73-fetch-run-20261029]
+    paths: ['.github/workflows/fetch-assets.yml']
   workflow_dispatch:
     inputs:
       domain:
@@ -67,10 +72,14 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     env:
-      DOMAIN: ${{ inputs.domain }}
-      INCLUDE_UNVERIFIED: ${{ inputs.include_unverified }}
+      DOMAIN: ${{ inputs.domain || 'all' }}
+      INCLUDE_UNVERIFIED: ${{ inputs.include_unverified || 'false' }}
     steps:
+      # Always build from the reviewed, corrected default branch. The temporary
+      # trigger branch never becomes the base of a data-snapshot PR.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -153,7 +162,7 @@ jobs:
       # test workflow on the PR as well, push any commit to the branch or
       # close and reopen the PR.
       - name: Commit to a review branch and open a draft PR
-        if: inputs.open_pr
+        if: inputs.open_pr != false
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
