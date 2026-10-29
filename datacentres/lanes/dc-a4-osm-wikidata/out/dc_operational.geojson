@@ -2000,12 +2000,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.796208,
-     51.281869
+     -0.798134,
+     51.280706
     ]
    },
    "properties": {
     "id": "DC-OW-0030",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-223",
+      "name": null,
+      "operator": null,
+      "lon": -0.7981341,
+      "lat": 51.2807055,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-223",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.795822,
+     51.282101
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0031",
     "name": null,
     "operator": "Ark Data Centres",
     "operator_alternatives": [],
@@ -2027,7 +2091,7 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 6 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 5 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -2119,24 +2183,6 @@
       "offtakers_ref": "osm_dc-206",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-223",
-      "name": null,
-      "operator": null,
-      "lon": -0.7981341,
-      "lat": 51.2807055,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-223",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
     ],
     "source_names": [
@@ -2159,7 +2205,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0031",
+    "id": "DC-OW-0032",
     "name": "Brean Cable Landing Station",
     "operator": "Cable & Wireless",
     "operator_alternatives": [],
@@ -2223,7 +2269,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0032",
+    "id": "DC-OW-0033",
     "name": "Digital Realty LGW14",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -2287,7 +2333,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0033",
+    "id": "DC-OW-0034",
     "name": null,
     "operator": "Bank Of America",
     "operator_alternatives": [],
@@ -2351,7 +2397,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0034",
+    "id": "DC-OW-0035",
     "name": "Redcentric Byfleet",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -2415,7 +2461,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0035",
+    "id": "DC-OW-0036",
     "name": "Pulsant South London",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -2479,7 +2525,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0036",
+    "id": "DC-OW-0037",
     "name": "Insight Data Ltd",
     "operator": null,
     "operator_alternatives": [],
@@ -2543,7 +2589,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0037",
+    "id": "DC-OW-0038",
     "name": "Digital Realty LHR13",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -2607,7 +2653,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0038",
+    "id": "DC-OW-0039",
     "name": "Venture West",
     "operator": "The Bunker Secure Hosting Ltd",
     "operator_alternatives": [],
@@ -2671,7 +2717,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0039",
+    "id": "DC-OW-0040",
     "name": "Longcross Park",
     "operator": "Ark Data Centres",
     "operator_alternatives": [],
@@ -2735,7 +2781,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0040",
+    "id": "DC-OW-0041",
     "name": null,
     "operator": "Morgan Stanley",
     "operator_alternatives": [],
@@ -2799,7 +2845,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0041",
+    "id": "DC-OW-0042",
     "name": null,
     "operator": "CapitaLand Ascendas REIT",
     "operator_alternatives": [],
@@ -2863,7 +2909,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0042",
+    "id": "DC-OW-0043",
     "name": "AWS Bracknell Data Centre",
     "operator": "Amazon Web Services",
     "operator_alternatives": [],
@@ -2949,12 +2995,140 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -2.219485,
+     51.417432
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0044",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-215",
+      "name": null,
+      "operator": null,
+      "lon": -2.2194847,
+      "lat": 51.4174316,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-215",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.21973,
+     51.417759
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0045",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-216",
+      "name": null,
+      "operator": null,
+      "lon": -2.2197302,
+      "lat": 51.4177591,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-216",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -2.22305,
      51.418464
     ]
    },
    "properties": {
-    "id": "DC-OW-0043",
+    "id": "DC-OW-0046",
     "name": "Ark Data Centres",
     "operator": "Ark Data Centres",
     "operator_alternatives": [],
@@ -3013,12 +3187,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -2.219573,
-     51.418075
+     -2.219539,
+     51.418554
     ]
    },
    "properties": {
-    "id": "DC-OW-0044",
+    "id": "DC-OW-0047",
     "name": "Ark Data Centres",
     "operator": "Ark Data Centres",
     "operator_alternatives": [],
@@ -3040,7 +3214,7 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 4 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -3078,42 +3252,6 @@
       "offtakers_ref": "osm_dc-165",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-215",
-      "name": null,
-      "operator": null,
-      "lon": -2.2194847,
-      "lat": 51.4174316,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-215",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-216",
-      "name": null,
-      "operator": null,
-      "lon": -2.2197302,
-      "lat": 51.4177591,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-216",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
     ],
     "source_names": [
@@ -3136,7 +3274,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0045",
+    "id": "DC-OW-0048",
     "name": "Redcentric Reading",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -3200,7 +3338,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0046",
+    "id": "DC-OW-0049",
     "name": "Pulsant",
     "operator": null,
     "operator_alternatives": [],
@@ -3264,7 +3402,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0047",
+    "id": "DC-OW-0050",
     "name": "Serverfarm LON1 – London Data Center",
     "operator": "Serverfarm",
     "operator_alternatives": [],
@@ -3328,7 +3466,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0048",
+    "id": "DC-OW-0051",
     "name": "Pulsant Reading East",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -3392,7 +3530,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0049",
+    "id": "DC-OW-0052",
     "name": "Skyways",
     "operator": "Verizon",
     "operator_alternatives": [],
@@ -3456,7 +3594,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0050",
+    "id": "DC-OW-0053",
     "name": "Morgan Stanley Data Centre",
     "operator": "Morgan Stanley",
     "operator_alternatives": [],
@@ -3520,7 +3658,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0051",
+    "id": "DC-OW-0054",
     "name": "Redcentric London West",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -3584,7 +3722,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0052",
+    "id": "DC-OW-0055",
     "name": null,
     "operator": "British Airways",
     "operator_alternatives": [],
@@ -3648,7 +3786,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0053",
+    "id": "DC-OW-0056",
     "name": "Fujitsu Data Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -3712,7 +3850,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0054",
+    "id": "DC-OW-0057",
     "name": "Digital Realty LHR17",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -3776,7 +3914,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0055",
+    "id": "DC-OW-0058",
     "name": "British Telecom Computer Centre",
     "operator": "BT",
     "operator_alternatives": [],
@@ -3840,7 +3978,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0056",
+    "id": "DC-OW-0059",
     "name": null,
     "operator": "OVH",
     "operator_alternatives": [],
@@ -3904,7 +4042,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0057",
+    "id": "DC-OW-0060",
     "name": "CGI Datacenter",
     "operator": "CGI",
     "operator_alternatives": [],
@@ -3968,7 +4106,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0058",
+    "id": "DC-OW-0061",
     "name": "Six Degrees Data Centre",
     "operator": "Six Degrees",
     "operator_alternatives": [],
@@ -4050,7 +4188,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0059",
+    "id": "DC-OW-0062",
     "name": "VIRTUS LONDON2",
     "operator": "VIRTUS",
     "operator_alternatives": [],
@@ -4114,7 +4252,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0060",
+    "id": "DC-OW-0063",
     "name": "Digital Realty LHR19",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -4173,16 +4311,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.01491,
-     51.498175
+     -0.014492,
+     51.498141
     ]
    },
    "properties": {
-    "id": "DC-OW-0061",
-    "name": "Equinix LD8",
-    "operator": "Equinix",
+    "id": "DC-OW-0064",
+    "name": null,
+    "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -4200,27 +4338,9 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-111",
-      "name": null,
-      "operator": null,
-      "lon": -0.0153399,
-      "lat": 51.4982057,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-111",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-112",
@@ -4238,7 +4358,53 @@
       "offtakers_ref": "osm_dc-112",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.014899,
+     51.498178
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0065",
+    "name": "Equinix LD8",
+    "operator": "Equinix",
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-235",
@@ -4273,12 +4439,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -0.01534,
+     51.498206
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0066",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-111",
+      "name": null,
+      "operator": null,
+      "lon": -0.0153399,
+      "lat": 51.4982057,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-111",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -0.011065,
      51.499839
     ]
    },
    "properties": {
-    "id": "DC-OW-0062",
+    "id": "DC-OW-0067",
     "name": "Digital Realty LHR20",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -4342,7 +4572,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0063",
+    "id": "DC-OW-0068",
     "name": "Pulsant Maidenhead",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -4424,7 +4654,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0064",
+    "id": "DC-OW-0069",
     "name": "Cable & Wireless Data Centre",
     "operator": "Cable & Wireless",
     "operator_alternatives": [],
@@ -4488,7 +4718,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0065",
+    "id": "DC-OW-0070",
     "name": "CyrusOne LON2",
     "operator": "CyrusOne",
     "operator_alternatives": [],
@@ -4552,7 +4782,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0066",
+    "id": "DC-OW-0071",
     "name": "UBS Data Centre",
     "operator": "UBS",
     "operator_alternatives": [],
@@ -4616,7 +4846,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0067",
+    "id": "DC-OW-0072",
     "name": "Telehouse South",
     "operator": "Telehouse",
     "operator_alternatives": [],
@@ -4680,7 +4910,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0068",
+    "id": "DC-OW-0073",
     "name": "Virtus London8",
     "operator": "Virtus",
     "operator_alternatives": [],
@@ -4744,7 +4974,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0069",
+    "id": "DC-OW-0074",
     "name": "Virtus London6",
     "operator": "Virtus",
     "operator_alternatives": [],
@@ -4854,7 +5084,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0070",
+    "id": "DC-OW-0075",
     "name": "Global Switch London East",
     "operator": "Global Switch",
     "operator_alternatives": [],
@@ -4945,7 +5175,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0071",
+    "id": "DC-OW-0076",
     "name": "Telehouse West",
     "operator": "Telehouse",
     "operator_alternatives": [],
@@ -5074,7 +5304,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0072",
+    "id": "DC-OW-0077",
     "name": "Stellanor London East",
     "operator": "Stellanor Data Centers",
     "operator_alternatives": [],
@@ -5138,7 +5368,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0073",
+    "id": "DC-OW-0078",
     "name": "IP House London Datacentre",
     "operator": "IP House",
     "operator_alternatives": [],
@@ -5202,7 +5432,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0074",
+    "id": "DC-OW-0079",
     "name": "Kao Data KLON-06",
     "operator": "Kao Data",
     "operator_alternatives": [],
@@ -5261,17 +5491,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.618376,
-     51.516947
+     -0.618383,
+     51.516585
     ]
    },
    "properties": {
-    "id": "DC-OW-0075",
+    "id": "DC-OW-0080",
     "name": "Digital Realty LHR26",
     "operator": "Digital Realty",
-    "operator_alternatives": [
-     "Global Technical Realty"
-    ],
+    "operator_alternatives": [],
     "site_kind": "data_centre_campus",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
@@ -5290,7 +5518,7 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -5328,24 +5556,6 @@
       "offtakers_ref": "osm_dc-135",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-237",
-      "name": "Global Technical Realty London GB One",
-      "operator": "Global Technical Realty",
-      "lon": -0.6183615,
-      "lat": 51.5176697,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-237",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
     ],
     "source_names": [
@@ -5358,17 +5568,9 @@
       "field": "name",
       "values": [
        "Digital Realty LHR26",
-       "Digital Realty LHR27",
-       "Global Technical Realty London GB One"
+       "Digital Realty LHR27"
       ],
       "note": "several names inside one grouped site: a multi-building campus, or two operators merged because one operator is unknown; check"
-     },
-     {
-      "field": "operator",
-      "values": [
-       "Digital Realty",
-       "Global Technical Realty"
-      ]
      }
     ],
     "offtakers_reconciliation": null,
@@ -5385,7 +5587,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0076",
+    "id": "DC-OW-0081",
     "name": "CryrusOne LON4",
     "operator": "CyrusOne",
     "operator_alternatives": [],
@@ -5476,7 +5678,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0077",
+    "id": "DC-OW-0082",
     "name": "Virtual Internet UK",
     "operator": null,
     "operator_alternatives": [],
@@ -5540,7 +5742,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0078",
+    "id": "DC-OW-0083",
     "name": "NTT Slough",
     "operator": "NTT",
     "operator_alternatives": [],
@@ -5604,7 +5806,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0079",
+    "id": "DC-OW-0084",
     "name": "Sky",
     "operator": null,
     "operator_alternatives": [],
@@ -5663,16 +5865,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.627264,
-     51.51922
+     -0.618362,
+     51.51767
     ]
    },
    "properties": {
-    "id": "DC-OW-0080",
-    "name": "China Mobile Slough",
-    "operator": null,
+    "id": "DC-OW-0085",
+    "name": "Global Technical Realty London GB One",
+    "operator": "Global Technical Realty",
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -5690,16 +5892,16 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-193",
-      "name": "China Mobile Slough",
-      "operator": null,
-      "lon": -0.6282758,
-      "lat": 51.5194824,
+      "source_id": "gg2050-dc-237",
+      "name": "Global Technical Realty London GB One",
+      "operator": "Global Technical Realty",
+      "lon": -0.6183615,
+      "lat": 51.5176697,
       "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
       "evidence_url": null,
       "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
@@ -5707,10 +5909,120 @@
       "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
       "attribution": "© OpenStreetMap contributors",
       "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-193",
+      "offtakers_ref": "osm_dc-237",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.618992,
+     51.518877
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0086",
+    "name": "VIRTUS LONDON9",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-196",
+      "name": "VIRTUS LONDON9",
+      "operator": null,
+      "lon": -0.6189915,
+      "lat": 51.5188766,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-196",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.626252,
+     51.518958
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0087",
+    "name": "VIRTUS London 11",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-231",
@@ -5735,16 +6047,7 @@
     ],
     "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
     "attribution": "© OpenStreetMap contributors (ODbL)",
-    "conflicts": [
-     {
-      "field": "name",
-      "values": [
-       "China Mobile Slough",
-       "VIRTUS London 11"
-      ],
-      "note": "several names inside one grouped site: a multi-building campus, or two operators merged because one operator is unknown; check"
-     }
-    ],
+    "conflicts": [],
     "offtakers_reconciliation": null,
     "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
    }
@@ -5754,16 +6057,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.619843,
-     51.519826
+     -0.628276,
+     51.519482
     ]
    },
    "properties": {
-    "id": "DC-OW-0081",
-    "name": "Rackspace London Slough (LON3)",
-    "operator": "Rackspace",
+    "id": "DC-OW-0088",
+    "name": "China Mobile Slough",
+    "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -5781,16 +6084,16 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-196",
-      "name": "VIRTUS LONDON9",
+      "source_id": "gg2050-dc-193",
+      "name": "China Mobile Slough",
       "operator": null,
-      "lon": -0.6189915,
-      "lat": 51.5188766,
+      "lon": -0.6282758,
+      "lat": 51.5194824,
       "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
       "evidence_url": null,
       "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
@@ -5798,10 +6101,56 @@
       "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
       "attribution": "© OpenStreetMap contributors",
       "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-196",
+      "offtakers_ref": "osm_dc-193",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.618973,
+     51.520086
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0089",
+    "name": "Rackspace London Slough (LON3)",
+    "operator": "Rackspace",
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-56",
@@ -5819,7 +6168,53 @@
       "offtakers_ref": "osm_dc-56",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.621565,
+     51.520515
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0090",
+    "name": "Logicalis Slough",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-57",
@@ -5844,17 +6239,7 @@
     ],
     "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
     "attribution": "© OpenStreetMap contributors (ODbL)",
-    "conflicts": [
-     {
-      "field": "name",
-      "values": [
-       "Logicalis Slough",
-       "Rackspace London Slough (LON3)",
-       "VIRTUS LONDON9"
-      ],
-      "note": "several names inside one grouped site: a multi-building campus, or two operators merged because one operator is unknown; check"
-     }
-    ],
+    "conflicts": [],
     "offtakers_reconciliation": null,
     "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
    }
@@ -5869,7 +6254,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0082",
+    "id": "DC-OW-0091",
     "name": "Netwise",
     "operator": null,
     "operator_alternatives": [],
@@ -5933,7 +6318,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0083",
+    "id": "DC-OW-0092",
     "name": "Digital Realty London LON3",
     "operator": "Digital Realty",
     "operator_alternatives": [],
@@ -5997,7 +6382,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0084",
+    "id": "DC-OW-0093",
     "name": "Equinix LD5",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -6056,12 +6441,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -0.624587,
+     51.522251
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0094",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-170",
+      "name": null,
+      "operator": null,
+      "lon": -0.6245867,
+      "lat": 51.5222507,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-170",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -0.624673,
      51.522299
     ]
    },
    "properties": {
-    "id": "DC-OW-0085",
+    "id": "DC-OW-0095",
     "name": "Equinix LD10",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -6120,12 +6569,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.622141,
-     51.52214
+     -0.621326,
+     51.522103
     ]
    },
    "properties": {
-    "id": "DC-OW-0086",
+    "id": "DC-OW-0096",
     "name": "VIRTUS Slough London 3 and 4",
     "operator": "VIRTUS",
     "operator_alternatives": [
@@ -6149,7 +6598,7 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 4 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -6185,24 +6634,6 @@
       "attribution": "© OpenStreetMap contributors",
       "attribution_url": "https://www.openstreetmap.org/copyright",
       "offtakers_ref": "osm_dc-147",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-170",
-      "name": null,
-      "operator": null,
-      "lon": -0.6245867,
-      "lat": 51.5222507,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-170",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      },
@@ -6255,7 +6686,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0087",
+    "id": "DC-OW-0097",
     "name": "Lumen",
     "operator": "Lumen Technologies",
     "operator_alternatives": [],
@@ -6319,7 +6750,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0088",
+    "id": "DC-OW-0098",
     "name": "Redcentric London City",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -6383,7 +6814,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0089",
+    "id": "DC-OW-0099",
     "name": "CyrusOne London 1",
     "operator": "CyrusOne",
     "operator_alternatives": [],
@@ -6447,7 +6878,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0090",
+    "id": "DC-OW-0100",
     "name": "Equinix LD11x",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -6576,7 +7007,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0091",
+    "id": "DC-OW-0101",
     "name": "Verne Global London Data Centre",
     "operator": "Verne Global",
     "operator_alternatives": [],
@@ -6640,7 +7071,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0092",
+    "id": "DC-OW-0102",
     "name": "AWS Swindon Data Centre",
     "operator": "Amazon Web Services",
     "operator_alternatives": [],
@@ -6722,7 +7153,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0093",
+    "id": "DC-OW-0103",
     "name": "Digital Realty LHR18",
     "operator": null,
     "operator_alternatives": [],
@@ -6786,7 +7217,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0094",
+    "id": "DC-OW-0104",
     "name": "Telefonica Data Centre",
     "operator": "Telefonica",
     "operator_alternatives": [],
@@ -6850,7 +7281,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0095",
+    "id": "DC-OW-0105",
     "name": "Equinix LD7",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -6914,7 +7345,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0096",
+    "id": "DC-OW-0106",
     "name": "CyrusOne LON3",
     "operator": "CyrusOne",
     "operator_alternatives": [],
@@ -6978,7 +7409,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0097",
+    "id": "DC-OW-0107",
     "name": "Iron Mountain London LON-1",
     "operator": "Iron Mountain",
     "operator_alternatives": [],
@@ -7042,7 +7473,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0098",
+    "id": "DC-OW-0108",
     "name": "Equinix LD3",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -7106,7 +7537,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0099",
+    "id": "DC-OW-0109",
     "name": "Stellanor London North",
     "operator": "Stellanor Data Centers",
     "operator_alternatives": [],
@@ -7165,16 +7596,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.273652,
-     51.529137
+     -0.274281,
+     51.529043
     ]
    },
    "properties": {
-    "id": "DC-OW-0100",
+    "id": "DC-OW-0110",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -7192,27 +7623,9 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-30",
-      "name": null,
-      "operator": null,
-      "lon": -0.2730223,
-      "lat": 51.5292302,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-30",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-31",
@@ -7247,16 +7660,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.256682,
-     51.531158
+     -0.273022,
+     51.52923
     ]
    },
    "properties": {
-    "id": "DC-OW-0101",
-    "name": "Equinix LD9",
-    "operator": "Equinix",
+    "id": "DC-OW-0111",
+    "name": null,
+    "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -7274,7 +7687,71 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 4 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-30",
+      "name": null,
+      "operator": null,
+      "lon": -0.2730223,
+      "lat": 51.5292302,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-30",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.255897,
+     51.530007
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0112",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -7294,7 +7771,53 @@
       "offtakers_ref": "osm_dc-149",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.257339,
+     51.531256
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0113",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-183",
@@ -7312,25 +7835,53 @@
       "offtakers_ref": "osm_dc-183",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-184",
-      "name": "Equinix LD9",
-      "operator": "Equinix",
-      "lon": -0.2576058,
-      "lat": 51.5319396,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-184",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.255888,
+     51.531431
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0114",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-48",
@@ -7365,12 +7916,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -0.257606,
+     51.53194
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0115",
+    "name": "Equinix LD9",
+    "operator": "Equinix",
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-184",
+      "name": "Equinix LD9",
+      "operator": "Equinix",
+      "lon": -0.2576058,
+      "lat": 51.5319396,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-184",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -0.260829,
      51.534747
     ]
    },
    "properties": {
-    "id": "DC-OW-0102",
+    "id": "DC-OW-0116",
     "name": null,
     "operator": "Options Technology Ltd.",
     "operator_alternatives": [],
@@ -7434,7 +8049,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0103",
+    "id": "DC-OW-0117",
     "name": "Tata Stratford",
     "operator": "Tata Communications",
     "operator_alternatives": [],
@@ -7498,7 +8113,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0104",
+    "id": "DC-OW-0118",
     "name": "Kao Data KLON-05",
     "operator": "Kao Data",
     "operator_alternatives": [],
@@ -7562,7 +8177,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0105",
+    "id": "DC-OW-0119",
     "name": "NTT London 1",
     "operator": "NTT",
     "operator_alternatives": [],
@@ -7626,7 +8241,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0106",
+    "id": "DC-OW-0120",
     "name": "Microsoft Newport data centre",
     "operator": "Microsoft",
     "operator_alternatives": [],
@@ -7690,7 +8305,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0107",
+    "id": "DC-OW-0121",
     "name": "Vantage Data Centers - CWL13",
     "operator": "Vantage Data Centers",
     "operator_alternatives": [],
@@ -7749,16 +8364,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -3.037983,
-     51.555313
+     -3.038272,
+     51.555019
     ]
    },
    "properties": {
-    "id": "DC-OW-0108",
+    "id": "DC-OW-0122",
     "name": "Next Generation Data",
     "operator": "Next Generation Data",
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -7776,7 +8391,7 @@
      "first_seen_in_source": null
     },
     "nation": "Wales (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -7796,24 +8411,6 @@
       "offtakers_ref": "osm_dc-0",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-9",
-      "name": "Centerprise International Newport",
-      "operator": null,
-      "lon": -3.0376928,
-      "lat": 51.5556071,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-9",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
     ],
     "source_names": [
@@ -7821,16 +8418,7 @@
     ],
     "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
     "attribution": "© OpenStreetMap contributors (ODbL)",
-    "conflicts": [
-     {
-      "field": "name",
-      "values": [
-       "Centerprise International Newport",
-       "Next Generation Data"
-      ],
-      "note": "several names inside one grouped site: a multi-building campus, or two operators merged because one operator is unknown; check"
-     }
-    ],
+    "conflicts": [],
     "offtakers_reconciliation": null,
     "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
    }
@@ -7845,7 +8433,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0109",
+    "id": "DC-OW-0123",
     "name": "Vantage Data Centers - CWL1",
     "operator": "Vantage Data Centers",
     "operator_alternatives": [],
@@ -7904,12 +8492,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -3.037693,
+     51.555607
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0124",
+    "name": "Centerprise International Newport",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "Wales (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-9",
+      "name": "Centerprise International Newport",
+      "operator": null,
+      "lon": -3.0376928,
+      "lat": 51.5556071,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-9",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -0.230852,
      51.568191
     ]
    },
    "properties": {
-    "id": "DC-OW-0110",
+    "id": "DC-OW-0125",
     "name": "LDeX 1",
     "operator": "LDeX Group",
     "operator_alternatives": [],
@@ -7973,7 +8625,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0111",
+    "id": "DC-OW-0126",
     "name": "CityFibre Cabinets",
     "operator": "CityFibre",
     "operator_alternatives": [],
@@ -8037,7 +8689,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0112",
+    "id": "DC-OW-0127",
     "name": "Nationwide Swindon Technology Centre",
     "operator": "Nationwide Building Society",
     "operator_alternatives": [],
@@ -8101,7 +8753,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0113",
+    "id": "DC-OW-0128",
     "name": "R89",
     "operator": null,
     "operator_alternatives": [],
@@ -8165,7 +8817,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0114",
+    "id": "DC-OW-0129",
     "name": "Reynoldston Cable Landing Station",
     "operator": "Cable & Wireless",
     "operator_alternatives": [],
@@ -8229,7 +8881,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0115",
+    "id": "DC-OW-0130",
     "name": "Imperium 315",
     "operator": "NYSE Euronext",
     "operator_alternatives": [],
@@ -8293,7 +8945,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0116",
+    "id": "DC-OW-0131",
     "name": "AWS Didcot Data Centre",
     "operator": "Amazon Web Services",
     "operator_alternatives": [],
@@ -8357,7 +9009,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0117",
+    "id": "DC-OW-0132",
     "name": "Ark Data Centres Meridian Park",
     "operator": "Ark Data Centres",
     "operator_alternatives": [],
@@ -8421,7 +9073,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0118",
+    "id": "DC-OW-0133",
     "name": null,
     "operator": "CapitaLand Ascendas REIT",
     "operator_alternatives": [],
@@ -8485,7 +9137,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0119",
+    "id": "DC-OW-0134",
     "name": "Centerprise International (Distribution)",
     "operator": "Centerprise International",
     "operator_alternatives": [],
@@ -8549,7 +9201,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0120",
+    "id": "DC-OW-0135",
     "name": "The Chess Building",
     "operator": "CapitaLand Ascendas REIT",
     "operator_alternatives": [],
@@ -8613,7 +9265,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0121",
+    "id": "DC-OW-0136",
     "name": "Virtus LONDON1",
     "operator": null,
     "operator_alternatives": [],
@@ -8677,7 +9329,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0122",
+    "id": "DC-OW-0137",
     "name": "Google Datacentre Waltham Cross",
     "operator": "Google",
     "operator_alternatives": [],
@@ -8741,7 +9393,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0123",
+    "id": "DC-OW-0138",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -8805,7 +9457,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0124",
+    "id": "DC-OW-0139",
     "name": "University Shared Data Centre",
     "operator": "University of Oxford",
     "operator_alternatives": [],
@@ -8869,7 +9521,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0125",
+    "id": "DC-OW-0140",
     "name": "NTT",
     "operator": "NTT",
     "operator_alternatives": [],
@@ -8933,7 +9585,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0126",
+    "id": "DC-OW-0141",
     "name": "Kao Data KLON-01",
     "operator": "Kao Data",
     "operator_alternatives": [],
@@ -9024,7 +9676,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0127",
+    "id": "DC-OW-0142",
     "name": "BT Computer Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -9088,7 +9740,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0128",
+    "id": "DC-OW-0143",
     "name": "Colt London North Data Centre",
     "operator": "Colt",
     "operator_alternatives": [],
@@ -9152,7 +9804,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0129",
+    "id": "DC-OW-0144",
     "name": "Hertfordshire Data Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -9216,7 +9868,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0130",
+    "id": "DC-OW-0145",
     "name": "DXC Technology",
     "operator": null,
     "operator_alternatives": [],
@@ -9280,7 +9932,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0131",
+    "id": "DC-OW-0146",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -9344,7 +9996,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0132",
+    "id": "DC-OW-0147",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -9408,7 +10060,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0133",
+    "id": "DC-OW-0148",
     "name": "Starwood House",
     "operator": "Tesco",
     "operator_alternatives": [],
@@ -9467,16 +10119,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.756312,
-     52.05488
+     -0.757243,
+     52.054687
     ]
    },
    "properties": {
-    "id": "DC-OW-0134",
-    "name": "Pulsant Milton Keynes SE-1",
-    "operator": "Pulsant",
+    "id": "DC-OW-0149",
+    "name": null,
+    "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -9494,27 +10146,9 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-150",
-      "name": "Pulsant Milton Keynes SE-1",
-      "operator": "Pulsant",
-      "lon": -0.7553817,
-      "lat": 52.0550736,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-150",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-151",
@@ -9549,12 +10183,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -0.755382,
+     52.055074
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0150",
+    "name": "Pulsant Milton Keynes SE-1",
+    "operator": "Pulsant",
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-150",
+      "name": "Pulsant Milton Keynes SE-1",
+      "operator": "Pulsant",
+      "lon": -0.7553817,
+      "lat": 52.0550736,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-150",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -2.156692,
      52.205895
     ]
    },
    "properties": {
-    "id": "DC-OW-0135",
+    "id": "DC-OW-0151",
     "name": null,
     "operator": "Ionos",
     "operator_alternatives": [],
@@ -9618,7 +10316,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0136",
+    "id": "DC-OW-0152",
     "name": "West Cambridge Data Centre",
     "operator": "University of Cambridge",
     "operator_alternatives": [],
@@ -9682,7 +10380,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0137",
+    "id": "DC-OW-0153",
     "name": "Redcentric Cambridge",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -9746,7 +10444,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0138",
+    "id": "DC-OW-0154",
     "name": "Hellermann Tyton Data",
     "operator": null,
     "operator_alternatives": [],
@@ -9810,7 +10508,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0139",
+    "id": "DC-OW-0155",
     "name": "Evoque Data Center Solutions",
     "operator": null,
     "operator_alternatives": [],
@@ -9874,7 +10572,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0140",
+    "id": "DC-OW-0156",
     "name": null,
     "operator": "US Air Force",
     "operator_alternatives": [],
@@ -9938,7 +10636,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0141",
+    "id": "DC-OW-0157",
     "name": "The Horizon Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -10002,7 +10700,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0142",
+    "id": "DC-OW-0158",
     "name": "EE Data Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -10066,7 +10764,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0143",
+    "id": "DC-OW-0159",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -10130,7 +10828,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0144",
+    "id": "DC-OW-0160",
     "name": "Hutchison 3G",
     "operator": null,
     "operator_alternatives": [],
@@ -10189,16 +10887,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.263589,
-     52.556119
+     -0.263938,
+     52.55587
     ]
    },
    "properties": {
-    "id": "DC-OW-0145",
+    "id": "DC-OW-0161",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -10216,7 +10914,71 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-60",
+      "name": null,
+      "operator": null,
+      "lon": -0.2639381,
+      "lat": 52.5558705,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-60",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.262759,
+     52.556204
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0162",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -10236,25 +10998,53 @@
       "offtakers_ref": "osm_dc-59",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-60",
-      "name": null,
-      "operator": null,
-      "lon": -0.2639381,
-      "lat": 52.5558705,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-60",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.264072,
+     52.556281
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0163",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-61",
@@ -10294,7 +11084,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0146",
+    "id": "DC-OW-0164",
     "name": null,
     "operator": "Santander",
     "operator_alternatives": [],
@@ -10358,7 +11148,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0147",
+    "id": "DC-OW-0165",
     "name": null,
     "operator": "Santander",
     "operator_alternatives": [],
@@ -10422,7 +11212,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0148",
+    "id": "DC-OW-0166",
     "name": null,
     "operator": "Santander",
     "operator_alternatives": [],
@@ -10486,7 +11276,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0149",
+    "id": "DC-OW-0167",
     "name": "Positive Park",
     "operator": "Positive Internet",
     "operator_alternatives": [],
@@ -10550,7 +11340,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0150",
+    "id": "DC-OW-0168",
     "name": "Winterton Cable Landing Station",
     "operator": "Vodafone",
     "operator_alternatives": [],
@@ -10614,7 +11404,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0151",
+    "id": "DC-OW-0169",
     "name": "Experian",
     "operator": null,
     "operator_alternatives": [],
@@ -10678,7 +11468,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0152",
+    "id": "DC-OW-0170",
     "name": null,
     "operator": "Internet Central",
     "operator_alternatives": [],
@@ -10742,7 +11532,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0153",
+    "id": "DC-OW-0171",
     "name": "nLighten Chester",
     "operator": "nLighten UK Ltd",
     "operator_alternatives": [],
@@ -10806,7 +11596,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0154",
+    "id": "DC-OW-0172",
     "name": "The Babbage Centre",
     "operator": "Getronics",
     "operator_alternatives": [],
@@ -10870,7 +11660,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0155",
+    "id": "DC-OW-0173",
     "name": "nLighten Edge Data Centre Liverpool",
     "operator": null,
     "operator_alternatives": [],
@@ -10934,7 +11724,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0156",
+    "id": "DC-OW-0174",
     "name": "Hive IT",
     "operator": null,
     "operator_alternatives": [],
@@ -10993,16 +11783,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -2.258565,
-     53.378893
+     -2.258518,
+     53.378636
     ]
    },
    "properties": {
-    "id": "DC-OW-0157",
+    "id": "DC-OW-0175",
     "name": "Datum Datacentres (MCR2)",
-    "operator": "TeleData",
+    "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -11020,27 +11810,9 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-189",
-      "name": "Delta House",
-      "operator": "TeleData",
-      "lon": -2.2586128,
-      "lat": 53.3791499,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-189",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-67",
@@ -11065,16 +11837,71 @@
     ],
     "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
     "attribution": "© OpenStreetMap contributors (ODbL)",
-    "conflicts": [
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.258613,
+     53.37915
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0176",
+    "name": "Delta House",
+    "operator": "TeleData",
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
-      "field": "name",
-      "values": [
-       "Datum Datacentres (MCR2)",
-       "Delta House"
-      ],
-      "note": "several names inside one grouped site: a multi-building campus, or two operators merged because one operator is unknown; check"
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-189",
+      "name": "Delta House",
+      "operator": "TeleData",
+      "lon": -2.2586128,
+      "lat": 53.3791499,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-189",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
     ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
     "offtakers_reconciliation": null,
     "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
    }
@@ -11089,7 +11916,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0158",
+    "id": "DC-OW-0177",
     "name": "UoS IT Services",
     "operator": null,
     "operator_alternatives": [],
@@ -11153,7 +11980,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0159",
+    "id": "DC-OW-0178",
     "name": "CDL Strata Campus Data Centre",
     "operator": null,
     "operator_alternatives": [],
@@ -11217,7 +12044,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0160",
+    "id": "DC-OW-0179",
     "name": "Iron Mountain",
     "operator": null,
     "operator_alternatives": [],
@@ -11281,7 +12108,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0161",
+    "id": "DC-OW-0180",
     "name": "Equinix MA4",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -11345,7 +12172,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0162",
+    "id": "DC-OW-0181",
     "name": "Equinix MA1",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -11409,7 +12236,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0163",
+    "id": "DC-OW-0182",
     "name": "Lunar 1&2",
     "operator": "Lunar Digital",
     "operator_alternatives": [],
@@ -11473,7 +12300,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0164",
+    "id": "DC-OW-0183",
     "name": "Joule House",
     "operator": "Equinix",
     "operator_alternatives": [],
@@ -11537,7 +12364,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0165",
+    "id": "DC-OW-0184",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -11601,7 +12428,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0166",
+    "id": "DC-OW-0185",
     "name": "Evolution @ Agecroft Commerce Park",
     "operator": null,
     "operator_alternatives": [],
@@ -11683,7 +12510,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0167",
+    "id": "DC-OW-0186",
     "name": "Hibernia Southport Cable Landing Station",
     "operator": "Hibernia Networks",
     "operator_alternatives": [],
@@ -11747,7 +12574,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0168",
+    "id": "DC-OW-0187",
     "name": "Redcentric Elland Data Centre",
     "operator": "Redcentric",
     "operator_alternatives": [],
@@ -11811,7 +12638,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0169",
+    "id": "DC-OW-0188",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -11870,16 +12697,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -1.884217,
-     53.708655
+     -1.883349,
+     53.70842
     ]
    },
    "properties": {
-    "id": "DC-OW-0170",
-    "name": "Lloyds Banking Group Copley",
+    "id": "DC-OW-0189",
+    "name": null,
     "operator": null,
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -11897,27 +12724,9 @@
      "first_seen_in_source": null
     },
     "nation": "England (approx)",
-    "location_precision": "site = 3 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-128",
-      "name": null,
-      "operator": null,
-      "lon": -1.8848533,
-      "lat": 53.7091115,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-128",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-129",
@@ -11935,7 +12744,53 @@
       "offtakers_ref": "osm_dc-129",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884448,
+     53.708433
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0190",
+    "name": "Lloyds Banking Group Copley",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
      {
       "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
       "source_id": "gg2050-dc-76",
@@ -11970,12 +12825,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -1.884853,
+     53.709111
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0191",
+    "name": null,
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "England (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-128",
+      "name": null,
+      "operator": null,
+      "lon": -1.8848533,
+      "lat": 53.7091115,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-128",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -3.030231,
      53.776567
     ]
    },
    "properties": {
-    "id": "DC-OW-0171",
+    "id": "DC-OW-0192",
     "name": "Lanis 1 Cable Landing Station",
     "operator": "Cable & Wireless",
     "operator_alternatives": [],
@@ -12039,7 +12958,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0172",
+    "id": "DC-OW-0193",
     "name": "VocaLink",
     "operator": null,
     "operator_alternatives": [],
@@ -12103,7 +13022,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0173",
+    "id": "DC-OW-0194",
     "name": null,
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -12167,7 +13086,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0174",
+    "id": "DC-OW-0195",
     "name": null,
     "operator": "Lumen Technologies",
     "operator_alternatives": [],
@@ -12231,7 +13150,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0175",
+    "id": "DC-OW-0196",
     "name": null,
     "operator": null,
     "operator_alternatives": [],
@@ -12295,7 +13214,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0176",
+    "id": "DC-OW-0197",
     "name": "Microsoft Ireland",
     "operator": "Microsoft",
     "operator_alternatives": [],
@@ -12359,7 +13278,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0177",
+    "id": "DC-OW-0198",
     "name": "DXC Wynyard Data Center",
     "operator": "HPE",
     "operator_alternatives": [],
@@ -12423,7 +13342,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0178",
+    "id": "DC-OW-0199",
     "name": "Stellium Newcastle Campus",
     "operator": null,
     "operator_alternatives": [],
@@ -12487,7 +13406,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0179",
+    "id": "DC-OW-0200",
     "name": "Prescient Coleraine",
     "operator": null,
     "operator_alternatives": [],
@@ -12551,7 +13470,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0180",
+    "id": "DC-OW-0201",
     "name": "DataVita DV1",
     "operator": "DataVita",
     "operator_alternatives": [],
@@ -12615,7 +13534,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0181",
+    "id": "DC-OW-0202",
     "name": "iomart Glasgow Data Centre",
     "operator": "iomart",
     "operator_alternatives": [],
@@ -12679,7 +13598,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0182",
+    "id": "DC-OW-0203",
     "name": "DataVita DV2",
     "operator": "DataVita",
     "operator_alternatives": [],
@@ -12743,7 +13662,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0183",
+    "id": "DC-OW-0204",
     "name": "RBS Melville Gate Data Centre",
     "operator": "Natwest Group",
     "operator_alternatives": [],
@@ -12807,7 +13726,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0184",
+    "id": "DC-OW-0205",
     "name": "Edinburgh SC-2",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -12866,16 +13785,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -3.293649,
-     55.929011
+     -3.293905,
+     55.928263
     ]
    },
    "properties": {
-    "id": "DC-OW-0185",
-    "name": "Pulsant Edinburgh SC-1",
+    "id": "DC-OW-0206",
+    "name": null,
     "operator": "Lloyds Banking Group",
     "operator_alternatives": [],
-    "site_kind": "data_centre_campus",
+    "site_kind": "data_centre",
     "status": "operational",
     "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
     "it_load_mw": {
@@ -12893,7 +13812,7 @@
      "first_seen_in_source": null
     },
     "nation": "Scotland (approx)",
-    "location_precision": "site = 2 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
     "evidence_url": null,
     "sources": [
      {
@@ -12911,24 +13830,6 @@
       "attribution": "© OpenStreetMap contributors",
       "attribution_url": "https://www.openstreetmap.org/copyright",
       "offtakers_ref": "osm_dc-15",
-      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
-      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-     },
-     {
-      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
-      "source_id": "gg2050-dc-239",
-      "name": "Pulsant Edinburgh SC-1",
-      "operator": null,
-      "lon": -3.2933933,
-      "lat": 55.9297598,
-      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
-      "evidence_url": null,
-      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
-      "licence": "ODbL 1.0",
-      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "© OpenStreetMap contributors",
-      "attribution_url": "https://www.openstreetmap.org/copyright",
-      "offtakers_ref": "osm_dc-239",
       "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
       "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
      }
@@ -12953,7 +13854,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0186",
+    "id": "DC-OW-0207",
     "name": "Edinburgh SC-3",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -13017,7 +13918,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0187",
+    "id": "DC-OW-0208",
     "name": "Pulsant Edinburgh South Gyle SC-1",
     "operator": "Pulsant",
     "operator_alternatives": [],
@@ -13094,12 +13995,76 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -3.293393,
+     55.92976
+    ]
+   },
+   "properties": {
+    "id": "DC-OW-0209",
+    "name": "Pulsant Edinburgh SC-1",
+    "operator": null,
+    "operator_alternatives": [],
+    "site_kind": "data_centre",
+    "status": "operational",
+    "status_basis": "mapped in OpenStreetMap/Wikidata as an existing data centre; not independently verified, no commissioning or energisation evidence; not a pipeline entry",
+    "it_load_mw": {
+     "value": null,
+     "basis": "unknown: no open source states IT load for this site"
+    },
+    "grid_connection_mw": {
+     "value": null,
+     "basis": "unknown: no open source states a grid connection capacity for this site"
+    },
+    "mw_unclassified": [],
+    "dates": {
+     "status_date": null,
+     "start_date": null,
+     "first_seen_in_source": null
+    },
+    "nation": "Scotland (approx)",
+    "location_precision": "site = 1 source object(s) within 250 m; point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+    "evidence_url": null,
+    "sources": [
+     {
+      "source": "OpenStreetMap via globalgrid2050 datacentres.geojson",
+      "source_id": "gg2050-dc-239",
+      "name": "Pulsant Edinburgh SC-1",
+      "operator": null,
+      "lon": -3.2933933,
+      "lat": 55.9297598,
+      "location_precision": "point: OSM node or footprint centre (element type and id not kept by the globalgrid2050 builder)",
+      "evidence_url": null,
+      "retrieved": "unknown; present in globalgrid2050 history at da7d8f6e (2026-10-13)",
+      "licence": "ODbL 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "attribution_url": "https://www.openstreetmap.org/copyright",
+      "offtakers_ref": "osm_dc-239",
+      "snapshot_file": "https://github.com/Ventusltd/globalgrid2050/blob/main/datacentres.geojson",
+      "snapshot_sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+     }
+    ],
+    "source_names": [
+     "osm_legacy"
+    ],
+    "licence": "ODbL 1.0 (OSM-derived database; share-alike)",
+    "attribution": "© OpenStreetMap contributors (ODbL)",
+    "conflicts": [],
+    "offtakers_reconciliation": null,
+    "screening_note": "operational-site list from open data: not a demand, contract, capacity or connection statement"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -2.901176,
      55.945162
     ]
    },
    "properties": {
-    "id": "DC-OW-0188",
+    "id": "DC-OW-0210",
     "name": "RBS Data Centre",
     "operator": "NatWest Group",
     "operator_alternatives": [],
@@ -13163,7 +14128,7 @@
     ]
    },
    "properties": {
-    "id": "DC-OW-0189",
+    "id": "DC-OW-0211",
     "name": "Brightsolid",
     "operator": "brightsolid",
     "operator_alternatives": [],
