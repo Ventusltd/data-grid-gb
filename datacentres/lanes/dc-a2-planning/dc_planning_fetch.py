@@ -383,6 +383,9 @@ def run(args):
             entry["sha256"] = sha256(data)
             entry["bytes"] = len(data)
             text = data.decode("utf-8-sig", errors="replace")
+            # Planning descriptions can legitimately exceed Python's default 128 KiB CSV cell cap.
+            # Keep a finite 4 MiB ceiling; oversized/untrusted data still fails closed.
+            csv.field_size_limit(4 * 1024 * 1024)
             rows = list(csv.DictReader(io.StringIO(text)))
             c["rows"] = len(rows)
             for row in rows:
