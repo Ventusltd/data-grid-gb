@@ -21,40 +21,48 @@
    "url": "https://files.planning.data.gov.uk/dataset/planning-application.csv"
   },
   {
+   "bytes": 17763927,
    "counts": {
     "ancillary_hits": 0,
-    "by_status": {},
-    "candidates": 0,
-    "rows": null,
+    "by_status": {
+     "in planning": 2
+    },
+    "candidates": 2,
+    "rows": 293,
     "use_class_only": 0,
-    "with_any_mw": 0,
-    "with_location": 0
+    "with_any_mw": 1,
+    "with_location": 2
    },
    "coverage_note": "England + Wales NSIPs (Planning Act 2008)",
-   "fetch": "missing-offline",
+   "fetch": "offline-cache",
    "id": "pdgu-infrastructure-project",
    "licence": "OGL-UK-3.0",
    "licence_evidence": "specification content/dataset/infrastructure-project.md licence: ogl3; config source.csv licence ogl3",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "e4a0221b5f8afcdd97ac7ef07e2ba36fa15c2cea30e575023b78c77a43feefd0",
    "title": "planning.data.gov.uk infrastructure-project (NSIPs, from PINS)",
    "url": "https://files.planning.data.gov.uk/dataset/infrastructure-project.csv"
   },
   {
+   "bytes": 226356,
    "counts": {
     "ancillary_hits": 0,
-    "by_status": {},
-    "candidates": 0,
-    "rows": null,
+    "by_status": {
+     "in planning": 2
+    },
+    "candidates": 2,
+    "rows": 295,
     "use_class_only": 0,
-    "with_any_mw": 0,
+    "with_any_mw": 1,
     "with_location": 0
    },
    "coverage_note": "all NSIPs incl. data centres directed in under s35 (since Jan 2026)",
-   "fetch": "missing-offline",
+   "fetch": "offline-cache",
    "id": "pins-nsip-applications",
    "licence": "OGL-UK-3.0",
    "licence_evidence": "site footer: 'All content is available under the Open Government Licence v3.0, except where otherwise stated'",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "03ae79b57ae0d33cd09553b165379b9757a82b8316d74fd9f98135659e036dc8",
    "title": "Planning Inspectorate NSIP applications download",
    "url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/api/applications-download"
   },
@@ -122,59 +130,70 @@
    "url": "https://raw.githubusercontent.com/digital-land/planning-condition-data/refs/heads/main/data/doncaster-conditions-data-2023-planning-application.csv"
   },
   {
+   "bytes": 6605258,
    "counts": {
     "ancillary_hits": 0,
     "by_status": {},
     "candidates": 0,
-    "rows": null,
+    "rows": 8192,
     "use_class_only": 0,
     "with_any_mw": 0,
     "with_location": 0
    },
    "coverage_note": "one LPA",
-   "fetch": "missing-offline",
+   "fetch": "offline-cache",
    "id": "adur",
    "licence": "OGL-UK-3.0",
    "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "c144ead0f68227c6a0f752bf2a258c574d09994d4b5b229f9752d7066c96a01a",
    "title": "Adur DC planning applications (LPA open data feed)",
    "url": "https://www.adur-worthing.gov.uk/datasets/planning/adur-planning.csv"
   },
   {
+   "bytes": 12102518,
    "counts": {
     "ancillary_hits": 0,
-    "by_status": {},
-    "candidates": 0,
-    "rows": null,
+    "by_status": {
+     "consented": 1
+    },
+    "candidates": 1,
+    "rows": 14663,
     "use_class_only": 0,
     "with_any_mw": 0,
     "with_location": 0
    },
    "coverage_note": "one LPA",
-   "fetch": "missing-offline",
+   "fetch": "offline-cache",
    "id": "worthing",
    "licence": "OGL-UK-3.0",
    "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "c902a7eb4e426515da6c41da10f3bcdcf2acc63493843004522ae027857f559b",
    "title": "Worthing BC planning applications (LPA open data feed)",
    "url": "https://www.adur-worthing.gov.uk/datasets/planning/worthing-planning.csv"
   },
   {
+   "bytes": 78273281,
    "counts": {
     "ancillary_hits": 0,
-    "by_status": {},
-    "candidates": 0,
-    "rows": null,
-    "use_class_only": 0,
+    "by_status": {
+     "consented": 2,
+     "unknown": 1
+    },
+    "candidates": 3,
+    "rows": 82912,
+    "use_class_only": 2,
     "with_any_mw": 0,
-    "with_location": 0
+    "with_location": 2
    },
    "coverage_note": "one LPA",
-   "fetch": "missing-offline",
+   "fetch": "offline-cache",
    "id": "camden",
    "licence": "OGL-UK-3.0",
    "licence_evidence": "digital-land config source.csv licence ogl3 (publisher page not re-read: unverified)",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+   "sha256": "62eab3f67f64d162f98b86ba6933c408ebaa2587d29adf7138d40c865b63f9e9",
    "title": "Camden planning applications (Socrata open data)",
    "url": "https://opendata.camden.gov.uk/resource/2eiu-s2cw.csv?$limit=200000&$order=application_number"
   },
@@ -196,8 +215,10 @@
  ],
  "totals": {
   "by_status": {
-   "in planning": 3
+   "consented": 3,
+   "in planning": 7,
+   "unknown": 1
   },
-  "candidates": 3
+  "candidates": 11
  }
 }

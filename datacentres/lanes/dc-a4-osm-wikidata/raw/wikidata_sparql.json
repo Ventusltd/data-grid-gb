@@ -1,0 +1,2139 @@
+{
+  "head" : {
+    "vars" : [ "item", "itemLabel", "class", "classLabel", "coord", "operator", "operatorLabel", "owner", "ownerLabel", "inception", "dissolved", "stateOfUse", "stateOfUseLabel", "website", "powerOut", "powerOutUnit", "powerUse", "powerUseUnit" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113557752"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Cultybraggan nuclear bunker"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.994579 56.357843)"
+      },
+      "inception" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1990-01-01T00:00:00Z"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q119855829"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse South"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.0034 51.5071)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.telehouse.net/data-centre-services/uk/london/telehouse-south/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3517302"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse Europe"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138391540"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD3"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld3"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138391574"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD9"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld9"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138392979"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD8"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld8"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138393192"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD4"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld4"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138393321"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD5"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld5"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138393462"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD6"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld6"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138393622"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD7"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld7"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138393970"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD10"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld10"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138394186"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix LD11x"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q851641"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Equinix"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138394549"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne LON1"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cyrusone.com/data-centers/emea/london-uk-lon1"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16953751"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "8.72"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426503"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus LONDON5"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/london5-stockley-park"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "24"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426515"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus LONDON6"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/london6-stockley-park"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "16"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426527"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus LONDON7"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/london7-stockley-park"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "32.5"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426549"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus LONDON8"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/stockley-park-london8"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426644"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne LON2"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cyrusone.com/data-centers/emea/london-uk-lon2"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16953751"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "13.92"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426651"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse North"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.00198 51.51206)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.telehouse.net/data-centre-services/uk/london/telehouse-north/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3517302"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse Europe"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426653"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse North Two"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.3E-4 51.51211)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.telehouse.net/data-centre-services/uk/london/telehouse-north-two/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3517302"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse Europe"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426664"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse East"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.00126 51.51152)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.telehouse.net/data-centre-services/uk/london/telehouse-east/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3517302"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse Europe"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426670"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse West"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.0023 51.51129)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.telehouse.net/data-centre-services/uk/london/telehouse-west/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3517302"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Telehouse Europe"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426707"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch London East"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.00348 51.51096)"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426680"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "87"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426766"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch London South"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.00547 51.51071)"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426680"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "35"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      },
+      "stateOfUse" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q12377751"
+      },
+      "stateOfUseLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "building or structure under construction"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426781"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR20"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.01108 51.49984)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr20"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426793"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LGW14"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.58835 51.32389)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lgw14"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426835"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LGW15"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lgw15"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426839"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LGW16"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lgw16"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426847"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR13"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr13"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426855"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR17"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr17"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427007"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR18"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr18"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427019"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR19"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr19"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427034"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR26"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr26"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427045"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty LHR27"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digitalrealty.com/data-centers/emea/london/lhr27"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5275969"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Realty Trust"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427139"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Technical Realty London GB One"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://globaltechnicalrealty.com/locations/london-gb-one/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427123"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Technical Realty"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "40.5"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427185"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne LON4"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cyrusone.com/data-centers/emea/london-uk-lon4"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16953751"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "18"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427203"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne LON5"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cyrusone.com/data-centers/emea/london-uk-lon5"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16953751"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "18"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427235"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne LON3"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cyrusone.com/data-centers/emea/london-uk-lon3"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16953751"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CyrusOne"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "9"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427542"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "VIRTUS LONDON2"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/hayes-campus"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "12"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138427609"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus LONDON1"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://virtusdatacentres.com/locations/uk/london/enfield-campus"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426434"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Virtus"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "4.2"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138440073"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stellanor London East"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.stellanordatacenters.com/our-data-centers/london-east/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138439830"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stellanor"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138440597"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stellanor London North"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.stellanordatacenters.com/our-data-centers/london-north/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138439830"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stellanor"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138441403"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric London City"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138441246"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138443230"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric London West"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://redcentricdatacentres.co.uk/data-centres/london-west-data-centre/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138441246"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138443880"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric Reading"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138441246"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138446583"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric Byfleet"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138441246"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Redcentric"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138447656"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Unit B, Beddington Lane"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres/croydon.html"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138447238"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CapitaLand Ascendas REIT"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138447821"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "The Chess Building"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres/the-chess-building.html"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138447238"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CapitaLand Ascendas REIT"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "31"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      },
+      "owner" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138447238"
+      },
+      "ownerLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CapitaLand Ascendas REIT"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139492468"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Verne London"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7921966"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Verne Global"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "9.5"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6982035"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890262"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Milton Keynes"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/milton-keynes/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "6000"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3320608"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890276"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Swindon"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "19300"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3320608"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890302"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Bristol"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/bristol/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "10800"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3320608"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890318"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Chester"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/chester/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "6000"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3320608"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890335"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Liverpool"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/liverpool/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890350"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Leeds"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/leeds/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890366"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten Nottingham"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.nlighten.com/en/edge-location/nottingham/"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139890258"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "nLighten"
+      },
+      "powerUse" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "9600"
+      },
+      "powerUseUnit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3320608"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q24993366"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q25345660"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hartree Centre"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "high performance computing center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-2.6383 53.3446)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.hartree.stfc.ac.uk/"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q26263559"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch London North"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.005613739 51.51112753)"
+      },
+      "operator" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138426680"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Global Switch"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q48632515"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q25345660"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Distributed Research using Advanced Computing (DiRAC)"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "high performance computing center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.dirac.ac.uk"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q54869682"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q25345660"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EPCC"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "high performance computing center"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.174 55.9217)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.epcc.ed.ac.uk/"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6953527"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q671224"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NERC Data Centres"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "data center"
+      },
+      "owner" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4272261"
+      },
+      "ownerLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Natural Environment Research Council"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7315073"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q25345660"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Research Computing Services"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "high performance computing center"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.rcs.manchester.ac.uk/"
+      }
+    } ]
+  }
+}

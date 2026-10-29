@@ -1,0 +1,19 @@
+{
+ "source": "Wikidata Query Service",
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query": "SELECT ?item ?itemLabel ?class ?classLabel ?coord ?operator ?operatorLabel ?owner ?ownerLabel\n       ?inception ?dissolved ?stateOfUse ?stateOfUseLabel ?website\n       ?powerOut ?powerOutUnit ?powerUse ?powerUseUnit WHERE {\n  ?item wdt:P31 ?class . ?class wdt:P279* wd:Q671224 .\n  ?item wdt:P17 wd:Q145 .\n  OPTIONAL { ?item wdt:P625 ?coord }\n  OPTIONAL { ?item wdt:P137 ?operator }\n  OPTIONAL { ?item wdt:P127 ?owner }\n  OPTIONAL { ?item wdt:P571 ?inception }\n  OPTIONAL { ?item wdt:P576 ?dissolved }\n  OPTIONAL { ?item wdt:P5817 ?stateOfUse }\n  OPTIONAL { ?item wdt:P856 ?website }\n  OPTIONAL { ?item p:P2109/psv:P2109 [ wikibase:quantityAmount ?powerOut ; wikibase:quantityUnit ?powerOutUnit ] }\n  OPTIONAL { ?item p:P2791/psv:P2791 [ wikibase:quantityAmount ?powerUse ; wikibase:quantityUnit ?powerUseUnit ] }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nORDER BY ?item",
+ "query_sha256": "3635b9559b5b8408143efe61842416932e793f76b87687ddd1edffdd9d190dc1",
+ "licence": {
+  "name": "CC0 1.0",
+  "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Wikidata (CC0; attribution not required, given as courtesy)",
+  "attribution_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+  "fully_open": "yes"
+ },
+ "retrieved": "2026-10-29",
+ "ok": true,
+ "http_status": 200,
+ "bytes": 57944,
+ "sha256": "6c545cc0c7713bf395f8b2cd0077dbd8a4a284997a95d18d02b9eda071b5cb94",
+ "raw": "wikidata_sparql.json"
+}

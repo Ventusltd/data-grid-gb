@@ -1,122 +1,311 @@
 {
- "domain": "datacentres",
- "lanes": {
-  "dc-a1-neso": {
-   "files": {
-    "fetch_neso.py": {
-     "bytes": 24425,
-     "sha256": "5103b0dd85ad7cfbdb6f3ff974854952f4afbc93258df91c380436810c4e92a3"
+  "domain": "datacentres",
+  "lanes": {
+    "dc-a1-neso": {
+      "files": {
+        "fetch_neso.py": {
+          "bytes": 24425,
+          "sha256": "5103b0dd85ad7cfbdb6f3ff974854952f4afbc93258df91c380436810c4e92a3"
+        }
+      }
+    },
+    "dc-a2-planning": {
+      "files": {
+        "dc_planning_fetch.py": {
+          "bytes": 26788,
+          "sha256": "75404016aad47f4bd149c03cf4fd295f73282c1e1fbdb5c76f9176e19bd1370b"
+        },
+        "out/dc_planning.geojson": {
+          "bytes": 19368,
+          "sha256": "823ed83f078cf2d2c35d57d5bd9b4a8b68424bb5048706456cc744b0b5294072"
+        },
+        "out/manifest.json": {
+          "bytes": 8183,
+          "sha256": "45885f900fc92f2511df846c3c1c88838553bc23cd48d3521ad0363c65833944"
+        },
+        "out/raw/adur.csv": {
+          "bytes": 6605258,
+          "sha256": "c144ead0f68227c6a0f752bf2a258c574d09994d4b5b229f9752d7066c96a01a"
+        },
+        "out/raw/camden.csv": {
+          "bytes": 78273281,
+          "sha256": "62eab3f67f64d162f98b86ba6933c408ebaa2587d29adf7138d40c865b63f9e9"
+        },
+        "out/raw/digital-land-nsip-snapshot.csv": {
+          "bytes": 49581,
+          "sha256": "0cd20e8867b2f8544a5674508c4493e1c60fc5006acfca287258756366b2dcfa"
+        },
+        "out/raw/doncaster-2023.csv": {
+          "bytes": 205267,
+          "sha256": "48380b738d1599b86e7514e170577cfc5c29a2d419a193ac501cb11c9bc999f1"
+        },
+        "out/raw/doncaster-2024.csv": {
+          "bytes": 196349,
+          "sha256": "4933704b9bcbfec0215ec80134716edf727e3ff0eaffeecf9e84c27d6f996b52"
+        },
+        "out/raw/pdgu-infrastructure-project.csv": {
+          "bytes": 17763927,
+          "sha256": "e4a0221b5f8afcdd97ac7ef07e2ba36fa15c2cea30e575023b78c77a43feefd0"
+        },
+        "out/raw/pins-nsip-applications.csv": {
+          "bytes": 226356,
+          "sha256": "03ae79b57ae0d33cd09553b165379b9757a82b8316d74fd9f98135659e036dc8"
+        },
+        "out/raw/worthing.csv": {
+          "bytes": 12102518,
+          "sha256": "c902a7eb4e426515da6c41da10f3bcdcf2acc63493843004522ae027857f559b"
+        }
+      },
+      "last_fetch": {
+        "codes": [
+          0
+        ],
+        "date": "2026-10-29",
+        "licence_gate": "fully open",
+        "ok": true
+      }
+    },
+    "dc-a3-gov": {
+      "files": {
+        "gov_sites.geojson": {
+          "bytes": 53466,
+          "sha256": "232fe19108641df30fefdcdfa70be3f30ee62e65cbab7781ff1fb0b697d50f5b"
+        },
+        "gov_sites.json": {
+          "bytes": 55093,
+          "sha256": "4b545f7f84c7d9cb3bec373aa7630015cbf8c039e581a9280cda958482960185"
+        },
+        "gov_sites.py": {
+          "bytes": 46179,
+          "sha256": "56e30080914830e6ced94d25b575f999243b9ef93418e688e3a462c4c142f4a8"
+        },
+        "raw/04a05d9187670dadee937fe22b9c60aadff621fdfef81dc72b23b62f3c181e71.json": {
+          "bytes": 22098,
+          "sha256": "04a05d9187670dadee937fe22b9c60aadff621fdfef81dc72b23b62f3c181e71"
+        },
+        "raw/07d12015f4491b302524f73875f8b4a1066ef9cf8a07a961ab1b550ad384fc80.json": {
+          "bytes": 11271,
+          "sha256": "07d12015f4491b302524f73875f8b4a1066ef9cf8a07a961ab1b550ad384fc80"
+        },
+        "raw/0ebfae35c91cc0a2a9b59b3f0b2a19f5aeda4b6a906251736ddb6e95a0cdcf4b.json": {
+          "bytes": 34663,
+          "sha256": "0ebfae35c91cc0a2a9b59b3f0b2a19f5aeda4b6a906251736ddb6e95a0cdcf4b"
+        },
+        "raw/1009a99d860adde75282202bcc79922637d804de4c1684052a49a8894d117cc2.pdf": {
+          "bytes": 243916,
+          "sha256": "1009a99d860adde75282202bcc79922637d804de4c1684052a49a8894d117cc2"
+        },
+        "raw/1e05050535906e69c7601607d587e07012d1bb28e5a539c57ee81e64d0fc5c4f.json": {
+          "bytes": 21587,
+          "sha256": "1e05050535906e69c7601607d587e07012d1bb28e5a539c57ee81e64d0fc5c4f"
+        },
+        "raw/27412b65642d32e99f378d2248cd1f9f2799378547270b95eea2ff8a3931ffd6.pdf": {
+          "bytes": 2533074,
+          "sha256": "27412b65642d32e99f378d2248cd1f9f2799378547270b95eea2ff8a3931ffd6"
+        },
+        "raw/36ec57cff6d3c30d4f2bda05bcdc9da3586fc7d2c3c5501b2e17c7e316ce182e.json": {
+          "bytes": 16421,
+          "sha256": "36ec57cff6d3c30d4f2bda05bcdc9da3586fc7d2c3c5501b2e17c7e316ce182e"
+        },
+        "raw/3b34eab4f93fe63e67aec72530f0d28e393d24e6a013d2b998147961302e0e2f.json": {
+          "bytes": 28688,
+          "sha256": "3b34eab4f93fe63e67aec72530f0d28e393d24e6a013d2b998147961302e0e2f"
+        },
+        "raw/4b1319f2c2469a0f8262decb96ac8d9491474f89e3c0547bb768d16887616e2a.pdf": {
+          "bytes": 7049969,
+          "sha256": "4b1319f2c2469a0f8262decb96ac8d9491474f89e3c0547bb768d16887616e2a"
+        },
+        "raw/5bfdf8f3b0f07b2d0d42cd9a84985fb3c325772dfe8fe9ccb170abd2084f9105.html": {
+          "bytes": 44980,
+          "sha256": "5bfdf8f3b0f07b2d0d42cd9a84985fb3c325772dfe8fe9ccb170abd2084f9105"
+        },
+        "raw/5d5389b6ac1e059194f99ba78ec0546d5ea0451a8d2518fc1dcf02a9eb3b0673.json": {
+          "bytes": 60335,
+          "sha256": "5d5389b6ac1e059194f99ba78ec0546d5ea0451a8d2518fc1dcf02a9eb3b0673"
+        },
+        "raw/64a73d5457f6b833e6f9ce3ff529bf26ac90a84ed9980c3540acc4a1400849c4.json": {
+          "bytes": 22210,
+          "sha256": "64a73d5457f6b833e6f9ce3ff529bf26ac90a84ed9980c3540acc4a1400849c4"
+        },
+        "raw/739799c3197b1a8f3a797c79424a78c51a0faccbb3e5a6294847a8ab486ce274.json": {
+          "bytes": 33496,
+          "sha256": "739799c3197b1a8f3a797c79424a78c51a0faccbb3e5a6294847a8ab486ce274"
+        },
+        "raw/73e40e2acf43347d3f8759cc60304226518f5582d001b0c60dc4d96feaf9aa4b.html": {
+          "bytes": 46362,
+          "sha256": "73e40e2acf43347d3f8759cc60304226518f5582d001b0c60dc4d96feaf9aa4b"
+        },
+        "raw/7d403d6c0aa29a11c7212adac02b91e5805c4e363468624e2c73344c6aa0b017.json": {
+          "bytes": 21837,
+          "sha256": "7d403d6c0aa29a11c7212adac02b91e5805c4e363468624e2c73344c6aa0b017"
+        },
+        "raw/8e7d045f9892b629c2186d4be596e1123acc3de94ad6439c2e35ba388f0e3d94.json": {
+          "bytes": 96999,
+          "sha256": "8e7d045f9892b629c2186d4be596e1123acc3de94ad6439c2e35ba388f0e3d94"
+        },
+        "raw/90b4f313921fa6e5f61218cb6d8b8d379e3d54062f6b8e568df6450b452c4180.pdf": {
+          "bytes": 1090373,
+          "sha256": "90b4f313921fa6e5f61218cb6d8b8d379e3d54062f6b8e568df6450b452c4180"
+        },
+        "raw/a0e3f102366ad1b9c43048818b727ff64f68016ae9741e64015853f48632e746.html": {
+          "bytes": 28346,
+          "sha256": "a0e3f102366ad1b9c43048818b727ff64f68016ae9741e64015853f48632e746"
+        },
+        "raw/a85cc3d64c138148b8c8fc5e4e24f32cc9ecbeaf8c4ebfe5969a234bad91f74d.pdf": {
+          "bytes": 7324926,
+          "sha256": "a85cc3d64c138148b8c8fc5e4e24f32cc9ecbeaf8c4ebfe5969a234bad91f74d"
+        },
+        "raw/ab989558475a5d7ed86b36977f1b626c94771fe92ad4fb204eeba7287f589d3b.json": {
+          "bytes": 50383,
+          "sha256": "ab989558475a5d7ed86b36977f1b626c94771fe92ad4fb204eeba7287f589d3b"
+        },
+        "raw/acc700c1d245171b413be248e2d1b21c07666f6891aa273f271d19e64ce2ae6f.pdf": {
+          "bytes": 442845,
+          "sha256": "acc700c1d245171b413be248e2d1b21c07666f6891aa273f271d19e64ce2ae6f"
+        },
+        "raw/cf2f0b597e8e763f2695d88ec5274cf2b0459d8649554065e5d47cb9b55d8c33.html": {
+          "bytes": 25909,
+          "sha256": "cf2f0b597e8e763f2695d88ec5274cf2b0459d8649554065e5d47cb9b55d8c33"
+        },
+        "raw/d1254c033a02200834d2603ebfe92f41ba6a6905e9164684dba77e114c118dc4.pdf": {
+          "bytes": 181634,
+          "sha256": "d1254c033a02200834d2603ebfe92f41ba6a6905e9164684dba77e114c118dc4"
+        },
+        "raw/e10c4b01381838957ac1db49a9555f60d3f058284049a6c5ce55c3d40c39e903.pdf": {
+          "bytes": 846096,
+          "sha256": "e10c4b01381838957ac1db49a9555f60d3f058284049a6c5ce55c3d40c39e903"
+        },
+        "raw/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.html": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "raw/e4e58ac979d0f076be87d616ff51b6950756aa9dfc38075d4304592dfdfc4368.html": {
+          "bytes": 76404,
+          "sha256": "e4e58ac979d0f076be87d616ff51b6950756aa9dfc38075d4304592dfdfc4368"
+        },
+        "raw/e63d9ef3cbd17924bbb37f93704f778b91557f1d06f2df966905147f69e133e7.pdf": {
+          "bytes": 943255,
+          "sha256": "e63d9ef3cbd17924bbb37f93704f778b91557f1d06f2df966905147f69e133e7"
+        },
+        "raw/eaa08b8999e06f2ebfca6793379d9ba574af944545ae23ef26748a5c773b2038.json": {
+          "bytes": 151757,
+          "sha256": "eaa08b8999e06f2ebfca6793379d9ba574af944545ae23ef26748a5c773b2038"
+        },
+        "raw/f85ab30d7435192c27c53a596d78122a9a52936bf9bfeda30597c68d6b45c461.json": {
+          "bytes": 16046,
+          "sha256": "f85ab30d7435192c27c53a596d78122a9a52936bf9bfeda30597c68d6b45c461"
+        },
+        "raw/fa5ecbd485cae53b75898cdac153a970e449c2908cbb4f1aab826cf7a90f2c5d.json": {
+          "bytes": 21053,
+          "sha256": "fa5ecbd485cae53b75898cdac153a970e449c2908cbb4f1aab826cf7a90f2c5d"
+        },
+        "raw/fe87d38a1dae729f1ec54562ade2f41e3002a2c2be09322cd966672831453c94.html": {
+          "bytes": 91401,
+          "sha256": "fe87d38a1dae729f1ec54562ade2f41e3002a2c2be09322cd966672831453c94"
+        },
+        "raw/manifest.json": {
+          "bytes": 15384,
+          "sha256": "1e76b2ca89306621b5fc876459f12462d9bf10d30a862d6b6df1267582f07d11"
+        }
+      },
+      "last_fetch": {
+        "codes": [
+          2
+        ],
+        "date": "2026-10-29",
+        "licence_gate": "fully open",
+        "ok": false
+      }
+    },
+    "dc-a4-osm-wikidata": {
+      "files": {
+        "dc_a4.py": {
+          "bytes": 33491,
+          "sha256": "0d03326972100dd4910df31d05b0657bb503ec5fa7d54f809b98cd8389a3f11f"
+        },
+        "out/counts.json": {
+          "bytes": 1005,
+          "sha256": "fe41928e2e698ad4ea790f3e0cb8657f47258880330876ceb732779fe423dfb0"
+        },
+        "out/dc_operational.geojson": {
+          "bytes": 611453,
+          "sha256": "66c824b98a4327d71a606ec73a5f6bfff7ddae6cec0df377dd166c4b5c6076f3"
+        },
+        "out/dc_operational.json": {
+          "bytes": 596696,
+          "sha256": "bf03c85c1cd2c04c8368a042b2667817216abd46fe7908c940e002da37b95588"
+        },
+        "raw/gg2050_datacentres.geojson": {
+          "bytes": 40563,
+          "sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+        },
+        "raw/osm_overpass.fetch.json": {
+          "bytes": 1068,
+          "sha256": "51b7085deaa2c0872976a8f5c7a30d075c7e1296f0a84520b96bfc08a6acff1a"
+        },
+        "raw/osm_overpass.json": {
+          "bytes": 109442,
+          "sha256": "f8f5b4d9c102a5d269c29399001d236d89e157c9a16a70515511819a45dbc934"
+        },
+        "raw/wikidata_sparql.fetch.json": {
+          "bytes": 1572,
+          "sha256": "f14f6bf77419d9c878cf37d9a16cb096cb31adbe60f00cb85456bff9b063af31"
+        },
+        "raw/wikidata_sparql.json": {
+          "bytes": 57944,
+          "sha256": "6c545cc0c7713bf395f8b2cd0077dbd8a4a284997a95d18d02b9eda071b5cb94"
+        }
+      },
+      "last_fetch": {
+        "codes": [
+          0,
+          0
+        ],
+        "date": "2026-10-29",
+        "licence_gate": "fully open",
+        "ok": true
+      }
+    },
+    "dc-a5-dno": {
+      "files": {
+        "dno_fetch.py": {
+          "bytes": 20682,
+          "sha256": "4b6a3f3da859e852c143ced96d74a72636079dacd7c8cd7662a0dca48b03fadb"
+        }
+      }
+    },
+    "dc-a7-merge": {
+      "files": {
+        "dc_pipeline.schema.json": {
+          "bytes": 10297,
+          "sha256": "758281b0644e951f5161a90f5ce5900526cebe882fd88582f253a6662f6bdeb7"
+        },
+        "dcingest.py": {
+          "bytes": 26902,
+          "sha256": "263ab7d44d0a2b293a6f0e3f1db44d189675b1f3e2a9c439f1da9b596184d532"
+        },
+        "dcmerge.py": {
+          "bytes": 22575,
+          "sha256": "95e4a08b9622ebb8bca983d39088d528a64b658c6bc90836172733ae0bc36182"
+        },
+        "dcschema.py": {
+          "bytes": 8604,
+          "sha256": "1c4cde998c127527aa3e2b228cad81c766fe3471aba3776f52032a3de4a43592"
+        },
+        "out/uk_datacentre_pipeline.geojson": {
+          "bytes": 543430,
+          "sha256": "c3c36ec36e5085cd68b6886c1e601d85015cf2ee48277dd69c29cc1550b854d4"
+        },
+        "out/uk_datacentre_pipeline.rejects.json": {
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "test_dcmerge.py": {
+          "bytes": 28105,
+          "sha256": "bd1ae38e1efb7e97910b2d97fefd2798790863476f6b1768cb62755d9550f7b7"
+        }
+      }
     }
-   }
   },
-  "dc-a2-planning": {
-   "files": {
-    "dc_planning_fetch.py": {
-     "bytes": 26788,
-     "sha256": "75404016aad47f4bd149c03cf4fd295f73282c1e1fbdb5c76f9176e19bd1370b"
-    },
-    "out/dc_planning.geojson": {
-     "bytes": 4375,
-     "sha256": "e44b0eff90847c4f94a2d6f4c36b62612f8ec25f6de445dc7a4f65ab4202b022"
-    },
-    "out/manifest.json": {
-     "bytes": 7521,
-     "sha256": "544e6da891c4d37dd21f418ed9fb42d0d50f8b5327ac55b2862a643d3b10b624"
-    },
-    "out/raw/digital-land-nsip-snapshot.csv": {
-     "bytes": 49581,
-     "sha256": "0cd20e8867b2f8544a5674508c4493e1c60fc5006acfca287258756366b2dcfa"
-    },
-    "out/raw/doncaster-2023.csv": {
-     "bytes": 205267,
-     "sha256": "48380b738d1599b86e7514e170577cfc5c29a2d419a193ac501cb11c9bc999f1"
-    },
-    "out/raw/doncaster-2024.csv": {
-     "bytes": 196349,
-     "sha256": "4933704b9bcbfec0215ec80134716edf727e3ff0eaffeecf9e84c27d6f996b52"
-    }
-   }
-  },
-  "dc-a3-gov": {
-   "files": {
-    "gov_sites.geojson": {
-     "bytes": 53466,
-     "sha256": "232fe19108641df30fefdcdfa70be3f30ee62e65cbab7781ff1fb0b697d50f5b"
-    },
-    "gov_sites.json": {
-     "bytes": 55093,
-     "sha256": "4b545f7f84c7d9cb3bec373aa7630015cbf8c039e581a9280cda958482960185"
-    },
-    "gov_sites.py": {
-     "bytes": 46179,
-     "sha256": "56e30080914830e6ced94d25b575f999243b9ef93418e688e3a462c4c142f4a8"
-    }
-   }
-  },
-  "dc-a4-osm-wikidata": {
-   "files": {
-    "dc_a4.py": {
-     "bytes": 33491,
-     "sha256": "0d03326972100dd4910df31d05b0657bb503ec5fa7d54f809b98cd8389a3f11f"
-    },
-    "out/counts.json": {
-     "bytes": 1030,
-     "sha256": "ca71f29131da2ecc4dfe7138d018e83243ee35068fbdcc7c51ffd26ff310b7b6"
-    },
-    "out/dc_operational.geojson": {
-     "bytes": 545537,
-     "sha256": "0d8318ed94bfb2acd828c93c67e58d13bd886c45533d7e19a535a4e93ef4c2c8"
-    },
-    "out/dc_operational.json": {
-     "bytes": 512203,
-     "sha256": "6628e707d4e60b68744aba9bbaf4dee8b9fd16a58879de2536dc2eb2d2c494c4"
-    },
-    "raw/gg2050_datacentres.geojson": {
-     "bytes": 40563,
-     "sha256": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
-    }
-   }
-  },
-  "dc-a5-dno": {
-   "files": {
-    "dno_fetch.py": {
-     "bytes": 20682,
-     "sha256": "4b6a3f3da859e852c143ced96d74a72636079dacd7c8cd7662a0dca48b03fadb"
-    }
-   }
-  },
-  "dc-a7-merge": {
-   "files": {
-    "dc_pipeline.schema.json": {
-     "bytes": 10297,
-     "sha256": "758281b0644e951f5161a90f5ce5900526cebe882fd88582f253a6662f6bdeb7"
-    },
-    "dcingest.py": {
-     "bytes": 26902,
-     "sha256": "263ab7d44d0a2b293a6f0e3f1db44d189675b1f3e2a9c439f1da9b596184d532"
-    },
-    "dcmerge.py": {
-     "bytes": 22575,
-     "sha256": "95e4a08b9622ebb8bca983d39088d528a64b658c6bc90836172733ae0bc36182"
-    },
-    "dcschema.py": {
-     "bytes": 8604,
-     "sha256": "1c4cde998c127527aa3e2b228cad81c766fe3471aba3776f52032a3de4a43592"
-    },
-    "out/uk_datacentre_pipeline.geojson": {
-     "bytes": 447511,
-     "sha256": "176c1b2e894943618c1dd866b3a96c9f3e00bcded8c6e88a5263b0048ae22d89"
-    },
-    "out/uk_datacentre_pipeline.rejects.json": {
-     "bytes": 2117,
-     "sha256": "dcf72c035d23de7bfb63449450211d575351145a6e61dc3acae1dd7764ab211f"
-    },
-    "test_dcmerge.py": {
-     "bytes": 28105,
-     "sha256": "bd1ae38e1efb7e97910b2d97fefd2798790863476f6b1768cb62755d9550f7b7"
-    }
-   }
-  }
- },
- "schema": "gb-asset-lanes-manifest.v1"
+  "schema": "gb-asset-lanes-manifest.v1"
 }

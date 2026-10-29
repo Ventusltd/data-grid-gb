@@ -1,0 +1,15 @@
+{
+  "domain": "conventional",
+  "files": {
+    "dukes-5-11/DUKES_5.11-2026-05.xlsx": {
+      "bytes": 1247443,
+      "committed": true,
+      "fetched_at": "2026-10-29T21:56:24Z",
+      "method": "GET",
+      "sha256": "760286f4cb3168f04a5ee1b581dbfcb35e1d65a5ea0151bb2dd4dc12dca2c72a",
+      "source_id": "dukes-5-11",
+      "url": "https://assets.publishing.service.gov.uk/media/6a6a365b0ddb7e4831c629f3/DUKES_5.11.xlsx"
+    }
+  },
+  "schema": "gb-asset-raw-manifest.v1"
+}

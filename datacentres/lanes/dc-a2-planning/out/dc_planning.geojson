@@ -3,6 +3,280 @@
   {
    "geometry": null,
    "properties": {
+    "address": "250 City Road,  Islington,  EC1V 2PU",
+    "applicant": null,
+    "date_decided": "2013-05-09T00:00:00.000",
+    "date_received": "2013-05-03T00:00:00.000",
+    "description": "Observations to adjoining borough of Islington for hybrid planning application for demolition of existing buildings and comprehensive redevelopment comprising full planning permission for all elements (other than Block 9 submitted in outline with appearance reserved) for four blocks ranging from 7 to 9 storeys plus two towers of 42 storeys (up to 155m) and 36 storeys (up to 137m), providing up to 995 residential units; commercial floorspace (Class B1) up to 5,000sqm; affordable workspace (Class B1); relocated data centre; flexible retail/financial and professional services/restaurant/ caf\u00e9/drinking establishment/health centre floorspace (Class A1/A2/A3/A4/D1) up to 3,650sqm; cr\u00e8che (Class D1); and hotel (Class C1) of up to 190 beds; together with public open spaces, up to 1,223 cycle spaces, 250 car parking spaces and ancillary floorspace within a basement and other associated works.",
+    "evidence_url": "https://planningrecords.camden.gov.uk/NECSWS/Redirection/redirect.aspx?linkid=EXDC&PARAM0=355719",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:camden:2013/2585/P",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "none",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Observations to adjoining borough of Islington for hybrid planning application for demolition of existing buildings and ",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "local-authority:CMD",
+    "route": "TCPA",
+    "source": "camden",
+    "status": "unknown",
+    "status_raw": "Final Decision | No objection",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -0.134183,
+     51.525381
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "address": "Kathleen Lonsdale Building Gower Place Bloomsbury London WC1E 6BN",
+    "applicant": null,
+    "date_decided": "2020-05-20T00:00:00.000",
+    "date_received": "2020-05-19T00:00:00.000",
+    "description": "Creation of a new opening and associated works between the Data Centre and the Lift Motor Room within the basement of the Kathleen Lonsdale Building.",
+    "evidence_url": "https://planningrecords.camden.gov.uk/NECSWS/Redirection/redirect.aspx?linkid=EXDC&PARAM0=543178",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:camden:2020/2009/L",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "application point",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Creation of a new opening and associated works between the Data Centre and the Lift Motor Room within the basement of th",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "local-authority:CMD",
+    "route": "TCPA",
+    "source": "camden",
+    "status": "consented",
+    "status_raw": "Final Decision | Granted",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -0.134542,
+     51.521897
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "address": "1-19 Torrington Place London WC1E 7HB",
+    "applicant": null,
+    "date_decided": "2024-02-07T00:00:00.000",
+    "date_received": "2022-08-19T00:00:00.000",
+    "description": "Temporary change of use for a period of up to 10 years for flexible office E(g)(i) and education F1(a) (excluding retail and other commercial units on Tottenham Court Road frontage, the data centre at basement and part ground floor levels and the UKPN substation).",
+    "evidence_url": "https://planningrecords.camden.gov.uk/NECSWS/Redirection/redirect.aspx?linkid=EXDC&PARAM0=602080",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:camden:2022/3535/P",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "application point",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Temporary change of use for a period of up to 10 years for flexible office E(g)(i) and education F1(a) (excluding retail",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "local-authority:CMD",
+    "route": "TCPA",
+    "source": "camden",
+    "status": "consented",
+    "status_raw": "Final Decision | Granted Subject to a Section 106 Legal Agreement",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -0.602673,
+     51.59073
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "address": null,
+    "applicant": null,
+    "date_decided": null,
+    "date_received": null,
+    "description": "The overall scheme comprises a data centre campus of up to three units (including server halls and cooling infrastructure, designed for an IT load of up to c.300MW across the three buildings (c.100 MW each), together with an integrated on-site energy generation centre and associated development. The energy centre will generate electricity from gas to provide resilient and reliable power supply to the data centre campus, mitigating pressure on local infrastructure and enabling the demand for data centre development to be met efficiently. It will demonstrate a viable pathway to become decarbonisation-ready. The gas connection to the energy centre is up to c.900 megawatts and, depending on the technology adopted, the maximum generating capacity of the energy centre is approximately 250-350 megawatts.",
+    "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110030",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:pdgu-infrastructure-project:EN0110030",
+    "it_load_mw": 300.0,
+    "keywords": [
+     "data centre",
+     "server halls"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "application point",
+    "match": "keyword",
+    "mw_evidence": [
+     "cooling infrastructure, designed for an IT load of up to c.300MW across the three buildings (c.100 MW ea",
+     "r an IT load of up to c.300MW across the three buildings (c.100 MW each), together with an integrated on-s",
+     "n-ready. The gas connection to the energy centre is up to c.900 megawatts and, depending on the technology adopte",
+     "nerating capacity of the energy centre is approximately 250-350 megawatts."
+    ],
+    "mw_unqualified": 100.0,
+    "name": "SDC M40 Campus",
+    "onsite_generation_mw": 900.0,
+    "operator": null,
+    "organisation": "government-organisation:EA39",
+    "route": "NSIP",
+    "source": "pdgu-infrastructure-project",
+    "status": "in planning",
+    "status_raw": "pre-application",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     0.407004,
+     52.665265
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "address": null,
+    "applicant": null,
+    "date_decided": null,
+    "date_received": null,
+    "description": "The proposed development comprises the construction, operation and maintenance and decommissioning of a solar photovoltaic (PV) panel array electricity generating station with associated electrical infrastructure, Battery Energy Storage System (BESS) Units, an integrated Data Centre Campus, landscaping, biodiversity mitigation and enhancement areas, access roads and associated grid infrastructure to connect the project to the existing NGET Walpole GSP.",
+    "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110048",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:pdgu-infrastructure-project:EN0110048",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "application point",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Longmarsh Green Energy",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "government-organisation:EA39",
+    "route": "NSIP",
+    "source": "pdgu-infrastructure-project",
+    "status": "in planning",
+    "status_raw": "pre-application",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
+    "address": "The site of the project is located in Buckinghamshire, England. It is approximately 2km to the west of Gerrards Cross, approximately 2.5km east of Beaconsfield and approximately 1.5km north of Hedgerley. The site comprises land immediately to the south of the A40 Oxford Road and immediately to the north of the M40 motorway. It has a history of landfill activities and is currently operated by Veolia for the landfilling of inert building waste (albeit the site no longer accepts any forms of waste).",
+    "applicant": null,
+    "date_decided": null,
+    "date_received": null,
+    "description": "SDC M40 Campus The overall scheme comprises a data centre campus of up to three units (including server halls and cooling infrastructure, designed for an IT load of up to c.300MW across the three buildings (c.100 MW each), together with an integrated on-site energy generation centre and associated development. The energy centre will generate electricity from gas \r\nto provide resilient and reliable power supply to the data centre campus, mitigating pressure on local infrastructure and enabling the demand for data centre development to be met efficiently. It will demonstrate a viable pathway to become decarbonisation-ready. \r\n\r\nThe gas connection to the energy centre is up to c.900 megawatts and, depending on the technology adopted, the maximum generating capacity of the energy centre is approximately 250-350 megawatts.",
+    "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110030",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:pins-nsip-applications:EN0110030",
+    "it_load_mw": 300.0,
+    "keywords": [
+     "data centre",
+     "server halls"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "none",
+    "match": "keyword",
+    "mw_evidence": [
+     "cooling infrastructure, designed for an IT load of up to c.300MW across the three buildings (c.100 MW ea",
+     "r an IT load of up to c.300MW across the three buildings (c.100 MW each), together with an integrated on-s",
+     "ady. \r\n\r\nThe gas connection to the energy centre is up to c.900 megawatts and, depending on the technology adopte",
+     "nerating capacity of the energy centre is approximately 250-350 megawatts."
+    ],
+    "mw_unqualified": 100.0,
+    "name": "SDC M40 Campus",
+    "onsite_generation_mw": 900.0,
+    "operator": null,
+    "organisation": "government-organisation:EA39",
+    "route": "NSIP",
+    "source": "pins-nsip-applications",
+    "status": "in planning",
+    "status_raw": "Pre-application",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
+    "address": "The site boundary spans from the existing National Grid (NGET) Grid Supply Point (GSP) at Walpole in the west to the south of the village of Barton Bendish in the east, extending circa 29km north-west to south-east.",
+    "applicant": null,
+    "date_decided": null,
+    "date_received": null,
+    "description": "Longmarsh Green Energy The proposed development comprises the construction, operation and maintenance and decommissioning of a solar photovoltaic (PV) panel array electricity generating station with associated electrical infrastructure, Battery Energy Storage System (BESS) Units, an integrated Data Centre Campus, landscaping, biodiversity mitigation and enhancement areas, access roads and associated grid infrastructure to connect the project to the existing NGET Walpole GSP.",
+    "evidence_url": "https://national-infrastructure-consenting.planninginspectorate.gov.uk/projects/EN0110048",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:pins-nsip-applications:EN0110048",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "none",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Longmarsh Green Energy",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "government-organisation:EA39",
+    "route": "NSIP",
+    "source": "pins-nsip-applications",
+    "status": "in planning",
+    "status_raw": "Pre-application",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
     "address": null,
     "applicant": "Slough Holdings UK Limited",
     "date_decided": null,
@@ -107,6 +381,40 @@
     "source": "s35-seed",
     "status": "in planning",
     "status_raw": "s35 direction granted",
+    "use_classes": []
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": null,
+   "properties": {
+    "address": "Ladydell Depot\rBruce Avenue\rWorthing\rWest Sussex\rBN11 5JN",
+    "applicant": null,
+    "date_decided": "31/07/2019",
+    "date_received": "07/06/2019",
+    "description": "Removal of 3 no. shipping containers and construction of 2 no. Data centre cabins with ancillary air conditioning units; a meter cabin on concrete base; refurbishment of existing building and security fencing and access gate.",
+    "evidence_url": "http://planning.adur-worthing.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=PSOLOXCB03G00",
+    "facility_power_mw": null,
+    "grid_connection_mw": null,
+    "id": "dc-a2:worthing:AWDM/0934/19",
+    "it_load_mw": null,
+    "keywords": [
+     "data centre"
+    ],
+    "licence": "OGL-UK-3.0",
+    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "location_precision": "none",
+    "match": "keyword",
+    "mw_evidence": null,
+    "mw_unqualified": null,
+    "name": "Removal of 3 no. shipping containers and construction of 2 no. Data centre cabins with ancillary air conditioning units;",
+    "onsite_generation_mw": null,
+    "operator": null,
+    "organisation": "Worthing",
+    "route": "TCPA",
+    "source": "worthing",
+    "status": "consented",
+    "status_raw": "Approve",
     "use_classes": []
    },
    "type": "Feature"
