@@ -120,3 +120,15 @@ These documents do not turn a displayed corridor into an engineered cable
 route. They preserve the existing straight-line measurement as the baseline
 and explicitly do not infer feasibility, consent, commitment, capacity,
 connection date, construction method, or cost.
+
+## Licence
+
+Code (pipelines, verifiers, workflows, docs): Apache License 2.0, the same licence as
+[GridAtlas](https://github.com/Ventusltd/gridatlas) and
+[lightning](https://github.com/Ventusltd/lightning); see `LICENSE` and `NOTICE`.
+
+Data keeps its own terms. Values derived from NESO's Electricity Ten Year Statement
+remain NESO's information; attribution: "Supported by National Energy SO Open Data"
+(NESO Open Licence wording; its application to the ETYS appendices is being confirmed
+with NESO). Substation coordinates are © OpenStreetMap contributors under the
+Open Database Licence (ODbL 1.0), and share-alike applies to products that republish them.

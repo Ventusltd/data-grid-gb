@@ -1,0 +1,51 @@
+data-grid-gb
+Copyright 2026 Ventus Ltd
+
+Author: Vikram (Ventus Ltd)
+Project: GlobalGrid2050 | Ventus Core - Open Infrastructure Intelligence
+Site: globalgrid2050.com
+
+The GB electricity network as its operator publishes it: the pipelines that
+fetch and pin the NESO Electricity Ten Year Statement appendices, the derived
+network products, and the verifiers that gate them.
+
+Licensed under the Apache License, Version 2.0. You may not use this work
+except in compliance with that licence; a copy is in the LICENSE file beside
+this one, and at http://www.apache.org/licenses/LICENSE-2.0
+
+WHY THIS LICENCE, recorded so the choice can be argued with rather than
+guessed at:
+
+  The same licence as the Grid Atlas (Ventusltd/gridatlas) and the lightning
+  data plane (Ventusltd/lightning), so code can move across the estate without
+  a licence boundary. This estate exists to be adopted. Apache-2.0 grants the
+  patent rights an adopter needs alongside the copyright ones, which a
+  permissive licence without a patent grant does not, and it requires
+  attribution to travel with the work rather than relying on goodwill.
+
+  Built on public knowledge. The Ventus contribution is the architecture.
+  Licensed to the world. Misrepresentation is not permitted.
+
+WHAT THIS LICENCE DOES NOT COVER:
+
+  Third-party data this repository reads or redistributes keeps its own terms
+  and is not licensed by this file. That includes, where present:
+
+  - NESO's Electricity Ten Year Statement appendices and the values derived
+    from them in derived/ (names, voltages, circuits, ratings, impedances,
+    fault levels, planned changes). These remain NESO's information under
+    NESO's terms. Where NESO's Open Licence applies, its required attribution
+    is: "Supported by National Energy SO Open Data". NESO licenses its
+    datasets individually, and the ETYS appendices are not, at the time of
+    writing, shown on NESO's data portal as associated with that licence;
+    the owner is asking NESO to confirm. Until confirmed, treat the derived
+    values as NESO's information reproduced with attribution, not as
+    Apache-2.0 material.
+  - Substation coordinates joined to ETYS identities (the `location` fields
+    in derived/ products), (c) OpenStreetMap contributors, available under
+    the Open Database Licence (ODbL 1.0) via the GridAtlas release. Any
+    product that republishes those coordinates is, to that extent, an ODbL
+    database and share-alike applies to it, not Apache-2.0.
+
+  A licence granted here over material that was never the licensor's to grant
+  would be worth nothing to the adopter who relied on it.
