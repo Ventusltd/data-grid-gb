@@ -30,7 +30,7 @@ SOURCE_DATE = "2026-05"
 # A station name has identity, but its redundant *ending* 'power station'
 # does not. Never discard descriptive or fuel-specific words like 'CHP',
 # 'A/B', 'east', 'north', 'extension', or place identity tokens.
-ENDINGS = (" power station", " power plant", " generating station")
+ENDINGS = (" power station", " power plant", " generating station", " power")
 CORPORATE_SUFFIX = {"ltd", "limited", "plc"}
 
 
