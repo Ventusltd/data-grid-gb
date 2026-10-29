@@ -23,3 +23,9 @@ for ws in wb:
             print("HEADER", i, vals[:24])
         if any(k in " ".join(str(v) for v in row if v is not None).upper() for k in ("MARCHWOOD", "KILROOT", "SIZEWELL B", "DRAX")):
             print("MATCH", i, vals[:24])
+
+from collections import Counter
+from conventional.fetchers.dukes_5_11 import normalise, RAW_FILE
+stations = normalise({RAW_FILE: data})
+print("DUKES_SOURCE_ROWS", len(stations), "BY_FUEL", dict(sorted(Counter(v["fuel"] for v in stations).items())))
+print("DUKES_MARCHWOOD", [(x["id"], x["name"], x["capacity_mw"], x["fuel"]) for x in stations if "marchwood" in x["name"].lower()])
