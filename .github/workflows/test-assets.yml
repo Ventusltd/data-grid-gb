@@ -54,9 +54,6 @@ jobs:
       - name: Install requirements.txt
         if: matrix.deps == 'requirements'
         run: pip install -r requirements.txt
-      - name: Probe DUKES 5.11 (Agent B evidence; requirements leg only)
-        if: matrix.deps == 'requirements' && startsWith(github.ref, 'refs/heads/dc-73-agent-b/')
-        run: python conventional/dukes_probe.py
       - name: Static check (undefined names)
         run: |
           pip install pyflakes==3.2.0
