@@ -1,35 +1,35 @@
 {
  "inputs": {
-  "gg2050_datacentres.geojson": "a686a2e00253bbf30c9f5262439bc2332524e8d5cb34481529c6a711c73acab4"
+  "osm_overpass": "f8f5b4d9c102a5d269c29399001d236d89e157c9a16a70515511819a45dbc934",
+  "wikidata_sparql": "6c545cc0c7713bf395f8b2cd0077dbd8a4a284997a95d18d02b9eda071b5cb94"
  },
- "mode": "legacy globalgrid2050 snapshot (Overpass and Wikidata unreachable from this session)",
+ "mode": "live Overpass",
  "source_objects": {
-  "osm": 240,
-  "wikidata_items": 0,
-  "wikidata_without_coords": 0
+  "osm": 296,
+  "wikidata_items": 61,
+  "wikidata_without_coords": 48
  },
- "sites_total": 212,
+ "sites_total": 261,
  "sites_by_kind": {
-  "cable_landing_station": 12,
-  "data_centre": 182,
-  "data_centre_campus": 18
+  "data_centre": 232,
+  "data_centre_campus": 29
  },
- "operational_data_centre_sites_excl_cable_landing": 200,
- "duplicates_merged": 28,
- "sites_multi_source": 0,
- "sites_with_conflicts": 11,
- "sites_with_name": 165,
- "sites_with_operator": 146,
+ "operational_data_centre_sites_excl_cable_landing": 261,
+ "duplicates_merged": 48,
+ "sites_multi_source": 2,
+ "sites_with_conflicts": 17,
+ "sites_with_name": 218,
+ "sites_with_operator": 173,
  "sites_with_it_load_mw": 0,
  "sites_with_grid_connection_mw": 0,
- "sites_with_unclassified_mw": 0,
+ "sites_with_unclassified_mw": 1,
  "reconciliation": null,
  "params": {
   "site_radius_m": 250,
   "cross_source_radius_m": 500
  },
  "outputs": {
-  "dc_operational.json": "6628e707d4e60b68744aba9bbaf4dee8b9fd16a58879de2536dc2eb2d2c494c4",
-  "dc_operational.geojson": "0d8318ed94bfb2acd828c93c67e58d13bd886c45533d7e19a535a4e93ef4c2c8"
+  "dc_operational.json": "bf03c85c1cd2c04c8368a042b2667817216abd46fe7908c940e002da37b95588",
+  "dc_operational.geojson": "66c824b98a4327d71a606ec73a5f6bfff7ddae6cec0df377dd166c4b5c6076f3"
  }
 }

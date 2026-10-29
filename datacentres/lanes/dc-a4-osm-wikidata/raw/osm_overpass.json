@@ -1,0 +1,5062 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-29T21:56:21Z",
+    "timestamp_areas_base": "2026-10-29T17:23:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 7829977772,
+  "lat": 52.2301270,
+  "lon": 0.1508622,
+  "tags": {
+    "addr:city": "Cambridge",
+    "addr:housename": "Newton House",
+    "addr:postcode": "CB4 0WZ",
+    "addr:street": "Cambridge Business Park",
+    "name": "Redcentric Cambridge",
+    "operator": "Redcentric",
+    "phone": "+44 345 120 7070",
+    "telecom": "data_center",
+    "website": "https://www.redcentricplc.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 8242627702,
+  "lat": 51.3332585,
+  "lon": -0.7662159,
+  "tags": {
+    "operator": "Bank Of America",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 8325036723,
+  "lat": 50.8678009,
+  "lon": -1.2456113,
+  "tags": {
+    "name": "Serverhouse",
+    "operator": "Serverhouse",
+    "telecom": "data_center",
+    "website": "https://www.serverhouse.co.uk/datacentre/hampshire-datacentre.php"
+  }
+},
+{
+  "type": "node",
+  "id": 8721229187,
+  "lat": 53.0038930,
+  "lon": -2.2699405,
+  "tags": {
+    "operator": "Internet Central",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 9253910552,
+  "lat": 57.1525691,
+  "lon": -2.1601492,
+  "tags": {
+    "addr:city": "Aberdeen",
+    "addr:country": "GB",
+    "addr:postcode": "AB16 6HQ",
+    "addr:street": "Whitemyres Avenue",
+    "description": "Brightsolid Data Centre",
+    "name": "Brightsolid",
+    "office": "company",
+    "operator": "brightsolid",
+    "phone": "+44 1224 417210",
+    "telecom": "data_center",
+    "website": "https://brightsolid.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 9458930462,
+  "lat": 51.5701871,
+  "lon": 0.6447764,
+  "tags": {
+    "addr:housenumber": "2-4",
+    "addr:street": "Brunel Road",
+    "name": "CityFibre Cabinets",
+    "operator": "CityFibre",
+    "telecom": "data_center",
+    "telecom:medium": "fibre"
+  }
+},
+{
+  "type": "node",
+  "id": 10029665515,
+  "lat": 51.3580017,
+  "lon": -2.9105618,
+  "tags": {
+    "addr:city": "Weston-super-Mare",
+    "addr:housename": "Worle Business Park",
+    "addr:housenumber": "502",
+    "addr:postcode": "BS22 6WA",
+    "addr:street": "Parkway",
+    "addr:suburb": "Worle",
+    "description": "Insight Data is now the leading provider of marketing data and CRM software exclusively in the UK construction, fenestration and glazing industries.",
+    "name": "Insight Data Ltd",
+    "phone": "+44 1934 808293",
+    "telecom": "data_center",
+    "website": "https://www.insightdata.co.uk/"
+  }
+},
+{
+  "type": "node",
+  "id": 11064014638,
+  "lat": 53.3808925,
+  "lon": -1.4850823,
+  "tags": {
+    "name": "UoS IT Services",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11161995738,
+  "lat": 51.5556071,
+  "lon": -3.0376928,
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Imperial Park",
+    "addr:postcode": "NP10 8BE",
+    "alt_name": "CiCloud Newport",
+    "name": "Centerprise International Newport",
+    "telecom": "data_center",
+    "website": "https://www.centerprisecloud.co.uk"
+  }
+},
+{
+  "type": "node",
+  "id": 11162004018,
+  "lat": 51.6293335,
+  "lon": -3.2290026,
+  "tags": {
+    "addr:city": "Ystrad Mynach",
+    "addr:housenumber": "9",
+    "addr:postcode": "CF82 7TW",
+    "addr:street": "Alder Avenue",
+    "name": "Centerprise International (Distribution)",
+    "operator": "Centerprise International",
+    "telecom": "data_center",
+    "website": "https://www.centerprise.co.uk/contact-us"
+  }
+},
+{
+  "type": "node",
+  "id": 11167049138,
+  "lat": 53.3758050,
+  "lon": -1.4793848,
+  "tags": {
+    "name": "Hive IT",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11640787539,
+  "lat": 51.5206017,
+  "lon": -0.0009807,
+  "tags": {
+    "name": "Netwise London East",
+    "operator": "Netwise",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11902288339,
+  "lat": 51.4138607,
+  "lon": -0.7820534,
+  "tags": {
+    "name": "AWS Bracknell Data Centre",
+    "note": "https://www.datacenterdynamics.com/en/news/amazon-may-be-behind-27mw-data-center-proposed-at-abandoned-hp-site-near-swindon/\n\nhttps://www.theregister.com/2022/01/13/aws_planning_app_oxford/",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157",
+    "source": "local knowledge",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11902392009,
+  "lat": 51.5240279,
+  "lon": -1.7641017,
+  "tags": {
+    "name": "AWS Swindon Data Centre",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 12292494768,
+  "lat": 55.9282626,
+  "lon": -3.2939051,
+  "tags": {
+    "operator": "Lloyds Banking Group",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 12300408592,
+  "lat": 55.8613892,
+  "lon": -4.2651336,
+  "tags": {
+    "addr:city": "Glasgow",
+    "addr:housenumber": "177",
+    "addr:street": "Bothwell Street",
+    "building": "data_center",
+    "name": "DataVita DV2",
+    "operator": "DataVita",
+    "ref": "DV2",
+    "telecom": "data_center",
+    "website": "https://www.datavita.co.uk/location/glasgow"
+  }
+},
+{
+  "type": "node",
+  "id": 12303136063,
+  "lat": 53.4642039,
+  "lon": -2.2363205,
+  "tags": {
+    "name": "Equinix MA1",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "MA1",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/manchester-data-centers/ma1"
+  }
+},
+{
+  "type": "node",
+  "id": 12303136064,
+  "lat": 53.4615004,
+  "lon": -2.2377018,
+  "tags": {
+    "name": "Equinix MA4",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "MA4",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/manchester-data-centers/ma4"
+  }
+},
+{
+  "type": "node",
+  "id": 12512246491,
+  "lat": 51.7596040,
+  "lon": -1.2521857,
+  "tags": {
+    "name": "University Shared Data Centre",
+    "operator": "University of Oxford",
+    "ref": "SDC",
+    "short_name": "USDC",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 12641413062,
+  "lat": 50.8482468,
+  "lon": -1.1664407,
+  "tags": {
+    "name": "ServerHouse",
+    "telecom": "data_center",
+    "website": "https://www.serverhouse.co.uk/datacentres/fareham-colocation/"
+  }
+},
+{
+  "type": "node",
+  "id": 13179027944,
+  "lat": 54.6047294,
+  "lon": -5.9202189,
+  "tags": {
+    "addr:city": "Belfast",
+    "addr:housename": "City Quays 3",
+    "addr:housenumber": "92",
+    "addr:postcode": "BT1 3FE",
+    "addr:street": "Donegall Quay",
+    "name": "Microsoft Ireland",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "telecom": "data_center",
+    "website": "https://www.microsoft.com/en-ie/aboutireland"
+  }
+},
+{
+  "type": "node",
+  "id": 13596137356,
+  "lat": 50.7219006,
+  "lon": -1.8749448,
+  "tags": {
+    "addr:city": "Bournemouth",
+    "addr:housenumber": "106",
+    "addr:postcode": "BH1 1LR",
+    "addr:street": "Old Christchurch Road",
+    "name": "Data Vault - Bournemouth BCP01",
+    "operator": "Dark Nebulae Ltd",
+    "phone": "+441202144445",
+    "telecom": "data_center",
+    "website": "https://thedatavault.uk"
+  }
+},
+{
+  "type": "node",
+  "id": 13655340206,
+  "lat": 54.5514292,
+  "lon": -1.3152153,
+  "tags": {
+    "operator": "Pulsant",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 14056398202,
+  "lat": 51.2929363,
+  "lon": -0.7880689,
+  "tags": {
+    "addr:city": "Farnborough",
+    "addr:housenumber": "B15 & B17",
+    "addr:postcode": "GU14 0NR",
+    "addr:street": "Armstrong Mall",
+    "name": "Asanti - Farnborough",
+    "operator": "Asanti",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 14056400574,
+  "lat": 53.4789028,
+  "lon": -2.2386018,
+  "tags": {
+    "addr:city": "Manchester",
+    "addr:country": "GB",
+    "addr:housename": "Bank House",
+    "addr:postcode": "M1 4EH",
+    "addr:street": "Faulkner Street",
+    "name": "Asanti Manchester",
+    "operator": "Asanti",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 14058270899,
+  "lat": 51.2799062,
+  "lon": 0.5493573,
+  "tags": {
+    "name": "CustodianDC Maidstone",
+    "operator": "CustodianDC",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 14061667937,
+  "lat": 51.4614715,
+  "lon": -0.9259691,
+  "tags": {
+    "name": "Microsoft Thames Valley Park Data Centre",
+    "operator": "Microsoft",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 14062735949,
+  "lat": 51.4944095,
+  "lon": -0.2736100,
+  "tags": {
+    "name": "Vision 247",
+    "operator": "Vision 247",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 15516422,
+  "center": {
+    "lat": 50.9616793,
+    "lon": -1.4273241
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sky Chilworth",
+    "operator": "Sky UK",
+    "operator:wikidata": "Q2033167",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 17663535,
+  "center": {
+    "lat": 51.5406763,
+    "lon": -2.5817485
+  },
+  "tags": {
+    "addr:housename": "Toltec",
+    "addr:housenumber": "1120",
+    "building": "yes",
+    "name": "nLighten Bristol",
+    "operator:wikidata": "Q139890258",
+    "ref": "BRS1",
+    "source:outline": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.com/en/edge-location/bristol/",
+    "wikidata": "Q139890302"
+  }
+},
+{
+  "type": "way",
+  "id": 23439047,
+  "center": {
+    "lat": 51.4816653,
+    "lon": -0.4603496
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Digital Realty LHR17",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LHR17",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.co.uk/data-centers/emea/london/lhr17",
+    "wikidata": "Q138426855"
+  }
+},
+{
+  "type": "way",
+  "id": 23571722,
+  "center": {
+    "lat": 51.3839823,
+    "lon": -0.1359021
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Segro Croydon (Morgan Stanley)",
+    "operator": "Morgan Stanley",
+    "operator:wikidata": "Q334204",
+    "telecom": "data_center",
+    "website": "https://www.segro.com/countries-repository/united-kingdom/segro-park-croydon-beddington-lane"
+  }
+},
+{
+  "type": "way",
+  "id": 23571724,
+  "center": {
+    "lat": 51.3845572,
+    "lon": -0.1374049
+  },
+  "tags": {
+    "addr:housename": "Unit B",
+    "addr:postcode": "CR0 4GN",
+    "building": "data_center",
+    "name": "CapitalLand - Croyden",
+    "old:operator": "Digital Realty",
+    "operator": "CapitaLand Ascendas REIT",
+    "operator:wikidata": "Q138447238",
+    "ref:GB:uprn": "5870110414",
+    "telecom": "data_center",
+    "website": "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres/croydon.html",
+    "wikidata": "Q138447656"
+  }
+},
+{
+  "type": "way",
+  "id": 23674117,
+  "center": {
+    "lat": 51.1324806,
+    "lon": -0.1758407
+  },
+  "tags": {
+    "addr:city": "Crawley",
+    "addr:housenumber": "17-19",
+    "addr:postcode": "RH10 9EY",
+    "addr:street": "Kelvin Lane",
+    "building": "industrial",
+    "description": "Data Center",
+    "name": "4D Data Centers - Gatwick",
+    "ref:GB:uprn": "200001229595",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 26794336,
+  "center": {
+    "lat": 51.5554234,
+    "lon": -3.0373944
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Celtic Way",
+    "addr:postcode": "NP10 8BE",
+    "building": "data_center",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "telecom": "data_center",
+    "website": "https://vantage-dc-cardiff.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 27618472,
+  "center": {
+    "lat": 51.5292302,
+    "lon": -0.2730223
+  },
+  "tags": {
+    "addr:housename": "Unit 5-7",
+    "building": "industrial",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 27618478,
+  "center": {
+    "lat": 51.5290430,
+    "lon": -0.2742813
+  },
+  "tags": {
+    "addr:housename": "Unit 8-9",
+    "building": "industrial",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 27618500,
+  "center": {
+    "lat": 51.5288870,
+    "lon": -0.2778211
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Unit 11",
+    "addr:postcode": "NW10 7PH",
+    "building": "data_center",
+    "name": "Equinix LD3",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD3",
+    "ref:GB:uprn": "12153209",
+    "telecom": "data_center",
+    "wikidata": "Q138391540"
+  }
+},
+{
+  "type": "way",
+  "id": 27756169,
+  "center": {
+    "lat": 51.3683288,
+    "lon": -0.2911225
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Digital Realty LHR13",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LHR13",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.co.uk/data-centers/emea/london/lhr13",
+    "wikidata": "Q138426847"
+  }
+},
+{
+  "type": "way",
+  "id": 28073975,
+  "center": {
+    "lat": 50.8679793,
+    "lon": -1.2460020
+  },
+  "tags": {
+    "addr:street": "Brunel Way",
+    "building": "yes",
+    "name": "Astrohouse",
+    "operator": "University of Southampton",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 28074414,
+  "center": {
+    "lat": 50.8683934,
+    "lon": -1.2471827
+  },
+  "tags": {
+    "addr:housenumber": "18",
+    "addr:street": "Brunel Way",
+    "building": "yes",
+    "description": "Fareham Data Centre offers over 2,800m² of Data Centre white space over fifteen Data Halls  https://www.scc.com/wp-content/uploads/2019/06/Business-Partnering-Fareham-Factsheet.pdf",
+    "name": "SCC",
+    "operator": "SCC",
+    "telecom": "data_center",
+    "website": "https://www.scc.com"
+  }
+},
+{
+  "type": "way",
+  "id": 28093960,
+  "center": {
+    "lat": 51.4533805,
+    "lon": 0.2580033
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "CustodianDC DA2",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 29120456,
+  "center": {
+    "lat": 51.4915116,
+    "lon": 0.1667209
+  },
+  "tags": {
+    "building": "industrial",
+    "operator": "OVH",
+    "ref": "LON-1",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 30914305,
+  "center": {
+    "lat": 53.4148556,
+    "lon": -2.6297586
+  },
+  "tags": {
+    "addr:city": "Warrington",
+    "addr:housenumber": "1010",
+    "addr:postcode": "WA5 7YP",
+    "addr:street": "Europa Boulevard",
+    "addr:suburb": "Westbrook",
+    "building": "yes",
+    "contact:website": "https://www.ironmountain.com/uk/",
+    "name": "Iron Mountain",
+    "ref:GB:uprn": "100012807014",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 30925979,
+  "center": {
+    "lat": 53.4205254,
+    "lon": -2.6013747
+  },
+  "tags": {
+    "addr:city": "Warrington",
+    "addr:housenumber": "9",
+    "addr:postcode": "WA2 8UD",
+    "addr:street": "Calver Road",
+    "building": "data_center",
+    "name": "Verizon Warrington",
+    "operator": "Verizion",
+    "ref:GB:uprn": "200000981146",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 32295873,
+  "center": {
+    "lat": 53.3226483,
+    "lon": -2.7340658
+  },
+  "tags": {
+    "addr:city": "Runcorn",
+    "addr:housename": "The Babbage Centre",
+    "addr:postcode": "WA7 4QX",
+    "addr:street": "The Heath Business and Technical Park",
+    "building": "yes",
+    "name": "The Babbage Centre",
+    "operator": "Getronics",
+    "telecom": "data_center",
+    "website": "https://www.getronics.com"
+  }
+},
+{
+  "type": "way",
+  "id": 33503496,
+  "center": {
+    "lat": 51.5235766,
+    "lon": -0.1008144
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "36-43",
+    "addr:street": "Great Sutton Street",
+    "building": "data_center",
+    "name": "Verne Global London Data Centre",
+    "old_name": "Volta Data Centre",
+    "operator": "Verne Global",
+    "operator:wikidata": "Q7921966",
+    "source": "Bing;survey",
+    "telecom": "data_center",
+    "website": "https://verneglobal.com/",
+    "wikidata": "Q139492468"
+  }
+},
+{
+  "type": "way",
+  "id": 34160179,
+  "center": {
+    "lat": 51.5111949,
+    "lon": -0.0023135
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Telehouse West",
+    "addr:postcode": "E14 2AA",
+    "addr:street": "Coriander Avenue",
+    "building": "data_center",
+    "building:levels": "8",
+    "name": "Telehouse West",
+    "operator": "Telehouse",
+    "operator:wikidata": "Q3517302",
+    "short_name": "THW",
+    "start_date": "2010-05",
+    "telecom": "data_center",
+    "wikidata": "Q138426670"
+  }
+},
+{
+  "type": "way",
+  "id": 34520874,
+  "center": {
+    "lat": 51.3238402,
+    "lon": -0.5880547
+  },
+  "tags": {
+    "addr:city": "Woking",
+    "addr:housename": "Unit 21",
+    "building": "industrial",
+    "last_check": "2018-07-21",
+    "name": "Digital Realty LGW14",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LGW14",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.co.uk/data-centers/emea/london/lgw14",
+    "wikidata": "Q138426793"
+  }
+},
+{
+  "type": "way",
+  "id": 37868350,
+  "center": {
+    "lat": 51.5013691,
+    "lon": -0.4288873
+  },
+  "tags": {
+    "addr:city": "Hayes",
+    "addr:postcode": "UB3 4AZ",
+    "building": "data_center",
+    "name": "Rackspace London 8",
+    "operator": "Rackspace",
+    "ref": "London 8",
+    "ref:GB:uprn": "100023563560",
+    "source": "yahoo",
+    "source:addr:postcode": "ONSUD;OS Open UPRN",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 37943653,
+  "center": {
+    "lat": 55.9296911,
+    "lon": -3.2938083
+  },
+  "tags": {
+    "addr:city": "Edinburgh",
+    "addr:housename": "The Clocktower Estate",
+    "addr:postcode": "EH12 9LB",
+    "addr:street": "Flassches Yard",
+    "building": "data_center",
+    "name": "Pulsant Edinburgh South Gyle SC-1",
+    "operator": "Pulsant",
+    "ref": "SC-1",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/colocation-south-gyle-datacentre"
+  }
+},
+{
+  "type": "way",
+  "id": 37943663,
+  "center": {
+    "lat": 55.9298918,
+    "lon": -3.2926708
+  },
+  "tags": {
+    "addr:city": "Edinburgh",
+    "addr:housename": "The Estate",
+    "addr:postcode": "EH12 9LB",
+    "addr:street": "Flassches Yard",
+    "building": "data_center",
+    "name": "Pulsant Edinburgh South Gyle SC-1",
+    "operator": "Pulsant",
+    "ref": "SC-1",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/colocation-south-gyle-datacentre"
+  }
+},
+{
+  "type": "way",
+  "id": 37960145,
+  "center": {
+    "lat": 51.5120622,
+    "lon": -0.5881200
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:postcode": "SL2 5EP",
+    "building": "data_center",
+    "name": "Elasticity Slough",
+    "operator": "Elasticity",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 38242832,
+  "center": {
+    "lat": 51.5681910,
+    "lon": -0.2308517
+  },
+  "tags": {
+    "building": "yes",
+    "name": "LDeX 1",
+    "operator": "LDeX Group",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 38246899,
+  "center": {
+    "lat": 51.5706229,
+    "lon": -0.2371879
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Pure DC London Brent Cross",
+    "operator": "Pure DC",
+    "ref": "LON01",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 38575403,
+  "center": {
+    "lat": 52.8796234,
+    "lon": -1.1449628
+  },
+  "tags": {
+    "addr:city": "Nottingham",
+    "addr:hamlet": "Ruddington Fields Business Park",
+    "addr:housename": "Fairham House",
+    "addr:postcode": "NG80 1DP",
+    "addr:street": "Mere Way",
+    "addr:suburb": "Ruddington",
+    "building": "commercial",
+    "name": "Experian",
+    "ref:GB:uprn": "3040071506",
+    "source": "survey",
+    "source:addr:postcode": "OS Open Data Codepoint",
+    "source:building": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 42031440,
+  "center": {
+    "lat": 51.5189837,
+    "lon": -0.1803439
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:country": "GB",
+    "addr:housenumber": "1",
+    "addr:postcode": "W2 6TT",
+    "addr:street": "Sheldon Square",
+    "building": "commercial",
+    "building:levels": "10",
+    "email": "enquiries.europe@visa.com",
+    "name": "Visa London",
+    "phone": "+44 20 7795 5777",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 43126267,
+  "center": {
+    "lat": 51.6514619,
+    "lon": -0.1503563
+  },
+  "tags": {
+    "addr:city": "Barnet",
+    "addr:housename": "Metro Point",
+    "addr:postcode": "EN4 9JQ",
+    "addr:street": "Chalk Lane",
+    "building": "data_center",
+    "landuse": "commercial",
+    "name": "Soverign Data Centre - Metro Point",
+    "operator": "Sovereign Business Integration Group",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 44107140,
+  "center": {
+    "lat": 51.5289786,
+    "lon": -0.1000954
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "260-265",
+    "addr:postcode": "EC1V 7AH",
+    "addr:street": "Goswell Road",
+    "alt_name": "Goswell Road Data Centre",
+    "building": "data_center",
+    "name": "Stellanor London North",
+    "old:operator": "Level 3 Communications",
+    "operator": "Stellanor Data Centers",
+    "operator:wikidata": "Q138439830",
+    "telecom": "data_center",
+    "website": "https://www.stellanordatacenters.com/our-data-centers/london-north/",
+    "wikidata": "Q138440597"
+  }
+},
+{
+  "type": "way",
+  "id": 44610344,
+  "center": {
+    "lat": 51.4666236,
+    "lon": -0.3963834
+  },
+  "tags": {
+    "addr:city": "Hounslow",
+    "addr:housename": "Unit D",
+    "addr:street": "Heathrow Corporate Park",
+    "building": "data_center",
+    "name": "Morgan Stanley Data Centre",
+    "operator": "Morgan Stanley",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 45131691,
+  "center": {
+    "lat": 51.5314309,
+    "lon": -0.2558878
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Equinix LD9",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD9",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld9",
+    "wikidata": "Q138391574"
+  }
+},
+{
+  "type": "way",
+  "id": 49602062,
+  "center": {
+    "lat": 51.5003153,
+    "lon": -0.7082525
+  },
+  "tags": {
+    "addr:city": "Maidenhead",
+    "addr:street": "Priors Way",
+    "building": "data_center",
+    "name": "Pulsant Maidenhead",
+    "operator": "Pulsant",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 49602063,
+  "center": {
+    "lat": 51.4996939,
+    "lon": -0.7083993
+  },
+  "tags": {
+    "addr:city": "Maidenhead",
+    "addr:street": "Priors Way",
+    "building": "data_center",
+    "name": "Pulsant Maidenhead",
+    "operator": "Pulsant",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 49695385,
+  "center": {
+    "lat": 51.5287467,
+    "lon": -0.7254074
+  },
+  "tags": {
+    "addr:city": "Maidenhead",
+    "addr:country": "GB",
+    "addr:postcode": "SL6 7FW",
+    "addr:street": "Clivemont Road",
+    "building": "data_center",
+    "name": "Spectrum House",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 53045250,
+  "center": {
+    "lat": 51.4811413,
+    "lon": 0.2700957
+  },
+  "tags": {
+    "addr:postcode": "RM20 3FJ",
+    "addr:street": "Weston Avenue",
+    "addr:unit": "2-5",
+    "building": "yes",
+    "name": "Fujitsu Data Centre",
+    "ref": "SDC01",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 55873731,
+  "center": {
+    "lat": 51.3475652,
+    "lon": -0.4799467
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Redcentric Byfleet",
+    "operator": "Redcentric",
+    "operator:wikidata": "Q138441246",
+    "telecom": "data_center",
+    "wikidata": "Q138446583"
+  }
+},
+{
+  "type": "way",
+  "id": 57977045,
+  "center": {
+    "lat": 53.6993157,
+    "lon": -1.3976736
+  },
+  "tags": {
+    "building": "yes",
+    "name": "nLighten Leeds",
+    "operator": "nLighten",
+    "operator:wikidata": "Q139890258",
+    "ref": "LBA1",
+    "source": "OS_Opendata_Streetview",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.com/en/edge-location/leeds/",
+    "wikidata": "Q139890350"
+  }
+},
+{
+  "type": "way",
+  "id": 59191365,
+  "center": {
+    "lat": 53.4644923,
+    "lon": -2.2475306
+  },
+  "tags": {
+    "addr:city": "Manchester",
+    "addr:housename": "Reynolds House",
+    "addr:housenumber": "4",
+    "addr:postcode": "M15 5RN",
+    "addr:street": "Archway",
+    "building": "commercial",
+    "name": "Lunar 1&2",
+    "note": "Two datacenters here, not sure of the layout. Transferred from Equinix to Lunar Digital in 2024.",
+    "old:operator": "Equinix",
+    "operator": "Lunar Digital",
+    "owner": "CapitaLand Ascendas REIT",
+    "owner:wikidata": "Q138447238",
+    "ref:GB:uprn": "10090665980;10070400896;10090665978;10090665979",
+    "telecom": "data_center",
+    "website:1": "https://www.lunardigital.co.uk/data-centres/lunar-1",
+    "website:2": "https://www.lunardigital.co.uk/data-centres/lunar-2"
+  }
+},
+{
+  "type": "way",
+  "id": 61123230,
+  "center": {
+    "lat": 55.9257236,
+    "lon": -3.2962233
+  },
+  "tags": {
+    "addr:city": "Edinburgh",
+    "addr:housenumber": "7",
+    "addr:postcode": "EH11 4BY",
+    "addr:street": "Bankhead Medway",
+    "building": "data_center",
+    "check_date": "2024-10-27",
+    "name": "Edinburgh SC-2",
+    "operator": "Pulsant",
+    "ref": "SC-2",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/colocation-medway-datacentre"
+  }
+},
+{
+  "type": "way",
+  "id": 61995368,
+  "center": {
+    "lat": 51.7647283,
+    "lon": -0.4427836
+  },
+  "tags": {
+    "addr:city": "Hemel Hempstead",
+    "addr:housenumber": "150",
+    "addr:postcode": "HP2 7DF",
+    "addr:street": "Maylands Avenue",
+    "building": "data_center",
+    "name": "NTT Hemel Hempstead 2",
+    "operator": "NTT",
+    "operator:wikidata": "Q1054787",
+    "telecom": "data_center",
+    "website": "https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/emea/hemel-hempstead-2-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 63983065,
+  "center": {
+    "lat": 51.4569277,
+    "lon": -0.9414155
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:postcode": "RG6 1AZ",
+    "addr:street": "Suttons Park Avenue",
+    "addr:unit": "50",
+    "building": "data_center",
+    "name": "Pulsant Reading East",
+    "operator": "Pulsant",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 68167898,
+  "center": {
+    "lat": 51.3138388,
+    "lon": 0.7261747
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Sota Datacentre",
+    "operator": "Sota",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 70521778,
+  "center": {
+    "lat": 51.4256273,
+    "lon": -0.9716398
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:housenumber": "472",
+    "addr:postcode": "RG2 0QN",
+    "addr:street": "Basingstoke Road",
+    "building": "data_center",
+    "name": "Asanti - Reading",
+    "operator": "Asanti",
+    "ref:GB:uprn": "310069747;310069746",
+    "source:building": "OS_OpenData_StreetView",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 81633700,
+  "center": {
+    "lat": 51.5200864,
+    "lon": -0.6189727
+  },
+  "tags": {
+    "addr:housenumber": "115",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Rackspace London Slough (LON3)",
+    "operator": "Rackspace",
+    "ref": "LON3",
+    "telecom": "data_center",
+    "website": "https://www.rackspace.com/about/data-centers/london-lon3"
+  }
+},
+{
+  "type": "way",
+  "id": 81633882,
+  "center": {
+    "lat": 51.5205153,
+    "lon": -0.6215649
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "110",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Iron Mountain LON-2",
+    "operator": "Iron Mountain",
+    "ref": "LON-2",
+    "ref:GB:uprn": "100081264093",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 86528807,
+  "center": {
+    "lat": 51.5220008,
+    "lon": -0.6292251
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:housenumber": "8",
+    "addr:postcode": "SL1 4AX",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Equinix LD5",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD5",
+    "source": "Yahoo",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld5",
+    "wikidata": "Q138393321"
+  }
+},
+{
+  "type": "way",
+  "id": 87850427,
+  "center": {
+    "lat": 52.5562036,
+    "lon": -0.2627586
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 87850564,
+  "center": {
+    "lat": 52.5558705,
+    "lon": -0.2639381
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 87850741,
+  "center": {
+    "lat": 52.5562815,
+    "lon": -0.2640718
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 90550466,
+  "center": {
+    "lat": 51.1989076,
+    "lon": -0.1642598
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Restore Records Management",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 93845197,
+  "center": {
+    "lat": 51.4206794,
+    "lon": -0.9752280
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:country": "GB",
+    "addr:county": "Berkshire",
+    "addr:housenumber": "3-5",
+    "addr:postcode": "RG2 0TG",
+    "addr:street": "Worton Drive",
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "Redcentric Reading",
+    "operator": "Redcentric",
+    "operator:wikidata": "Q138441246",
+    "ref:GB:uprn": "310039248",
+    "source:building": "OS_OpenData_StreetView",
+    "telecom": "data_center",
+    "website": "https://redcentricdatacentres.co.uk/data-centres/reading-data-centre/",
+    "wikidata": "Q138443880"
+  }
+},
+{
+  "type": "way",
+  "id": 93984382,
+  "center": {
+    "lat": 51.4274231,
+    "lon": -0.9787351
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:housenumber": "2",
+    "addr:postcode": "RG2 0QS",
+    "addr:street": "Smallmead Road",
+    "building": "data_center",
+    "building:levels": "2",
+    "name": "Pulsant Reading SE3",
+    "ref:GB:uprn": "310001697",
+    "source:building": "OS_OpenData_StreetView",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 94396838,
+  "center": {
+    "lat": 51.4164884,
+    "lon": -0.7723720
+  },
+  "tags": {
+    "addr:city": "Bracknell",
+    "addr:housename": "Waterside House",
+    "addr:postcode": "RG12 1WB",
+    "addr:street": "Longshot Lane",
+    "building": "data_center",
+    "name": "Keppel Data Centres (Vodafone) - London",
+    "operator": "Vodafone",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 96173979,
+  "center": {
+    "lat": 51.4448808,
+    "lon": -0.9758992
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:country": "GB",
+    "addr:housename": "Kilnbrook House",
+    "building": "yes",
+    "name": "Pulsant",
+    "office": "it",
+    "ref:GB:uprn": "310089549;310089569;310089568;310089567;310089566;310089565;310089564;310089563;310089562;310089561;310089560;310089559;310089558;310089557;310089556;310089555;310089554;310089553;310089552;310089551;310089550;310089572;310089571;310089570;310068389",
+    "source:building": "OS_OpenData_StreetView",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 98134606,
+  "center": {
+    "lat": 51.7999480,
+    "lon": -0.1835561
+  },
+  "tags": {
+    "addr:city": "Welwyn Garden City",
+    "addr:housenumber": "20",
+    "addr:postcode": "AL7 1QA",
+    "addr:street": "Black Fan Road",
+    "building": "yes",
+    "email": "dcsinfo@colt.net",
+    "name": "Colt London North Data Centre",
+    "operator": "Colt",
+    "operator:wikidata": "Q567477",
+    "owner": "COLT",
+    "phone": "+44 20 3003 4584",
+    "ref:GB:uprn": "200003857159",
+    "telecom": "data_center",
+    "website": "https://www.coltdatacentres.net/en-GB/our-locations/data-centre-locations-europe/london-north"
+  }
+},
+{
+  "type": "way",
+  "id": 100299967,
+  "center": {
+    "lat": 51.5139460,
+    "lon": -0.0724737
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "6",
+    "addr:postcode": "E1 8EE",
+    "addr:street": "Braham Street",
+    "building": "data_center",
+    "building:colour": "grey",
+    "building:levels": "6",
+    "building:material": "mirror",
+    "name": "Stellanor London East",
+    "old:operator": "Level3 Communications",
+    "operator": "Stellanor Data Centers",
+    "operator:wikidata": "Q138439830",
+    "roof:shape": "flat",
+    "telecom": "data_center",
+    "website": "https://www.stellanordatacenters.com/our-data-centers/london-east/",
+    "wikidata": "Q138440073"
+  }
+},
+{
+  "type": "way",
+  "id": 103482135,
+  "center": {
+    "lat": 53.3786359,
+    "lon": -2.2585178
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Datum Datacentres (MCR2)",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 103765318,
+  "center": {
+    "lat": 55.8942976,
+    "lon": -3.0866159
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "RBS Melville Gate Data Centre",
+    "operator": "Natwest Group",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 115238481,
+  "center": {
+    "lat": 51.4945420,
+    "lon": -0.0188761
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "5-6",
+    "addr:postcode": "E14 9NN",
+    "addr:street": "Greenwich View Place",
+    "building": "data_center",
+    "name": "Telstra London Hosting Centre",
+    "operator": "Telstra International",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 115238482,
+  "center": {
+    "lat": 51.4959285,
+    "lon": -0.0183079
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "1",
+    "addr:postcode": "E14 9NN",
+    "addr:street": "Greenwich View Place",
+    "building": "data_center",
+    "name": "London Stock Exchange datacenter",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 128487593,
+  "center": {
+    "lat": 51.0215574,
+    "lon": -0.3504690
+  },
+  "tags": {
+    "building": "yes",
+    "name": "IBM Horsham",
+    "operator": "IBM",
+    "owner": "Royal & Sun Alliance",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 129823651,
+  "center": {
+    "lat": 53.9758144,
+    "lon": -1.5690030
+  },
+  "tags": {
+    "addr:city": "Harrogate",
+    "addr:housenumber": "4",
+    "addr:postcode": "HG3 1RY",
+    "addr:street": "Cardale Park",
+    "building": "yes",
+    "name": "VocaLink",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 131474700,
+  "center": {
+    "lat": 51.6195253,
+    "lon": -0.0414604
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "10",
+    "addr:postcode": "N9 0BD",
+    "addr:street": "Ardra Road",
+    "building": "yes",
+    "name": "Ark Data Centres Meridian Park",
+    "operator": "Ark Data Centres",
+    "operator:wikidata": "Q128794708",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 133868759,
+  "center": {
+    "lat": 55.8511347,
+    "lon": -4.2835487
+  },
+  "tags": {
+    "addr:housenumber": "88",
+    "addr:street": "Middlesex Street",
+    "building": "data_center",
+    "name": "iomart Glasgow Data Centre",
+    "operator": "iomart",
+    "roof:colour": "#c0bcb3",
+    "roof:shape": "gabled",
+    "telecom": "data_center",
+    "website": "https://www.iomart.com/uk-data-centres/glasgow-data-centre"
+  }
+},
+{
+  "type": "way",
+  "id": 134915217,
+  "center": {
+    "lat": 51.2275256,
+    "lon": -2.9631583
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Tata Communications Highbridge Datacentre",
+    "operator": "Tata Communications",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 143146089,
+  "center": {
+    "lat": 51.5722528,
+    "lon": -1.8362321
+  },
+  "tags": {
+    "industrial": "data_centre",
+    "landuse": "industrial",
+    "operator": "Nationwide Building Society"
+  }
+},
+{
+  "type": "way",
+  "id": 147532741,
+  "center": {
+    "lat": 53.7084325,
+    "lon": -1.8844483
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Lloyds Banking Group Copley",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 153267622,
+  "center": {
+    "lat": 55.8762813,
+    "lon": -3.4812859
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Sungard Availability Services",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 154430569,
+  "center": {
+    "lat": 51.4466633,
+    "lon": -0.4542685
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Serverfarm LON1 – London Data Center",
+    "operator": "Serverfarm",
+    "telecom": "data_center",
+    "website": "https://www.serverfarmllc.com/london-data-center/"
+  }
+},
+{
+  "type": "way",
+  "id": 157178049,
+  "center": {
+    "lat": 51.5109396,
+    "lon": -0.0034250
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "3",
+    "addr:postcode": "E14 2AX",
+    "addr:street": "Nutmeg Lane",
+    "building": "data_center",
+    "building:levels": "11",
+    "name": "Global Switch London East",
+    "operator": "Global Switch",
+    "source": "Bing;survey",
+    "telecom": "data_center",
+    "wikidata": "Q138426707"
+  }
+},
+{
+  "type": "way",
+  "id": 164113041,
+  "center": {
+    "lat": 50.8843947,
+    "lon": -4.5535857
+  },
+  "tags": {
+    "building": "data_center",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 164243077,
+  "center": {
+    "lat": 51.5242683,
+    "lon": -0.0793150
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "colt",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 164527297,
+  "center": {
+    "lat": 51.5229321,
+    "lon": -0.0828809
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Lifeline House",
+    "addr:housenumber": "80",
+    "addr:postcode": "EC2A 4HB",
+    "addr:street": "Clifton Street",
+    "building": "yes",
+    "building:levels": "5",
+    "name": "Redcentric London City",
+    "old_name": "City Lifeline",
+    "operator": "Redcentric",
+    "telecom": "data_center",
+    "website": "https://redcentricdatacentres.co.uk/data-centres/london-city-data-centre/",
+    "wikidata": "Q138441403"
+  }
+},
+{
+  "type": "way",
+  "id": 166184193,
+  "center": {
+    "lat": 51.5515096,
+    "lon": -1.8471367
+  },
+  "tags": {
+    "addr:city": "Swindon",
+    "addr:housename": "7 Windmill Hill Business Park",
+    "addr:postcode": "SN5 6LA",
+    "addr:street": "Whitehill Way",
+    "building": "data_center",
+    "name": "Vodafone",
+    "ref:GB:uprn": "200001530341",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 166184208,
+  "center": {
+    "lat": 51.5722231,
+    "lon": -1.8367418
+  },
+  "tags": {
+    "addr:city": "Swindon",
+    "addr:postcode": "SN5 5NZ;SN38 1JJ",
+    "addr:street": "Marshall Road",
+    "addr:suburb": "Hillmead",
+    "building": "industrial",
+    "name": "Nationwide Swindon Technology Centre",
+    "operator": "Nationwide Building Society",
+    "ref:GB:uprn": "10008546704",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 166407577,
+  "center": {
+    "lat": 53.4680158,
+    "lon": -2.2934202
+  },
+  "tags": {
+    "addr:housenumber": "76",
+    "addr:postcode": "M17 1HE",
+    "addr:street": "Trafford Wharf Road",
+    "building": "data_center",
+    "name": "Joule House",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "MA3",
+    "source": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.equinix.co.uk/locations/europe-colocation/united-kingdom-colocation/manchester-data-centers/ma3/"
+  }
+},
+{
+  "type": "way",
+  "id": 178312270,
+  "center": {
+    "lat": 51.9812122,
+    "lon": -0.2068599
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Starwood House",
+    "operator": "Tesco",
+    "operator:wikidata": "Q487494",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 179698364,
+  "center": {
+    "lat": 51.8078965,
+    "lon": -0.1864269
+  },
+  "tags": {
+    "addr:city": "Welwyn Garden City",
+    "addr:postcode": "AL7 1GE",
+    "addr:street": "Mundells",
+    "building": "yes",
+    "name": "Hertfordshire Data Centre",
+    "note": "Was labelled as HSBC but I believe it's not (entirely) occupied by them any more.",
+    "owner": "CapitaLand Ascendas REIT",
+    "owner:wikidata": "Q138447238",
+    "ref:GB:uprn": "10091065861;10014211971",
+    "source": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres.html"
+  }
+},
+{
+  "type": "way",
+  "id": 180779572,
+  "center": {
+    "lat": 51.3535862,
+    "lon": -0.1195452
+  },
+  "tags": {
+    "addr:housenumber": "35",
+    "addr:street": "Imperial Way",
+    "building": "data_center",
+    "name": "Pulsant South London",
+    "operator": "Pulsant",
+    "source": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/solutions/colocation/south-london/"
+  }
+},
+{
+  "type": "way",
+  "id": 187251460,
+  "center": {
+    "lat": 51.4595405,
+    "lon": -0.4099656
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Verizon UK4",
+    "old_name": "Skyways",
+    "operator": "Verizon",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 190297843,
+  "center": {
+    "lat": 51.5020050,
+    "lon": -0.0091155
+  },
+  "tags": {
+    "building": "data_center",
+    "building:levels": "2",
+    "layer": "1",
+    "name": "Cable & Wireless Data Centre",
+    "operator": "Cable & Wireless",
+    "roof:shape": "flat",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 190449012,
+  "center": {
+    "lat": 51.4856166,
+    "lon": -0.4831024
+  },
+  "tags": {
+    "building": "yes",
+    "name": "British Telecom Computer Centre",
+    "operator": "BT",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 190845697,
+  "center": {
+    "lat": 51.4817516,
+    "lon": -0.1261156
+  },
+  "tags": {
+    "addr:housename": "Wyvil Court",
+    "addr:housenumber": "10",
+    "addr:street": "Wyvil Road",
+    "building": "data_center",
+    "name": "WRN Broadcast",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 191603111,
+  "center": {
+    "lat": 55.9451623,
+    "lon": -2.9011761
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "RBS Data Centre",
+    "operator": "NatWest Group",
+    "planned": "https://pa.eastlothian.gov.uk/online-applications/applicationDetails.do?activeTab=documents&keyVal=KIRC4AGN07S00",
+    "source": "The Royal Bank of Scotland Group",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 191842525,
+  "center": {
+    "lat": 51.4968425,
+    "lon": -0.0188136
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:country": "GB",
+    "addr:housename": "Cloud House",
+    "addr:housenumber": "47",
+    "addr:postcode": "E14 9TR",
+    "addr:street": "Millharbour",
+    "building": "data_center",
+    "building:levels": "5",
+    "building:material": "brick",
+    "name": "Digital Realty LHR19",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LHR19",
+    "source": "Bing;survey",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lhr19",
+    "wikidata": "Q138427019"
+  }
+},
+{
+  "type": "way",
+  "id": 193806160,
+  "center": {
+    "lat": 51.5070483,
+    "lon": -0.0034631
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "1",
+    "addr:postcode": "E14 2EH",
+    "addr:street": "Paul Julius Close",
+    "building": "commercial",
+    "building:levels": "10",
+    "fhrs:id": "50042",
+    "name": "Telehouse South",
+    "old_name": "Thomson Reuters Docklands Technical Centre",
+    "operator": "Telehouse",
+    "operator:wikidata": "Q3517302",
+    "short_name": "THS",
+    "telecom": "data_center",
+    "wikidata": "Q119855829"
+  }
+},
+{
+  "type": "way",
+  "id": 194258560,
+  "center": {
+    "lat": 51.4947787,
+    "lon": -0.0191726
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "7",
+    "addr:postcode": "E14 9NN",
+    "addr:street": "Greenwich View Place",
+    "building": "data_center",
+    "name": "Csquare: LHR2 Docklands Data Center Campus",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 194258564,
+  "center": {
+    "lat": 51.4954355,
+    "lon": -0.0190627
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "8",
+    "addr:postcode": "E14 9NN",
+    "addr:street": "Greenwich View Place",
+    "building": "data_center",
+    "name": "Bloomberg Datacentre",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 194508831,
+  "center": {
+    "lat": 51.4713244,
+    "lon": -0.4232704
+  },
+  "tags": {
+    "addr:housename": "Boadicea House",
+    "building": "data_center",
+    "name": "BA Boadicea House Data Centre",
+    "old_name": "BOAC Computer Building",
+    "operator": "British Airways",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 196783604,
+  "center": {
+    "lat": 51.5111190,
+    "lon": -0.0055730
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:country": "GB",
+    "addr:housename": "East India Dock House",
+    "addr:postcode": "E14 9YY",
+    "addr:street": "East India Dock Road",
+    "building": "data_center",
+    "building:levels": "3",
+    "name": "Global Switch London North",
+    "operator": "Global Switch",
+    "source": "Bing;survey",
+    "telecom": "data_center",
+    "wikidata": "Q26263559",
+    "wikipedia": "en:East India Dock House"
+  }
+},
+{
+  "type": "way",
+  "id": 200338749,
+  "center": {
+    "lat": 51.5740371,
+    "lon": -1.3153016
+  },
+  "tags": {
+    "addr:city": "Didcot",
+    "addr:housename": "R89",
+    "addr:place": "Rutherford Appleton Laboratory",
+    "addr:postcode": "OX11 0QX",
+    "addr:suburb": "Harwell Campus",
+    "building": "office",
+    "name": "R89",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 200649197,
+  "center": {
+    "lat": 53.0789763,
+    "lon": -0.7920692
+  },
+  "tags": {
+    "addr:city": "Newark",
+    "addr:postcode": "NG24 2EG",
+    "addr:street": "Brunel Close",
+    "building": "industrial",
+    "name": "Digital Space DC - Newark",
+    "operator": "Digital Space Group Limited",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 200649213,
+  "center": {
+    "lat": 53.0790476,
+    "lon": -0.7922606
+  },
+  "tags": {
+    "addr:city": "Newark",
+    "addr:postcode": "NG24 2EG",
+    "addr:street": "Brunel Close",
+    "building": "industrial",
+    "name": "Digital Space DC - Newark",
+    "operator": "Digital Space Group Limited",
+    "ref:GB:uprn": "10002309737",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 200649214,
+  "center": {
+    "lat": 53.0791272,
+    "lon": -0.7924434
+  },
+  "tags": {
+    "addr:city": "Newark",
+    "addr:postcode": "NG24 2EG",
+    "addr:street": "Brunel Close",
+    "building": "industrial",
+    "name": "Digital Space DC - Newark",
+    "operator": "Digital Space Group Limited",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 201843176,
+  "center": {
+    "lat": 54.6332910,
+    "lon": -1.3100648
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "DXC Wynyard Data Center",
+    "operator": "HPE",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 202085268,
+  "center": {
+    "lat": 53.6938856,
+    "lon": -1.8214237
+  },
+  "tags": {
+    "addr:city": "Elland",
+    "addr:housename": "Unit J1",
+    "addr:postcode": "HX5 9DA",
+    "addr:street": "Lowfields Way",
+    "building": "yes",
+    "building:levels": "2",
+    "check_date": "2024-05-31",
+    "description": "Large scale Data Centre operated by Redcentric. Was previously Sungard.",
+    "name": "Redcentric Elland Data Centre",
+    "operator": "Redcentric",
+    "phone": "+44 1423 850 000",
+    "ref:GB:uprn": "10035033423",
+    "source": "local knowledge",
+    "telecom": "data_center",
+    "website": "https://www.redcentricplc.com/uk-data-centres/elland-data-centre/"
+  }
+},
+{
+  "type": "way",
+  "id": 203500066,
+  "center": {
+    "lat": 51.7701020,
+    "lon": -0.3206157
+  },
+  "tags": {
+    "addr:city": "St Albans",
+    "addr:housenumber": "154",
+    "addr:postcode": "AL4 9NH",
+    "addr:street": "St Albans Road",
+    "building": "yes",
+    "name": "BT Computer Centre",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 206625800,
+  "center": {
+    "lat": 51.5120520,
+    "lon": -0.0019544
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Telehouse North",
+    "addr:postcode": "E14 2AA",
+    "addr:street": "Coriander Avenue",
+    "building": "data_center",
+    "fhrs:id": "75467",
+    "name": "Telehouse North",
+    "operator": "Telehouse",
+    "operator:wikidata": "Q3517302",
+    "short_name": "THN",
+    "start_date": "1990",
+    "telecom": "data_center",
+    "wikidata": "Q138426651"
+  }
+},
+{
+  "type": "way",
+  "id": 206625804,
+  "center": {
+    "lat": 51.5115297,
+    "lon": -0.0012660
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Telehouse East",
+    "addr:postcode": "E14 2AA",
+    "addr:street": "Coriander Avenue",
+    "building": "data_center",
+    "name": "Telehouse East",
+    "operator": "Telehouse",
+    "operator:wikidata": "Q3517302",
+    "short_name": "THE",
+    "telecom": "data_center",
+    "website": "https://www.telehouse.net/data-centre-services/uk/london/telehouse-east/",
+    "wikidata": "Q138426664"
+  }
+},
+{
+  "type": "way",
+  "id": 207831858,
+  "center": {
+    "lat": 53.7830763,
+    "lon": -1.5734609
+  },
+  "tags": {
+    "addr:city": "Leeds",
+    "addr:country": "GB",
+    "addr:housenumber": "4",
+    "addr:postcode": "LS12 6BF",
+    "addr:street": "The Tristram Centre",
+    "addr:suburb": "Holbeck",
+    "building": "commercial",
+    "name": "GridJet",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 207831859,
+  "center": {
+    "lat": 53.7829395,
+    "lon": -1.5735356
+  },
+  "tags": {
+    "addr:city": "Leeds",
+    "addr:country": "GB",
+    "addr:housenumber": "5",
+    "addr:postcode": "LS12 6BF",
+    "addr:street": "The Tristram Centre",
+    "addr:suburb": "Holbeck",
+    "building": "commercial",
+    "name": "GridJet",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 210931289,
+  "center": {
+    "lat": 51.4166537,
+    "lon": -0.7585502
+  },
+  "tags": {
+    "addr:city": "Bracknell",
+    "addr:housenumber": "5",
+    "addr:postcode": "RG12 1WA",
+    "addr:street": "Arlington Square",
+    "building": "data_center",
+    "name": "Centrilogic",
+    "operator": "Centrilogic",
+    "source": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.centrilogic.com/bracknell-united-kingdom-data-center/"
+  }
+},
+{
+  "type": "way",
+  "id": 218905097,
+  "center": {
+    "lat": 51.5425077,
+    "lon": -0.3366447
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Kyndryl UK Ltd",
+    "telecom": "data_center",
+    "wikidata": "Q26676212"
+  }
+},
+{
+  "type": "way",
+  "id": 220442829,
+  "center": {
+    "lat": 53.0064897,
+    "lon": -1.2145155
+  },
+  "tags": {
+    "addr:city": "Nottingham",
+    "addr:postcode": "NG6 8UY",
+    "building": "warehouse",
+    "name": "nLighten Nottingham",
+    "operator": "nLighten",
+    "operator:wikidata": "Q139890258",
+    "ref": "EMA1",
+    "ref:GB:uprn": "200001374335",
+    "source": "Bing",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.com/en/edge-location/nottingham/",
+    "wikidata": "Q139890366"
+  }
+},
+{
+  "type": "way",
+  "id": 221131413,
+  "center": {
+    "lat": 51.5027785,
+    "lon": -0.4463277
+  },
+  "tags": {
+    "addr:city": "West Drayton",
+    "addr:housename": "Unit F",
+    "addr:postcode": "UB7 9FN",
+    "addr:street": "Prologis Park",
+    "building": "data_center",
+    "name": "CyrusOne LON2",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "LON2",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/emea/london-uk-lon2",
+    "wikidata": "Q138426644"
+  }
+},
+{
+  "type": "way",
+  "id": 222789497,
+  "center": {
+    "lat": 51.5453478,
+    "lon": -0.3639385
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "Kao Data KLON-05",
+    "operator": "Kao Data",
+    "operator:wikidata": "Q128597000",
+    "telecom": "data_center",
+    "website": "https://kaodata.com/locations/northolt"
+  }
+},
+{
+  "type": "way",
+  "id": 225909384,
+  "center": {
+    "lat": 51.5249468,
+    "lon": -0.6378088
+  },
+  "tags": {
+    "addr:housenumber": "354",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Virgin Media O2 Slough",
+    "operator": "Virgin Media",
+    "ref:GB:uprn": "10022917850;100081264386",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 225909388,
+  "center": {
+    "lat": 51.5230923,
+    "lon": -0.6377381
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Equinix LD11x",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "telecom": "data_center",
+    "wikidata": "Q138394186"
+  }
+},
+{
+  "type": "way",
+  "id": 225909390,
+  "center": {
+    "lat": 51.5234658,
+    "lon": -0.6360736
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "2",
+    "addr:postcode": "SL1 4NB",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Equinix LD4",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD4",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld4",
+    "wikidata": "Q138393192"
+  }
+},
+{
+  "type": "way",
+  "id": 231762788,
+  "center": {
+    "lat": 53.4890823,
+    "lon": -1.4920080
+  },
+  "tags": {
+    "addr:housename": "HSBC Data Centre",
+    "building": "data_center",
+    "name": "HSBC Data Centre",
+    "operator": "HSBC",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 240952254,
+  "center": {
+    "lat": 51.6519012,
+    "lon": -0.0553626
+  },
+  "tags": {
+    "addr:city": "Enfield",
+    "addr:housename": "Unit 3, Trade City",
+    "addr:housenumber": "13",
+    "addr:postcode": "EN1 1TX",
+    "addr:street": "Crown Road",
+    "building": "data_center",
+    "name": "Virtus LONDON1",
+    "ref": "LONDON1",
+    "telecom": "data_center",
+    "wikidata": "Q138427609"
+  }
+},
+{
+  "type": "way",
+  "id": 251948724,
+  "center": {
+    "lat": 55.9293897,
+    "lon": -3.4096908
+  },
+  "tags": {
+    "addr:city": "Edinburgh",
+    "addr:housenumber": "7",
+    "addr:postcode": "EH28 8LF",
+    "addr:street": "Claylands Road",
+    "building": "data_center",
+    "check_date": "2024-10-27",
+    "name": "Edinburgh SC-3",
+    "operator": "Pulsant",
+    "ref": "SC-3",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/colocation-newbridge-datacentre"
+  }
+},
+{
+  "type": "way",
+  "id": 254132701,
+  "center": {
+    "lat": 51.4683030,
+    "lon": -0.3974058
+  },
+  "tags": {
+    "addr:city": "Hounslow",
+    "addr:housenumber": "Unit B",
+    "addr:postcode": "TW4 6ER",
+    "addr:street": "Green Lane",
+    "addr:suburb": "Heathrow Corporate Park",
+    "building": "data_center",
+    "name": "Stellanor London West",
+    "operator": "Stellanor",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 256764286,
+  "center": {
+    "lat": 53.2452627,
+    "lon": -2.9295354
+  },
+  "tags": {
+    "addr:city": "Chester",
+    "addr:postcode": "CH1 6LT",
+    "building": "yes",
+    "check_date": "2025-07-06",
+    "name": "nLighten Chester",
+    "operator": "nLighten UK Ltd",
+    "operator:wikidata": "Q139890258",
+    "ref": "MAN1",
+    "ref:GB:uprn": "10000083172",
+    "telecom": "data_center",
+    "wikidata": "Q139890318"
+  }
+},
+{
+  "type": "way",
+  "id": 257754194,
+  "center": {
+    "lat": 51.4982057,
+    "lon": -0.0153399
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Harbour Exchange",
+    "addr:housenumber": "8-9",
+    "addr:postcode": "E14 9HF",
+    "addr:street": "Harbour Exchange Square",
+    "building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 258625769,
+  "center": {
+    "lat": 51.4981409,
+    "lon": -0.0144922
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Harbour Exchange",
+    "addr:housenumber": "6-7",
+    "addr:postcode": "E14 9HE",
+    "addr:street": "Harbour Exchange Square",
+    "building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 265076098,
+  "center": {
+    "lat": 53.5042725,
+    "lon": -1.1120203
+  },
+  "tags": {
+    "addr:city": "Doncaster",
+    "addr:street": "Wisconsin Drive",
+    "building": "data_center",
+    "building:levels": "2",
+    "name": "Thales",
+    "operator": "Thales",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 267568325,
+  "center": {
+    "lat": 51.5173812,
+    "lon": -0.0710402
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Sky",
+    "addr:housenumber": "1",
+    "addr:postcode": "E1 6PU",
+    "addr:street": "Brick Lane",
+    "building": "office",
+    "building:levels": "6",
+    "name": "Sky",
+    "telecom": "data_center",
+    "website": "https://corporate.sky.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 270023895,
+  "center": {
+    "lat": 51.5154060,
+    "lon": 0.0019607
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "20",
+    "addr:postcode": "E14 0JF",
+    "addr:street": "Lanrick Road",
+    "building": "industrial",
+    "name": "IP House London Datacentre",
+    "operator": "IP House",
+    "ref:GB:uprn": "6154483",
+    "telecom": "data_center",
+    "website": "https://www.ip-house.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 270426364,
+  "center": {
+    "lat": 51.5215881,
+    "lon": -0.0731386
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "11",
+    "addr:postcode": "E1 6QR",
+    "addr:street": "Hanbury Street",
+    "building": "office",
+    "name": "Digital Realty London LON3",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lon3"
+  }
+},
+{
+  "type": "way",
+  "id": 286648420,
+  "center": {
+    "lat": 52.3121903,
+    "lon": -1.8833659
+  },
+  "tags": {
+    "addr:city": "Redditch",
+    "addr:postcode": "B98 9NA",
+    "addr:street": "Ravensbank Drive",
+    "building": "industrial",
+    "name": "Evoque Data Center Solutions",
+    "source": "Warwicks CC Aerial Imagery 2013",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 305726393,
+  "center": {
+    "lat": 52.2088956,
+    "lon": 0.0793340
+  },
+  "tags": {
+    "addr:city": "Cambridge",
+    "addr:country": "GB",
+    "addr:housename": "University of Cambridge Data Centre",
+    "addr:postcode": "CB3 0QX",
+    "addr:street": "Ada Lovelace Road",
+    "building": "university",
+    "name": "West Cambridge Data Centre",
+    "operator": "University of Cambridge",
+    "ref": "W129",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 314914896,
+  "center": {
+    "lat": 53.7034936,
+    "lon": -1.3770130
+  },
+  "tags": {
+    "industrial": "data_centre",
+    "landuse": "industrial",
+    "name": "HSBC Wakefield Data Centre",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 320724394,
+  "center": {
+    "lat": 51.4998389,
+    "lon": -0.0110653
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Sovereign House",
+    "addr:housenumber": "227",
+    "addr:postcode": "E14 9SD",
+    "addr:street": "Marsh Wall",
+    "building": "data_center",
+    "name": "Digital Realty LHR20",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "owner": "Digital Realty",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lhr20",
+    "wikidata": "Q138426781"
+  }
+},
+{
+  "type": "way",
+  "id": 358447150,
+  "center": {
+    "lat": 51.5006126,
+    "lon": -0.0118260
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Memaco House",
+    "addr:housenumber": "215",
+    "addr:postcode": "E14 9FJ",
+    "addr:street": "Marsh Wall",
+    "building": "data_center",
+    "name": "Digital Realty Trust",
+    "operator": "Digital Realty Trust",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 364385695,
+  "center": {
+    "lat": 51.1354635,
+    "lon": -0.0419907
+  },
+  "tags": {
+    "addr:city": "East Grinstead",
+    "addr:housename": "East Grinstead Data Centre",
+    "addr:postcode": "RH19 1XZ",
+    "addr:street": "Hills Road",
+    "addr:unit": "30",
+    "building": "yes",
+    "note": "No indication on ground of what this building is, and only a few online sources. Of the online sources that do exist, they specify that this is a datacentre used by Goldman Sachs.",
+    "operator": "Goldman Sachs",
+    "operator:wikidata": "Q193326",
+    "ref:GB:uprn": "10070633552",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 375842477,
+  "center": {
+    "lat": 51.4935168,
+    "lon": 0.0300078
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Six Degrees Data Centre",
+    "operator": "Six Degrees",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 375842478,
+  "center": {
+    "lat": 51.4937101,
+    "lon": 0.0310638
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Six Degrees Data Centre",
+    "operator": "Six Degrees",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 393243674,
+  "center": {
+    "lat": 51.5267957,
+    "lon": -0.6333195
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:postcode": "SL1 4JU",
+    "addr:street": "Dundee Road",
+    "building": "data_center",
+    "description": "Formerly Credit Suisse Data Centre",
+    "name": "Iron Mountain London LON-1",
+    "operator": "Iron Mountain",
+    "telecom": "data_center",
+    "website": "https://www.ironmountain.com/data-centers/locations/london-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 403124342,
+  "center": {
+    "lat": 53.7091115,
+    "lon": -1.8848533
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 403124345,
+  "center": {
+    "lat": 53.7084196,
+    "lon": -1.8833490
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 431542356,
+  "center": {
+    "lat": 51.4611515,
+    "lon": -0.0138038
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housename": "Lewisham House",
+    "addr:housenumber": "66",
+    "addr:postcode": "SE13 7EX",
+    "addr:street": "Molesworth Street",
+    "building": "data_center",
+    "building:levels": "6",
+    "description": "Citibank UK Datacenter",
+    "name": "Citibank Riverdale Data Centre",
+    "start_date": "2015",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 447240912,
+  "center": {
+    "lat": 52.5833804,
+    "lon": -1.2089785
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Santander",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 447245005,
+  "center": {
+    "lat": 51.5170188,
+    "lon": -0.6160237
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "670",
+    "addr:postcode": "SL1 4BG",
+    "addr:street": "Ajax Avenue",
+    "building": "yes",
+    "name": "NTT Slough 2",
+    "operator": "NTT",
+    "operator:wikidata": "Q1054787",
+    "ref:GB:uprn": "10002332008;100081264323;10022917938",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 447245008,
+  "center": {
+    "lat": 51.5164560,
+    "lon": -0.6179162
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:housenumber": "630",
+    "addr:postcode": "SL1 4DG",
+    "addr:street": "Ajax Avenue",
+    "building": "data_center",
+    "name": "Digital Realty LHR26",
+    "old_name": "CenturyLink LO1",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LHR26",
+    "ref:GB:uprn": "10022917514;10002338595;10002338589;10002338615",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lhr26"
+  }
+},
+{
+  "type": "way",
+  "id": 447245009,
+  "center": {
+    "lat": 51.5155700,
+    "lon": -0.6162721
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:housenumber": "672",
+    "addr:postcode": "SL1 4AN",
+    "addr:street": "Galvin Road",
+    "building": "data_center",
+    "name": "Kao Data KLON-06",
+    "operator": "Kao Data",
+    "operator:wikidata": "Q128597000",
+    "ref:GB:uprn": "100081264269",
+    "telecom": "data_center",
+    "website": "https://kaodata.com/locations/slough"
+  }
+},
+{
+  "type": "way",
+  "id": 447245010,
+  "center": {
+    "lat": 51.5163646,
+    "lon": -0.6146360
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "665",
+    "addr:postcode": "SL1 4BG",
+    "addr:street": "Ajax Avenue",
+    "building": "data_center",
+    "name": "NTT Slough 3",
+    "operator": "NTT",
+    "ref:GB:uprn": "100081264249;10022917939",
+    "source": "Bing",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 447320367,
+  "center": {
+    "lat": 51.5167148,
+    "lon": -0.6188497
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:housenumber": "631",
+    "addr:postcode": "SL1 4DG",
+    "addr:street": "Ajax Avenue",
+    "building": "data_center",
+    "name": "Digital Realty LHR27",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "LHR27",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lhr27",
+    "wikidata": "Q138427045"
+  }
+},
+{
+  "type": "way",
+  "id": 459025630,
+  "center": {
+    "lat": 51.6199000,
+    "lon": -0.7790299
+  },
+  "tags": {
+    "addr:city": "High Wycombe",
+    "addr:postcode": "HP12 3TA",
+    "addr:street": "Coronation Road",
+    "building": "data_center",
+    "old:operator": "Digital Realty",
+    "operator": "CapitaLand Ascendas REIT",
+    "operator:wikidata": "Q138447238",
+    "source": "Bing",
+    "website": "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres/cressex-businesspark.html"
+  }
+},
+{
+  "type": "way",
+  "id": 459572486,
+  "center": {
+    "lat": 51.5228223,
+    "lon": -0.6213452
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "14",
+    "addr:postcode": "SL1 4QZ",
+    "addr:street": "Liverpool Road",
+    "building": "data_center",
+    "name": "VIRTUS London 4",
+    "note": "Formerly Infinity Datacenter",
+    "operator": "VIRTUS",
+    "ref": "LONDON4",
+    "ref:GB:uprn": "100081264131;10002335595",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/london-4-slough"
+  }
+},
+{
+  "type": "way",
+  "id": 459589221,
+  "center": {
+    "lat": 51.5067717,
+    "lon": -0.4271464
+  },
+  "tags": {
+    "addr:city": "Hayes",
+    "addr:housenumber": "151",
+    "addr:street": "Clayton Road",
+    "building": "data_center",
+    "name": "UBS Data Centre",
+    "operator": "UBS",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 459600800,
+  "center": {
+    "lat": 51.5214331,
+    "lon": -0.6209389
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:postcode": "SL1 4PN",
+    "addr:street": "Buckingham Avenue",
+    "building": "yes",
+    "name": "Virtus London 10",
+    "operator": "Virtus",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 459600829,
+  "center": {
+    "lat": 51.5229154,
+    "lon": -0.6171466
+  },
+  "tags": {
+    "addr:housenumber": "394",
+    "addr:street": "Edinburgh Avenue",
+    "building": "data_center",
+    "name": "Lumen",
+    "operator": "Lumen Technologies",
+    "operator:wikidata": "Q5063092",
+    "ref:GB:uprn": "10026010481",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 459613192,
+  "center": {
+    "lat": 51.5300072,
+    "lon": -0.2558966
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Equinix LD9",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD9",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 460010262,
+  "center": {
+    "lat": 52.0550736,
+    "lon": -0.7553817
+  },
+  "tags": {
+    "addr:city": "Milton Keynes",
+    "addr:housenumber": "5",
+    "addr:street": "Rockingham Drive",
+    "building": "data_center",
+    "name": "Pulsant Milton Keynes SE-1",
+    "operator": "Pulsant",
+    "ref": "SE-1",
+    "telecom": "data_center",
+    "website": "https://www.pulsant.com/colocation-milton-keynes-datacentre"
+  }
+},
+{
+  "type": "way",
+  "id": 460010263,
+  "center": {
+    "lat": 52.0546866,
+    "lon": -0.7572426
+  },
+  "tags": {
+    "building": "data_center",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 460206687,
+  "center": {
+    "lat": 51.3770297,
+    "lon": -1.2904722
+  },
+  "tags": {
+    "alt_name": "Newbury Data Centre",
+    "building": "data_center",
+    "name": "Venture West",
+    "operator": "The Bunker Secure Hosting Ltd",
+    "telecom": "data_center",
+    "website": "http://www.thebunker.net/our-data-centres/#newbury",
+    "wikidata": "Q26263542"
+  }
+},
+{
+  "type": "way",
+  "id": 460210729,
+  "center": {
+    "lat": 51.2711950,
+    "lon": 1.2963278
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "The Bunker - South East Data Centre",
+    "note": "these are the offices and security - the main data centre is underneath",
+    "operator": "Cyberfort",
+    "ref:GB:uprn": "200002882338",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 460244923,
+  "center": {
+    "lat": 51.2477532,
+    "lon": -0.1596895
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "Unit 1",
+    "operator": "Galaxy Data Centers",
+    "owner": "Galaxy Data Centers",
+    "owner:wikidata": "Q138358768",
+    "ref:GB:uprn": "68161695",
+    "telecom": "data_center",
+    "was:owner": "Digital Realty"
+  }
+},
+{
+  "type": "way",
+  "id": 460244927,
+  "center": {
+    "lat": 51.2479408,
+    "lon": -0.1572905
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "Unit 3",
+    "operator": "Galaxy Data Centers",
+    "owner": "Galaxy Data Centers",
+    "owner:wikidata": "Q138358768",
+    "ref:GB:uprn": "100062607031",
+    "telecom": "data_center",
+    "was:owner": "Digital Realty"
+  }
+},
+{
+  "type": "way",
+  "id": 460244928,
+  "center": {
+    "lat": 51.2476379,
+    "lon": -0.1586246
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "Unit 2",
+    "operator": "Galaxy Data Centers",
+    "owner": "Galaxy Data Centers",
+    "owner:wikidata": "Q138358768",
+    "ref:GB:uprn": "68161696",
+    "telecom": "data_center",
+    "was:owner": "Digital Realty"
+  }
+},
+{
+  "type": "way",
+  "id": 460246772,
+  "center": {
+    "lat": 51.6428492,
+    "lon": -0.4276473
+  },
+  "tags": {
+    "addr:city": "Watford",
+    "addr:housenumber": "9-17",
+    "addr:postcode": "WD18 8UA",
+    "addr:street": "Caxton Way",
+    "building": "data_center",
+    "name": "The Chess Building",
+    "old:operator": "Digital Realty",
+    "operator": "CapitaLand Ascendas REIT",
+    "operator:wikidata": "Q138447238",
+    "owner": "CapitaLand Ascendas REIT",
+    "ref:GB:uprn": "100081285315",
+    "telecom": "data_center",
+    "website": "https://www.capitaland-ascendasreit.com/en/our-portfolio/united-kingdom---europe/data-centres/the-chess-building.html",
+    "wikidata": "Q138447821"
+  }
+},
+{
+  "type": "way",
+  "id": 460956016,
+  "center": {
+    "lat": 51.5866746,
+    "lon": 0.4848784
+  },
+  "tags": {
+    "addr:city": "Basildon",
+    "addr:street": "Gardiners Lane South",
+    "building": "data_center",
+    "name": "Imperium 315",
+    "operator": "NYSE Euronext",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 490844969,
+  "center": {
+    "lat": 55.8344313,
+    "lon": -3.9525146
+  },
+  "tags": {
+    "addr:city": "Airdrie",
+    "addr:housenumber": "1",
+    "addr:street": "York Road",
+    "building": "data_center",
+    "name": "DataVita DV1",
+    "operator": "DataVita",
+    "ref": "DV1",
+    "ref:GB:uprn": "118195209",
+    "telecom": "data_center",
+    "website": "https://www.datavita.co.uk/location/dv1-data-centre-lanarkshire"
+  }
+},
+{
+  "type": "way",
+  "id": 497956675,
+  "center": {
+    "lat": 51.5121049,
+    "lon": -0.0005474
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:country": "GB",
+    "addr:housename": "Telehouse International Corporation",
+    "addr:postcode": "E14 2AA",
+    "addr:street": "Coriander Avenue",
+    "building": "yes",
+    "building:levels": "6",
+    "name": "Telehouse North Two",
+    "operator": "Telehouse",
+    "operator:wikidata": "Q3517302",
+    "short_name": "THN2",
+    "start_date": "2016",
+    "telecom": "data_center",
+    "website": "https://www.telehouse.net/data-centre-services/uk/london/telehouse-north-two/",
+    "wikidata": "Q138426653"
+  }
+},
+{
+  "type": "way",
+  "id": 503988314,
+  "center": {
+    "lat": 52.5160240,
+    "lon": -0.6458990
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "The Horizon Centre",
+    "source": "OS VectorMap District",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 510493859,
+  "center": {
+    "lat": 51.8715292,
+    "lon": -2.4858019
+  },
+  "tags": {
+    "addr:city": "Mitcheldean",
+    "addr:housename": "Building 9.3",
+    "addr:postcode": "GL17 0DD",
+    "addr:street": "Vantage Point Business Village",
+    "building": "commercial",
+    "name": "DXC Technology",
+    "source": "OS_OpenData_StreetView",
+    "start_date": "1997",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 516481255,
+  "center": {
+    "lat": 51.4129104,
+    "lon": -0.7654248
+  },
+  "tags": {
+    "addr:housename": "St James House",
+    "addr:postcode": "RG12 8TH",
+    "building": "data_center",
+    "building:levels": "2",
+    "name": "EXA Infrastructure - St James House",
+    "operator": "EXA Infrastructure",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 526426719,
+  "center": {
+    "lat": 51.8977355,
+    "lon": -0.5013188
+  },
+  "tags": {
+    "addr:city": "Dunstable",
+    "addr:postcode": "LU5 4TB",
+    "addr:street": "Humphrys Road",
+    "addr:unit": "17",
+    "building": "warehouse",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 558958575,
+  "center": {
+    "lat": 51.6020084,
+    "lon": -1.7301983
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "nLighten Swindon",
+    "operator:wikidata": "Q139890258",
+    "ref": "BRS2",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.com/en/edge-location/swindon/",
+    "wikidata": "Q139890276"
+  }
+},
+{
+  "type": "way",
+  "id": 574135457,
+  "center": {
+    "lat": 51.4187452,
+    "lon": -2.2185032
+  },
+  "tags": {
+    "addr:housenumber": "D1",
+    "addr:postcode": "SN13 9GB",
+    "building": "data_center",
+    "name": "Ark Data Centres",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 574135468,
+  "center": {
+    "lat": 51.4183627,
+    "lon": -2.2205758
+  },
+  "tags": {
+    "addr:housenumber": "P1",
+    "addr:postcode": "SN13 9GB",
+    "building": "data_center",
+    "name": "Ark Data Centres",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 574135471,
+  "center": {
+    "lat": 51.4184644,
+    "lon": -2.2230500
+  },
+  "tags": {
+    "addr:housename": "SQ17",
+    "addr:postcode": "SN13 9GB",
+    "building": "data_center",
+    "name": "Ark Data Centres",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 587679709,
+  "center": {
+    "lat": 51.1290700,
+    "lon": -0.1767860
+  },
+  "tags": {
+    "addr:housename": "Unit 2",
+    "addr:postcode": "RH10 9BE",
+    "addr:street": "Connect Way",
+    "building": "data_center",
+    "name": "Digital Realty LGW16",
+    "operator": "Digital Realty",
+    "ref": "LGW16",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lgw16",
+    "wikidata": "Q138426839"
+  }
+},
+{
+  "type": "way",
+  "id": 595216849,
+  "center": {
+    "lat": 51.7620214,
+    "lon": -0.4364535
+  },
+  "tags": {
+    "addr:city": "Hemel Hempstead",
+    "addr:postcode": "HP2 7TN",
+    "addr:street": "Spring Way",
+    "building": "data_center",
+    "name": "NTT Hemel Hempstead 3",
+    "operator": "NTT",
+    "operator:wikidata": "Q1054787",
+    "telecom": "data_center",
+    "website": "https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/emea/hemel-hempstead-3-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 613855632,
+  "center": {
+    "lat": 52.2341940,
+    "lon": -0.9190280
+  },
+  "tags": {
+    "addr:city": "Northampton",
+    "addr:housename": "Hellermann Tyton",
+    "addr:postcode": "NN5 5JE",
+    "addr:street": "Edgar Mobbs Way",
+    "building": "industrial",
+    "name": "Hellermann Tyton Data",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 620921953,
+  "center": {
+    "lat": 53.4082158,
+    "lon": -2.1790008
+  },
+  "tags": {
+    "addr:postcode": "SK4 2HD",
+    "building": "commercial",
+    "name": "CDL Strata Campus Data Centre",
+    "source": "local knowledge",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 633645074,
+  "center": {
+    "lat": 55.7804481,
+    "lon": -4.1004178
+  },
+  "tags": {
+    "addr:city": "Glasgow",
+    "addr:housenumber": "4",
+    "addr:postcode": "G72 0FT",
+    "addr:street": "Lister Way",
+    "building": "data_center",
+    "building:levels": "3",
+    "name": "Asanti Hamilton",
+    "ref:GB:uprn": "484150760",
+    "roof:shape": "flat",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 658909713,
+  "center": {
+    "lat": 51.5048149,
+    "lon": -0.4441576
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Virtus London 14",
+    "operator": "Virtus",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 665572144,
+  "center": {
+    "lat": 51.5222507,
+    "lon": -0.6245867
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "13",
+    "addr:postcode": "SL1 4QZ",
+    "addr:street": "Liverpool Road",
+    "building": "data_center",
+    "name": "Equinix LD10",
+    "operator": "Equinix",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 665572148,
+  "center": {
+    "lat": 51.5230450,
+    "lon": -0.6239391
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "13",
+    "addr:postcode": "SL1 4QZ",
+    "addr:street": "Liverpool Road",
+    "building": "data_center",
+    "description": "Formerly IO London Data Center",
+    "name": "CyrusOne London 1",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "LON1",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/europe/united-kingdom/london",
+    "wikidata": "Q138394549"
+  }
+},
+{
+  "type": "way",
+  "id": 699790674,
+  "center": {
+    "lat": 51.7691716,
+    "lon": 0.1292881
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Kao Data KLON-01",
+    "operator": "Kao Data",
+    "operator:wikidata": "Q128597000",
+    "ref": "KLON-01",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 702784280,
+  "center": {
+    "lat": 51.5222992,
+    "lon": -0.6246734
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "13",
+    "addr:postcode": "SL1 4QZ",
+    "addr:street": "Liverpool Road",
+    "description": "Formerly IO London Data Center (2015), acquired by Equinix 2017",
+    "man_made": "works",
+    "name": "Equinix LD10",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD10",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld10",
+    "wikidata": "Q138393970"
+  }
+},
+{
+  "type": "way",
+  "id": 703332116,
+  "center": {
+    "lat": 51.1274257,
+    "lon": -0.1761628
+  },
+  "tags": {
+    "addr:housename": "Unit 1",
+    "addr:postcode": "RH10 9BE",
+    "addr:street": "Power Avenue",
+    "building": "data_center",
+    "layer": "2",
+    "name": "Digital Realty LGW15",
+    "operator": "Digital Realty",
+    "ref": "LGW15",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lgw15",
+    "wikidata": "Q138426835"
+  }
+},
+{
+  "type": "way",
+  "id": 703959498,
+  "center": {
+    "lat": 53.4683964,
+    "lon": -2.1768304
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 705064992,
+  "center": {
+    "lat": 51.5239361,
+    "lon": -0.6376100
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:postcode": "SL1 4NL",
+    "addr:street": "Buckingham Avenue",
+    "building": "yes",
+    "name": "Equinix LD12",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD12",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 705065012,
+  "center": {
+    "lat": 51.5259440,
+    "lon": -0.6269396
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "700",
+    "addr:postcode": "SL1 4ST",
+    "addr:street": "Stirling Road",
+    "building": "yes",
+    "name": "CyrusOne LON3",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "LON3",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/emea/london-uk-lon3",
+    "wikidata": "Q138427235"
+  }
+},
+{
+  "type": "way",
+  "id": 705065014,
+  "center": {
+    "lat": 51.5220534,
+    "lon": -0.6216930
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:postcode": "SL1 4QZ",
+    "addr:street": "Liverpool Road",
+    "building": "yes",
+    "name": "Virtus London 3",
+    "operator": "Virtus",
+    "ref:GB:uprn": "10090770865",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 705085805,
+  "center": {
+    "lat": 51.5105687,
+    "lon": -0.4538102
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Virtus London6",
+    "operator": "Virtus",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/london6-stockley-park",
+    "wikidata": "Q138426515"
+  }
+},
+{
+  "type": "way",
+  "id": 705085806,
+  "center": {
+    "lat": 51.5095441,
+    "lon": -0.4542871
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Virtus London5",
+    "operator": "Virtus",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/london5-stockley-park",
+    "wikidata": "Q138426503"
+  }
+},
+{
+  "type": "way",
+  "id": 705085807,
+  "center": {
+    "lat": 51.5108817,
+    "lon": -0.4566535
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Virtus London7",
+    "operator": "Virtus",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/london7-stockley-park",
+    "wikidata": "Q138426527"
+  }
+},
+{
+  "type": "way",
+  "id": 706624099,
+  "center": {
+    "lat": 51.5347469,
+    "lon": -0.2608292
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "3",
+    "addr:postcode": "NW10 7NU",
+    "addr:street": "Waxlow Road",
+    "building": "yes",
+    "name": "Options Park Royal Data Centre",
+    "operator": "Options Technology Ltd.",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 706624302,
+  "center": {
+    "lat": 51.5312555,
+    "lon": -0.2573390
+  },
+  "tags": {
+    "building": "data_center",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 706624303,
+  "center": {
+    "lat": 51.5319396,
+    "lon": -0.2576058
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:postcode": "NW10 6PW",
+    "addr:street": "Volt Avenue",
+    "addr:unit": "9-13",
+    "building": "data_center",
+    "name": "Colt London West",
+    "operator": "Colt",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 710050084,
+  "center": {
+    "lat": 52.5409438,
+    "lon": -1.3811263
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 711646220,
+  "center": {
+    "lat": 52.0421211,
+    "lon": -0.8188082
+  },
+  "tags": {
+    "building": "yes",
+    "name": "nLighten Milton Keynes",
+    "operator:wikidata": "Q139890258",
+    "ref": "LTN1",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.com/en/edge-location/milton-keynes/",
+    "wikidata": "Q139890262"
+  }
+},
+{
+  "type": "way",
+  "id": 712277376,
+  "center": {
+    "lat": 51.5245814,
+    "lon": -0.6352072
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "352",
+    "addr:postcode": "SL1 4PF;SL1 4NB",
+    "addr:street": "Buckingham Avenue",
+    "building": "industrial",
+    "name": "Equinix LD6",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD6",
+    "ref:GB:uprn": "100081263739",
+    "source": "personal knowledge",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld6",
+    "wikidata": "Q138393462"
+  }
+},
+{
+  "type": "way",
+  "id": 712298673,
+  "center": {
+    "lat": 51.4964027,
+    "lon": -0.4045035
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "VIRTUS LONDON2",
+    "operator": "VIRTUS",
+    "ref": "LONDON2",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/hayes-campus",
+    "wikidata": "Q138427542"
+  }
+},
+{
+  "type": "way",
+  "id": 713651005,
+  "center": {
+    "lat": 51.1864311,
+    "lon": -0.6019958
+  },
+  "tags": {
+    "building": "office",
+    "name": "Surrey Data Park",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 713940435,
+  "center": {
+    "lat": 51.3330613,
+    "lon": -0.7668328
+  },
+  "tags": {
+    "addr:city": "Camberley",
+    "addr:postcode": "GU15 3BW",
+    "addr:street": "Stanhope Road",
+    "building": "data_center",
+    "name": "Gravity Edge LDN1",
+    "operator": "Gravity Edge",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 726129785,
+  "center": {
+    "lat": 53.3791499,
+    "lon": -2.2586128
+  },
+  "tags": {
+    "addr:city": "Manchester",
+    "addr:housename": "Delta House",
+    "addr:postcode": "M22 5QZ",
+    "addr:street": "Wavell Road",
+    "building": "yes",
+    "name": "Delta House",
+    "operator": "TeleData",
+    "ref:GB:uprn": "77056446;10094703470;10091813443;10091813440;10094703469;10094703473;10094703474;10094703471;10094703472",
+    "telecom": "data_center",
+    "website": "https://www.teledata.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 729539167,
+  "center": {
+    "lat": 51.2788289,
+    "lon": 0.5472057
+  },
+  "tags": {
+    "addr:city": "Maidstone",
+    "addr:housename": "Pegasus Place",
+    "addr:postcode": "ME14 5EH",
+    "addr:street": "Lodge Road",
+    "building": "yes",
+    "name": "CXD Infrastructure Solutions",
+    "operator": "DXC UKI",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 732605607,
+  "center": {
+    "lat": 51.4918316,
+    "lon": -3.5807100
+  },
+  "tags": {
+    "building": "yes",
+    "name": "CGI Datacenter",
+    "operator": "CGI",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 735444062,
+  "center": {
+    "lat": 51.5255429,
+    "lon": -0.6345310
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "1",
+    "addr:postcode": "SL1 4LH",
+    "addr:street": "Banbury Avenue",
+    "building": "yes",
+    "name": "Equinix LD7",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD7",
+    "source": "Bing;local knowledge",
+    "telecom": "data_center",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/united-kingdom-colocation/london-data-centers/ld7",
+    "wikidata": "Q138393622"
+  }
+},
+{
+  "type": "way",
+  "id": 735444063,
+  "center": {
+    "lat": 51.5194824,
+    "lon": -0.6282758
+  },
+  "tags": {
+    "building": "yes",
+    "name": "China Mobile Slough",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 749964337,
+  "center": {
+    "lat": 55.0171282,
+    "lon": -1.5039339
+  },
+  "tags": {
+    "addr:city": "Wallsend",
+    "addr:country": "GB",
+    "addr:housenumber": "9",
+    "addr:postcode": "NE28 9EJ",
+    "addr:street": "Cobalt Park Way",
+    "barrier": "fence",
+    "name": "Stellium Newcastle Campus",
+    "telecom": "data_center",
+    "website": "https://www.stelliumdc.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 787209296,
+  "center": {
+    "lat": 51.5165511,
+    "lon": -0.6289481
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "225B",
+    "addr:postcode": "SL1 5PP",
+    "addr:street": "Bath Road",
+    "building": "yes",
+    "name": "CryrusOne LON4",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "LON4",
+    "ref:GB:uprn": "10094478458",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/emea/london-uk-lon4",
+    "wikidata": "Q138427185"
+  }
+},
+{
+  "type": "way",
+  "id": 787209399,
+  "center": {
+    "lat": 51.5188766,
+    "lon": -0.6189915
+  },
+  "tags": {
+    "building": "yes",
+    "name": "VIRTUS LONDON9",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 795170874,
+  "center": {
+    "lat": 51.6961913,
+    "lon": -0.0488561
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Google Datacentre Waltham Cross",
+    "operator": "Google",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 813089664,
+  "center": {
+    "lat": 55.1534408,
+    "lon": -6.6854646
+  },
+  "tags": {
+    "addr:city": "Coleraine",
+    "addr:street": "Portstewart Road",
+    "building": "data_center",
+    "building:colour": "navy",
+    "building:levels": "1",
+    "building:material": "metal",
+    "name": "Prescient Coleraine",
+    "operator": "Prescient Data Centres Limited",
+    "roof:colour": "silver",
+    "roof:material": "metal",
+    "roof:shape": "gabled",
+    "telecom": "data_center",
+    "website": "https://prescientdc.com/data-centres/"
+  }
+},
+{
+  "type": "way",
+  "id": 825504801,
+  "center": {
+    "lat": 51.5473720,
+    "lon": 0.1758028
+  },
+  "tags": {
+    "building": "yes",
+    "name": "NTT London 1",
+    "operator": "NTT",
+    "operator:wikidata": "Q1054787",
+    "telecom": "data_center",
+    "website": "https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/emea/london-1-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 830370909,
+  "center": {
+    "lat": 52.5788870,
+    "lon": -1.2100338
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Santander",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 830370910,
+  "center": {
+    "lat": 52.5796263,
+    "lon": -1.2062397
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Santander",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838655597,
+  "center": {
+    "lat": 51.2817675,
+    "lon": -0.7972979
+  },
+  "tags": {
+    "building": "yes",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838655598,
+  "center": {
+    "lat": 51.2824757,
+    "lon": -0.7961314
+  },
+  "tags": {
+    "building": "yes",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838655599,
+  "center": {
+    "lat": 51.2821000,
+    "lon": -0.7957685
+  },
+  "tags": {
+    "building": "yes",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838655600,
+  "center": {
+    "lat": 51.2817263,
+    "lon": -0.7954006
+  },
+  "tags": {
+    "building": "yes",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838655601,
+  "center": {
+    "lat": 51.2824377,
+    "lon": -0.7945139
+  },
+  "tags": {
+    "building": "service",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838773806,
+  "center": {
+    "lat": 51.5016648,
+    "lon": -0.4101919
+  },
+  "tags": {
+    "construction": "industrial",
+    "landuse": "construction",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 838801558,
+  "center": {
+    "lat": 51.5097605,
+    "lon": -0.4571888
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Virtus London8",
+    "operator": "Virtus",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/stockley-park-london8",
+    "wikidata": "Q138426549"
+  }
+},
+{
+  "type": "way",
+  "id": 886580615,
+  "center": {
+    "lat": 51.4569728,
+    "lon": -0.9424708
+  },
+  "tags": {
+    "addr:city": "Reading",
+    "addr:postcode": "RG6 1AZ",
+    "addr:street": "Suttons Park Avenue",
+    "addr:unit": "53",
+    "building": "data_center",
+    "name": "Pulsant",
+    "ref:GB:uprn": "14062047",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 888760205,
+  "center": {
+    "lat": 52.5837453,
+    "lon": 0.0565064
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Positive Park",
+    "operator": "Positive Internet",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 891871959,
+  "center": {
+    "lat": 53.3433136,
+    "lon": -2.9733309
+  },
+  "tags": {
+    "layer": "1",
+    "man_made": "works",
+    "name": "nLighten Edge Data Centre Liverpool",
+    "operator:wikidata": "Q139890258",
+    "ref": "LPL1",
+    "telecom": "data_center",
+    "website": "https://www.nlighten.eu/en/united-kingdom-data-centers/liverpool/",
+    "wikidata": "Q139890335"
+  }
+},
+{
+  "type": "way",
+  "id": 958673591,
+  "center": {
+    "lat": 50.9067432,
+    "lon": -1.2500233
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Regit4u",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 981640451,
+  "center": {
+    "lat": 53.5077832,
+    "lon": -2.3049271
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Evolution @ Agecroft Commerce Park",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 981640535,
+  "center": {
+    "lat": 53.5062901,
+    "lon": -2.3045891
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Evolution @ Agecroft Commerce Park",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 984002529,
+  "center": {
+    "lat": 51.5159310,
+    "lon": -0.6270685
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "225C",
+    "addr:postcode": "SL1 5PP",
+    "addr:street": "Bath Road",
+    "building": "yes",
+    "name": "CryrusOne LON5",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "LON5",
+    "telecom": "data_center",
+    "wikidata": "Q138427203"
+  }
+},
+{
+  "type": "way",
+  "id": 989525011,
+  "center": {
+    "lat": 51.7572082,
+    "lon": -0.4292808
+  },
+  "tags": {
+    "addr:city": "Hemel Hempstead",
+    "addr:housenumber": "1",
+    "addr:postcode": "HP2 4ZB",
+    "addr:street": "Blossom Way",
+    "building": "data_center",
+    "name": "NTT Hemel Hempstead 4",
+    "operator": "NTT",
+    "operator:wikidata": "Q1054787",
+    "telecom": "data_center",
+    "website": "https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/emea/hemel-hempstead-4-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 996865179,
+  "center": {
+    "lat": 51.4174316,
+    "lon": -2.2194847
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 996865180,
+  "center": {
+    "lat": 51.4177591,
+    "lon": -2.2197302
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1001246921,
+  "center": {
+    "lat": 51.5166504,
+    "lon": 0.0233541
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:postcode": "E16 1PW",
+    "addr:street": "Butchers Road",
+    "addr:suburb": "Canning Town",
+    "addr:unit": "A",
+    "building": "industrial",
+    "industrial": "warehouse",
+    "name": "Virtual Internet UK",
+    "ref:GB:uprn": "46101184",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1046859137,
+  "center": {
+    "lat": 52.2058954,
+    "lon": -2.1566924
+  },
+  "tags": {
+    "building": "yes",
+    "operator": "Ionos",
+    "operator:wikidata": "Q882107",
+    "start_date": "2022",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1055031579,
+  "center": {
+    "lat": 54.5917636,
+    "lon": -1.0320237
+  },
+  "tags": {
+    "addr:city": "Redcar",
+    "addr:postcode": "TS11 6HG",
+    "building": "industrial",
+    "ref:GB:uprn": "10023901810",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1072007403,
+  "center": {
+    "lat": 51.5545288,
+    "lon": -3.0325756
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:postcode": "NP10 8DE",
+    "addr:street": "North Lake Drive",
+    "industrial": "data_centre",
+    "landuse": "industrial",
+    "name": "Vantage Data Centers - CWL13",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "ref": "CWL13"
+  }
+},
+{
+  "type": "way",
+  "id": 1072007436,
+  "center": {
+    "lat": 51.5560979,
+    "lon": -3.0365549
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Celtic Way",
+    "addr:postcode": "NP10 8BE",
+    "industrial": "data_centre",
+    "landuse": "industrial",
+    "name": "Vantage Data Centers - CWL1",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "ref": "CWL1"
+  }
+},
+{
+  "type": "way",
+  "id": 1122158384,
+  "center": {
+    "lat": 51.5240125,
+    "lon": -1.7643629
+  },
+  "tags": {
+    "addr:city": "Swindon",
+    "addr:postcode": "SN4 0QB",
+    "addr:street": "Burderop",
+    "addr:suburb": "Chiseldon",
+    "building": "yes",
+    "building:part": "industrial",
+    "name": "AWS Swindon Data Centre",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157",
+    "ref:GB:uprn": "10008542605",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1131944103,
+  "center": {
+    "lat": 54.5785009,
+    "lon": -1.2350678
+  },
+  "tags": {
+    "addr:city": "Middlesbrough",
+    "addr:postcode": "TS1 1EH",
+    "addr:street": "Zetland Road",
+    "building": "yes",
+    "operator": "Lumen Technologies",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1161721011,
+  "center": {
+    "lat": 51.4138567,
+    "lon": -0.7819399
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Amazon Web Services",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1164817477,
+  "center": {
+    "lat": 51.2807055,
+    "lon": -0.7981341
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1198641381,
+  "center": {
+    "lat": 51.5547890,
+    "lon": -3.0327479
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:postcode": "NP10 8DE",
+    "addr:street": "North Lake Drive",
+    "building": "data_center",
+    "name": "Vantage Data Centers - CWL13",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "ref": "CWL13",
+    "telecom": "data_center",
+    "website": "https://vantage-dc-cardiff.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 1213266502,
+  "center": {
+    "lat": 51.5509775,
+    "lon": -3.0404591
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Imperial Park",
+    "addr:postcode": "NP10 8FS",
+    "addr:suburb": "Coedkernew",
+    "name": "Microsoft Newport data centre",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1254986167,
+  "center": {
+    "lat": 51.8879741,
+    "lon": -0.8184560
+  },
+  "tags": {
+    "building": "yes",
+    "roof:shape": "pyramidal",
+    "source": "microsoft/BuildingFootprints",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1268715673,
+  "center": {
+    "lat": 54.5959499,
+    "lon": -5.9248945
+  },
+  "tags": {
+    "building": "yes",
+    "building:min_level": "7",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1270223634,
+  "center": {
+    "lat": 51.6173524,
+    "lon": -1.2615655
+  },
+  "tags": {
+    "building": "yes",
+    "name": "AWS Didcot Data Centre",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157",
+    "ref:GB:uprn": "10095368958",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1270223656,
+  "center": {
+    "lat": 51.6175657,
+    "lon": -1.2618997
+  },
+  "tags": {
+    "barrier": "fence",
+    "industrial": "data_center",
+    "landuse": "industrial",
+    "operator": "Amazon Web Services",
+    "operator:short": "AWS",
+    "operator:wikidata": "Q456157"
+  }
+},
+{
+  "type": "way",
+  "id": 1302091424,
+  "center": {
+    "lat": 52.5473033,
+    "lon": -2.0305574
+  },
+  "tags": {
+    "addr:city": "Wednesbury",
+    "addr:housename": "Unit 4",
+    "addr:postcode": "WS10 7WP",
+    "building": "industrial",
+    "name": "Hutchison 3G",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1303852315,
+  "center": {
+    "lat": 52.3988688,
+    "lon": 0.5502103
+  },
+  "tags": {
+    "addr:city": "Brandon",
+    "addr:locality": "RAF Lakenheath",
+    "addr:postcode": "IP7 9PN",
+    "building": "data_center",
+    "operator": "US Air Force",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1305758728,
+  "center": {
+    "lat": 51.7701046,
+    "lon": 0.1293794
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Kao Data KLON-02",
+    "operator": "Kao Data",
+    "operator:wikidata": "Q128597000",
+    "ref": "KLON-02",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1313579347,
+  "center": {
+    "lat": 51.5189576,
+    "lon": -0.6262520
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:country": "GB",
+    "addr:postcode": "SL1 4EQ",
+    "building": "yes",
+    "name": "VIRTUS London 11",
+    "telecom": "data_center",
+    "website": "https://virtusdatacentres.com/locations/uk/london/slough-london11"
+  }
+},
+{
+  "type": "way",
+  "id": 1322919061,
+  "center": {
+    "lat": 51.5424593,
+    "lon": 0.0025166
+  },
+  "tags": {
+    "level": "1",
+    "name": "Tata Stratford",
+    "operator": "Tata Communications",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1349649740,
+  "center": {
+    "lat": 52.5297368,
+    "lon": -2.0210407
+  },
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "Cygnus Way",
+    "building": "industrial",
+    "name": "EE Data Centre",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1414750854,
+  "center": {
+    "lat": 55.8583498,
+    "lon": -4.2691082
+  },
+  "tags": {
+    "building": "data_center",
+    "building:levels": "5",
+    "building:part": "yes",
+    "name": "Verizon Glasgow GLSGGB",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1452591984,
+  "center": {
+    "lat": 51.5569826,
+    "lon": -3.0346372
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Celtic Way",
+    "addr:postcode": "NP10 8BE",
+    "building": "data_center",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "telecom": "data_center",
+    "website": "https://vantage-dc-cardiff.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 1452591985,
+  "center": {
+    "lat": 51.5566097,
+    "lon": -3.0341921
+  },
+  "tags": {
+    "addr:city": "Newport",
+    "addr:place": "Celtic Way",
+    "addr:postcode": "NP10 8BE",
+    "building": "data_center",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "telecom": "data_center",
+    "website": "https://vantage-dc-cardiff.co.uk/"
+  }
+},
+{
+  "type": "way",
+  "id": 1481166632,
+  "center": {
+    "lat": 51.3805356,
+    "lon": -0.5946346
+  },
+  "tags": {
+    "addr:city": "Chertsey",
+    "addr:country": "GB",
+    "addr:postcode": "KT16 0EE",
+    "addr:street": "Chobham Lane",
+    "addr:suburb": "Longcross",
+    "building": "yes",
+    "name": "Ark Data Centres - Longcross Park",
+    "operator": "Ark Data Centres",
+    "telecom": "data_center",
+    "website": "https://www.ark-d-c.com/locations/longcross-park"
+  }
+},
+{
+  "type": "way",
+  "id": 1481464832,
+  "center": {
+    "lat": 51.5329720,
+    "lon": -0.2592311
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Vantage LHR2",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1481464835,
+  "center": {
+    "lat": 51.5276722,
+    "lon": -0.2551627
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Vantage Data Centers LHR1",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1481471882,
+  "center": {
+    "lat": 51.5286059,
+    "lon": -0.2571097
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:telecom": "data_center",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1481564428,
+  "center": {
+    "lat": 51.4981784,
+    "lon": -0.0148988
+  },
+  "tags": {
+    "name": "Equinix LD8",
+    "operator": "Equinix",
+    "operator:wikidata": "Q851641",
+    "ref": "LD8",
+    "telecom": "data_center",
+    "wikidata": "Q138392979"
+  }
+},
+{
+  "type": "way",
+  "id": 1481787910,
+  "center": {
+    "lat": 51.5124753,
+    "lon": -0.5792971
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Yondr",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1481787911,
+  "center": {
+    "lat": 51.5130834,
+    "lon": -0.5788070
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Yondr",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1481787912,
+  "center": {
+    "lat": 51.5134671,
+    "lon": -0.5768553
+  },
+  "tags": {
+    "building": "data_center",
+    "operator": "Yondr",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1482203073,
+  "center": {
+    "lat": 51.5242569,
+    "lon": -0.0865103
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:postcode": "EC1Y 1HQ",
+    "addr:street": "Oliver's Yard",
+    "name": "Digital Realty LHR18",
+    "note": "Exact footprint unknown, area covers part of building covered with chillers",
+    "ref": "LHR18",
+    "telecom": "data_center",
+    "website": "https://www.digitalrealty.com/data-centers/emea/london/lhr18",
+    "wikidata": "Q138427007"
+  }
+},
+{
+  "type": "way",
+  "id": 1482210622,
+  "center": {
+    "lat": 51.5176697,
+    "lon": -0.6183615
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Global Technical Realty London GB One",
+    "operator": "Global Technical Realty",
+    "telecom": "data_center",
+    "website": "https://globaltechnicalrealty.com/locations/london-gb-one/",
+    "wikidata": "Q138427139"
+  }
+},
+{
+  "type": "way",
+  "id": 1493499780,
+  "center": {
+    "lat": 51.5217402,
+    "lon": -0.6202336
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Virtus London 12",
+    "operator": "Virtus",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1493499783,
+  "center": {
+    "lat": 51.5203218,
+    "lon": -0.6203800
+  },
+  "tags": {
+    "addr:city": "Slough",
+    "addr:housenumber": "111",
+    "addr:postcode": "SL1 4PF",
+    "addr:street": "Buckingham Avenue",
+    "building": "data_center",
+    "name": "Iron Mountain LON-3",
+    "operator": "Iron Mountain",
+    "operator:wikidata": "Q1673079",
+    "ref": "LON-3",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1495920404,
+  "center": {
+    "lat": 51.5095591,
+    "lon": -0.3940890
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Colt London 4",
+    "operator": "Colt Data Centre Services",
+    "ref": "London 4",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1535147042,
+  "center": {
+    "lat": 53.4499653,
+    "lon": -2.3706219
+  },
+  "tags": {
+    "building": "yes",
+    "construction": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1540942790,
+  "center": {
+    "lat": 50.8664189,
+    "lon": -0.9756791
+  },
+  "tags": {
+    "addr": "s",
+    "addr:city": "Havant",
+    "addr:postcode": "PO9 5TH",
+    "addr:street": "Martin Road",
+    "building": "service",
+    "operator": "SSE",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1543080891,
+  "center": {
+    "lat": 51.5128133,
+    "lon": -0.3099253
+  },
+  "tags": {
+    "building:part": "yes",
+    "name": "Redwire",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1545872018,
+  "center": {
+    "lat": 51.5377102,
+    "lon": -0.1321309
+  },
+  "tags": {
+    "addr:city": "London",
+    "addr:housenumber": "2-6",
+    "addr:postcode": "NW1 0QG",
+    "addr:street": "St. Pancras Way",
+    "building": "data_center",
+    "name": "Verizon UK5",
+    "operator": "Verizon",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1548060501,
+  "center": {
+    "lat": 55.9251066,
+    "lon": -3.2506058
+  },
+  "tags": {
+    "building": "industrial_plant",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1551100328,
+  "center": {
+    "lat": 53.4750243,
+    "lon": -2.6392925
+  },
+  "tags": {
+    "building": "warehouse",
+    "source": "survey",
+    "start_date": "2024",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "relation",
+  "id": 6796766,
+  "center": {
+    "lat": 51.4373456,
+    "lon": -0.8873807
+  },
+  "tags": {
+    "building": "data_center",
+    "building:levels": "2",
+    "name": "CSquare London LHR3",
+    "operator": "CSquare",
+    "ref": "LHR3",
+    "telecom": "data_center",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 6796887,
+  "center": {
+    "lat": 51.2805849,
+    "lon": -0.7960565
+  },
+  "tags": {
+    "building": "data_center",
+    "name": "Datum Farnborough Data Centre",
+    "operator": "Datum",
+    "ref": "FRN1",
+    "telecom": "data_center",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 18217492,
+  "center": {
+    "lat": 55.9297598,
+    "lon": -3.2933933
+  },
+  "tags": {
+    "name": "Pulsant Edinburgh SC-1",
+    "site": "yes",
+    "telecom": "data_center",
+    "type": "site"
+  }
+}
+
+  ]
+}

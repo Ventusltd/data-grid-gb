@@ -1,0 +1,20 @@
+{
+ "source": "OpenStreetMap via Overpass",
+ "endpoint": "https://overpass-api.de/api/interpreter",
+ "query": "[out:json][timeout:300];\narea(id:3600062149)->.uk;\n(\n  nwr[\"telecom\"=\"data_center\"](area.uk);\n  nwr[\"building\"~\"^data_cent(er|re)$\"](area.uk);\n  nwr[\"building:use\"~\"^data_cent(er|re)$\"](area.uk);\n  nwr[\"industrial\"~\"^data_cent(er|re)$\"](area.uk);\n);\nout center tags;",
+ "query_sha256": "c93f03a5a88b0d4a0098078065d9cb90de24936f30aff69dfbe65c47b92ae434",
+ "licence": {
+  "name": "ODbL 1.0",
+  "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "attribution_url": "https://www.openstreetmap.org/copyright",
+  "share_alike": "Derived databases must be offered under ODbL; produced works must carry the attribution.",
+  "fully_open": "yes (ODbL with attribution is on the owner's list)"
+ },
+ "retrieved": "2026-10-29",
+ "ok": true,
+ "http_status": 200,
+ "bytes": 109442,
+ "sha256": "f8f5b4d9c102a5d269c29399001d236d89e157c9a16a70515511819a45dbc934",
+ "raw": "osm_overpass.json"
+}
