@@ -159,6 +159,23 @@ class MergeTests(unittest.TestCase):
                operator="Global Technical Realty")
         self.assertEqual(len(dcmerge.merge([a, b])), 2)
 
+    def test_parenthesised_operator_gloss_is_not_a_split(self):
+        # False-split guard (Wapseys Wood, PINS EN0110030): one operator written with and without a
+        # parenthesised gloss is one operator; the cross-operator guard above must still hold.
+        a = mk("DC-A3", "government", "s35-wapseys", "SDC M40 Campus (Wapseys Wood)", 51.58696, -0.59697,
+               operator="Slough Holdings UK Limited (SDC Capital Partners)", it=300)
+        b = mk("DC-A2", "planning", "EN0110030", "SDC M40 Campus (Wapseys Wood)",
+               operator="Slough Holdings UK Limited", it=300)
+        self.assertTrue(dcmerge.operator_match(a["operator"], b["operator"]))
+        self.assertFalse(dcmerge.operator_match("Digital Realty", "Global Technical Realty"))
+        for order in ([a, b], [b, a]):
+            out = dcmerge.merge(order)
+            self.assertEqual(len(out), 1)
+            self.assertEqual(len(out[0]["sources"]), 2)
+            self.assertEqual(out[0]["location"]["precision"], "exact_site")
+            self.assertEqual(out[0]["it_load_mw"]["value"], 300)
+            self.assertFalse([c for c in out[0]["conflicts"] if c["kind"] == "operator_disagreement"])
+
     def test_cross_operator_shared_document_and_ref_never_merge(self):
         url = "https://assets.publishing.service.gov.uk/media/abcd/shared.pdf"
         a = mk("DC-A2", "planning", "1", "Slough Campus", 51.517, -0.618,
