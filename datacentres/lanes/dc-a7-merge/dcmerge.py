@@ -119,8 +119,14 @@ def name_similarity(a, b):
     return round(max(jac, seq), 4)
 
 
+def _op_core(s):
+    # A parenthesised tail is a gloss on one operator ("Slough Holdings UK Limited (SDC Capital
+    # Partners)", "X Ltd (appellant)"), not a second operator: drop it before comparing.
+    return re.sub(r"\([^)]*\)", " ", s or "")
+
+
 def operator_match(a, b):
-    na, nb = norm_operator(a), norm_operator(b)
+    na, nb = norm_operator(_op_core(a)), norm_operator(_op_core(b))
     if not na or not nb:
         return None  # unknown
     # Subset matching is unsafe: Digital Realty must not match Global Digital
