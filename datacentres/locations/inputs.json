@@ -1,0 +1,27 @@
+{
+  "schema": "data-grid-gb.dc-address-inputs.v1",
+  "cohort": {
+    "url": "https://raw.githubusercontent.com/Ventusltd/globalgrid2050/84c739ad711b3ce8476acdfab219c8f8b67f102d/uk_renewables_pipeline/202611161757/global-datacentres/projects.json",
+    "sha256": "faf617d9979151b7d309554cb1cd59d343f70b9d60616f90db45e5c2a227d449"
+  },
+  "references": [
+    {
+      "id": "gridatlas-offtakers",
+      "url": "https://raw.githubusercontent.com/Ventusltd/gridatlas/1de35f9eca360a5d80d81542230fef546917f5c5/data/offtakers_filtered_202610292000.geojson",
+      "sha256": "16dca56003e7a222e7a74025b9b61db3c1929ac7e34adc38daeb343074e68139",
+      "class_filter": "C",
+      "licence": "ODbL-1.0; source record terms retained",
+      "attribution": "(c) OpenStreetMap contributors; existing GridAtlas/DC-A4 source owners; ODbL share-alike applies to derived cross-reference data",
+      "country_scope": "GB"
+    },
+    {
+      "id": "dc-a4-mapped",
+      "url": "https://raw.githubusercontent.com/Ventusltd/data-grid-gb/01a4491dc66ec4e6319a05a394926043b9d992f9/datacentres/lanes/dc-a4-osm-wikidata/out/dc_operational.geojson",
+      "sha256": "0d8318ed94bfb2acd828c93c67e58d13bd886c45533d7e19a535a4e93ef4c2c8",
+      "class_filter": null,
+      "licence": "ODbL-1.0; source record terms retained",
+      "attribution": "(c) OpenStreetMap contributors; existing GridAtlas/DC-A4 source owners; ODbL share-alike applies to derived cross-reference data",
+      "country_scope": "GB"
+    }
+  ]
+}

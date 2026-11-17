@@ -1,0 +1,44 @@
+name: Data centre address locations
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'datacentres/locations/**'
+      - 'tests/test_dc_address_locations.py'
+      - '.github/workflows/datacentre-addresses.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dc-addresses-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install duckdb==1.3.2
+      - name: Offline synthetic source and location boundaries
+        run: python -B -m unittest discover -s tests -p 'test_dc_address_locations.py' -v
+      - name: Collect bounded original source facts and build GeoJSON plus Parquet
+        if: github.event_name == 'workflow_dispatch'
+        run: python -B -m datacentres.locations.pipeline collect --output artifacts/dc-addresses --parquet
+      - name: Replay actual captured sources independently offline
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python -B -m datacentres.locations.pipeline build --snapshot artifacts/dc-addresses --output artifacts/dc-addresses-replay --parquet
+          cmp artifacts/dc-addresses/datacentre-locations.geojson artifacts/dc-addresses-replay/datacentre-locations.geojson
+          cmp artifacts/dc-addresses/datacentre-locations.parquet artifacts/dc-addresses-replay/datacentre-locations.parquet
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch'
+        with:
+          name: datacentre-address-source-proof
+          path: artifacts/
+          if-no-files-found: error
