@@ -14,6 +14,8 @@ on:
       - 'conventional/**'
       - 'pipelines/fetch_assets.py'
       - 'pipelines/run_lanes.py'
+      - 'pipelines/grid_journey_crosswalk.py'
+      - 'journey/**'
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
@@ -27,6 +29,8 @@ on:
       - 'conventional/**'
       - 'pipelines/fetch_assets.py'
       - 'pipelines/run_lanes.py'
+      - 'pipelines/grid_journey_crosswalk.py'
+      - 'journey/**'
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
@@ -57,7 +61,7 @@ jobs:
       - name: Static check (undefined names)
         run: |
           pip install pyflakes==3.2.0
-          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py pipelines/run_lanes.py datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
+          python -m pyflakes assetpipe ci tests reproduce.py pipelines/fetch_assets.py pipelines/run_lanes.py pipelines/grid_journey_crosswalk.py journey datacentres conventional | tee "$RUNNER_TEMP/pyflakes.txt" || true
           if grep -E "undefined name|referenced before assignment|unable to detect undefined names" "$RUNNER_TEMP/pyflakes.txt"; then
             echo "::error::pyflakes found an undefined name"
             exit 1
