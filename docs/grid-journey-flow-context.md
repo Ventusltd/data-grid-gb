@@ -30,6 +30,9 @@ metadata SHA256 is
 `fa1d3e3796e3bba6f2e3e699ae109dca9c1482828fc8b4d0ae78b548d2683b82`.
 The raw CSV was not fetched or hashed by this adapter; its hash stays null.
 No PDF or whole CSV is copied into this closure.
+The three exact raw input files have narrow `-text` rules in the new
+`journey/fixtures/.gitattributes`; this preserves the observed receipt's CRLF
+bytes across Git checkouts without changing existing attributes or old files.
 
 Dataset `day-ahead-constraint-flows-and-limits`, package
 `cf3cbc92-2d5d-4c2b-bd29-e11a21070b26`, CSV/datastore resource
@@ -140,3 +143,6 @@ That baseline drift is preserved for its owner; no dependency was installed or
 old product repaired here. The final **25 focused contract tests passed**,
 including query ordering and malformed-authority refusals. All 18 original
 GJ-01 tests passed in the full run. Hosted exact-head CI is a separate state.
+All three committed Git blob hashes were checked against their pins, and all
+25 focused tests also passed in a clean detached checkout after applying the
+raw-input byte rules.
