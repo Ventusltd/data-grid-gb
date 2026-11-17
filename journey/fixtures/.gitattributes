@@ -1,0 +1,5 @@
+# These are exact observed input bytes, independently pinned by SHA256.
+neso-day-ahead.metadata.v1.json -text
+neso-scotex-api.sample.v1.json -text
+# Captured CRLF is an end-of-line marker, not editable trailing whitespace.
+neso-scotex.sample-receipt.v1.json -text whitespace=cr-at-eol

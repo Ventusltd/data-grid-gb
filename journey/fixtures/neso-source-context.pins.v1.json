@@ -1,0 +1,26 @@
+{
+  "schema": "data-grid-gb.gj05-source-pins.v1",
+  "profile": "neso-day-ahead-boundary",
+  "attribution": "Supported by National Energy SO Open Data",
+  "metadata": {
+    "path": "neso-day-ahead.metadata.v1.json",
+    "bytes": 7602,
+    "sha256": "fa1d3e3796e3bba6f2e3e699ae109dca9c1482828fc8b4d0ae78b548d2683b82",
+    "scope": "metadata_response_bytes",
+    "url": "https://api.neso.energy/api/3/action/datapackage_show?id=day-ahead-constraint-flows-and-limits",
+    "retrievedAt": "2026-11-17T15:34:24.402458+00:00"
+  },
+  "sample": {
+    "path": "neso-scotex-api.sample.v1.json",
+    "bytes": 867,
+    "sha256": "8d14ed0790a20555ac043e1ff5d9898537f011daab8a5d0fb6fce67535e2cee9",
+    "scope": "bounded_api_response_bytes_not_raw_csv",
+    "url": "https://api.neso.energy/api/3/action/datastore_search_sql?sql=SELECT+%22Constraint+Group%22%2C+%22Date_+Time+GMT_BST%22%2C+%22Limit_MW%22%2C+%22Flow_MW%22+FROM+%2238a18ec1-9e40-465d-93fb-301e80fd1352%22+WHERE+%22Constraint+Group%22+%3D+%27SCOTEX%27+ORDER+BY+%22Date_+Time+GMT_BST%22+DESC+LIMIT+3"
+  },
+  "receipt": {
+    "path": "neso-scotex.sample-receipt.v1.json",
+    "bytes": 1680,
+    "sha256": "2b0ed0ca2c9caf74496db0024eecb41f5b82ce5d3b74c3cd2878341784bd998f",
+    "scope": "local_observation_receipt_bytes"
+  }
+}
