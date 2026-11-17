@@ -1,0 +1,134 @@
+{
+  "schema": "data-grid-gb.repd-columnar-local-receipt.v1",
+  "recorded_at": "2026-11-17T18:01:30Z",
+  "state": "LOCAL_TESTED_CANDIDATE",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.18",
+    "duckdb": "1.3.2"
+  },
+  "source_commit": "3a3106e248131f6e430c1ea03b4858d659755303",
+  "edition_path": "uk_renewables_pipeline/202611171609",
+  "source_package_sha256": "e67e2b15e40ad79e38241a66aaef05067dbcb51a7bccff947be6684f714e3bfc",
+  "output_package_sha256": "74252fe71817b1ecbad1e2cf828506ec8e5ca95800abc1d4d2c5a57d4b3e2519",
+  "source_blobs": 21,
+  "source_fields": 38,
+  "rows": 7775,
+  "solar_rows": 3604,
+  "all_row_and_typed_field_roundtrip": "PASS",
+  "solar1000_order": "PASS",
+  "solar1000_manifest_sha256": "c625edbb9c471a1e9a9034a1afe99881fbfabb1fcadcf0623355931f5b6aed1f",
+  "null_counts": {
+    "capacity_mw": 0,
+    "planning_application_submitted": 122,
+    "repd_record_updated": 0,
+    "operational": 5531
+  },
+  "raw_hash_evidence": "Reference hashes checked against pinned product release descriptor; raw CSV/workbook not fetched or rehashed by this export",
+  "outputs": [
+    {
+      "bytes": 1867327,
+      "path": "repd.parquet",
+      "sha256": "163660e97727d8aa692329602dfc1dad4b375b72ce918255d582cac420731873"
+    },
+    {
+      "bytes": 38332,
+      "path": "filtered.json",
+      "sha256": "fedd67a2331b406a587861953b5751bba76de62e41b34fc3d37ecb6d271a45c8"
+    },
+    {
+      "bytes": 12956,
+      "path": "solar1000-manifest.json",
+      "sha256": "c625edbb9c471a1e9a9034a1afe99881fbfabb1fcadcf0623355931f5b6aed1f"
+    },
+    {
+      "bytes": 9724925,
+      "path": "benchmark-baseline.json",
+      "sha256": "bd88e5bebea518cb1829fb921d25b0a4e6dff2b3686323bc0957e0dd9222c21e"
+    },
+    {
+      "bytes": 1156,
+      "path": "measurements.json",
+      "sha256": "9557ffa838add7f8bff3ef4f2234d81c6766ddb6416c565b8cf324f92e515d1d"
+    }
+  ],
+  "measurements": {
+    "alternating_order": true,
+    "cache": "OS file cache uncontrolled; not a cold-cache benchmark; no browser transfer/WASM or GPU speedup claim",
+    "limit": 100,
+    "query": {
+      "operational_year": null,
+      "submitted_year": "missing",
+      "technology": "solar",
+      "updated_year": null
+    },
+    "same_selection": "PASS",
+    "samples": [
+      {
+        "cpu_ms": 93.75,
+        "elapsed_ms": 97.299600020051,
+        "format": "json",
+        "iteration": 0,
+        "matching_count": 32,
+        "returned_count": 32
+      },
+      {
+        "cpu_ms": 31.25,
+        "elapsed_ms": 34.802100039087236,
+        "format": "parquet",
+        "iteration": 0,
+        "matching_count": 32,
+        "returned_count": 32
+      },
+      {
+        "cpu_ms": 31.25,
+        "elapsed_ms": 34.8058000090532,
+        "format": "parquet",
+        "iteration": 1,
+        "matching_count": 32,
+        "returned_count": 32
+      },
+      {
+        "cpu_ms": 109.375,
+        "elapsed_ms": 104.42809999221936,
+        "format": "json",
+        "iteration": 1,
+        "matching_count": 32,
+        "returned_count": 32
+      },
+      {
+        "cpu_ms": 125.0,
+        "elapsed_ms": 116.49679997935891,
+        "format": "json",
+        "iteration": 2,
+        "matching_count": 32,
+        "returned_count": 32
+      },
+      {
+        "cpu_ms": 31.25,
+        "elapsed_ms": 35.29140003956854,
+        "format": "parquet",
+        "iteration": 2,
+        "matching_count": 32,
+        "returned_count": 32
+      }
+    ],
+    "scope": "One workload; fresh DuckDB connection per Parquet sample; file read/parse/filter/decode included; connection startup included for Parquet"
+  },
+  "tests": {
+    "command": "python -B -m unittest discover -s repd_columnar/tests -v",
+    "environment": "REPD_SOURCE_ROOT=<local pinned product repository>",
+    "passed": 10,
+    "elapsed_seconds": 12.326
+  },
+  "workflow_validation": "YAML parse, exact source checkout, scoped PR/manual triggers, read permission, 10-minute timeout checked locally; no GitHub run claimed",
+  "static_validation": "Python AST parse and git diff --check; pyflakes unavailable locally",
+  "publication": "No push, merge, live consumer switch or publication by this worker",
+  "size_context": {
+    "json_file_codec": "uncompressed",
+    "json_gzip_bytes_reference_only": 1079280,
+    "note": "Gzip size is an in-memory reference, not a measured browser transfer or gzip query benchmark",
+    "parquet_codec": "ZSTD"
+  },
+  "measurement_host_load": "Final retained workload ran after the test/export processes completed; external host load and OS cache remain uncontrolled"
+}

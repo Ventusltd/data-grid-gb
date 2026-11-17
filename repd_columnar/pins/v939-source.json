@@ -1,0 +1,125 @@
+{
+  "schema": "data-grid-gb.repd-columnar-input.v1",
+  "source_repository": "Ventusltd/globalgrid2050",
+  "source_commit": "3a3106e248131f6e430c1ea03b4858d659755303",
+  "edition_path": "uk_renewables_pipeline/202611171609",
+  "expected_rows": 7775,
+  "expected_solar": 3604,
+  "original_source_population": 14967,
+  "solar1000_manifest_sha256": "c625edbb9c471a1e9a9034a1afe99881fbfabb1fcadcf0623355931f5b6aed1f",
+  "solar1000_seed_reference_sha256": "c625edbb9c471a1e9a9034a1afe99881fbfabb1fcadcf0623355931f5b6aed1f",
+  "raw_dataset_hashes": {
+    "csv_sha256": "48e76c49f33a1090e78108d1ea9bfe689b35963ea3be1bb4f6516d038a5ff862",
+    "xlsx_sha256": "87811e249395a05b223db6855952334f425e66cc9a2106caea0e38fd9e5037ea"
+  },
+  "files": [
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/build_manifest.json",
+      "bytes": 7849,
+      "sha256": "eb59fee0ab9bd4bf304cf7957755e69647038ad2360eabe680848d14e636c304"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/contracts/release.v9.1.json",
+      "bytes": 1991,
+      "sha256": "a4e8afea9ac5b791b733454bddc939de1194f71f29e7ad25afbc27fe5acf3f4a"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-001.json",
+      "bytes": 624940,
+      "sha256": "1dec5e14cb05d5d47a3543d66a8970a5dc6e74e3cd444c1471befba2fad0a2aa"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-002.json",
+      "bytes": 628900,
+      "sha256": "1c9156f1c15914d48bb1d5b2e548dd619da18314f2ab35901ee807e624026e7d"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-003.json",
+      "bytes": 629709,
+      "sha256": "f9c58b6eba9e14408226743c3dc46bbc82284100ee2a658e525344299d12e480"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-004.json",
+      "bytes": 627190,
+      "sha256": "e6c4ff63ca0592931258710e2acc533d83f0e98478c6adb4d4c792bb7fc76d2a"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-005.json",
+      "bytes": 632176,
+      "sha256": "ed54b8487f8af2b45e03161fc227e1d621a192dff06783f82cb05035c1aad9ba"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-006.json",
+      "bytes": 630023,
+      "sha256": "0754bad6a8a35d5a88cde8be731c4d5151efaaf54a9ae5861421e3503c58e1c2"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-007.json",
+      "bytes": 630020,
+      "sha256": "aab1edc98930510b283bf03aaa19bb034fe93432a5b90e6a6e60bc7fd50ae79d"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-008.json",
+      "bytes": 629849,
+      "sha256": "6a1fd5450e45bb19aaaf04c066ffdd88b44920a066a0d8a13f101aa08339c2ac"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-009.json",
+      "bytes": 631821,
+      "sha256": "344f95a93d6aad29e45703d724414d18dedf2e73713f73ab20bd9607a5817255"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-010.json",
+      "bytes": 628444,
+      "sha256": "0504bb6c01031f56557d6fc300409157fc45da8368e5fa2e497d63749e248680"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-011.json",
+      "bytes": 622294,
+      "sha256": "dbd9398b2f2cc36a8289f787e92f12fe6a67007a17447d4078f94a2bd64ad70b"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-012.json",
+      "bytes": 613797,
+      "sha256": "3353d3682819501532562b729723580155a0904d9df991ad8de9d135eaed3a18"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-013.json",
+      "bytes": 622375,
+      "sha256": "5def4c183b3a3b8ce05acf2a9634007b4522741e7e312b8ba20b832309b14f8d"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-014.json",
+      "bytes": 620084,
+      "sha256": "508a671988d3b9adb818fc6099a87c10ec302f9c8f8997d25b871265cce92f18"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-015.json",
+      "bytes": 616636,
+      "sha256": "7d682d6700c606c2534518853ff28db29667f6eca493a9ac1c4d0fcea51ff460"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/data/v9.1/projects/part-016.json",
+      "bytes": 338528,
+      "sha256": "9e656e4955b6a8d94c6b10aebff3290b3fdd32488987e18eb236286d623f4f86"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/solar1000/manifest.json",
+      "bytes": 12956,
+      "sha256": "c625edbb9c471a1e9a9034a1afe99881fbfabb1fcadcf0623355931f5b6aed1f"
+    },
+    {
+      "path": "uk_renewables_pipeline/202611171609/prospecting/manifest.json",
+      "bytes": 104634,
+      "sha256": "4cb13bcdc332730f1c88804b1a1cadae76b75d1c9ada4dd4f6d1c7252f86de27"
+    },
+    {
+      "path": "automation/repd/releases/2026q3.json",
+      "bytes": 1970,
+      "sha256": "ce6a5990c9678d80a797f24b2d3f26afbcb414f6299fd487e6699644ea3e0cbf"
+    }
+  ],
+  "scope": "Frozen canonical qualifying projects, not full raw REPD population; no source refresh",
+  "rights": "Existing DESNZ/OGL attribution and source policy retained; no source enablement",
+  "raw_descriptor_path": "automation/repd/releases/2026q3.json"
+}
