@@ -42,7 +42,7 @@ def _text(value, label):
 
 def _url(value, label):
     _text(value, label)
-    if re.search(r"[\s\\]", value) or not value.startswith("https://"):
+    if re.search(r"[\s\\]", value) or not re.fullmatch(r"https://[A-Za-z0-9.-]+(?::[0-9]+)?(?:[/?#].*)?", value):
         raise ValueError(f"{label} contains forbidden URL whitespace, backslash or scheme")
     u = urlparse(value)
     host = u.hostname or ""

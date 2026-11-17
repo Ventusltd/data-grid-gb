@@ -76,7 +76,7 @@ class GridJourneyTests(unittest.TestCase):
 
     def test_https_metadata_rejects_parser_differences(self):
         for url in ["https://bad host.example/a", "https://good.example\\bad", "https://good.example/\npath",
-                    "https://user:secret@good.example/", "https://good.example:99999/", "https://%65xample.com/"]:
+                    "https://user:secret@good.example/", "https://good.example:99999/", "https://%65xample.com/", "https://good.example:/"]:
             ledger = copy.deepcopy(self.ledger)
             ledger["edges"][0]["sourceRef"]["url"] = url
             with self.assertRaises(ValueError):
