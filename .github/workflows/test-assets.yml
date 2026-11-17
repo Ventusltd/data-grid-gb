@@ -17,6 +17,7 @@ on:
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
+      - 'intelligence/**'
       - 'requirements.txt'
       - '.github/workflows/test-assets.yml'
       - '.github/workflows/fetch-assets.yml'
@@ -30,6 +31,7 @@ on:
       - 'ci/**'
       - 'reproduce.py'
       - 'tests/**'
+      - 'intelligence/**'
       - 'requirements.txt'
       - '.github/workflows/test-assets.yml'
       - '.github/workflows/fetch-assets.yml'
@@ -38,6 +40,22 @@ permissions:
   contents: read
 
 jobs:
+  intelligence:
+    name: intelligence contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned analytical contract dependency
+        run: python -m pip install -r intelligence/requirements.txt
+      - name: Validate the offline intelligence contract
+        run: python -B -m unittest discover -s intelligence/tests -p 'test_*.py' -v
+
   test:
     name: test (${{ matrix.deps }})
     runs-on: ubuntu-24.04
