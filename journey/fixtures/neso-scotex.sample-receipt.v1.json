@@ -1,0 +1,33 @@
+{
+  "url": "https://api.neso.energy/api/3/action/datastore_search_sql?sql=SELECT+%22Constraint+Group%22%2C+%22Date_+Time+GMT_BST%22%2C+%22Limit_MW%22%2C+%22Flow_MW%22+FROM+%2238a18ec1-9e40-465d-93fb-301e80fd1352%22+WHERE+%22Constraint+Group%22+%3D+%27SCOTEX%27+ORDER+BY+%22Date_+Time+GMT_BST%22+DESC+LIMIT+3",
+  "http": 200,
+  "bytes": 867,
+  "sha256": "8d14ed0790a20555ac043e1ff5d9898537f011daab8a5d0fb6fce67535e2cee9",
+  "retrievedAt": "2026-11-17T16:07:15.040240+00:00",
+  "success": true,
+  "records": [
+    {
+      "Flow_MW": "4548",
+      "Limit_MW": 3350,
+      "Date_ Time GMT_BST": "2026-11-17T23:30:00",
+      "Constraint Group": "SCOTEX"
+    },
+    {
+      "Flow_MW": "4074",
+      "Limit_MW": 3350,
+      "Date_ Time GMT_BST": "2026-11-17T23:00:00",
+      "Constraint Group": "SCOTEX"
+    },
+    {
+      "Flow_MW": "4115",
+      "Limit_MW": 3350,
+      "Date_ Time GMT_BST": "2026-11-17T22:30:00",
+      "Constraint Group": "SCOTEX"
+    }
+  ],
+  "sourceClock": "Resource metadata last_modified2026-11-16T16:48:01.749033 has no supplied timezone; retain raw, not inventUTC. Data field explicitlyGMT/BST local calendar; DSTambiguity requires fail-closed handling.",
+  "meaning": "Day-ahead modelled boundaryforecast, not actual circuitflow/current or connectionheadroom; methodbreak2024-04-22.",
+  "identity": "SCOTEX is exact datastorekey. B6 query returned0; no automaticB6 crosswalk accepted.32-key bounded distinctsample not exhaustive.",
+  "direction": "WITHHELD pending independently inspected positive-polarity diagram/version mapping. No circuitarrow.",
+  "hashScope": "Bounded APIresponsebytes only, not rawCSV/dataset hash."
+}
